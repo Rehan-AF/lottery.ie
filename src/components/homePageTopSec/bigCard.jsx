@@ -6,7 +6,7 @@ const BigCard = () => {
     <>
       <button
         role="link"
-        className="HeroBanner_halfBasis__d_3Ul group rounded-lg lg:basis-3/6 lg:flex-grow transition-shadow duration-200 hover:shadow-cardHov relative overflow-hidden grid grid-rows-hero-banner lg:flex lg:flex-col cursor-pointer"
+        className="hover:shadow-2xl w-full HeroBanner_halfBasis__d_3Ul group rounded-lg lg:basis-3/6 lg:flex-grow transition-shadow duration-200 hover:shadow-cardHov relative overflow-hidden grid grid-rows-hero-banner lg:flex lg:flex-col cursor-pointer"
       >
         <div
           style={{
@@ -16,7 +16,7 @@ const BigCard = () => {
           className="-z-1 bg-no-repeat bg-cover lg:bg-right md:bg-top bg-bottom rounded-t-lg w-full h-full flex-grow bg-gradient-to-t from-blue-hero-from to-blue-hero-to"
         ></div>
         <div className="relative flex flex-col text-white rounded-lg md:rounded-l-lg flex-shrink w-full">
-          <div className="absolute -top-8 md:-top-14 lg:-top-8 w-full -z-1 bottom-0">
+          <div className="absolute lg:top-[-4rem] xl:top[-2rem] md:-top-14 lg:-top-8 w-full -z-1 bottom-0">
             <img
               src="https://www.lottery.ie/content/dam/pli/new-webapp/homepage-content/hero-backgrounds/hero-background-4.svg"
               alt="logo background"

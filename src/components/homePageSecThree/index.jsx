@@ -4,7 +4,7 @@ const HomePageSecThree = () => {
   return (
     <>
       <div
-        className="mt-[4.5rem] text-center text-white px-[105px] w-full flex flex-col items-center relative rounded-lg overflow-hidden lg:flex-row lg:items-center lg:justify-center lg:h-80 lg:text-left lg:px-1/12"
+        className="mt-[4.5rem] pt-[2rem] pb-[2rem] text-center text-white px-[105px] w-full flex flex-col items-center relative rounded-lg overflow-hidden xl:flex-row xl:items-center xl:justify-center xl:h-80 xl:text-left xl:px-1/12"
         style={{
           backgroundImage: `url(${greenBack})`,
           backgroundSize: 'cover',
@@ -27,7 +27,7 @@ const HomePageSecThree = () => {
             €4.5 million*
           </p>
         </div>
-        <div className="lg:w-60 flex flex-col items-center lg:items-start z-10">
+        <div className="xl:w-60 flex flex-col items-center xl:items-start z-10">
           <h3 className="-mt-4 font-black text-3xl">Thank you!</h3>
           <p className="text-white font-bold w-full px-4 text-center mt-2 lg:text-left lg:p-0">
             €4.5 million* has been raised for Good Causes just last week.
@@ -52,13 +52,13 @@ export default HomePageSecThree;
 
 const SecondPart = () => {
   return (
-    <div className="mt-[4.5rem] w-full flex flex-col gap-[5rem] items-center text-center my-25 lg:flex-row lg:justify-center lg:text-left">
+    <div className="mt-[4.5rem] w-full flex flex-col xl:gap-[5rem] items-center text-center my-25 xl:flex-row xl:justify-center xl:text-left">
       <img
-        className="w-40 lg:w-52"
+        className="w-40 xl:w-52"
         src="https://www.lottery.ie/mkd/images/StarWithClipboard.svg"
         alt="Play Responsibly, Play for Fun"
       />
-      <div className="mt-[36px] flex flex-col items-center lg:items-start lg:ml-18">
+      <div className="mt-[36px] flex flex-col items-center xl:items-start xl:ml-18">
         <h2 className="font-black text-4xl md:text-4xl-xtra">
           <span>Play Responsibly, Play for Fun</span>
         </h2>

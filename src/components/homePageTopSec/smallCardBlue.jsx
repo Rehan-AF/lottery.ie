@@ -4,15 +4,13 @@ const SmallCard = () => {
   return (
     <div className="xsm:h-30 md:min-h-30 lg:min-h-0 h-full w-full lg:w-auto lg:h-full">
       <button
-        className="group cursor-pointer text-left w-full h-full"
+        className="hover:shadow-2xl group cursor-pointer text-left w-full h-full"
         role="link"
       >
         <div
-          className="bg-dailyMillionCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
+          className="bg-dailyMillionCardBackground xl:w-[301.5px] xl:h-[261px] bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
           style={{
             backgroundImage: `url(${backImage})`,
-            width: 301.5,
-            height: 261,
           }}
         >
           <div className="flex flex-col md:flex-row flex-wrap md:no-wrap items-center lg:items-start lg:flex-col h-full justify-between md:justify-start lg:space-y-4">

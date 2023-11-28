@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import background from '../../assets/homePageSecTwo/background.png';
 import LargeCard from './largeCard';
 import {
@@ -9,6 +10,11 @@ import {
   SmallCardTwo,
 } from './smallCards';
 const HomePageSecTwo = () => {
+  const [Windowwidth, setWidth] = useState();
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, [Windowwidth]);
   return (
     <div
       className="pt-[4rem] mt-[4rem]"
@@ -17,15 +23,17 @@ const HomePageSecTwo = () => {
         backgroundSize: 'cover',
       }}
     >
-      <div className="flex justify-center">
+      <div className="xl:flex xl:justify-center pl-[1rem] xl:pl[0rem] pr-[1rem] xl:pr-[0rem]">
         <div className=" flex flex-col">
           <div className="pb-3 pt-4 ">
             <h3 className="font-black text-3xl">Win up to €250k</h3>
             <h6 className="font-bold text-lg">with our Instant Win Games</h6>
           </div>
-          <div className="flex ">
+          <div className="xl:flex  xl:flex-row w-full">
             <LargeCard />
-            <div className="grid grid-cols-3">
+            <div
+              className={`flex xl:max-w-[630px] w-[${Windowwidth}px] overflow-x-scroll overflow-hidden xl:grid xl:grid-cols-3`}
+            >
               <SmallCardOne />
               <SmallCardTwo />
               <SmallCardThree />

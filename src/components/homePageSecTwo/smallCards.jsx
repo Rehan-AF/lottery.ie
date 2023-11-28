@@ -62,9 +62,9 @@ export const SmallCardOne = () => {
 
 export const SmallCardTwo = () => {
   return (
-    <div className="m-3">
+    <div className=" m-3">
       <button
-        className="group cursor-pointer text-left"
+        className="hover:shadow-xl group cursor-pointer text-left"
         data-game="Cashword Bonus"
         role="link"
       >
@@ -118,9 +118,9 @@ export const SmallCardTwo = () => {
 
 export const SmallCardThree = () => {
   return (
-    <div className="m-3">
+    <div className=" m-3">
       <button
-        className="group cursor-pointer text-left"
+        className="hover:shadow-xl group cursor-pointer text-left"
         data-game="Cash Bolt Wicked Wins"
         role="link"
       >
@@ -174,9 +174,9 @@ export const SmallCardThree = () => {
 
 export const SmallCardFour = () => {
   return (
-    <div className="m-3">
+    <div className=" m-3">
       <button
-        className="group cursor-pointer text-left"
+        className="hover:shadow-xl group cursor-pointer text-left"
         data-game="Cashword Mini"
         role="link"
       >
@@ -230,9 +230,9 @@ export const SmallCardFour = () => {
 
 export const SmallCardFive = () => {
   return (
-    <div className="m-3">
+    <div className=" m-3">
       <button
-        className="group cursor-pointer text-left"
+        className="hover:shadow-xl group cursor-pointer text-left"
         data-game="Koi Kash"
         role="link"
       >
@@ -288,7 +288,7 @@ export const SmallCardSix = () => {
   return (
     <div className="m-3">
       <button
-        className="group cursor-pointer text-left"
+        className="hover:shadow-xl group cursor-pointer text-left"
         data-game="Big Money Bingo"
         role="link"
       >
