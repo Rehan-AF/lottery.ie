@@ -9,9 +9,9 @@ const Routers = () => {
     <div>
       <Router>
         <Navbar />
-        <Banner />
+        {/* <Banner /> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
         </Routes>
         <Footer />
       </Router>
