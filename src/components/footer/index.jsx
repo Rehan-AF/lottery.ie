@@ -599,7 +599,7 @@ export const Footer = () => {
                   </p>
                   <a
                     href="/"
-                    className="text-[13.5px] text-[#49636e] mt-2 underline"
+                    className="text-[13.5px] mx-2  text-[#49636e] mt-2 underline"
                   >
                     Find out more
                   </a>
