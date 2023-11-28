@@ -17,7 +17,7 @@ export default function Navbar() {
                     alt="Your Company"
                   />
                 </div>
-                <div><span className='inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-blue-light py-3 '>Sign In </span></div>
+                <div><span className='inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-blue-light py-3 lg:hidden '>Sign In </span></div>
                 <div className="hidden lg:ml-6 lg:block ">
                   <div className="flex space-x-4 justify-center items-center pt-5">
                     <a
