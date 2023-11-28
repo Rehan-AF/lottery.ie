@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export const Footer = () => {
   const [lotteryVisible, setLotteryVisible] = useState(true);
   const [infoVisible, setInfoVisible] = useState(true);
 
   const toggleLotteryVisibility = () => {
-    setLotteryVisible(!lotteryVisible);
+    if (window.innerWidth < 768) {
+      setLotteryVisible(!lotteryVisible);
+    }
   };
 
   const toggleInfoVisibility = () => {
-    setInfoVisible(!infoVisible);
+    if (window.innerWidth < 768) {
+      setInfoVisible(!infoVisible);
+    }
   };
 
   useEffect(() => {
-    // Set initial visibility based on screen width
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setLotteryVisible(true);
@@ -23,12 +26,9 @@ export const Footer = () => {
         setInfoVisible(false);
       }
     };
-
-    // Call on mount and resize
     handleResize();
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -633,17 +633,23 @@ export const Footer = () => {
 
           <div className="flex md:hidden w-full items-center mt-4  sm:mt-0">
             <div className="w-1/2 mx-2">
-            <a href="/" className="text-[13.5px] text-[#49636e] underline mt-2">
-              Gaelige
-            </a>
-            <a href="/" className="text-[13.5px] text-[#49636e] underline mt-2">
-              English
-            </a>
+              <a
+                href="/"
+                className="text-[13.5px] text-[#49636e] underline mt-2"
+              >
+                Gaelige
+              </a>
+              <a
+                href="/"
+                className="text-[13.5px] text-[#49636e] underline mt-2"
+              >
+                English
+              </a>
             </div>
             <div className="w-1/2 mx-2 text-end">
-            <h6 className="text-[13.5px] text-[#49636e] mt-2">
-              &copy;2023 National Lottery
-            </h6>
+              <h6 className="text-[13.5px] text-[#49636e] mt-2">
+                &copy;2023 National Lottery
+              </h6>
             </div>
           </div>
 
