@@ -6,7 +6,7 @@ const BigCard = () => {
     <>
       <button
         role="link"
-        className="HeroBanner_halfBasis__d_3Ul group rounded-lg lg:basis-3/6 lg:flex-grow transition-shadow duration-200 hover:shadow-cardHov relative overflow-hidden grid grid-rows-hero-banner lg:flex lg:flex-col cursor-pointer"
+        className="HeroBanner_halfBasis__d_3Ul group rounded-lg h-full lg:basis-3/6 lg:flex-grow transition-shadow duration-200 hover:shadow-cardHov relative overflow-hidden grid grid-rows-hero-banner lg:flex lg:flex-col cursor-pointer"
       >
         <div
           style={{

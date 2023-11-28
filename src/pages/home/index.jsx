@@ -22,7 +22,7 @@ const Home = () => {
         {/* first ad end */}
       </Template>
 
-      <HomePageSecTwo />
+      {/* <HomePageSecTwo /> */}
       <Template>
         {/* second ad start */}
         <div className="w-full flex justify-center">
