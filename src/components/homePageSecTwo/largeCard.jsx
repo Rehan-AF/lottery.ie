@@ -1,7 +1,7 @@
 const LargeCard = () => {
   return (
     <button
-      className="relative rounded-md md:my-3 md:mr-3 flex-col md:flex-row md:items-center cursor-pointer group"
+      className="relative hover:shadow-xl rounded-md md:my-3 md:mr-3 flex-col md:flex-row md:items-center cursor-pointer group"
       role="link"
       style={{
         backgroundImage: `url('https://www.lottery.ie/content/dam/pli/games/festive-fortune/square-bg1x.jpg')`,

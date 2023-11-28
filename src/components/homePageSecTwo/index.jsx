@@ -36,14 +36,16 @@ const HomePageSecTwo = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="w-76 ">
+      <div className="flex justify-center bg-gradient-to-t from-white to-transparent mb-[2rem]">
+        <div className="w-76 mt-[2rem] ">
           <a
             role="button"
-            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-blue-800 bg-[#c4dc33] border-green-400 active:bg-green-400"
-            href="/instant-win-games"
+            className="flex items-center justify-center hover:shadow-xl rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-blue-800 bg-[#c4dc33] border-green-400 active:bg-green-400"
+            href=""
           >
-            <span>See All Instant Win Games</span>
+            <span className="text-gray-700 text-[.75rem] px-5">
+              See All Instant Win Games
+            </span>
           </a>
         </div>
       </div>

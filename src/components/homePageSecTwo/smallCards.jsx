@@ -8,7 +8,7 @@ export const SmallCardOne = () => {
   return (
     <div className="m-3 ">
       <button
-        className="group cursor-pointer text-left"
+        className="hover:shadow-xl group cursor-pointer text-left"
         data-game="Digital Christmas Money Multiplier"
         role="link"
       >
