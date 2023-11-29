@@ -16,10 +16,10 @@ const HomePageTopSection = () => {
         <div className="side w-full xl:w-1/2 flex flex-col gap-[1rem]">
           <div className="flex  flex-col xl:flex-row gap-[1rem]">
             <div className="w-full xl:w-1/2 ">
-              <SmallCard />
+              <SmallCardRed />
             </div>
             <div className="w-full xl:w-1/2 ">
-              <SmallCardRed />
+              <SmallCardPurple />
             </div>
           </div>
           <div className="flex  flex-col xl:flex-row gap-[1rem]">
@@ -27,7 +27,7 @@ const HomePageTopSection = () => {
               <SmallCard />
             </div>
             <div className="w-full xl:w-1/2 ">
-              <SmallCard />
+              <SmallCardStar />
             </div>
           </div>
         </div>

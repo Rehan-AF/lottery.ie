@@ -59,7 +59,7 @@ const CardGreen = () => {
                 </div>
               </a>
             </div>
-            <p className="text-white text-x-sm font-bold pr-4 absolute bottom-0 right-0 pb-2.5 w-1/2 md:w-auto">
+            <p className="text-white text-sm font-normal pr-4 absolute bottom-0 right-0 pb-2.5 w-1/2 md:w-auto">
               *guaranteed
             </p>
           </div>
