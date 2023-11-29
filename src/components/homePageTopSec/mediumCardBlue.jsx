@@ -1,4 +1,4 @@
-import backImg from '../../assets/cards/MillionaireRaffle-back.png';
+import backImg from '../../assets/mediumcardblue.svg';
 const MediumCardBlue = () => {
   return (
     <div
@@ -9,7 +9,7 @@ const MediumCardBlue = () => {
         <div
           className="bg-millionaireRaffleCardBackground bg-left-bottom bg-cover bg-no-repeat text-white rounded-lg relative py-4 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov"
           style={{
-            backgroundImage: `url("https://www.lottery.ie/mkd/images/DbgCardBackground/DailyMillion-back.svg")`,
+            backgroundImage: `url(${backImg})`,
           }}
         >
           <div className="flex flex-row flex-wrap md:no-wrap items-center h-full justify-between">
@@ -59,7 +59,7 @@ const MediumCardBlue = () => {
                 </div>
               </a>
             </div>
-            <p className="text-white text-x-sm font-bold pr-4 absolute bottom-0 right-0 pb-2.5 w-1/2 md:w-auto">
+            <p className="text-white text-sm font-normal pr-4 absolute bottom-0 right-0 pb-2.5 w-1/2 md:w-auto">
               *guaranteed
             </p>
           </div>
