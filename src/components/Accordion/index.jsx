@@ -1,23 +1,23 @@
 import { useState } from 'react';
 
-const Accorion = ({ children, title }) => {
+const Accorion = ({ children, title, center = false }) => {
   const [lotteryVisible, setLotteryVisible] = useState(true);
 
   const toggleLotteryVisibility = () => {
-    if (window.innerWidth < 768) {
-      setLotteryVisible(!lotteryVisible);
-    }
+    setLotteryVisible(!lotteryVisible);
   };
   return (
     <>
       <div
         onClick={toggleLotteryVisibility}
-        className="flex  py-3 md:hover:bg-inherit border-b md:border-b-0 border-gray-300 flex-row mt-4 md:mt-0"
+        className={`flex  ${
+          center === true ? 'justify-center' : 'justify-between'
+        } py-3 md:hover:bg-inherit border-b md:border-b-0 border-gray-300`}
       >
-        <p className="font-bold mx-2 flex justify-start  w-1/2 tracking-wide cursor-pointer text-black ">
+        <p className="font-bold tracking-wide cursor-pointer text-black ">
           {title}
         </p>
-        <span className="flex items-center justify-end w-1/2 mx-5">
+        <span className="">
           <svg
             width="12"
             height="8"

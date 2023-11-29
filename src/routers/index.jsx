@@ -4,6 +4,7 @@ import Navbar from '../components/navbar';
 import Banner from '../components/navbar/banner';
 import { Footer } from '../components/footer';
 import ResultsPage from '../pages/resultsPage';
+import ResultsCard from '../components/resultsComponent/resultsCard';
 
 const Routers = () => {
   return (
