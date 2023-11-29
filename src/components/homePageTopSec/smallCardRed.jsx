@@ -3,7 +3,7 @@ const SmallCardRed = () => {
   return (
     <div className="xsm:h-30 md:min-h-30  lg:min-h-0 h-full md:w-full lg:w-auto lg:h-full">
       <button
-        className="group cursor-pointer text-left w-full h-full"
+        className="hover:shadow-2xl group cursor-pointer text-left w-full h-full"
         role="link"
       >
         <div

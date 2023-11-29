@@ -2,16 +2,14 @@ const SmallCardPurple = () => {
   return (
     <div className="xsm:h-30 md:min-h-30 lg:min-h-0 h-full w-full lg:w-auto lg:h-full">
       <button
-        className="group cursor-pointer text-left w-full h-full"
+        className="hover:shadow-2xl group cursor-pointer text-left w-full h-full"
         role="link"
       >
         <div
-          className="bg-eurodreams-gradient bg-cover bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
+          className="bg-eurodreams-gradient xl:w-[301.5px] xl:h-[261px] bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
           style={{
             backgroundImage:
               'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
-            width: 301.5,
-            height: 261,
           }}
         >
           <img

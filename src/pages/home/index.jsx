@@ -1,3 +1,4 @@
+import HomePageSecThree from '../../components/homePageSecThree';
 import HomePageSecTwo from '../../components/homePageSecTwo';
 import HomePageTopSection from '../../components/homePageTopSec';
 
@@ -22,7 +23,7 @@ const Home = () => {
         {/* first ad end */}
       </Template>
 
-      {/* <HomePageSecTwo /> */}
+      <HomePageSecTwo />
       <Template>
         {/* second ad start */}
         <div className="w-full flex justify-center">
@@ -35,6 +36,7 @@ const Home = () => {
           </a>
         </div>
         {/* second ad end */}
+        <HomePageSecThree />
       </Template>
     </div>
   );

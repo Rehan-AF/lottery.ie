@@ -1,8 +1,11 @@
 import backImg from '../../assets/cards/MillionaireRaffle-back.png';
 const CardGreen = () => {
   return (
-    <div className="xsm:h-30 md:min-h-30 h-full w-full mt-[1rem]" role="link">
-      <button className="group cursor-pointer text-left w-full h-full">
+    <div
+      className="xsm:h-30 md:min-h-30 h-full w-full  mb-[1rem] xl:mb-[0rem] mt-[1rem]"
+      role="link"
+    >
+      <button className="hover:shadow-2xl group cursor-pointer text-left w-full h-full">
         <div
           className="bg-millionaireRaffleCardBackground bg-left-bottom bg-cover bg-no-repeat text-white rounded-lg relative py-4 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov"
           style={{
