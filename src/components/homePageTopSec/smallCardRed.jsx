@@ -1,4 +1,4 @@
-import backImage from '../../assets/cards/Lotto-back.png';
+import backImage from '../../assets/redbg.svg';
 const SmallCardRed = () => {
   return (
     <div className="xsm:h-30 md:min-h-30  lg:min-h-0 h-full md:w-full lg:w-auto lg:h-full">
