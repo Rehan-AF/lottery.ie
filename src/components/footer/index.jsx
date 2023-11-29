@@ -36,9 +36,10 @@ export const Footer = () => {
   return (
     <div className="bg-[#ffffff]">
       <div className=" pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="flex flex-col mb-8 lg:flex-row">
-          <div className="flex flex-wrap w-full ">
-            <div className="w-full md:w-1/4">
+       
+        <div className="flex ">
+          <div className="flex flex-row mb-8 lg:flex-row flex-wrap w-full ">
+            <div className="w-full md:w-1/2 lg:w-1/4">
               <div
                 onClick={toggleLotteryVisibility}
                 className="flex  py-3 md:hover:bg-inherit border-b md:border-b-0 border-gray-300 flex-row mt-4 md:mt-0"
@@ -100,7 +101,7 @@ export const Footer = () => {
                 </ul>
               )}
             </div>
-            <div className="w-full md:w-1/4">
+            <div className="w-full md:w-1/2 lg:w-1/4">
               <div
                 onClick={toggleInfoVisibility}
                 className="flex  border-b md:border-b-0 border-gray-300 md:hover:bg-inherit  flex-row mt-4 md:mt-0"
@@ -186,7 +187,7 @@ export const Footer = () => {
                 </ul>
               )}
             </div>
-            <div className="w-full   mt-4  md:mt-0 md:w-1/4">
+            <div className="w-full   mt-4  md:mt-0 md:w-1/2 lg:w-1/4">
               <div className="py-3 mx-2">
                 <p className="font-bold tracking-wide text-black mb-4">
                   Find Us
@@ -223,7 +224,7 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full md:py-0 py-4 mx-2 md:mx-0 md:order-3 mt-4 md:mt-0 md:w-1/4">
+            <div className="w-full md:py-0 py-4 mx-2 md:mx-0 md:order-3 mt-4 md:mt-0 md:w-1/2 lg:w-1/4">
               <div className="  flex flex-row">
                 <span className="text-base py-3 font-bold tracking-wide text-black">
                   How can we help
@@ -284,6 +285,8 @@ export const Footer = () => {
             </div>
           </div>
         </div>
+
+
         <div className="flex justify-between pt-5 flex-col md:flex-row pb-10 border-t border-[#1222282c]">
           <div className="flex px-2 md:justify-end w-full items-center mt-4 space-x-4 sm:mt-0">
             <h6 className="text-[13.5px] text-[#49636e] mt-2">
