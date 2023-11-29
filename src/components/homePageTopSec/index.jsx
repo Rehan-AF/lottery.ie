@@ -9,15 +9,27 @@ import MediumCardBlue from './mediumCardBlue';
 const HomePageTopSection = () => {
   return (
     <div>
-      <div className="flex xl:flex-row flex-col gap-[1rem]">
-        <div>
+      <div className="flex flex-col xl:flex-row gap-[1rem]  ">
+        <div className=" w-full xl:w-1/2">
           <BigCard />
         </div>
-        <div className="flex  flex-col gap-[1rem] xl:grid xl:grid-cols-2 xl:gap-[1rem]">
-          <SmallCard />
-          <SmallCardRed />
-          <SmallCardPurple />
-          <SmallCardStar />
+        <div className="side w-full xl:w-1/2 flex flex-col gap-[1rem]">
+          <div className="flex  flex-col xl:flex-row gap-[1rem]">
+            <div className="w-full xl:w-1/2 ">
+              <SmallCard />
+            </div>
+            <div className="w-full xl:w-1/2 ">
+              <SmallCardRed />
+            </div>
+          </div>
+          <div className="flex  flex-col xl:flex-row gap-[1rem]">
+            <div className="w-full xl:w-1/2 ">
+              <SmallCard />
+            </div>
+            <div className="w-full xl:w-1/2 ">
+              <SmallCard />
+            </div>
+          </div>
         </div>
       </div>
       <CardGreen />
@@ -25,6 +37,7 @@ const HomePageTopSection = () => {
         <MediumCardBlue />
         <MediumCardBlue />
       </div>
+      <div className="flex gap-[1rem]"></div>
     </div>
   );
 };

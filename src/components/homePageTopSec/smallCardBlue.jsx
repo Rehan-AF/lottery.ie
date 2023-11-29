@@ -8,12 +8,12 @@ const SmallCard = () => {
         role="link"
       >
         <div
-          className="bg-dailyMillionCardBackground xl:w-[301.5px] xl:h-[261px] bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
+          className="bg-dailyMillionCardBackground md:h-[261px]  bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
           style={{
             backgroundImage: `url(${backImage})`,
           }}
         >
-          <div className="flex flex-col md:flex-row flex-wrap md:no-wrap items-center lg:items-start lg:flex-col h-full justify-between md:justify-start lg:space-y-4">
+          <div className="flex flex-row md:flex-row flex-wrap md:no-wrap items-center lg:items-start lg:flex-col h-full justify-between md:justify-start lg:space-y-4">
             <div className="self-start md:self-center lg:self-start filter drop-shadow w-1/2 md:w-1/3 lg:w-auto">
               <img
                 alt="white Daily Million logo"

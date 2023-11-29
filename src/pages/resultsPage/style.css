@@ -1,0 +1,22 @@
+/* .ant-tabs-nav {
+  background-color: rgb(37, 37, 37);
+} */
+.ant-tabs-nav {
+  position: absolute;
+  top: -79px;
+  left: 225px;
+}
+.ant-tabs-ink-bar {
+  height: 10px;
+  background: #374151 !important;
+  width: 200px;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-tabs
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  color: #374151 !important;
+  text-shadow: 0 0 0.25px currentcolor;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-tabs .ant-tabs-tab-btn:hover {
+  color: #374151 !important;
+}
