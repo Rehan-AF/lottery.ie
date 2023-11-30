@@ -1,23 +1,24 @@
-const ResultsCard = () => {
+const ResultsCard = ({ logo, gradient, backgroundImage }) => {
   return (
     <div
       tabIndex="0"
       role="link"
-      className="flex-1 relative"
+      className="w-[176px] h-[234px]"
       aria-label="Lotto"
     >
       <div
         className="group cursor-pointer flex flex-col items-center h-52 rounded-md bg-cover flex-1 bg-lottoCardBackground bg-left shadow-headerCard hover:shadow-headerCardHover transition-all ease-linear animate-fadeToTop"
-        style="animation-duration: 0.2s; opacity: 100;"
+        style={{
+          animationDuration: '0.2s',
+          opacity: 100,
+          backgroundImage: `${
+            gradient === true ? `${backgroundImage}` : `url(${backgroundImage})`
+          }`,
+        }}
       >
         <div className="flex flex-col pt-10 h-full w-full justify-end items-center mb-6">
           <div className="relative mb-10 filter drop-shadow">
-            <img
-              alt="white Lotto logo"
-              className="w-38"
-              src="https://www.lottery.ie/content/dam/pli/logos/centered/white/Lotto.svg"
-              role="img"
-            />
+            <img alt="logo" className="w-[171px]" src={logo} role="img" />
           </div>
           <button
             role="link"

@@ -4,15 +4,25 @@ import DropDown from '../dropDown';
 import SmallCard from '../homePageTopSec/smallCardBlue';
 import GamesCard from './gamesCard';
 import GamesDropDown from './gamesDropDown';
-
+import ResultsDropDown from './resultsDropDown';
+import Accorion from '../Accordion/index';
+import './navStyles.css';
+import { useState } from 'react';
+import { GamesAccordions, ResultsAccordion } from './mobileNavAccordions';
 export default function Navbar() {
+  const [panelVisible, setPanelVisible] = useState(false);
+
+  const togglePanel = () => {
+    setPanelVisible(!panelVisible);
+  };
+
   return (
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-white shadow-button">
-            <div className="flex h-16 items-center justify-between pt-4 flex-row-reverse lg:flex-row-reverse">
-              <div className="flex items-center w-2/3 justify-between flex-row-reverse">
+            <div className="flex h-16 items-center justify-between pt-4 flex-row lg:flex-row-reverse">
+              <div className="flex items-center w-2/3 justify-between  lg:flex-row-reverse">
                 <div className="flex-shrink-0">
                   <img
                     className="w-32 h-14"
@@ -22,7 +32,7 @@ export default function Navbar() {
                 </div>
                 <div>
                   <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-blue-light py-3 lg:hidden ">
-                    Sign In{' '}
+                    Sign In
                   </span>
                 </div>
                 <div className="hidden lg:ml-6 lg:block ">
@@ -34,7 +44,7 @@ export default function Navbar() {
                     </DropDown>
                     <DropDown title={'Results'} position={-500}>
                       <div className="w-[100%]">
-                        <GamesDropDown />
+                        <ResultsDropDown />
                       </div>
                     </DropDown>
                   </div>
@@ -76,35 +86,76 @@ export default function Navbar() {
 
               <div className="-mr-2 flex lg:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
+                <button
+                  className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  onClick={() => {
+                    setPanelVisible(true);
+                    console.log('clicked');
+                  }}
+                >
+                  <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                </button>
               </div>
             </div>
           </div>
 
-          <Disclosure.Panel className="lg:hidden">
+          <div
+            className={`pt-[15px] navPanel ${panelVisible ? 'open' : 'close'}`}
+          >
+            <li className="flex items-center justify-between border-b-1 border-gray-300 w-screen py-3.5">
+              <div className="px-2 mx-auto">
+                <span>Don&apos;t have an account?</span>&nbsp;
+                <a
+                  href=""
+                  className="sm:px-1 py-3 text-base font-bold text-gray-900 underline uppercase"
+                >
+                  Register today
+                </a>
+              </div>
+              <button
+                aria-label="Close Menu"
+                className="mr-6 text-gray-900"
+                onClick={() => {
+                  setPanelVisible(false);
+                }}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M4.73907 2.46994C4.11249 1.84335 3.0966 1.84335 2.47001 2.46994C1.84343 3.09652 1.84343 4.11241 2.47001 4.739L9.73098 12L2.46994 19.261C1.84335 19.8876 1.84335 20.9035 2.46994 21.5301C3.09652 22.1567 4.11241 22.1567 4.739 21.5301L12 14.269L19.261 21.53C19.8876 22.1566 20.9035 22.1566 21.5301 21.53C22.1567 20.9034 22.1567 19.8875 21.5301 19.261L14.2691 12L21.53 4.73904C22.1566 4.11246 22.1566 3.09657 21.53 2.46998C20.9034 1.8434 19.8875 1.8434 19.261 2.46998L12 9.73091L4.73907 2.46994Z"
+                    fill="#2D4550"
+                  ></path>
+                </svg>
+              </button>
+            </li>
+
             <div className="space-y-1 pb-3 pt-2">
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block px-6 py-3 text-base font-bold text-gray-900 border-gray-300 border-b-[1px]"
+                className="block  py-3 text-base font-bold text-gray-900 pb-[12px]"
               >
-                Games
+                <Accorion title="Games" pading={true}>
+                  <GamesAccordions />
+                </Accorion>
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block px-6 py-3 text-base font-bold text-gray-900 border-gray-300 border-b-[1px]"
+                className="block  py-3 text-base font-bold text-gray-900 "
               >
-                Results
+                <Accorion title="Results" pading={true}>
+                  <ResultsAccordion />
+                </Accorion>
               </Disclosure.Button>
+
               <Disclosure.Button
                 as="a"
                 href="#"
@@ -145,7 +196,7 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
             </div>
-          </Disclosure.Panel>
+          </div>
         </>
       )}
     </Disclosure>

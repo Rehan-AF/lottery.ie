@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-const Accorion = ({ children, title, center = false }) => {
-  const [lotteryVisible, setLotteryVisible] = useState(true);
+const Accorion = ({ children, title, center = false, pading = false }) => {
+  const [lotteryVisible, setLotteryVisible] = useState(false);
 
   const toggleLotteryVisibility = () => {
     setLotteryVisible(!lotteryVisible);
@@ -12,7 +12,9 @@ const Accorion = ({ children, title, center = false }) => {
         onClick={toggleLotteryVisibility}
         className={`flex  ${
           center === true ? 'justify-center' : 'justify-between'
-        } py-3 md:hover:bg-inherit border-b md:border-b-0 border-gray-300`}
+        } ${
+          pading === true ? 'px-[27px]' : 'px[0rem] py-3'
+        }  md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]`}
       >
         <p className="font-bold tracking-wide cursor-pointer text-black ">
           {title}

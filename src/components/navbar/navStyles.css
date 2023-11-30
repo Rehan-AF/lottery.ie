@@ -1,0 +1,36 @@
+.navPanel {
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  left: -100%; /* Start off-screen to the left */
+  background-color: white; /* Adjust the background color as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Use the slideIn animation */
+}
+
+.navPanel.open {
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+.navPanel.close {
+  animation: slideOut 0.3s ease-in-out forwards; /* Use the slideOut animation */
+}
+
+@keyframes slideIn {
+  from {
+    left: -120%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -120%;
+  }
+}
