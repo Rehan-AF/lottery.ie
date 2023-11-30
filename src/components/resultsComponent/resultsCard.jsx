@@ -17,7 +17,7 @@ const ResultsCard = ({
       <div className="relative shadow my-2 lg:flex lg:justify-between bg-white rounded-md">
         <div className="lg:w-full flex flex-col justify-evenly">
           <div className="px-4 md:px-9">
-            <div className="bg-white flex justify-between pt-3 pb-3 rounded-t-lg">
+            <div className="bg-white flex flex-row-reverse justify-between pt-3 pb-3 rounded-t-lg">
               <div className="w-22 -mb-1">
                 <img src={logo} alt="Lotto logo" className="w-full h-full" />
               </div>
@@ -27,7 +27,7 @@ const ResultsCard = ({
               </div>
             </div>
             <div className="pb-4">
-              <span className="relative">
+              <div className="relative text-end">
                 <span
                   aria-hidden="true"
                   className="pt-2 pb-0.5 font-bold text-lg md:text-xl md:pb-4"
@@ -37,11 +37,11 @@ const ResultsCard = ({
                 {/* <span className="absolute top-0 left-0 w-full h-full opacity-0 whitespace-nowrap">
                   Sunday, November 26th, 2023
                 </span> */}
-              </span>
+              </div>
               <div className="flex justify-center items-center lg:block">
                 <div className="justify-center flex flex-row flex-wrap gap-6 lg:gap-10">
                   <div className="flex-col">
-                    <div className="leading-5 font-bold py-1.5">
+                    <div className="leading-5 font-bold py-1.5 text-end">
                       Winning numbers
                     </div>
                     <div className="flex flex-col space-y-4">
@@ -78,12 +78,12 @@ const ResultsCard = ({
             aria-hidden="true"
           />
           <div className="">
-            <div className="flex flex-col justify-center md:flex-row md:items-center lg:justify-start px-9">
+            <div className="flex flex-col justify-center md:flex-row md:items-center lg:justify-end px-9">
               <div className="mb-4.5 md:mb-7 md:mt-8 md:flex md:justify-start">
                 <div className="uppercase mt-4 md:mt-0 mx-auto lg:mx-0 w-8/10 md:w-72">
                   <a
                     role="button"
-                    className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-blue-800 bg-white border-blue-800 active:bg-blue-lighter-04"
+                    className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-[#2c4b63] bg-white border-[#2c4b63] active:bg-blue-lighter-04"
                   >
                     <span>more results</span>
                   </a>
@@ -105,7 +105,7 @@ const ResultsCard = ({
             </svg>
           </div>
           <div
-            className="py-2 md:py-0 lg:py-2 pr-1 rounded-b-md lg:rounded-l-none lg:rounded-r-md h-full flex overflow-hidden relative bg-game-lotto lg:bg-lottoCrossSellBackground bg-cover"
+            className="pr-[1rem] py-2 md:py-0 lg:py-2 rounded-b-md lg:rounded-l-none lg:rounded-r-md h-full flex overflow-hidden relative bg-game-lotto lg:bg-lottoCrossSellBackground bg-cover"
             style={
               gradient === false
                 ? { backgroundImage: `url(${backgroundImage})` }
@@ -113,7 +113,7 @@ const ResultsCard = ({
             }
           >
             <div className="flex flex-1 flex-row md:justify-center lg:justify-start lg:flex-col lg:h-full lg:mb-auto z-1 gap-2 md:gap-0">
-              <div className="mr-4 mt-2 lg:flex hidden justify-end">
+              <div className="mt-2 lg:flex hidden justify-end ">
                 <img
                   alt="logo"
                   className="w-11 md:w-12 lg:w-24 h-10"
@@ -122,7 +122,7 @@ const ResultsCard = ({
                 />
               </div>
               <div className="items-center ml-2 my-auto md:flex md:ml-0 md:my-3 lg:ml-3 lg:flex-col lg:flex-grow lg:h-full lg:mt-0 lg:items-start">
-                <div className="ml-2 md:ml-8">
+                <div className="text-end w-full">
                   <h1 className="text-white text-xl md:text-4xl lg:text-base lg:font-bold font-black mb-1 hidden lg:block">
                     Next draw
                   </h1>
@@ -130,8 +130,8 @@ const ResultsCard = ({
                     {nextDraw}
                   </div>
                 </div>
-                <div className="flex lg:flex-col leading-4 justify-between lg:justify-start lg:my-auto flex-row">
-                  <div className="lg:flex justify-center ml-2 lg:ml-8 lg:mt-6 lg:justify-start xsm:whitespace-nowrap">
+                <div className="w-full flex lg:flex-col leading-4 justify-between lg:justify-start lg:my-auto flex-row items-end">
+                  <div className="lg:flex justify-end ml-2 lg:ml-8 lg:mt-6 xsm:whitespace-nowrap ">
                     <div className="text-white text-base md:text-lg lg:text-6xl lg:flex hidden font-bold lg:font-black">
                       €{drawAmount}*
                     </div>
@@ -144,7 +144,7 @@ const ResultsCard = ({
                   </div>
                 </div>
               </div>
-              <div className="flex lg:ml-11 md:mt-1.5 lg:mb-4 ml-auto md:ml-2 md:mb-2 lg:justify-start mr-2 lg:mr-3 pt-1 shrink-0 whitespace-nowrap">
+              <div className="flex lg:ml-11 md:mt-1.5 lg:mb-4 ml-auto md:ml-2 md:mb-2 lg:justify-end mr-2 lg:mr-3 pt-1 shrink-0 whitespace-nowrap">
                 <a
                   aria-label="Play from €4 link"
                   className="flex justify-center group"
@@ -159,7 +159,7 @@ const ResultsCard = ({
                   </div>
                 </a>
               </div>
-              <div className="text-white justify-end lg:flex font-normal text-sm ml-2 mr-6 lg:flex-grow hidden">
+              <div className="text-white justify-start lg:flex font-normal text-sm ml-2 mr-6 lg:flex-grow hidden">
                 <div className="lg:mt-auto lg:mb-2">*estimated</div>
               </div>
             </div>

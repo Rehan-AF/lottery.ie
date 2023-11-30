@@ -1,0 +1,21 @@
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out; /* Ensure the transition property is correctly specified */
+}
+
+.dropdown-content.show {
+  display: block;
+  max-height: 500px; /* Set a maximum height for the transition effect */
+}
