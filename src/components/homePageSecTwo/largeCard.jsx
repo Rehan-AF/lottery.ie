@@ -29,7 +29,7 @@ const LargeCard = () => {
               className="flex justify-center"
               href="/"
             >
-              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                 <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                   <span aria-label="€3 to play">€3 to play</span>
                 </div>

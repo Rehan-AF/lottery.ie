@@ -1,5 +1,5 @@
 import img1 from '../../assets/cards/img1.png';
-import YelloBack from '../../assets/cards/hero-background-4.png';
+import YelloBack from '../../assets/cards/hero-background-4.svg';
 import EuroMill from '../../assets/cards/EuroMillions.svg';
 const BigCard = () => {
   return (
@@ -18,7 +18,7 @@ const BigCard = () => {
         <div className="relative flex flex-col text-white rounded-lg md:rounded-l-lg flex-shrink w-full">
           <div className="absolute lg:top-[-4rem] xl:top[-2rem] md:-top-14 lg:-top-8 w-full -z-1 bottom-0">
             <img
-              src="https://www.lottery.ie/content/dam/pli/new-webapp/homepage-content/hero-backgrounds/hero-background-4.svg"
+              src={YelloBack}
               alt="logo background"
               className="w-full h-full object-cover object-top"
             />
@@ -28,7 +28,7 @@ const BigCard = () => {
               <img
                 alt="white EuroMillions logo"
                 className="h-12 lg:h-16 filter drop-shadow"
-                src="https://www.lottery.ie/content/dam/pli/logos/left/white/EuroMillions.svg"
+                src={EuroMill}
                 role="img"
               />
             </div>
@@ -70,10 +70,10 @@ const BigCard = () => {
             <div className="flex flex-row w-1/2 md:w-1/3 lg:w-auto md:justify-end lg:justify-start">
               <a
                 aria-label="Play from €2.50 link"
-                className="flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-blue-900 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
+                className="flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
                 href="/draw-games/euromillions"
               >
-                <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+                <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                   <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                     <span aria-label="play from €2.50">Play from €2.50</span>
                   </div>
@@ -81,7 +81,7 @@ const BigCard = () => {
               </a>
             </div>
           </div>
-          <div className="w-full text-white text-left">
+          {/* <div className="w-full text-white text-left">
             <div className="h-auto w-auto rounded-b-lg p-2 pl-4 bg-black-alpha-30">
               <div className="flex items-start w-full">
                 <div className="flex self-center max-w-xs relative justify-end items-center">
@@ -131,7 +131,7 @@ const BigCard = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </button>
     </>

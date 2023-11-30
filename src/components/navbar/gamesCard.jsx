@@ -21,7 +21,7 @@ const GamesCard = ({
             width: 179,
             height: 202,
             backgroundImage: `${
-              gradient === true ? `${background}` : `url(${background})`
+              gradient === true ? `${background}` : `url("${background}")`
             }`,
           }}
         >
@@ -54,10 +54,10 @@ const GamesCard = ({
               <div className="flex justify-end">
                 <a
                   aria-label="Play from €4 link"
-                  className="flex justify-center cursor-pointer group-hover:text-blue-900 group-hover:shadow-hover group-hover:bg-white rounded-full ease-in-out duration-200"
+                  className="flex justify-center cursor-pointer group-hover:text-gray-800 group-hover:shadow-hover group-hover:bg-white rounded-full ease-in-out duration-200"
                   href="/"
                 >
-                  <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+                  <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                     <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                       <span aria-label="play from €4">
                         Play from €{playFor}

@@ -47,7 +47,7 @@ export const SmallCardOne = () => {
               className="flex justify-center"
               href="/"
             >
-              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                 <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                   <span aria-label="€5 to play">€5 to play</span>
                 </div>
@@ -103,7 +103,7 @@ export const SmallCardTwo = () => {
               className="flex justify-center"
               href="/"
             >
-              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                 <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                   <span aria-label="€5 to play">€5 to play</span>
                 </div>
@@ -159,7 +159,7 @@ export const SmallCardThree = () => {
               className="flex justify-center"
               href="/"
             >
-              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                 <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                   <span aria-label="€5 to play">€5 to play</span>
                 </div>
@@ -215,7 +215,7 @@ export const SmallCardFour = () => {
               className="flex justify-center"
               href="/"
             >
-              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                 <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                   <span aria-label="€2 to play">€2 to play</span>
                 </div>
@@ -271,7 +271,7 @@ export const SmallCardFive = () => {
               className="flex justify-center"
               href="/"
             >
-              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                 <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                   <span aria-label="€3 to play">€3 to play</span>
                 </div>
@@ -327,7 +327,7 @@ export const SmallCardSix = () => {
               className="flex justify-center"
               href="/"
             >
-              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+              <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                 <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                   <span aria-label="€8 to play">€8 to play</span>
                 </div>

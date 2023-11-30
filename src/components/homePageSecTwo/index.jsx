@@ -48,7 +48,7 @@ const HomePageSecTwo = () => {
         <div className="w-76 mt-[2rem] ">
           <a
             role="button"
-            className="flex items-center justify-center hover:shadow-xl rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-blue-800 bg-[#c4dc33] border-green-400 active:bg-green-400"
+            className="flex items-center justify-center hover:shadow-xl rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] border-green-400 active:bg-green-400"
             href=""
           >
             <span className="text-gray-700 text-[.75rem] px-5">

@@ -15,7 +15,7 @@ export const GamesAccordions = () => {
             >
               <h6 className="w-1/2 font-bold text-lg">Lotto</h6>
               <div className="w-1/2 text-sm">
-                <p className="font-bold text-gray-800">
+                <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
                     className="text-lg md:text-3xl text-sm md:text-sm"
@@ -36,7 +36,7 @@ export const GamesAccordions = () => {
             >
               <h6 className="w-1/2 font-bold text-lg">EuroMillions</h6>
               <div className="w-1/2 text-sm">
-                <p className="font-bold text-gray-800">
+                <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
                     className="text-lg md:text-3xl text-sm md:text-sm"
@@ -57,7 +57,7 @@ export const GamesAccordions = () => {
             >
               <h6 className="w-1/2 font-bold text-lg">EuroDreams</h6>
               <div className="w-1/2 text-sm">
-                <p className="font-bold text-gray-800">
+                <p className="font-bold text-gray-700">
                   <span className="text-sm md:text-sm lg:text-3xl">
                     €20,000
                     <div className="text-sm md:text-sm">
@@ -78,7 +78,7 @@ export const GamesAccordions = () => {
             >
               <h6 className="w-1/2 font-bold text-lg">Daily Million</h6>
               <div className="w-1/2 text-sm">
-                <p className="font-bold text-gray-800">
+                <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
                     className="text-lg md:text-3xl text-sm md:text-sm"
@@ -99,7 +99,7 @@ export const GamesAccordions = () => {
             >
               <h6 className="w-1/2 font-bold text-lg">Lotto 5-4-3-2-1</h6>
               <div className="w-1/2 text-sm">
-                <p className="font-bold text-gray-800">
+                <p className="font-bold text-gray-700">
                   <span>€125,000**</span>
                 </p>
                 <p>
@@ -115,7 +115,7 @@ export const GamesAccordions = () => {
             >
               <h6 className="w-1/2 font-bold text-lg">Millionaire Raffle</h6>
               <div className="w-1/2 text-sm">
-                <p className="font-bold text-gray-800">
+                <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
                     className="text-lg md:text-3xl text-sm md:text-sm"
@@ -139,7 +139,7 @@ export const GamesAccordions = () => {
             >
               <h6 className="w-1/2 font-bold text-lg">Instant Win Games</h6>
               <div className="w-1/2 text-sm">
-                <p className="font-bold text-gray-800">
+                <p className="font-bold text-gray-700">
                   Win prizes up to €250,000
                 </p>
               </div>
@@ -216,7 +216,7 @@ export const ResultsAccordion = () => {
         >
           <a
             role="button"
-            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 text-gray-800 bg-white border-blue-800 active:bg-blue-lighter-04"
+            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 text-gray-700 bg-white border-blue-800 active:bg-blue-lighter-04"
             href="/results"
           >
             <span>view all results</span>
