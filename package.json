@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "animate.css": "^4.1.1",
     "antd": "^5.11.5",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",

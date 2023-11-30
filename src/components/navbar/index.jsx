@@ -1,6 +1,7 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import DropDown from '../dropDown';
+import SmallCard from '../homePageTopSec/smallCardBlue';
 
 export default function Navbar() {
   return (
@@ -8,8 +9,8 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-white shadow-button">
-            <div className="flex h-16 items-center justify-between pt-4 flex-row-reverse lg:flex-row">
-              <div className="flex items-center w-2/3 justify-between">
+            <div className="flex h-16 items-center justify-between pt-4 flex-row-reverse lg:flex-row-reverse">
+              <div className="flex items-center w-2/3 justify-between flex-row-reverse">
                 <div className="flex-shrink-0">
                   <img
                     className="w-32 h-14"
@@ -19,7 +20,7 @@ export default function Navbar() {
                 </div>
                 <div>
                   <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-blue-light py-3 lg:hidden ">
-                    Sign In{" "}
+                    Sign In{' '}
                   </span>
                 </div>
                 <div className="hidden lg:ml-6 lg:block ">
@@ -36,35 +37,32 @@ export default function Navbar() {
                     >
                       Results
                     </a>
-                    <a
-                      href="#"
-                      className="text-gray-700 relative mx-3 py-4 text-base leading-5 font-bold flex justify-center items-center"
-                    >
-                      Good Causes & Winners
-                    </a>
+                    <DropDown>
+                      <div className="w-[200px]">
+                        <SmallCard />
+                      </div>
+                      <div className="w-[200px]">
+                        <SmallCard />
+                      </div>
+                      <div className="w-[200px]">
+                        <SmallCard />
+                      </div>
+                      <div className="w-[200px]">
+                        <SmallCard />
+                      </div>
+                      <div className="w-[200px]">
+                        <SmallCard />
+                      </div>
+                      <div className="w-[200px]">
+                        <SmallCard />
+                      </div>
+                    </DropDown>
                   </div>
                 </div>
               </div>
 
               <div className="hidden lg:ml-6 lg:block ">
                 <div className="flex space-x-4 justify-center items-center pt-5">
-                  <a
-                    href="#"
-                    className="px-2 text-xs font-medium hover:text-blue-light text-gray-700  "
-                  >
-                    Responsible Play
-                  </a>
-                  <a
-                    href="#"
-                    className="px-2 text-sm font-bold hover:text-blue-light text-gray-700 "
-                  >
-                    Register &nbsp;&nbsp;{" "}
-                    <span className=" border-l-2 pr-2 border-gray-700 ">
-                      {" "}
-                      &nbsp;
-                    </span>
-                    <span className="text-gray-700 ">Sign In </span>
-                  </a>
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -75,6 +73,24 @@ export default function Navbar() {
                       fill="#2D4550"
                     ></path>
                   </svg>
+                  <a
+                    href="#"
+                    className="px-2 text-sm font-bold hover:text-blue-light text-gray-700 "
+                  >
+                    Register &nbsp;&nbsp;{' '}
+                    <span className=" border-l-2 pr-2 border-gray-700 ">
+                      {' '}
+                      &nbsp;
+                    </span>
+                    <span className="text-gray-700 ">Sign In </span>
+                  </a>
+
+                  <a
+                    href="#"
+                    className="px-2 text-xs font-medium hover:text-blue-light text-gray-700  "
+                  >
+                    Responsible Play
+                  </a>
                 </div>
               </div>
 
@@ -115,13 +131,6 @@ export default function Navbar() {
                 className="block px-6 py-3 text-base font-bold text-gray-900 border-gray-300 border-b-[1px]"
               >
                 Scratch Cards
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block px-6 py-3 text-base font-bold text-gray-900 border-gray-300 border-b-[1px]"
-              >
-                Good Causes & Winners
               </Disclosure.Button>
             </div>
             <div className="pb-3">
