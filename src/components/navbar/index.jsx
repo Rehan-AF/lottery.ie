@@ -2,6 +2,8 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import DropDown from '../dropDown';
 import SmallCard from '../homePageTopSec/smallCardBlue';
+import GamesCard from './gamesCard';
+import GamesDropDown from './gamesDropDown';
 
 export default function Navbar() {
   return (
@@ -25,36 +27,14 @@ export default function Navbar() {
                 </div>
                 <div className="hidden lg:ml-6 lg:block ">
                   <div className="flex space-x-4 justify-center items-center pt-5">
-                    <a
-                      href="#"
-                      className="text-gray-700 relative mx-3 py-4 text-base leading-5 font-bold flex justify-center items-center "
-                    >
-                      Games
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-700 relative mx-3 py-4 text-base leading-5 font-bold flex justify-center items-center"
-                    >
-                      Results
-                    </a>
-                    <DropDown>
-                      <div className="w-[200px]">
-                        <SmallCard />
+                    <DropDown title={'Games'} position={-400}>
+                      <div className="w-[100%]">
+                        <GamesDropDown />
                       </div>
-                      <div className="w-[200px]">
-                        <SmallCard />
-                      </div>
-                      <div className="w-[200px]">
-                        <SmallCard />
-                      </div>
-                      <div className="w-[200px]">
-                        <SmallCard />
-                      </div>
-                      <div className="w-[200px]">
-                        <SmallCard />
-                      </div>
-                      <div className="w-[200px]">
-                        <SmallCard />
+                    </DropDown>
+                    <DropDown title={'Results'} position={-500}>
+                      <div className="w-[100%]">
+                        <GamesDropDown />
                       </div>
                     </DropDown>
                   </div>
