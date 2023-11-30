@@ -5,20 +5,20 @@ export const Footer = () => {
   const [infoVisible, setInfoVisible] = useState(true);
 
   const toggleLotteryVisibility = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1200) {
       setLotteryVisible(!lotteryVisible);
     }
   };
 
   const toggleInfoVisibility = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1200) {
       setInfoVisible(!infoVisible);
     }
   };
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1200) {
         setLotteryVisible(true);
         setInfoVisible(true);
       } else {
@@ -39,15 +39,15 @@ export const Footer = () => {
        
         <div className="flex ">
           <div className="flex flex-row mb-8 lg:flex-row flex-wrap w-full ">
-            <div className="w-full md:w-1/2 lg:w-1/4">
+            <div className="w-full  lg:w-1/4">
               <div
                 onClick={toggleLotteryVisibility}
-                className="flex  py-3 md:hover:bg-inherit border-b md:border-b-0 border-gray-300 flex-row mt-4 md:mt-0"
+                className="flex  py-3 lg:hover:bg-inherit border-b lg:border-b-0 border-gray-300 flex-row mt-4 lg:mt-0"
               >
                 <p className="font-bold mx-2 flex justify-start  w-1/2 tracking-wide cursor-pointer text-black ">
                   Lottery
                 </p>
-                <span className="md:hidden flex items-center justify-end w-1/2 mx-5">
+                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5">
                   <svg
                     width="12"
                     height="8"
@@ -101,15 +101,15 @@ export const Footer = () => {
                 </ul>
               )}
             </div>
-            <div className="w-full md:w-1/2 lg:w-1/4">
+            <div className="w-full  lg:w-1/4">
               <div
                 onClick={toggleInfoVisibility}
-                className="flex  border-b md:border-b-0 border-gray-300 md:hover:bg-inherit  flex-row mt-4 md:mt-0"
+                className="flex  border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0"
               >
                 <p className="font-bold mx-2 flex justify-start  w-1/2 tracking-wide cursor-pointer text-black py-3">
                   Useful Information
                 </p>
-                <span className="md:hidden flex items-center justify-end w-1/2 mx-5">
+                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5">
                   <svg
                     width="12"
                     height="8"
@@ -187,12 +187,12 @@ export const Footer = () => {
                 </ul>
               )}
             </div>
-            <div className="w-full   mt-4  md:mt-0 md:w-1/2 lg:w-1/4">
+            <div className="w-full   mt-4  lg:mt-0  lg:w-1/4">
               <div className="py-3 mx-2">
                 <p className="font-bold tracking-wide text-black mb-4">
                   Find Us
                 </p>
-                <div className="flex md:w-[80%] flex-row">
+                <div className="flex lg:w-[80%] flex-row">
                   <a href="/" className="w-1/4">
                     <svg
                       width="28"
@@ -224,7 +224,7 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full md:py-0 py-4 mx-2 md:mx-0 md:order-3 mt-4 md:mt-0 md:w-1/2 lg:w-1/4">
+            <div className="w-full lg:py-0 py-4 mx-2 lg:mx-0 lg:order-3 mt-4 lg:mt-0  lg:w-1/4">
               <div className="  flex flex-row">
                 <span className="text-base py-3 font-bold tracking-wide text-black">
                   How can we help
