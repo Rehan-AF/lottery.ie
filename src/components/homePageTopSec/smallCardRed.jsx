@@ -9,9 +9,11 @@ const SmallCardRed = ({
   drawTime,
   jackpotAmount,
   estimatedLabel,
+  price,
+  drew,
 }) => {
   return (
-    <div className="xsm:h-30 md:min-h-30  lg:min-h-0 h-full md:w-full lg:w-auto lg:h-full">
+    <div className="md:min-h-30 lg:min-h-0 h-full w-full lg:w-auto lg:h-full">
       {/*for mobile   */}
       <div
         className="maindiv md:hidden flex justify-between  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse"
@@ -25,29 +27,34 @@ const SmallCardRed = ({
             role="img"
           />
           <button className=" rounded-full border border-solid text-center px-3 py-1 border-white text-white   lg: group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
-            Play from €4
+            {/* Play from €4 */}
+            {playLabel}
           </button>
         </div>
 
         <div className="2">
           <div>
             <p className="text-sm md:text-base shadow-text font-bold">
-              Next draw
+              {/* Next draw */}
+              {drew}
             </p>
             <p className=" md:text-lg shadow-text leading-5 font-black text-lg">
-              Tomorrow, 12:45am
+              {/* Tomorrow, 12:45am */}
+              {`${drawDay}, ${drawTime}`}
             </p>
             <p className=" shadow-text break-words sm:text-2xl md:text-3xl font-black text-lg">
               {' '}
               <strong className="text-5xl md:text-5xl-xtra lg:text-5xl">
-                €6.8
+                {/* €6.8 */}
+                {jackpotAmount}
               </strong>
-              Million
+              {/* Million */}{price}
             </p>
           </div>
           <div>
             <p className="text-white text-x-sm font-bold pr-4  pt-[14px] md:w-auto">
-              *estimated
+              {/* *estimated */}
+              {estimatedLabel}
             </p>
           </div>
         </div>
@@ -81,14 +88,16 @@ const SmallCardRed = ({
           </h2>
           <h3
             aria-label="1 Million Euro *"
-            class="shadow-text break-words text-xl sm:text-2xl md:text-3xl font-black text-lg"
+            class="shadow-text break-words text-xl sm:text-2xl md:text-3xl font-black "
           >
             <span aria-hidden="true" class="text-lg md:text-3xl">
               <span>
-                <strong class="text-5xl md:text-5xl-xtra lg:text-5xl">
-                  €1
+                <strong class=" lg:text-5xl">
+                  {/* €1 */}
+                  {playLabel}
                 </strong>{' '}
-                Million*
+                {/* Million* */}
+                {price}
               </span>
             </span>
           </h3>
@@ -101,17 +110,18 @@ const SmallCardRed = ({
           </div>
 
           <p class="text-left text-white text-x-sm font-bold  w-1/2 md:w-auto md:pt-10">
-            *estimated
+            {/* *estimated */}
+            {estimatedLabel}
           </p>
         </div>
       </div>
 
       <button
-        className="hover:shadow-2xl group cursor-pointer text-left w-full h-full xl:flex hidden items-end"
+        className="hover:shadow-2xl group cursor-pointer text-left w-full h-full xl:flex hidden items-end  "
         role="link"
       >
         <div
-          className="bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
+          className="bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden h-[261px]"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         >
           <div className="flex flex-row md:flex-row flex-wrap md:no-wrap flex-end  lg:flex-col h-full justify-between md:justify-start lg:space-y-4 items-end">
@@ -142,22 +152,22 @@ const SmallCardRed = ({
             <div className="flex flex-col space-y-1 w-1/2 md:w-1/3 lg:w-auto">
               <div className="flex flex-col">
                 <h1 className="flex self-end pr-2 md:text-base shadow-text font-bold text-lg">
-                  Next draw
+                  {drew}
                 </h1>
                 <h2 className="flex self-end pr- md:text-lg shadow-text leading-5 font-black text-lg">
-                  {`${drawDay}, ${drawTime}`}
+                  {`${drawDay} ${drawTime}`}
                 </h2>
               </div>
               <h3
                 aria-label={`${jackpotAmount} *`}
-                className="shadow-text break-words text-xl sm:text-2xl md:text-3xl font-black text-lg"
+                className="shadow-text break-words text-xl sm:text-2xl md:text-3xl font-black "
               >
                 <span aria-hidden="true" className="text-lg md:text-3xl">
                   <span>
                     <strong className="text-5xl md:text-5xl-xtra lg:text-5xl">
                       {jackpotAmount}
                     </strong>{' '}
-                    Million*
+                    {price}
                   </span>
                 </span>
               </h3>
