@@ -6,6 +6,24 @@ body {
   margin: 0;
 }
 
-* {
-  font-family: 'Roboto', sans-serif;
+@font-face {
+  font-family: iran;
+  src: url(../public/font/IRANSansWeb.woff);
+}
+*{
+  font-family: iran;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  max-height: 500px; /* Adjust as needed */
+  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
 }
