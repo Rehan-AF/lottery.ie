@@ -1,20 +1,20 @@
 .navPanel {
-  position: absolute;
+  position: fixed;
   top: 0px;
-  z-index: 10;
+  z-index: 30;
   width: 100vw;
   height: 100vh;
-  left: -100%; /* Start off-screen to the left */
-  background-color: white; /* Adjust the background color as needed */
+  left: -100%;
+  background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* Use the slideIn animation */
+  overflow-y: scroll;
 }
 
 .navPanel.open {
   animation: slideIn 0.3s ease-in-out forwards;
 }
 .navPanel.close {
-  animation: slideOut 0.3s ease-in-out forwards; /* Use the slideOut animation */
+  animation: slideOut 0.3s ease-in-out forwards;
 }
 
 @keyframes slideIn {
@@ -32,5 +32,35 @@
   }
   to {
     left: -120%;
+  }
+}
+
+/* Small screens */
+@media (min-width: 0px) {
+  .custom_width {
+    width: calc(100% + 64px);
+  }
+  .custom_width_min {
+    width: calc(100% - 64px);
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .custom_width {
+    width: calc(100% + 64px);
+  }
+  .custom_width_min {
+    width: calc(100% - 64px);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .custom_width {
+    width: 100%;
+  }
+  .custom_width_min {
+    width: 100%;
   }
 }

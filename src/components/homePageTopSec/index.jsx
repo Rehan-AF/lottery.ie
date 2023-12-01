@@ -11,7 +11,7 @@ import yelloBg from '../../assets/results/yellowBg.svg';
 import redStartBg from '../../assets/redstars.svg';
 const HomePageTopSection = () => {
   return (
-    <div>
+    <div className="">
       <div className="flex flex-col xl:flex-row gap-[1rem]  ">
         <div className=" w-full xl:w-1/2">
           <BigCard />

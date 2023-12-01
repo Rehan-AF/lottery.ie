@@ -1,20 +1,17 @@
-import React from 'react';
-
 export const GamesAccordions = () => {
   return (
     <div>
-      <div
-        style={{ maxHeight: '385px' }}
-        className="overflow-hidden transition-max-height duration-700 ease-in-out flex-1 bg-gray-100"
-      >
-        <div className="flex flex-col">
+      <div className="transition-max-height duration-700 ease-in-out flex-1 bg-gray-100">
+        <div className="flex flex-col gap-[0.7rem]">
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12"
+              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
               style={{ animationDuration: '0.3s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg">Lotto</h6>
-              <div className="w-1/2 text-sm">
+              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                Lotto
+              </h6>
+              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
@@ -31,11 +28,13 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12"
+              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
               style={{ animationDuration: '0.4s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg">EuroMillions</h6>
-              <div className="w-1/2 text-sm">
+              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                EuroMillions
+              </h6>
+              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
@@ -52,11 +51,13 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12"
+              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
               style={{ animationDuration: '0.5s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg">EuroDreams</h6>
-              <div className="w-1/2 text-sm">
+              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                EuroDreams
+              </h6>
+              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span className="text-sm md:text-sm lg:text-3xl">
                     €20,000
@@ -73,11 +74,13 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12"
+              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
               style={{ animationDuration: '0.6000000000000001s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg">Daily Million</h6>
-              <div className="w-1/2 text-sm">
+              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                Daily Million
+              </h6>
+              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
@@ -94,11 +97,13 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12"
+              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
               style={{ animationDuration: '0.7s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg">Lotto 5-4-3-2-1</h6>
-              <div className="w-1/2 text-sm">
+              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                Lotto 5-4-3-2-1
+              </h6>
+              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span>€125,000**</span>
                 </p>
@@ -110,11 +115,13 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12"
+              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
               style={{ animationDuration: '0.8s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg">Millionaire Raffle</h6>
-              <div className="w-1/2 text-sm">
+              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                Millionaire Raffle
+              </h6>
+              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
@@ -134,11 +141,13 @@ export const GamesAccordions = () => {
             className="text-left"
           >
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12"
+              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
               style={{ animationDuration: '0.9000000000000001s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg">Instant Win Games</h6>
-              <div className="w-1/2 text-sm">
+              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                Instant Win Games
+              </h6>
+              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   Win prizes up to €250,000
                 </p>
@@ -147,8 +156,8 @@ export const GamesAccordions = () => {
           </button>
         </div>
         <div className="w-full border-t-1 text-sm px-6 py-2">
-          <p>*estimated</p>
-          <p>**guaranteed</p>
+          <p className="text-end">*estimated</p>
+          <p className="text-end">**guaranteed</p>
         </div>
       </div>
     </div>
@@ -161,7 +170,7 @@ export const ResultsAccordion = () => {
       style={{ maxHeight: ' 282px' }}
       className="overflow-hidden transition-max-height duration-700 ease-in-out flex-1 bg-gray-100"
     >
-      <div className="flex flex-col text-lg space-y-4 font-bold mb-2 px-6 py-4">
+      <div className="flex flex-col sm:gap-[0.7rem] md:gap-[0.7rem] text-lg space-y-4 font-bold mb-2 px-6 py-4 sm:items-end md:items-end">
         <div
           className="animate-fadeToLeft"
           style={{ animationDuration: '0.3s' }}

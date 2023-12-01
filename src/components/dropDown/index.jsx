@@ -5,7 +5,7 @@ const DropDown = ({ title, children, position }) => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="dropdown-container">
+    <div className="dropdown-container z-30">
       <button
         className={`flex items-center text-gray-700 relative mx-3 py-4 text-base leading-5 font-bold justify-center ${
           visible === true ? 'border-b-[5px] border-gray-700' : 'border-b-none'
