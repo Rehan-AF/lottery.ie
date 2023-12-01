@@ -1,14 +1,14 @@
 import backImage from '../../assets/cards/DailyMillion-back.png';
-
+import './styles.css';
 const SmallCard = () => {
   return (
     <div className="xsm:h-30 md:min-h-30 lg:min-h-0 h-full w-full lg:w-auto lg:h-full">
       <button
-        className="hover:shadow-2xl group cursor-pointer text-left w-full h-full"
+        className="on_hover group cursor-pointer text-left w-full h-full"
         role="link"
       >
         <div
-          className="bg-dailyMillionCardBackground md:h-[261px]  bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
+          className=" bg-dailyMillionCardBackground md:h-[261px]  bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
           style={{
             backgroundImage: `url(${backImage})`,
           }}
@@ -25,10 +25,10 @@ const SmallCard = () => {
             <div className="flex flex-start h-auto -mt-3 md:mt-0 bottom-4 w-1/2 md:w-1/3 md:order-last lg:w-auto md:justify-end lg:justify-start lg:absolute false">
               <a
                 aria-label="Play from €1 link"
-                className="flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-blue-900 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
+                className="flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
                 href="/"
               >
-                <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+                <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                   <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                     <span aria-label="play from €1">Play from €1</span>
                   </div>

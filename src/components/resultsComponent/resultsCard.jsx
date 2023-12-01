@@ -108,7 +108,7 @@ const ResultsCard = ({
             className="pr-[1rem] py-2 md:py-0 lg:py-2 rounded-b-md lg:rounded-l-none lg:rounded-r-md h-full flex overflow-hidden relative bg-game-lotto lg:bg-lottoCrossSellBackground bg-cover"
             style={
               gradient === false
-                ? { backgroundImage: `url(${backgroundImage})` }
+                ? { backgroundImage: `url("${backgroundImage}")` }
                 : { backgroundImage: `${backgroundImage}` }
             }
           >
@@ -150,7 +150,7 @@ const ResultsCard = ({
                   className="flex justify-center group"
                   href="/draw-games/lotto"
                 >
-                  <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-blue-900 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+                  <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                     <div className="uppercase text-sm font-bold leading-none xsm:text-base">
                       <span aria-label="play from €4">
                         Play from €${playFor}

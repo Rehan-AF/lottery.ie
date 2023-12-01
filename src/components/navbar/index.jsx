@@ -9,6 +9,7 @@ import Accorion from '../Accordion/index';
 import './navStyles.css';
 import { useState } from 'react';
 import { GamesAccordions, ResultsAccordion } from './mobileNavAccordions';
+import { Link } from 'react-router-dom';
 export default function Navbar() {
   const [panelVisible, setPanelVisible] = useState(false);
 
@@ -22,23 +23,25 @@ export default function Navbar() {
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-white shadow-button">
             <div className="flex h-16 items-center justify-between pt-4 flex-row lg:flex-row-reverse">
-              <div className="flex items-center w-2/3 justify-between  lg:flex-row-reverse">
+              <div className="flex items-center w-2/3 justify-between flex-row-reverse">
                 <div className="flex-shrink-0">
-                  <img
-                    className="w-32 h-14"
-                    src="https://www.lottery.ie/mkd/images/star-logo-with-text.webp"
-                    alt="Your Company"
-                  />
+                  <Link to="/">
+                    <img
+                      className="w-32 h-14"
+                      src="https://www.lottery.ie/mkd/images/star-logo-with-text.webp"
+                      alt="Your Company"
+                    />
+                  </Link>
                 </div>
                 <div>
-                  <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-blue-light py-3 lg:hidden ">
+                  <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-gray-light py-3 lg:hidden ">
                     Sign In
                   </span>
                 </div>
                 <div className="hidden lg:ml-6 lg:block ">
                   <div className="flex space-x-4 justify-center items-center pt-5">
                     <DropDown title={'Games'} position={-400}>
-                      <div className="w-[100%]">
+                      <div className="w-[100%] p-[1rem]">
                         <GamesDropDown />
                       </div>
                     </DropDown>
@@ -65,7 +68,7 @@ export default function Navbar() {
                   </svg>
                   <a
                     href="#"
-                    className="px-2 text-sm font-bold hover:text-blue-light text-gray-700 "
+                    className="px-2 text-sm font-bold hover:text-gray-light text-gray-700 "
                   >
                     Register &nbsp;&nbsp;{' '}
                     <span className=" border-l-2 pr-2 border-gray-700 ">
@@ -77,7 +80,7 @@ export default function Navbar() {
 
                   <a
                     href="#"
-                    className="px-2 text-xs font-medium hover:text-blue-light text-gray-700  "
+                    className="px-2 text-xs font-medium hover:text-gray-light text-gray-700  "
                   >
                     Responsible Play
                   </a>
@@ -87,7 +90,7 @@ export default function Navbar() {
               <div className="-mr-2 flex lg:hidden">
                 {/* Mobile menu button */}
                 <button
-                  className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                   onClick={() => {
                     setPanelVisible(true);
                     console.log('clicked');
@@ -107,14 +110,14 @@ export default function Navbar() {
                 <span>Don&apos;t have an account?</span>&nbsp;
                 <a
                   href=""
-                  className="sm:px-1 py-3 text-base font-bold text-gray-900 underline uppercase"
+                  className="sm:px-1 py-3 text-base font-bold text-gray-800 underline uppercase"
                 >
                   Register today
                 </a>
               </div>
               <button
                 aria-label="Close Menu"
-                className="mr-6 text-gray-900"
+                className="mr-6 text-gray-800"
                 onClick={() => {
                   setPanelVisible(false);
                 }}
@@ -140,7 +143,7 @@ export default function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block  py-3 text-base font-bold text-gray-900 pb-[12px]"
+                className="block  py-3 text-base font-bold text-gray-800 pb-[12px]"
               >
                 <Accorion title="Games" pading={true}>
                   <GamesAccordions />
@@ -149,7 +152,7 @@ export default function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block  py-3 text-base font-bold text-gray-900 "
+                className="block text-base font-bold text-gray-800 "
               >
                 <Accorion title="Results" pading={true}>
                   <ResultsAccordion />
@@ -159,7 +162,7 @@ export default function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block px-6 py-3 text-base font-bold text-gray-900 border-gray-300 border-b-[1px]"
+                className="block px-6 py-3 text-base font-bold text-gray-800 border-gray-300 border-b-[1px]"
               >
                 Scratch Cards
               </Disclosure.Button>
@@ -169,28 +172,28 @@ export default function Navbar() {
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block px-6 pb-2 text-sm font-medium text-gray-900 "
+                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
                 >
                   How to Play
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block px-6 pb-2 text-sm font-medium text-gray-900 "
+                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
                 >
                   Responsible Play
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block px-6 pb-2 text-sm font-medium text-gray-900 "
+                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
                 >
                   Accessible results
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block px-6 pb-2 text-sm font-medium text-gray-900 "
+                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
                 >
                   Gaeilge | English
                 </Disclosure.Button>

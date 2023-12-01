@@ -8,10 +8,11 @@ body {
 
 @font-face {
   font-family: iran;
-  src: url(../public/font/IRANSansWeb.woff);
+  src: url(/font/IRANSansWeb.woff);
 }
 * {
   font-family: iran;
+  /* text-shadow: rgba(0, 0, 0, 0.3) 1px 1px; */
 }
 
 .fade-in {

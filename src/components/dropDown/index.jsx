@@ -33,7 +33,7 @@ const DropDown = ({ title, children, position }) => {
       </button>
       {visible ? (
         <div
-          className={`absolute left-[${position}%] mt-[40px] z-10 animate__animated animate__pulse w-[w-full] bg-white p-[1rem] rounded-md shadow-lg`}
+          className={`absolute left-[${position}%] mt-[40px] z-10 animate__animated animate__pulse w-[w-full] bg-white rounded-md shadow-lg`}
         >
           <div className=" flex gap-[1rem] animate__delay-1s">{children}</div>
         </div>

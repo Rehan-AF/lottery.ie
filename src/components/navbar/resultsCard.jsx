@@ -12,7 +12,9 @@ const ResultsCard = ({ logo, gradient, backgroundImage }) => {
           animationDuration: '0.2s',
           opacity: 100,
           backgroundImage: `${
-            gradient === true ? `${backgroundImage}` : `url(${backgroundImage})`
+            gradient === true
+              ? `${backgroundImage}`
+              : `url("${backgroundImage}")`
           }`,
         }}
       >
@@ -22,7 +24,7 @@ const ResultsCard = ({ logo, gradient, backgroundImage }) => {
           </div>
           <button
             role="link"
-            className="py-1.5 px-3 mx-2 bg-black-alpha-20 rounded-full border border-solid border-white text-white group-hover:text-blue-900 group-hover:shadow-hover group-hover:bg-white ease-in-out duration-200"
+            className="py-1.5 px-3 mx-2 bg-black-alpha-20 rounded-full border border-solid border-white text-white group-hover:text-gray-800 group-hover:shadow-hover group-hover:bg-white ease-in-out duration-200"
           >
             <h5 className="uppercase text-sm font-bold">View Results</h5>
           </button>

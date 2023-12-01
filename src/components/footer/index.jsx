@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export const Footer = () => {
   const [lotteryVisible, setLotteryVisible] = useState(true);
@@ -27,24 +27,23 @@ export const Footer = () => {
       }
     };
     handleResize();
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   return (
     <div className="bg-[#ffffff]">
-      <div className=" pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-       
+      <div className=" pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8">
         <div className="flex ">
-          <div className="flex flex-row mb-8 lg:flex-row flex-wrap w-full ">
+          <div className="flex flex-row mb-8 lg:flex-row-reverse flex-wrap w-full ">
             <div className="w-full  lg:w-1/4">
               <div
                 onClick={toggleLotteryVisibility}
-                className="flex  py-3 lg:hover:bg-inherit border-b lg:border-b-0 border-gray-300 flex-row mt-4 lg:mt-0"
+                className="py-3 lg:hover:bg-inherit border-b lg:border-b-0 border-gray-300 flex-row mt-4 lg:mt-0"
               >
-                <p className="font-bold mx-2 flex justify-start  w-1/2 tracking-wide cursor-pointer text-black ">
+                <p className="lg:w-full lg:text-end font-bold mx-2 tracking-wide cursor-pointer text-black ">
                   Lottery
                 </p>
                 <span className="lg:hidden flex items-center justify-end w-1/2 mx-5">
@@ -65,11 +64,11 @@ export const Footer = () => {
                 </span>
               </div>
               {lotteryVisible && (
-                <ul className=" space-y-2 my-3">
+                <ul className=" space-y-2 my-3 lg:text-end">
                   <li>
                     <a
                       href="/"
-                      className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                      className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
                       About us
                     </a>
@@ -77,7 +76,7 @@ export const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                      className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
                       Latest News
                     </a>
@@ -85,7 +84,7 @@ export const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                      className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
                       Careers
                     </a>
@@ -93,7 +92,7 @@ export const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                      className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
                       Scratch Cards
                     </a>
@@ -104,9 +103,9 @@ export const Footer = () => {
             <div className="w-full  lg:w-1/4">
               <div
                 onClick={toggleInfoVisibility}
-                className="flex  border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0"
+                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0"
               >
-                <p className="font-bold mx-2 flex justify-start  w-1/2 tracking-wide cursor-pointer text-black py-3">
+                <p className="font-bold mx-2 flex justify-start lg:justify-end  w-1/2 tracking-wide cursor-pointer text-black py-3">
                   Useful Information
                 </p>
                 <span className="lg:hidden flex items-center justify-end w-1/2 mx-5">
@@ -127,7 +126,7 @@ export const Footer = () => {
                 </span>
               </div>
               {infoVisible && (
-                <ul className=" space-y-2 my-3">
+                <ul className="lg:text-end space-y-2 my-3">
                   <li>
                     <a
                       href="/"
@@ -189,11 +188,11 @@ export const Footer = () => {
             </div>
             <div className="w-full   mt-4  lg:mt-0  lg:w-1/4">
               <div className="py-3 mx-2">
-                <p className="font-bold tracking-wide text-black mb-4">
+                <p className="lg:text-end font-bold tracking-wide text-black mb-4">
                   Find Us
                 </p>
-                <div className="flex lg:w-[80%] flex-row">
-                  <a href="/" className="w-1/4">
+                <div className="flex flex-row lg:gap-[1rem] lg:justify-end">
+                  <a href="/" className="">
                     <svg
                       width="28"
                       height="20"
@@ -207,7 +206,7 @@ export const Footer = () => {
                       ></path>
                     </svg>
                   </a>
-                  <a href="/" className="w-1/4">
+                  <a href="/" className="">
                     <svg
                       width="20"
                       height="20"
@@ -225,17 +224,17 @@ export const Footer = () => {
               </div>
             </div>
             <div className="w-full lg:py-0 py-4 mx-2 lg:mx-0 lg:order-3 mt-4 lg:mt-0  lg:w-1/4">
-              <div className="  flex flex-row">
+              <div className="  flex flex-row-reverse gap-[1rem]">
                 <span className="text-base py-3 font-bold tracking-wide text-black">
                   How can we help
                 </span>
                 <form className="flex flex-col items-center  md:flex-row">
-                  <button className="h-8 px-[18px] rounded-full py-[4.5px] font-bold text-[13.5px] ms-[18px] bg-[#c4dc33] tracking-wide text-black transition duration-200  shadow-md focus:shadow-outline focus:outline-none">
+                  <button className="h-8 px-[18px] rounded-full py-[4.5px] font-bold text-[13.5px] ms-[18px] bg-[#c4dc33] tracking-wide text-black transition duration-200  hover:shadow-lg shadow-md focus:shadow-outline focus:outline-none">
                     CONTACT US
                   </button>
                 </form>
               </div>
-              <div className="flex md:border-t-0 border-t border-gray-300 py-4  md:flex-col md:w-[80%]">
+              <div className="flex items-end md:border-t-0 border-t border-gray-300 py-4 lg:w-full  md:flex-col md:w-[80%]">
                 <div className="svg mx-2 md:mx-0">
                   <svg
                     width="47"
@@ -267,8 +266,8 @@ export const Footer = () => {
                     </defs>
                   </svg>
                 </div>
-                <div className="para">
-                  <p className="md:mt-4 text-[12px] mx-2 md:text-[13.5px] text-[#49636e] ">
+                <div className="para flex flex-col">
+                  <p className="text-end md:mt-4 text-[12px] mx-2 md:text-[13.5px] text-[#49636e] ">
                     The National Lottery games on this website are promoted by
                     Premier Lotteries Ireland Designated Activity Company under
                     licence issued by the Minister for Public Expenditure and
@@ -276,7 +275,7 @@ export const Footer = () => {
                   </p>
                   <a
                     href="/"
-                    className="text-[13.5px] mx-2  text-[#49636e] mt-2 underline"
+                    className="text-[13.5px] mx-2  text-[#49636e] mt-2 underline text-end"
                   >
                     Find out more
                   </a>
@@ -286,9 +285,8 @@ export const Footer = () => {
           </div>
         </div>
 
-
         <div className="flex justify-between pt-5 flex-col md:flex-row pb-10 border-t border-[#1222282c]">
-          <div className="flex px-2 md:justify-end w-full items-center mt-4 space-x-4 sm:mt-0">
+          <div className="flex px-2  w-full items-center mt-4 space-x-4 sm:mt-0">
             <h6 className="text-[13.5px] text-[#49636e] mt-2">
               &copy;2023 National Lottery
             </h6>
