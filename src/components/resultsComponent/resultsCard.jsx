@@ -108,7 +108,7 @@ const ResultsCard = ({
             className="pr-[1rem] py-2 md:py-0 lg:py-2 rounded-b-md lg:rounded-l-none lg:rounded-r-md h-full flex overflow-hidden relative bg-game-lotto lg:bg-lottoCrossSellBackground bg-cover"
             style={
               gradient === false
-                ? { backgroundImage: `url(${backgroundImage})` }
+                ? { backgroundImage: `url("${backgroundImage}")` }
                 : { backgroundImage: `${backgroundImage}` }
             }
           >

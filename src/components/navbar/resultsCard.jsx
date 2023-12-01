@@ -12,7 +12,9 @@ const ResultsCard = ({ logo, gradient, backgroundImage }) => {
           animationDuration: '0.2s',
           opacity: 100,
           backgroundImage: `${
-            gradient === true ? `${backgroundImage}` : `url(${backgroundImage})`
+            gradient === true
+              ? `${backgroundImage}`
+              : `url("${backgroundImage}")`
           }`,
         }}
       >

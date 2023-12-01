@@ -97,7 +97,7 @@ const ResultsDropDown = () => {
         </div>
         <div>
           <div
-            className="w-full h-12 flex justify-center items-center gap-6 rounded-b-md bg-game-daily"
+            className="w-full h-12 flex flex-row-reverse justify-center items-center gap-6 rounded-b-md bg-game-daily"
             style={{
               backgroundImage:
                 'linear-gradient(180deg,#781ea5 51.95%,#ff3c69 206.15%)',

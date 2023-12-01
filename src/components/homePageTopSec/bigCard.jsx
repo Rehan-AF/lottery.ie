@@ -1,12 +1,13 @@
 import img1 from '../../assets/cards/img1.png';
 import YelloBack from '../../assets/cards/hero-background-4.svg';
 import EuroMill from '../../assets/cards/EuroMillions.svg';
+import './styles.css';
 const BigCard = () => {
   return (
     <>
       <button
         role="link"
-        className="HeroBanner_halfBasis__d_3Ul group w-full rounded-lg h-full lg:basis-3/6 lg:flex-grow transition-shadow duration-200 hover:shadow-cardHov relative overflow-hidden grid grid-rows-hero-banner lg:flex lg:flex-col cursor-pointer"
+        className="on_hover HeroBanner_halfBasis__d_3Ul group w-full rounded-lg h-full lg:basis-3/6 lg:flex-grow transition-shadow duration-200 hover:shadow-cardHov relative overflow-hidden grid grid-rows-hero-banner lg:flex lg:flex-col cursor-pointer"
       >
         <div
           style={{
@@ -23,8 +24,8 @@ const BigCard = () => {
               className="w-full h-full object-cover object-top"
             />
           </div>
-          <div className="w-full flex flex-row flex-wrap md:flex-nowrap lg:flex-col items-center lg:items-start px-4 pb-4 justify-between md:space-y-4 relative">
-            <div className="self-start md:self-center w-1/2 md:w-1/3 lg:w-full">
+          <div className="md:flex-row-reverse sm:flex-row-reverse w-full flex flex-row flex-wrap md:flex-nowrap lg:flex-col items-center lg:items-start px-4 pb-4 justify-between md:space-y-4 relative">
+            <div className="sm:flex sm:justify-end  sm:pr-[0px] sm:text-end lg:flex lg:justify-end md:self-center w-1/2 md:w-1/3 lg:w-full md:justify-end md:flex">
               <img
                 alt="white EuroMillions logo"
                 className="h-12 lg:h-16 filter drop-shadow"
@@ -33,25 +34,25 @@ const BigCard = () => {
               />
             </div>
             <div
-              className="flex-col text-left md:mt-0 w-1/2 md:w-1/3 lg:w-full"
+              className="flex-col sm:text-righ text-left md:mt-0 w-1/2 md:w-1/3 lg:w-full"
               style={{ textShadow: ' rgba(0, 0, 0, 0.3) 1px 1px' }}
             >
-              <h1 className="leading-none text-sm md:text-base font-bold">
+              <h1 className="lg:flex lg:justify-end leading-none sm:text-right text-sm md:text-base font-bold">
                 Next draw
               </h1>
-              <h2 className="font-black text-base md:text-lg leading-6">
+              <h2 className="lg:flex lg:justify-end font-black sm:text-right text-base md:text-lg leading-6">
                 Tomorrow, 12:30am
               </h2>
               <h3
-                className="pr-1 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black pt-1"
+                className="pl-1 text-xl sm:text-end sm:text-2xl md:text-3xl lg:text-4xl font-black pt-1"
                 aria-label="85 Million Euro *"
               >
                 <span
                   aria-hidden="true"
-                  className="text-lg md:text-3xl lg:text-5xl"
+                  className="lg:flex lg:justify-end text-lg md:text-3xl lg:text-5xl"
                 >
                   <span>
-                    <strong className="text-4xl-xtra md:text-6xl lg:text-6xl-xtra">
+                    <strong className="text-4xl-xtra  md:text-6xl lg:text-6xl-xtra sm:text-[32px]">
                       €85
                     </strong>{' '}
                     Million*
@@ -62,19 +63,19 @@ const BigCard = () => {
                 className="w-full text-white"
                 style={{ textShadow: 'rgba(0, 0, 0, 0.3) 1px 1px' }}
               >
-                <p className="text-left text-white text-x-sm font-bold absolute md:right-3 bottom-3 w-1/2 md:w-auto">
+                <p className="sm:text-end sm:pr-[16px] text-left text-white text-x-sm font-bold absolute bottom-3 w-1/2 md:right-[1.5rem] md:w-auto">
                   *estimated
                 </p>
               </div>
             </div>
-            <div className="flex flex-row w-1/2 md:w-1/3 lg:w-auto md:justify-end lg:justify-start">
+            <div className="flex justify-end md:justify-end lg:flex-row md:w-1/3">
               <a
                 aria-label="Play from €2.50 link"
-                className="flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
+                className="no_hover_shadow on_hover flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
                 href="/draw-games/euromillions"
               >
-                <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
-                  <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
+                <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:bg-white">
+                  <div className="uppercase text-sm font-bold leading-none sm:text-[12px]">
                     <span aria-label="play from €2.50">Play from €2.50</span>
                   </div>
                 </div>

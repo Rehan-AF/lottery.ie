@@ -1,14 +1,14 @@
 import backImage from '../../assets/cards/DailyMillion-back.png';
-
+import './styles.css';
 const SmallCard = () => {
   return (
     <div className="xsm:h-30 md:min-h-30 lg:min-h-0 h-full w-full lg:w-auto lg:h-full">
       <button
-        className="hover:shadow-2xl group cursor-pointer text-left w-full h-full"
+        className="on_hover group cursor-pointer text-left w-full h-full"
         role="link"
       >
         <div
-          className="bg-dailyMillionCardBackground md:h-[261px]  bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
+          className=" bg-dailyMillionCardBackground md:h-[261px]  bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden"
           style={{
             backgroundImage: `url(${backImage})`,
           }}

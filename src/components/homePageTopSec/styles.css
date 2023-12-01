@@ -1,0 +1,11 @@
+.on_hover {
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px;
+}
+.on_hover:hover {
+  box-shadow: 0px 10px 10px 0px rgba(59, 59, 59, 0.5);
+  transition: box-shadow 150ms ease-in-out;
+}
+.no_hover_shadow {
+  box-shadow: 0px 5px 8px rgba(51, 66, 77, 0.3);
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px;
+}

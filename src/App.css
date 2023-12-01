@@ -12,6 +12,7 @@ body {
 }
 * {
   font-family: iran;
+  /* text-shadow: rgba(0, 0, 0, 0.3) 1px 1px; */
 }
 
 .fade-in {
