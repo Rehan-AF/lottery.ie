@@ -1,3 +1,5 @@
+import '../homePageTopSec/styles.css';
+import './navStyles.css';
 const GamesCard = ({
   logo,
   background,
@@ -5,18 +7,23 @@ const GamesCard = ({
   amount,
   playFor,
   gradient = false,
+  animationDuration,
 }) => {
   return (
     <div
-      className="flex-1 w-full animate-fadeToTop"
+      className="flex-1 w-full card_container animate-fadeToTop"
       style={{
-        animationDuration: '0.2s',
         opacity: 100,
       }}
     >
-      <button className="group w-full cursor-pointer h-45">
+      <button
+        className="group w-full card cursor-pointer h-45"
+        style={{
+          animationDuration: `${animationDuration}s`,
+        }}
+      >
         <div
-          className="bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg hover:shadow-hover relative p-3 h-full"
+          className="bg-lottoCardBackground on_hover bg-left bg-cover bg-no-repeat text-white rounded-lg hover:shadow-hover relative p-3 h-full"
           style={{
             width: 179,
             height: 202,
@@ -57,7 +64,7 @@ const GamesCard = ({
                   className="flex justify-center cursor-pointer group-hover:text-gray-800 group-hover:shadow-hover group-hover:bg-white rounded-full ease-in-out duration-200"
                   href="/"
                 >
-                  <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+                  <div className="m-auto rounded-full border on_hover border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                     <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
                       <span aria-label="play from €4">
                         Play from €{playFor}

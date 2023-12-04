@@ -1,6 +1,5 @@
-import backImg from '../../assets/mediumcardblue.svg';
 import './styles.css';
-const MediumCardBlue = () => {
+const MediumCardBlue = ({ backgroundImage }) => {
   return (
     <div
       className="xsm:h-30 md:min-h-30 h-full w-full xl:mt-[1rem]"
@@ -10,7 +9,7 @@ const MediumCardBlue = () => {
         <div
           className="on_hover bg-millionaireRaffleCardBackground bg-left-bottom bg-cover bg-no-repeat text-white rounded-lg relative py-4 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov"
           style={{
-            backgroundImage: `url("${backImg}")`,
+            backgroundImage: `url("${backgroundImage}")`,
           }}
         >
           <div className="sm:flex-row-reverse flex flex-row flex-wrap md:no-wrap items-center h-full justify-between">

@@ -16,6 +16,18 @@ export default function Navbar() {
   const togglePanel = () => {
     setPanelVisible(!panelVisible);
   };
+  const [gamesVisible, setGamesVisible] = useState(false);
+  const [resultsVisible, setResultsVisible] = useState(false);
+
+  const handleGamesToggle = () => {
+    setGamesVisible(!gamesVisible);
+    setResultsVisible(false);
+  };
+
+  const handleResultsToggle = () => {
+    setResultsVisible(!resultsVisible);
+    setGamesVisible(false);
+  };
 
   return (
     <Disclosure as="nav" className="bg-white">
@@ -23,7 +35,7 @@ export default function Navbar() {
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-white shadow-button">
             <div className="flex h-16 items-center justify-between pt-4 flex-row lg:flex-row-reverse">
-              <div className="flex items-center w-2/3 lg:gap-[2rem] flex-row-reverse custom_width sm:justify-between">
+              <div className="flex items-center w-2/3 lg:gap-[2rem] flex-row-reverse custom_width sm:justify-start">
                 <div className="flex-shrink-0 lg:mr-6">
                   <Link to="/">
                     <img
@@ -50,12 +62,22 @@ export default function Navbar() {
                 </div>
                 <div className="hidden lg:ml-6 lg:block ">
                   <div className="flex space-x-4 justify-center items-center pt-5">
-                    <DropDown title={'Games'} position={-765}>
-                      <div className="w-[100%] p-[1rem]">
+                    <DropDown
+                      title={'Games'}
+                      position={-765}
+                      visible={gamesVisible}
+                      onToggle={handleGamesToggle}
+                    >
+                      <div className="w-[100%] px-[1rem] pb-[1rem] pt-[2px]">
                         <GamesDropDown />
                       </div>
                     </DropDown>
-                    <DropDown title={'Results'} position={-853}>
+                    <DropDown
+                      title={'Results'}
+                      position={-853}
+                      visible={resultsVisible}
+                      onToggle={handleResultsToggle}
+                    >
                       <div className="w-[100%]">
                         <ResultsDropDown />
                       </div>
@@ -108,105 +130,6 @@ export default function Navbar() {
                 >
                   <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className={`pt-[15px] navPanel ${panelVisible ? 'open' : 'close'}`}
-          >
-            <li className="flex items-center justify-between border-b-1 border-gray-300 w-screen py-3.5">
-              <div className="px-2 mx-auto">
-                <span>Don&apos;t have an account?</span>&nbsp;
-                <a
-                  href=""
-                  className="sm:px-1 py-3 text-base font-bold text-gray-800 underline uppercase"
-                >
-                  Register today
-                </a>
-              </div>
-              <button
-                aria-label="Close Menu"
-                className="mr-6 text-gray-800"
-                onClick={() => {
-                  setPanelVisible(false);
-                }}
-              >
-                <svg
-                  aria-hidden="true"
-                  className="h-5 w-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M4.73907 2.46994C4.11249 1.84335 3.0966 1.84335 2.47001 2.46994C1.84343 3.09652 1.84343 4.11241 2.47001 4.739L9.73098 12L2.46994 19.261C1.84335 19.8876 1.84335 20.9035 2.46994 21.5301C3.09652 22.1567 4.11241 22.1567 4.739 21.5301L12 14.269L19.261 21.53C19.8876 22.1566 20.9035 22.1566 21.5301 21.53C22.1567 20.9034 22.1567 19.8875 21.5301 19.261L14.2691 12L21.53 4.73904C22.1566 4.11246 22.1566 3.09657 21.53 2.46998C20.9034 1.8434 19.8875 1.8434 19.261 2.46998L12 9.73091L4.73907 2.46994Z"
-                    fill="#2D4550"
-                  ></path>
-                </svg>
-              </button>
-            </li>
-
-            <div className="space-y-1 pb-3 pt-2">
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block  py-3 text-base font-bold text-gray-800 pb-[12px]"
-              >
-                <Accorion title="Games" pading={true} navbar={true}>
-                  <GamesAccordions />
-                </Accorion>
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block text-base font-bold text-gray-800 "
-              >
-                <Accorion title="Results" pading={true} navbar={true}>
-                  <ResultsAccordion />
-                </Accorion>
-              </Disclosure.Button>
-
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block px-6 py-3 text-base font-bold text-gray-800 border-gray-300 border-b-[1px] text-end"
-              >
-                Scratch Cards
-              </Disclosure.Button>
-            </div>
-            <div className="pb-3">
-              <div className="sm:flex md:flex sm:items-end md:items sm:justify-end md:justify-end sm:flex-col md:flex-col">
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
-                >
-                  How to Play
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
-                >
-                  Responsible Play
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
-                >
-                  Accessible results
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
-                >
-                  Gaeilge | English
-                </Disclosure.Button>
               </div>
             </div>
           </div>

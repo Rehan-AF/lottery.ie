@@ -5,76 +5,48 @@ import redImage from '../../assets/results/redbg.svg';
 import EuroMillions from '../../assets/results/EuroMillions.svg';
 import EuroMillionsWhite from '../../assets/results/EuroMillionsWhite.svg';
 import yelloBg from '../../assets/results/yellowBg.svg';
-/**
- * 
-  logo,
-  JackportAmount,
-  date,
-  winingNumbers,
-  winingColor,
-  secondLogo,
-  nextDraw,
-  drawAmount,
-  playFor,
- */
+import backgroundImage1 from '../../assets/backgrounds/1_Mega-da-virada.svg';
+import backgroundImage2 from '../../assets/backgrounds/2_Milionaria.svg';
+import backgroundImage4 from '../../assets/backgrounds/4_Dupla-Sena.svg';
+import backgroundImage5 from '../../assets/backgrounds/5_Lotomania.svg';
+import backgroundImage6 from '../../assets/backgrounds/6_Mega-Sena.svg';
+import backgroundImage7 from '../../assets/backgrounds/7_Quina.svg';
+import backgroundImage8 from '../../assets/backgrounds/8_Super-Sete.svg';
+
 const data = [
   {
+    name: 'game 1',
     logo: lottoLogoRed,
     JackportAmount: '6,431,246',
     date: 'Sun 26/11/23',
     winingNumbers: [13, 17, 21, 22, 37, 42, 23, 32, 43, 54, 12, 34, 56, 43, 23],
-    winingColor: '#e3262d',
+    winingColor: '#068e5a',
     secondLogo: lottoLogoWhite,
     nextDraw: 'Tomorrow, 12:45am',
     drawAmount: '6.8 Million',
     playFor: '4',
-    backgroundImage: redImage,
+    backgroundImage: backgroundImage1,
   },
   {
+    name: 'game 2',
     logo: EuroMillions,
     JackportAmount: '83,068,817',
     date: 'Wed 29/11/23',
     winingNumbers: [12, 16, 27, 33, 44, 23],
-    winingColor: '#f6a500',
+    winingColor: '#2a2a85',
     secondLogo: EuroMillionsWhite,
     nextDraw: 'Saturday, 12:30am',
     drawAmount: '200 Million',
     playFor: '2.50',
-    backgroundImage: yelloBg,
+    backgroundImage: backgroundImage2,
   },
   {
+    name: 'game 3',
     logo: lottoLogoRed,
     JackportAmount: '6,431,246',
     date: 'Sun 26/11/23',
-    winingNumbers: [12, 34, 54, 64, 3],
-    winingColor: '#e3262d',
-    secondLogo: lottoLogoWhite,
-    nextDraw: 'Tomorrow, 12:45am',
-    drawAmount: '6.8 Million',
-    playFor: '4',
-    backgroundImage: redImage,
-  },
-  {
-    logo: lottoLogoRed,
-    JackportAmount: '6,431,246',
-    date: 'Sun 26/11/23',
-    winingNumbers: [
-      12, 34, 54, 64, 3, 12, 34, 54, 64, 3, 12, 34, 54, 64, 3, 12, 34, 54, 64,
-      3,
-    ],
-    winingColor: '#e3262d',
-    secondLogo: lottoLogoWhite,
-    nextDraw: 'Tomorrow, 12:45am',
-    drawAmount: '6.8 Million',
-    playFor: '4',
-    backgroundImage: redImage,
-  },
-  {
-    logo: lottoLogoRed,
-    JackportAmount: '6,431,246',
-    date: 'Sun 26/11/23',
-    winingNumbers: [12, 34, 54, 64, 3, 12],
-    winingColor: '#e3262d',
+    winingNumbers: [12, 34, 54, 64, 3, 9],
+    winingColor: '#781ea5',
     secondLogo: lottoLogoWhite,
     nextDraw: 'Tomorrow, 12:45am',
     drawAmount: '6.8 Million',
@@ -84,28 +56,76 @@ const data = [
     gradient: true,
   },
   {
+    name: 'game 4',
+    logo: lottoLogoRed,
+    JackportAmount: '6,431,246',
+    date: 'Sun 26/11/23',
+    winingNumbers: [12, 34, 54, 3, 9],
+    winingColor: '#e3262d',
+    secondLogo: lottoLogoWhite,
+    nextDraw: 'Tomorrow, 12:45am',
+    drawAmount: '6.8 Million',
+    playFor: '4',
+    backgroundImage: backgroundImage4,
+    columnNumber: 5,
+  },
+  {
+    name: 'game 5',
+    logo: lottoLogoRed,
+    JackportAmount: '6,431,246',
+    date: 'Sun 26/11/23',
+    winingNumbers: [
+      12, 34, 54, 64, 3, 12, 34, 54, 64, 3, 12, 34, 54, 64, 3, 12, 34, 54, 64,
+      3,
+    ],
+    winingColor: '#f6a500',
+    secondLogo: lottoLogoWhite,
+    nextDraw: 'Tomorrow, 12:45am',
+    drawAmount: '6.8 Million',
+    playFor: '4',
+    backgroundImage: backgroundImage5,
+  },
+  {
+    name: 'game 6',
+    logo: lottoLogoRed,
+    JackportAmount: '6,431,246',
+    date: 'Sun 26/11/23',
+    winingNumbers: [12, 34, 54, 64, 3, 12],
+    specialNumbers: [12, 34],
+    winingColor: '#128631',
+    secondLogo: lottoLogoWhite,
+    nextDraw: 'Tomorrow, 12:45am',
+    drawAmount: '6.8 Million',
+    playFor: '4',
+    backgroundImage: backgroundImage6,
+  },
+  {
+    name: 'game 7',
     logo: EuroMillions,
     JackportAmount: '83,068,817',
     date: 'Wed 29/11/23',
-    winingNumbers: [12, 34, 54, 64, 3, 12, 34, 54, 64, 3, 78, 5],
-    winingColor: '#f6a500',
+    winingNumbers: [12, 34, 54, 64, 3, 12],
+    winingNumbers2: [64, 3, 12, 34, 54, 64],
+    winingColor: '#0094b3',
     secondLogo: EuroMillionsWhite,
     nextDraw: 'Saturday, 12:30am',
     drawAmount: '200 Million',
     playFor: '2.50',
-    backgroundImage: yelloBg,
+    backgroundImage: backgroundImage7,
   },
   {
+    name: 'game 8',
     logo: EuroMillions,
     JackportAmount: '83,068,817',
     date: 'Wed 29/11/23',
     winingNumbers: [12, 16, 27, 33, 44, 23, 45],
-    winingColor: '#f6a500',
+    winingColor: '#82c342',
     secondLogo: EuroMillionsWhite,
     nextDraw: 'Saturday, 12:30am',
     drawAmount: '200 Million',
     playFor: '2.50',
-    backgroundImage: yelloBg,
+    backgroundImage: backgroundImage8,
+    columnNumber: '7',
   },
 ];
 const Results = () => {
@@ -125,6 +145,7 @@ const Results = () => {
                 JackportAmount={val.JackportAmount}
                 date={val.date}
                 winingNumbers={val.winingNumbers}
+                winingNumbers2={val.winingNumbers2}
                 winingColor={val.winingColor}
                 secondLogo={val.secondLogo}
                 nextDraw={val.nextDraw}
@@ -132,6 +153,8 @@ const Results = () => {
                 playFor={val.playFor}
                 backgroundImage={val.backgroundImage}
                 gradient={val.gradient}
+                specialNumbers={val.specialNumbers}
+                columnNumber={val.columnNumber}
               />
             </div>
           );

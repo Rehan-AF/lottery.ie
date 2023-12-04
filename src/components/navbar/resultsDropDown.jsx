@@ -18,32 +18,38 @@ const data = [
     logo: lottoLogo,
     gradient: false,
     backgroundImage: redbg,
+    animationDuration: 0.2,
   },
   {
     logo: EuroMillionsWhite,
     gradient: false,
     backgroundImage: yellowBg,
+    animationDuration: 0.26,
   },
   {
     logo: EuroDreams,
     gradient: true,
     backgroundImage:
       'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
+    animationDuration: 0.32,
   },
   {
     logo: DailyMillions,
     gradient: false,
     backgroundImage: blueBg,
+    animationDuration: 0.38,
   },
   {
     logo: Lotto54321,
     gradient: false,
     backgroundImage: lottoBackStar,
+    animationDuration: 0.44,
   },
   {
     logo: TellyBingo,
     gradient: false,
     backgroundImage: purpleBg,
+    animationDuration: 0.5,
   },
 ];
 const ResultsDropDown = () => {
@@ -57,6 +63,7 @@ const ResultsDropDown = () => {
                 logo={val.logo}
                 gradient={val.gradient}
                 backgroundImage={val.backgroundImage}
+                animationDuration={val.animationDuration}
               />
             </div>
           );

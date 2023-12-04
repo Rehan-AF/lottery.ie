@@ -9,6 +9,11 @@ import backImage from '../../assets/redbg.svg';
 import backImg from '../../assets/mediumcardblue.svg';
 import yelloBg from '../../assets/results/yellowBg.svg';
 import redStartBg from '../../assets/redstars.svg';
+import backgroundImage2 from '../../assets/backgrounds/2_Milionaria.svg';
+import backgroundImage4 from '../../assets/backgrounds/4_Dupla-Sena.svg';
+import backgroundImage5 from '../../assets/backgrounds/5_Lotomania.svg';
+import backgroundImage7 from '../../assets/backgrounds/7_Quina.svg';
+import backgroundImage8 from '../../assets/backgrounds/8_Super-Sete.svg';
 const HomePageTopSection = () => {
   return (
     <div className="">
@@ -21,7 +26,7 @@ const HomePageTopSection = () => {
             <div className="w-full xl:w-1/2 ">
               {/* <SmallCardRed /> */}
               <SmallCardRed
-                backgroundImage={yelloBg}
+                backgroundImage={backgroundImage2}
                 logoSrc="https://www.lottery.ie/content/dam/pli/logos/left/white/EuroMillions.svg"
                 playLink="/"
                 playLabel="Play from €4"
@@ -36,7 +41,6 @@ const HomePageTopSection = () => {
             <div className="w-full xl:w-1/2 ">
               {/* <SmallCardPurple /> */}
               <SmallCardRed
-                backgroundImage={backImg}
                 logoSrc="	https://www.lottery.ie/content/dam/pli/logos/left/white/DailyMillion.svg"
                 playLink="/"
                 playLabel="Play from €1"
@@ -46,6 +50,7 @@ const HomePageTopSection = () => {
                 estimatedLabel="*estimated"
                 price=" Million*"
                 drew="Only €1 per line"
+                gradient={true}
               />
             </div>
           </div>
@@ -53,23 +58,7 @@ const HomePageTopSection = () => {
             <div className="w-full xl:w-1/2 ">
               {/* <SmallCard /> */}
               <SmallCardRed
-                backgroundImage={backImage}
-                logoSrc="	https://www.lottery.ie/content/dam/pli/logos/left/white/Lotto.svg"
-                playLink="/"
-                playLabel="Play from €4"
-                drawDay="Sunday"
-                drawTime="12:45am"
-                jackpotAmount="€7.2"
-                estimatedLabel="*estimated"
-                price=" Million*"
-                drew="Next draw"
-              />
-            </div>
-            <div className="w-full xl:w-1/2 ">
-              {/* <SmallCardStar /> */}
-
-              <SmallCardRed
-                backgroundImage={redStartBg}
+                backgroundImage={backgroundImage4}
                 logoSrc="https://www.lottery.ie/content/dam/pli/logos/left/white/Lotto54321.svg"
                 playLink="/"
                 playLabel="Play from €1"
@@ -81,13 +70,29 @@ const HomePageTopSection = () => {
                 drew="Next draw"
               />
             </div>
+            <div className="w-full xl:w-1/2 ">
+              {/* <SmallCardStar /> */}
+
+              <SmallCardRed
+                backgroundImage={backgroundImage5}
+                logoSrc="	https://www.lottery.ie/content/dam/pli/logos/left/white/Lotto.svg"
+                playLink="/"
+                playLabel="Play from €4"
+                drawDay="Sunday"
+                drawTime="12:45am"
+                jackpotAmount="€7.2"
+                estimatedLabel="*estimated"
+                price=" Million*"
+                drew="Next draw"
+              />
+            </div>
           </div>
         </div>
       </div>
       <CardGreen />
       <div className="flex flex-col xl:flex-row gap-[1rem]">
-        <MediumCardBlue />
-        <MediumCardBlue />
+        <MediumCardBlue backgroundImage={backgroundImage7} />
+        <MediumCardBlue backgroundImage={backgroundImage8} />
       </div>
       <div className="flex gap-[1rem]"></div>
     </div>

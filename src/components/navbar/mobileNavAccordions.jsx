@@ -1,11 +1,13 @@
-export const GamesAccordions = () => {
+export const GamesAccordions = ({ isVisible }) => {
   return (
     <div>
       <div className="transition-max-height duration-700 ease-in-out flex-1 bg-gray-100">
         <div className="flex flex-col gap-[0.7rem]">
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
+              className={`${
+                isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+              } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.3s' }}
             >
               <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
@@ -28,7 +30,9 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
+              className={`${
+                isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+              } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.4s' }}
             >
               <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
@@ -51,7 +55,9 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
+              className={`${
+                isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+              } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.5s' }}
             >
               <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
@@ -74,7 +80,9 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
+              className={`${
+                isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+              } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.6000000000000001s' }}
             >
               <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
@@ -97,7 +105,9 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
+              className={`${
+                isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+              } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.7s' }}
             >
               <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
@@ -115,7 +125,9 @@ export const GamesAccordions = () => {
           </button>
           <button className="text-left">
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
+              className={`${
+                isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+              } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.8s' }}
             >
               <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
@@ -141,7 +153,9 @@ export const GamesAccordions = () => {
             className="text-left"
           >
             <div
-              className="animate-fadeToLeft flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse"
+              className={`${
+                isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+              } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.9000000000000001s' }}
             >
               <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
@@ -155,7 +169,7 @@ export const GamesAccordions = () => {
             </div>
           </button>
         </div>
-        <div className="w-full border-t-1 text-sm px-6 py-2">
+        <div className="w-full border-t text-sm px-6 py-2">
           <p className="text-end">*estimated</p>
           <p className="text-end">**guaranteed</p>
         </div>
@@ -164,15 +178,14 @@ export const GamesAccordions = () => {
   );
 };
 
-export const ResultsAccordion = () => {
+export const ResultsAccordion = ({ isVisible }) => {
   return (
-    <div
-      style={{ maxHeight: ' 282px' }}
-      className="overflow-hidden transition-max-height duration-700 ease-in-out flex-1 bg-gray-100"
-    >
+    <div className="overflow-hidden transition-max-height duration-700 ease-in-out flex-1 bg-gray-100">
       <div className="flex flex-col sm:gap-[0.7rem] md:gap-[0.7rem] text-lg space-y-4 font-bold mb-2 px-6 py-4 sm:items-end md:items-end">
         <div
-          className="animate-fadeToLeft"
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard`}
           style={{ animationDuration: '0.3s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
@@ -180,7 +193,9 @@ export const ResultsAccordion = () => {
           </div>
         </div>
         <div
-          className="animate-fadeToLeft"
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard`}
           style={{ animationDuration: '0.4s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
@@ -188,7 +203,9 @@ export const ResultsAccordion = () => {
           </div>
         </div>
         <div
-          className="animate-fadeToLeft"
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard`}
           style={{ animationDuration: '0.5s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
@@ -196,7 +213,9 @@ export const ResultsAccordion = () => {
           </div>
         </div>
         <div
-          className="animate-fadeToLeft"
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard`}
           style={{ animationDuration: '0.6000000000000001s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
@@ -204,7 +223,9 @@ export const ResultsAccordion = () => {
           </div>
         </div>
         <div
-          className="animate-fadeToLeft"
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard`}
           style={{ animationDuration: '0.7s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
@@ -212,7 +233,9 @@ export const ResultsAccordion = () => {
           </div>
         </div>
         <div
-          className="animate-fadeToLeft"
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard`}
           style={{ animationDuration: '0.8s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
@@ -220,8 +243,10 @@ export const ResultsAccordion = () => {
           </div>
         </div>
         <div
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard flex flex-col items-start`}
           style={{ animationDuration: '0.9000000000000001s' }}
-          className="flex flex-col items-start animate-fadeToLeft"
         >
           <a
             role="button"

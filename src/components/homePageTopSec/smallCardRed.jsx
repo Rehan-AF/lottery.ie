@@ -1,3 +1,6 @@
+import radient_left from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-left.svg';
+import radient_right from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-right.svg';
+
 const SmallCardRed = ({
   backgroundImage,
   logoSrc,
@@ -9,14 +12,33 @@ const SmallCardRed = ({
   estimatedLabel,
   price,
   drew,
+  gradient = false,
 }) => {
   return (
-    <div className=" md:min-h-30 lg:min-h-0 h-full w-full lg:w-auto lg:h-full">
+    <div
+      className={` md:min-h-30 lg:min-h-0 h-full w-full lg:w-auto lg:h-full ${
+        gradient === true ? 'relative' : ''
+      }`}
+    >
       {/*for mobile   */}
       <div
-        className="on_hover maindiv sm:w-full md:hidden flex justify-between  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse"
-        style={{ backgroundImage: `url("${backgroundImage}")` }}
+        className={`on_hover maindiv sm:w-full md:hidden flex justify-between  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse ${
+          gradient === true ? 'relative' : ''
+        }`}
+        style={
+          gradient === false
+            ? { backgroundImage: `url("${backgroundImage}")` }
+            : {
+                backgroundImage:
+                  'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
+              }
+        }
       >
+        {gradient && (
+          <div className="absolute top-[-1px] left-[0px] rotate-90 z-0">
+            <img src={radient_left} alt="sda" />
+          </div>
+        )}
         <div className="flex flex-col justify-between ">
           <img
             alt="white Lotto logo"
@@ -57,6 +79,11 @@ const SmallCardRed = ({
             </p>
           </div>
         </div>
+        {gradient && (
+          <div className="absolute bottom-[-1px] right-[0px] rotate-90 z-0">
+            <img src={radient_right} alt="sda" />
+          </div>
+        )}
       </div>
 
       {/*  */}
@@ -64,9 +91,23 @@ const SmallCardRed = ({
       {/* for medium screen */}
 
       <div
-        className="on_hover maindiv items-center md:flex md:w-full xl:hidden justify-between hidden md  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse justify-center"
-        style={{ backgroundImage: `url("${backgroundImage}")` }}
+        className={`on_hover maindiv items-center md:flex md:w-full xl:hidden justify-between hidden md  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse justify-center ${
+          gradient === true ? 'relative' : ''
+        }`}
+        style={
+          gradient === false
+            ? { backgroundImage: `url("${backgroundImage}")` }
+            : {
+                backgroundImage:
+                  'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
+              }
+        }
       >
+        {gradient && (
+          <div className="absolute top-[-1px] left-[0px] rotate-90 z-0">
+            <img src={radient_left} alt="sda" />
+          </div>
+        )}
         <div className="filter drop-shadow w-1/2 md:w-1/3 lg:w-auto flex justify-end">
           <img
             alt="white Daily Million logo"
@@ -113,6 +154,11 @@ const SmallCardRed = ({
             {estimatedLabel}
           </p>
         </div>
+        {gradient && (
+          <div className="absolute bottom-[-1px] right-[0px] rotate-90 z-0">
+            <img src={radient_right} alt="sda" />
+          </div>
+        )}
       </div>
       {/* full size screen start  */}
       <button
@@ -120,9 +166,24 @@ const SmallCardRed = ({
         role="link"
       >
         <div
-          className="on_hover bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden h-[261px]"
-          style={{ backgroundImage: `url("${backgroundImage}")` }}
+          className={`on_hover bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden h-[261px] ${
+            gradient === true ? 'relative' : ''
+          }`}
+          style={
+            gradient === false
+              ? { backgroundImage: `url("${backgroundImage}")` }
+              : {
+                  backgroundImage:
+                    'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
+                }
+          }
         >
+          {gradient && (
+            <div className="absolute top-[-1px] left-[0px] rotate-90 z-0">
+              <img src={radient_left} alt="sda" />
+            </div>
+          )}
+
           <div className="flex flex-row md:flex-row flex-wrap md:no-wrap flex-end  lg:flex-col h-full justify-between md:justify-start lg:space-y-4 items-end">
             <div className="mr-[-10px]  self-end  filter drop-shadow w-1/2 md:w-1/3 lg:w-auto  ">
               <img
@@ -172,6 +233,11 @@ const SmallCardRed = ({
               </h3>
             </div>
           </div>
+          {gradient && (
+            <div className="absolute bottom-[-1px] right-[0px] rotate-90 z-0">
+              <img src={radient_right} alt="sda" />
+            </div>
+          )}
         </div>
       </button>
       {/* full size screen start  */}

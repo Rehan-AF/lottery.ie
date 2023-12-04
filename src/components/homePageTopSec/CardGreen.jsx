@@ -1,4 +1,4 @@
-import backImg from '../../assets/cards/MillionaireRaffle-back.png';
+import backgroundImage5 from '../../assets/backgrounds/6_Mega-Sena.svg';
 import './styles.css';
 const CardGreen = () => {
   return (
@@ -10,7 +10,7 @@ const CardGreen = () => {
         <div
           className="on_hover bg-millionaireRaffleCardBackground bg-left-bottom bg-cover bg-no-repeat text-white rounded-lg relative py-4 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov"
           style={{
-            backgroundImage: `url("${backImg}")`,
+            backgroundImage: `url("${backgroundImage5}")`,
           }}
         >
           <div className="flex flex-row-reverse flex-wrap md:no-wrap items-center h-full justify-between">

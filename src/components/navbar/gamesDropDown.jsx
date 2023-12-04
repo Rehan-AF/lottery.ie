@@ -16,6 +16,7 @@ const data = [
     date: 'Sunday, 12:45am',
     amount: '7.2 Millions',
     playFor: '4',
+    animationDuration: 0.2,
   },
   {
     logo: EuroMillionsWhite,
@@ -23,6 +24,7 @@ const data = [
     date: 'Saturday, 12:30am',
     amount: '200 Millions',
     playFor: '2.50',
+    animationDuration: 0.26,
   },
   {
     logo: EuroDreams,
@@ -31,6 +33,7 @@ const data = [
     amount: '20,000',
     playFor: '2.50',
     gradient: true,
+    animationDuration: 0.32,
   },
   {
     logo: DailyMillions,
@@ -38,6 +41,7 @@ const data = [
     date: 'Only €1 per line',
     amount: '1 Million',
     playFor: '1',
+    animationDuration: 0.38,
   },
   {
     logo: lottoLogo,
@@ -45,6 +49,7 @@ const data = [
     date: 'Sunday, 12:45am',
     amount: '125,000',
     playFor: '1',
+    animationDuration: 0.44,
   },
   {
     logo: MillionaireRaffle,
@@ -52,6 +57,7 @@ const data = [
     date: '32 days to go!',
     amount: '1 Million',
     playFor: '25',
+    animationDuration: 0.5,
   },
 ];
 
@@ -59,14 +65,14 @@ const GamesDropDown = () => {
   return (
     <div>
       <div>
-        <h6 className="leading-6 mb-2 mt-4 font-black text-lg">
+        <h6 className="leading-6 mb-2 mt-2 font-black text-lg">
           Play Draw Games
         </h6>
       </div>
       <div className="flex flex-row gap-[0.5rem]">
         {data?.map((val, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="flex">
               <GamesCard
                 logo={val.logo}
                 background={val.background}
@@ -74,6 +80,7 @@ const GamesDropDown = () => {
                 amount={val.amount}
                 playFor={val.playFor}
                 gradient={val.gradient}
+                animationDuration={val.animationDuration}
               />
             </div>
           );

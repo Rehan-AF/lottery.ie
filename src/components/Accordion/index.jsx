@@ -1,22 +1,30 @@
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import './styles.css';
 const Accorion = ({
   children,
   title,
   center = false,
   pading = false,
   navbar = false,
+  animate = false,
 }) => {
   const [lotteryVisible, setLotteryVisible] = useState(false);
 
   const toggleLotteryVisibility = () => {
     setLotteryVisible(!lotteryVisible);
   };
+
+  useEffect(() => {
+    if (animate) {
+      animate(lotteryVisible);
+    }
+  }, [animate, lotteryVisible]);
+
   return (
     <>
       <div
         onClick={toggleLotteryVisibility}
-        className={`flex  ${
+        className={`flex ${
           center === true ? 'justify-center' : 'justify-between'
         } ${pading === true ? 'px-[27px]' : 'px[0rem] py-3'} ${
           navbar === true ? 'pb-[12px]' : 'pb[0px]'
@@ -47,7 +55,17 @@ const Accorion = ({
           </svg>
         </span>
       </div>
-      {lotteryVisible && <div className="animate-slide-in">{children}</div>}
+      <div className="">
+        <div
+          className={`${
+            lotteryVisible === true
+              ? ' opening_animation_accordion'
+              : 'closing_animation_accordion'
+          } element_style_accordion animate-slide-in element_style element_style`}
+        >
+          {children}
+        </div>
+      </div>
     </>
   );
 };
