@@ -1,0 +1,38 @@
+.text_shadow_results {
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px;
+}
+.on_hover_results:hover {
+  box-shadow: 0px 5px 10px 0px rgba(59, 59, 59, 0.5);
+  transition: box-shadow 150ms ease-in-out;
+}
+
+.shadow_custom {
+  box-shadow: 0px 5px 5px 0px rgba(59, 59, 59, 0.2);
+  transition: box-shadow 150ms ease-in-out;
+}
+
+.clover-container {
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  background-color: #4caf50; /* You can replace this with your desired background color */
+  border-radius: 50%;
+  position: absolute;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 0 26.1px;
+  border-color: transparent transparent transparent #4caf50;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  transform: rotate(45deg);
+}

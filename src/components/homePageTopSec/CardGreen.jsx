@@ -1,4 +1,5 @@
-import backImg from '../../assets/cards/MillionaireRaffle-back.png';
+import backgroundImage5 from '../../assets/backgrounds/6_Mega-Sena.svg';
+import logo4 from '../../assets/gameLogos/04.svg';
 import './styles.css';
 const CardGreen = () => {
   return (
@@ -10,7 +11,7 @@ const CardGreen = () => {
         <div
           className="on_hover bg-millionaireRaffleCardBackground bg-left-bottom bg-cover bg-no-repeat text-white rounded-lg relative py-4 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov"
           style={{
-            backgroundImage: `url("${backImg}")`,
+            backgroundImage: `url("${backgroundImage5}")`,
           }}
         >
           <div className="flex flex-row-reverse flex-wrap md:no-wrap items-center h-full justify-between">
@@ -18,14 +19,14 @@ const CardGreen = () => {
               <img
                 alt="white millionaire raffle logo"
                 className="h-12 lg:h-16"
-                src="https://www.lottery.ie/content/dam/pli/logos/left/white/MillionaireRaffle.svg"
+                src={logo4}
                 role="img"
               />
             </div>
-            <div className="flex flex-col w-1/2 md:w-1/3 lg:items-center">
+            <div className="flex flex-col w-1/2 md:w-1/3 items-end">
               <div className="text-end flex flex-col h-full space-y-3">
                 <div className="flex flex-col">
-                  <span className="text-end text-sm md:text-base font-bold shadow-text">
+                  <span className="text-end text-sm sm:text-[12px] md:text-base font-bold shadow-text">
                     One Millionaire Guaranteed
                   </span>
                   <span className="text-base md:text-lg shadow-text font-black leading-5">

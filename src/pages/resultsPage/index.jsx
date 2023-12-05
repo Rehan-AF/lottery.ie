@@ -1,6 +1,4 @@
 import Template from '../../components/template';
-import BlueBack from '../../assets/blueBack.svg';
-import ResultsCard from '../../components/resultsComponent/resultsCard';
 import Results from '../../components/resultsComponent';
 const ResultsPage = ({ children }) => {
   return (

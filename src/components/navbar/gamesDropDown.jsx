@@ -1,83 +1,15 @@
-import GamesCard from './gamesCard';
-import lottoLogo from '../../assets/results/LottoWhite.svg';
-import EuroMillionsWhite from '../../assets/results/EuroMillionsWhite.svg';
-import EuroDreams from '../../assets/results/EuroDreams.svg';
-import DailyMillions from '../../assets/results/DailyMillion.svg';
-import MillionaireRaffle from '../../assets/results/MillionaireRaffle.svg';
-import redbg from '../../assets/results/redbg.svg';
-import yellowBg from '../../assets/results/yellowBg.svg';
-import blueBg from '../../assets/cards/DailyMillion-back.png';
-import lottoBackStar from '../../assets/cards/Lotto-back-star.png';
-import greenBg from '../../assets/results/greenBg.svg';
-const data = [
-  {
-    logo: lottoLogo,
-    background: redbg,
-    date: 'Sunday, 12:45am',
-    amount: '7.2 Millions',
-    playFor: '4',
-  },
-  {
-    logo: EuroMillionsWhite,
-    background: yellowBg,
-    date: 'Saturday, 12:30am',
-    amount: '200 Millions',
-    playFor: '2.50',
-  },
-  {
-    logo: EuroDreams,
-    background: 'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
-    date: 'Tomorrow, 12:30am',
-    amount: '20,000',
-    playFor: '2.50',
-    gradient: true,
-  },
-  {
-    logo: DailyMillions,
-    background: blueBg,
-    date: 'Only €1 per line',
-    amount: '1 Million',
-    playFor: '1',
-  },
-  {
-    logo: lottoLogo,
-    background: lottoBackStar,
-    date: 'Sunday, 12:45am',
-    amount: '125,000',
-    playFor: '1',
-  },
-  {
-    logo: MillionaireRaffle,
-    background: greenBg,
-    date: '32 days to go!',
-    amount: '1 Million',
-    playFor: '25',
-  },
-];
+import GameCarousel from './games/GameCarousel';
 
 const GamesDropDown = () => {
   return (
     <div>
       <div>
-        <h6 className="leading-6 mb-2 mt-4 font-black text-lg">
+        <h6 className="leading-6 mb-2 mt-2 font-black text-lg">
           Play Draw Games
         </h6>
       </div>
-      <div className="flex flex-row gap-[0.5rem]">
-        {data?.map((val, index) => {
-          return (
-            <div key={index}>
-              <GamesCard
-                logo={val.logo}
-                background={val.background}
-                date={val.date}
-                amount={val.amount}
-                playFor={val.playFor}
-                gradient={val.gradient}
-              />
-            </div>
-          );
-        })}
+      <div className="w-[1024px] flex justify-center">
+        <GameCarousel />
       </div>
       <div className="flex justify-between mt-[1rem]">
         <svg

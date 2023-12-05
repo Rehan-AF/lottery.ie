@@ -12,55 +12,13 @@ import lottoBackStar from '../../assets/cards/Lotto-back-star.png';
 import greenBg from '../../assets/results/greenBg.svg';
 import purpleBg from '../../assets/results/purpleBg.svg';
 import { Link } from 'react-router-dom';
+import ResultsCarousel from './results/ResultsCarousel';
 
-const data = [
-  {
-    logo: lottoLogo,
-    gradient: false,
-    backgroundImage: redbg,
-  },
-  {
-    logo: EuroMillionsWhite,
-    gradient: false,
-    backgroundImage: yellowBg,
-  },
-  {
-    logo: EuroDreams,
-    gradient: true,
-    backgroundImage:
-      'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
-  },
-  {
-    logo: DailyMillions,
-    gradient: false,
-    backgroundImage: blueBg,
-  },
-  {
-    logo: Lotto54321,
-    gradient: false,
-    backgroundImage: lottoBackStar,
-  },
-  {
-    logo: TellyBingo,
-    gradient: false,
-    backgroundImage: purpleBg,
-  },
-];
 const ResultsDropDown = () => {
   return (
     <div>
-      <div className="flex p-[1rem] gap-[0.5rem]">
-        {data.map((val, index) => {
-          return (
-            <div key={index}>
-              <ResultsCard
-                logo={val.logo}
-                gradient={val.gradient}
-                backgroundImage={val.backgroundImage}
-              />
-            </div>
-          );
-        })}
+      <div className="w-[1024px] flex justify-center">
+        <ResultsCarousel />
       </div>
       <div>
         <div

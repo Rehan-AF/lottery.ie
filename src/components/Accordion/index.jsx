@@ -1,20 +1,34 @@
-import { useState } from 'react';
-
-const Accorion = ({ children, title, center = false, pading = false }) => {
+import { useEffect, useState } from 'react';
+import './styles.css';
+const Accorion = ({
+  children,
+  title,
+  center = false,
+  pading = false,
+  navbar = false,
+  animate = false,
+}) => {
   const [lotteryVisible, setLotteryVisible] = useState(false);
 
   const toggleLotteryVisibility = () => {
     setLotteryVisible(!lotteryVisible);
   };
+
+  useEffect(() => {
+    if (animate) {
+      animate(lotteryVisible);
+    }
+  }, [animate, lotteryVisible]);
+
   return (
     <>
       <div
         onClick={toggleLotteryVisibility}
-        className={`flex  ${
+        className={`flex ${
           center === true ? 'justify-center' : 'justify-between'
-        } ${
-          pading === true ? 'px-[27px]' : 'px[0rem] py-3'
-        }  md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]`}
+        } ${pading === true ? 'px-[27px]' : 'px[0rem] py-3'} ${
+          navbar === true ? 'pb-[12px]' : 'pb[0px]'
+        } m-h-[100%] items-center sm:flex-row-reverse md:flex-row-reverse md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]`}
       >
         <p className="font-bold tracking-wide cursor-pointer text-black ">
           {title}
@@ -41,7 +55,17 @@ const Accorion = ({ children, title, center = false, pading = false }) => {
           </svg>
         </span>
       </div>
-      {lotteryVisible && <div className="animate-slide-in">{children}</div>}
+      <div className="">
+        <div
+          className={`${
+            lotteryVisible === true
+              ? ' opening_animation_accordion'
+              : 'closing_animation_accordion'
+          } element_style_accordion animate-slide-in element_style element_style`}
+        >
+          {children}
+        </div>
+      </div>
     </>
   );
 };

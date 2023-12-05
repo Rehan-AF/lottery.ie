@@ -1,16 +1,14 @@
 import { useState } from 'react';
-import './style.css'; // Import your CSS file for styling
+import './style.css';
 
-const DropDown = ({ title, children, position }) => {
-  const [visible, setVisible] = useState(false);
-
+const DropDown = ({ title, children, position, visible, onToggle }) => {
   return (
-    <div className="dropdown-container">
+    <div className="dropdown-container z-30">
       <button
         className={`flex items-center text-gray-700 relative mx-3 py-4 text-base leading-5 font-bold justify-center ${
           visible === true ? 'border-b-[5px] border-gray-700' : 'border-b-none'
         }`}
-        onClick={() => setVisible(!visible)}
+        onClick={onToggle}
       >
         {title}
         <svg
@@ -31,13 +29,18 @@ const DropDown = ({ title, children, position }) => {
           ></path>
         </svg>
       </button>
-      {visible ? (
+
+      <div
+        className={`absolute left-[${position}%] mt-[40px] z-10  w-[w-full]`}
+      >
         <div
-          className={`absolute left-[${position}%] mt-[40px] z-10 animate__animated animate__pulse w-[w-full] bg-white rounded-md shadow-lg`}
+          className={`flex gap-[1rem] ${
+            visible ? 'opening-animation' : 'closing-animation'
+          } element_style rounded-md shadow-lg animate__delay-1s bg-white`}
         >
-          <div className=" flex gap-[1rem] animate__delay-1s">{children}</div>
+          {children}
         </div>
-      ) : null}
+      </div>
     </div>
   );
 };
