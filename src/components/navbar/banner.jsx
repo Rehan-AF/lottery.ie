@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <a
-      className="w-full h-6.5 mt-4 bg-gray-600 via-blue-300 to-blue-700 text-white overflow-hidden flex justify-center banner-container"
+      className="w-full h-6.5 bg-gray-600 via-blue-300 to-blue-700 lg:mt-[1rem] text-white overflow-hidden flex justify-center banner-container"
       href="https://www.lottery.ie/how-to-play/eurodreams"
     >
       <a

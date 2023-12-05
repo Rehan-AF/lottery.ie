@@ -7,15 +7,14 @@ import ResultsPage from '../pages/resultsPage';
 import ResultsCard from '../components/resultsComponent/resultsCard';
 import MobileNav from '../components/navbar/MobileNav';
 import Template from '../components/template';
+import CustomArrows from '../components/navbar/games/GameCarousel';
 
 const Routers = () => {
   return (
     <div>
       <Router>
-        <div className="sm:block lg:hidden">
-          <Template>
-            <MobileNav />
-          </Template>
+        <div className="sm:block lg:hidden px-[1rem] py-[2px]">
+          <MobileNav />
         </div>
         <div className="sm:hidden lg:block">
           <Navbar />
@@ -24,6 +23,7 @@ const Routers = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/results" element={<ResultsPage />} />
+          <Route path="/caroucel" element={<CustomArrows />} />
         </Routes>
         <Footer />
       </Router>

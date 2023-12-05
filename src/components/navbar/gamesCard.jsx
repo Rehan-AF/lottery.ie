@@ -36,7 +36,7 @@ const GamesCard = ({
             <div className="filter drop-shadow">
               <img
                 alt="white Lotto logo"
-                className="h-10 w-auto"
+                className="h-10 w-[80px]"
                 src={logo}
                 role="img"
               />

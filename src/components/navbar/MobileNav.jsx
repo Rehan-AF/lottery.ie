@@ -15,9 +15,9 @@ const MobileNav = () => {
   };
   return (
     <div className="">
-      <div className="sm:flex hidden lg:hidden">
-        <div className="sm:flex sm:items-end sm:flex-row-reverse lg:hidden sm:gap-3">
-          <span className="text-[13px] inline-flex flex-col justify-center px-4 text-sm font-bold uppercase border border-gray-900 rounded-full box-content py-2 lg:hidden ">
+      <div className="sm:flex items-end lg:hidden">
+        <div className="sm:flex w-1/3 justify-end sm:items-end sm:flex-row-reverse lg:hidden sm:gap-3">
+          <span className=" h-[31px] inline-flex flex-col justify-center px-[12px] text-[12px] font-bold uppercase border border-gray-900 rounded-full box-content lg:hidden ">
             Sign In
           </span>
           <div className="sm:flex items-center mb-[10px] lg:hidden">

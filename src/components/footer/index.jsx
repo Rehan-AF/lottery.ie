@@ -52,8 +52,8 @@ export const Footer = () => {
           Responsible play information
         </a>
       </section>
-      <section className="sm:flex md:hidden bg-[#49636e] text-white items-center justify-start pl-[1rem] sm:h-[63px]">
-        <div className=" text-[#49636e] font-bold h-[36px] w-[36px] bg-white rounded-full flex justify-center items-center">
+      <section className="sm:flex md:hidden py-[12px] px-[16px] bg-[#49636e] text-white items-center justify-start pl-[1rem] ">
+        <div className=" self-start mt-[10px] text-[#49636e] text-[12px] font-bold h-[32px] w-[32px] bg-white rounded-full flex justify-center items-center">
           18+
         </div>
         <div className=" flex flex-col justify-center">
@@ -62,7 +62,7 @@ export const Footer = () => {
             around Ireland.
           </p>
           <a
-            className="flex pl-[9px] text-[0.75rem]"
+            className="flex pl-[9px] text-[12px] underline"
             href="/useful-info/play-responsibly"
           >
             Responsible play information
@@ -272,7 +272,7 @@ export const Footer = () => {
                   </button>
                 </form>
               </div>
-              <div className="flex  md:border-t-0 border-t border-gray-300 py-4 lg:w-full items-start md:flex-row-reverse lg:flex-col lg:items-end ]">
+              <div className="flex  md:border-t-0 border-t border-gray-300 py-4 lg:w-full items-start sm:flex-row-reverse lg:flex-col lg:items-end ]">
                 <div className="svg mx-2 md:mx-0">
                   <svg
                     width="47"
@@ -323,7 +323,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-between pt-5 flex-col md:flex-row pb-10 border-t border-[#1222282c] mr-4">
+        <div className="flex justify-between pt-5 flex-col md:flex-row pb-[1rem] border-t border-[#1222282c] mr-4">
           <div className="flex px-2  w-full items-center mt-4 space-x-4 sm:mt-0 justify-end">
             <h6 className="text-[13.5px] text-[#49636e] mt-2">
               &copy;2023 National Lottery

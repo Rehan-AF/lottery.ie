@@ -216,7 +216,7 @@ const ResultsCard = ({
               <div className="mt-2 lg:flex hidden justify-start ">
                 <img
                   alt="logo"
-                  className="w-11 md:w-12 lg:w-24 h-10"
+                  className="ml-[1rem] w-11 md:w-12 lg:w-24 h-10"
                   src={secondLogo}
                   role="img"
                 />

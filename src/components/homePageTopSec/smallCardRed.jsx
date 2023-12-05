@@ -162,7 +162,7 @@ const SmallCardRed = ({
       </div>
       {/* full size screen start  */}
       <button
-        className=" group cursor-pointer text-left w-full h-full xl:flex hidden items-end  "
+        className="group cursor-pointer text-left w-full h-full xl:flex hidden items-end  "
         role="link"
       >
         <div
@@ -185,7 +185,7 @@ const SmallCardRed = ({
           )}
 
           <div className="flex flex-row md:flex-row flex-wrap md:no-wrap flex-end  lg:flex-col h-full justify-between md:justify-start lg:space-y-4 items-end">
-            <div className="mr-[-10px]  self-end  filter drop-shadow w-1/2 md:w-1/3 lg:w-auto  ">
+            <div className="  self-end  filter drop-shadow w-[116px] md:w-1/3 lg:w-auto  ">
               <img
                 alt="white Lotto logo"
                 className="h-12"
@@ -211,7 +211,7 @@ const SmallCardRed = ({
             </p>
             <div className="flex flex-col space-y-1 w-1/2 md:w-1/3 lg:w-auto">
               <div className="flex flex-col">
-                <h1 className="flex self-end pr-2 md:text-base md:text-[16px] shadow-text font-bold text-lg">
+                <h1 className="flex self-end md:text-base md:text-[16px] shadow-text font-bold text-lg">
                   {drew}
                 </h1>
                 <h2 className="flex self-end pr- md:text-lg shadow-text leading-5 font-black text-lg">

@@ -9,6 +9,7 @@ import Accorion from '../Accordion/index';
 import './navStyles.css';
 import { useState } from 'react';
 import { GamesAccordions, ResultsAccordion } from './mobileNavAccordions';
+import mainLogo from '../../assets/smallLogo.svg';
 import { Link } from 'react-router-dom';
 export default function Navbar() {
   const [panelVisible, setPanelVisible] = useState(false);
@@ -40,7 +41,7 @@ export default function Navbar() {
                   <Link to="/">
                     <img
                       className="w-32 h-14"
-                      src="https://www.lottery.ie/mkd/images/star-logo-with-text.webp"
+                      src={mainLogo}
                       alt="Your Company"
                     />
                   </Link>
@@ -74,7 +75,7 @@ export default function Navbar() {
                     </DropDown>
                     <DropDown
                       title={'Results'}
-                      position={-853}
+                      position={-840}
                       visible={resultsVisible}
                       onToggle={handleResultsToggle}
                     >

@@ -29,7 +29,7 @@ const ResultsCard = ({
       >
         <div className="flex flex-col pt-10 h-full w-full justify-end items-center mb-6">
           <div className="relative mb-10 filter drop-shadow">
-            <img alt="logo" className="w-[171px]" src={logo} role="img" />
+            <img alt="logo" className="w-[100px]" src={logo} role="img" />
           </div>
           <button
             role="link"
