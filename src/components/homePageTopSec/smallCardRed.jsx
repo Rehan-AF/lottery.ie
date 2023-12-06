@@ -22,7 +22,7 @@ const SmallCardRed = ({
     >
       {/*for mobile   */}
       <div
-        className={`on_hover maindiv sm:w-full md:hidden flex justify-between  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse ${
+        className={`on_hover maindiv sm:w-full md:hidden flex justify-between  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden sm:flex-row md:flex-row-reverse ${
           gradient === true ? 'relative' : ''
         }`}
         style={
@@ -42,7 +42,7 @@ const SmallCardRed = ({
         <div className="flex flex-col justify-between ">
           <img
             alt="white Lotto logo"
-            className="h-12"
+            className="h-12 sm:self-baseline"
             src={logoSrc}
             role="img"
           />
@@ -108,7 +108,7 @@ const SmallCardRed = ({
             <img src={radient_left} alt="sda" />
           </div>
         )}
-        <div className="filter drop-shadow w-1/2 md:w-1/3 lg:w-auto flex justify-end">
+        <div className="sm:self-start md:self-center filter drop-shadow w-1/2 md:w-1/3 lg:w-auto flex justify-end">
           <img
             alt="white Daily Million logo"
             className="h-12"

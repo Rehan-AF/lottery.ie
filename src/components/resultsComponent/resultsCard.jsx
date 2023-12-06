@@ -25,12 +25,11 @@ const ResultsCard = ({
       <div className="relative shadow_custom my-2 lg:flex lg:justify-between bg-white rounded-md">
         <div className="lg:w-full flex flex-col justify-evenly">
           <div className="px-4 md:px-9">
-            <div className="bg-white flex flex-row-reverse justify-between pt-3 sm:pb-[0px] md:pb-3 rounded-t-lg">
+            <div className="bg-white flex flex-row justify-between pt-3 sm:pb-[0px] md:pb-3 rounded-t-lg">
               <div className="w-22 -mb-1">
                 <GameLogos
                   logoName={secondLogo}
                   width={108}
-                  className="pl-[1rem]"
                   color={winingColor}
                   customClass={customClass}
                 />

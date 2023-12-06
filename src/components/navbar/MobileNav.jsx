@@ -15,7 +15,7 @@ const MobileNav = () => {
   };
   return (
     <div className="">
-      <div className="sm:flex items-end lg:hidden">
+      <div className="sm:flex items-center lg:hidden">
         <div className="sm:flex w-1/3 justify-end sm:items-end sm:flex-row-reverse lg:hidden sm:gap-3">
           <span className=" h-[31px] inline-flex flex-col justify-center px-[12px] text-[12px] font-bold uppercase border border-gray-900 rounded-full box-content lg:hidden ">
             Sign In
@@ -41,7 +41,7 @@ const MobileNav = () => {
         <div className="-mr-2 w-1/3 flex lg:hidden justify-end">
           {/* Mobile menu button */}
           <button
-            className="relative inline-flex items-center justify-center rounded-md p-2 pb-0 text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            className="relative inline-flex items-center justify-center rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             onClick={() => {
               setPanelVisible(true);
               console.log('clicked');
@@ -149,7 +149,10 @@ const MobileNav = () => {
                   navbar={true}
                   animate={setResultsPanelVisible}
                 >
-                  <ResultsAccordion isVisible={resultsPanelVisible} />
+                  <ResultsAccordion
+                    setPanelVisible={setPanelVisible}
+                    isVisible={resultsPanelVisible}
+                  />
                 </Accorion>
               </Disclosure.Button>
 

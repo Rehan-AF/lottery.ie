@@ -14,8 +14,8 @@ const CardGreen = () => {
             backgroundImage: `url("${backgroundImage5}")`,
           }}
         >
-          <div className="flex flex-row-reverse flex-wrap md:no-wrap items-center h-full justify-between md:items-end">
-            <div className="flex justify-end self-start md:self-center filter drop-shadow w-1/2 md:w-1/3">
+          <div className="flex sm:flex-row md:flex-row-reverse flex-wrap md:no-wrap items-center h-full justify-between md:items-end">
+            <div className="flex sm:justify-start md:justify-end self-start md:self-center filter drop-shadow w-1/2 md:w-1/3">
               <img
                 alt="white millionaire raffle logo"
                 className="h-12 lg:h-16"
@@ -46,9 +46,12 @@ const CardGreen = () => {
                     </span>
                   </span>
                 </span>
+                <p className="sm:text-end text-white md:absolute md:hidden text-sm font-normal pr-4 absolute bottom-0 right-[0px] pb-2.5 w-1/2 md:w-auto">
+                  *guaranteed
+                </p>
               </div>
             </div>
-            <div className="sm:justify-end flex flex-start md:flex-col md:items-start  h-auto -mt-3 md:mt-0 bottom-4 w-1/2 md:w-1/3 false">
+            <div className=" flex flex-start md:flex-col md:items-start  h-auto -mt-3 md:mt-0 bottom-4 w-1/2 md:w-1/3 false">
               <a
                 aria-label="Play for €25 link"
                 className="no_hover_shadow md:self-start on_hover no_hover_shadow flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
@@ -64,9 +67,6 @@ const CardGreen = () => {
                 *guaranteed
               </p>
             </div>
-            <p className="sm:text-end text-white md:absolute md:hidden text-sm font-normal pr-4 absolute bottom-0 left-[16px] pb-2.5 w-1/2 md:w-auto">
-              *guaranteed
-            </p>
           </div>
         </div>
       </button>

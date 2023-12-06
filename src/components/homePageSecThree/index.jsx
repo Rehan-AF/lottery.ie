@@ -4,14 +4,14 @@ const HomePageSecThree = () => {
   return (
     <>
       <div
-        className="mt-[4.5rem] pt-[2rem] pb-[2rem] text-center text-white md:px-[105px] w-full flex flex-col items-center relative rounded-lg overflow-hidden xl:flex-row-reverse xl:items-center xl:justify-center xl:h-80 xl:text-left xl:px-1/12"
+        className=" pt-[2rem] pb-[2rem] text-center text-white md:px-[105px] w-full flex flex-col items-center relative rounded-lg overflow-hidden xl:flex-row-reverse xl:items-center xl:justify-center xl:h-80 xl:text-left xl:px-1/12"
         style={{
           backgroundImage: `url(${greenBack})`,
           backgroundSize: 'cover',
         }}
       >
         <h2 className="text-white text-center z-10 md:text-[36px] md:pr-[0px] md:text-center lg:text-end whitespace-pre-wrap  lg:p-0 lg:flex-grow lg:max-w-2xl lg:pr-4 font-black text-[1.75rem] md:text-4xl md:text-4xl-xtra lg:justify-end">
-          <span className='flex lg:justify-end items-end'>
+          <span className="flex lg:justify-end items-end">
             Good Causes
             <br />
             and The National Lottery
@@ -39,7 +39,7 @@ const HomePageSecThree = () => {
               className="hover:shadow-lg flex md:p-[1rem] items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-60 mt-4 p-4 lg:w-32 px-4 py-1 text-gray-700 bg-white active:bg-blue-lighter-04 lg:text-center"
               data-selected="false"
             >
-              <span className=''>LEARN MORE</span>
+              <span className="">LEARN MORE</span>
             </button>
           </div>
           <div className="w-full flex justify-center lg:justify-end lg:text-end">
@@ -58,7 +58,7 @@ export default HomePageSecThree;
 
 const SecondPart = () => {
   return (
-    <div className="mt-[4.5rem]  flex flex-col xl:gap-[5rem] items-center text-center my-25 xl:flex-row xl:justify-center xl:text-right">
+    <div className="mt-[4.5rem] pb-[2rem]  flex flex-col xl:gap-[5rem] items-center text-center my-25 xl:flex-row xl:justify-center xl:text-right">
       <img
         className="w-40 xl:w-52"
         src="https://www.lottery.ie/mkd/images/StarWithClipboard.svg"

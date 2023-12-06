@@ -26,7 +26,7 @@ const BigCard = () => {
             <img
               src={backgroundImage2}
               alt="logo background"
-              className="w-full h-full object-cover object-top"
+              className="sm:h-[190px] md:h-full w-full h-full object-cover object-top"
             />
           </div>
           <div className="md:flex-row-reverse sm:flex-row-reverse w-full flex flex-row flex-wrap md:flex-nowrap lg:flex-col items-center lg:items-start px-4 py-4 justify-between md:space-y-4 relative md:items-end">

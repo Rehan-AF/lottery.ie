@@ -80,18 +80,15 @@
 /* Responsive styles for small screens */
 @media (max-width: 600px) {
   .banner-text {
-    animation: moveTextSmallScreen 30s linear infinite; /* Adjust the duration for small screens */
+    animation: moveTextSmallScreen 13s linear infinite; /* Adjust the duration for small screens */
   }
 
   @keyframes moveTextSmallScreen {
     0% {
-      transform: translateX(99%);
-    }
-    50% {
-      transform: translateX(-99%);
+      transform: translateX(100%); /* Start from 100% (right) */
     }
     100% {
-      transform: translateX(99%);
+      transform: translateX(-100%); /* Move to -100% (left) */
     }
   }
 }
