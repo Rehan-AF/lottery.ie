@@ -98,7 +98,7 @@ const items = [
     {data?.map((val, index) => {
       return (
         <>
-          {index >= 0 && index <= 3 ? (
+          {index >= 0 && index <= 5 ? (
             <div key={index} className="flex">
               <GamesCard
                 logo={val.logo}
@@ -116,14 +116,14 @@ const items = [
     })}
   </div>,
   <div
-    className="item flex px-[1rem] pb-[1rem] flex-row gap-[0.5rem] justify-center"
+    className="item flex pr-[1rem] pl-[0.15rem] pb-[1rem] flex-row gap-[0.5rem] justify-start"
     data-value="2"
     key={2}
   >
     {data?.map((val, index) => {
       return (
         <>
-          {index >= 4 && index <= 7 ? (
+          {index >= 6 && index <= 7 ? (
             <div key={index} className="flex">
               <GamesCard
                 logo={val.logo}
@@ -141,17 +141,40 @@ const items = [
     })}
   </div>,
 ];
-
-const GameCarousel = () => (
-  <AliceCarousel
-    mouseTracking={true}
-    items={items}
-    responsive={1}
-    controlsStrategy="alternate"
-    autoWidth={true}
-    infinite={true}
-    disableDotsControls={false}
-    keyboardNavigation={true}
-  />
-);
+const items2 = data?.map((val, index) => (
+  <div
+    className="item flex p-[1rem] flex-row gap-[0.5rem] justify-center"
+    data-value="2"
+    key={index}
+  >
+    <div className="flex">
+      <GamesCard
+        logo={val.logo}
+        background={val.background}
+        date={val.date}
+        amount={val.amount}
+        playFor={val.playFor}
+        gradient={val.gradient}
+        animationDuration={val.animationDuration}
+      />
+    </div>
+  </div>
+));
+const GameCarousel = ({ firstItem = 0, secondItem = 6 }) => {
+  const sixItems =
+    items2 && items2.length >= 6 ? items2.slice(firstItem, secondItem) : [];
+  return (
+    <AliceCarousel
+      slidesToShow={4}
+      mouseTracking={true}
+      items={sixItems}
+      responsive={1}
+      controlsStrategy="alternate"
+      autoWidth={true}
+      infinite={true}
+      disableDotsControls={false}
+      keyboardNavigation={true}
+    />
+  );
+};
 export default GameCarousel;

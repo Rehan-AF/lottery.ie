@@ -52,7 +52,7 @@ export const Footer = () => {
           Responsible play information
         </a>
       </section>
-      <section className="sm:flex md:hidden py-[12px] px-[16px] bg-[#49636e] text-white items-center justify-start pl-[1rem] ">
+      <section className="sm:flex flex-row-reverse text-right md:hidden py-[12px] px-[16px] bg-[#49636e] text-white items-center justify-start pl-[1rem] ">
         <div className=" self-start mt-[10px] text-[#49636e] text-[12px] font-bold h-[32px] w-[32px] bg-white rounded-full flex justify-center items-center">
           18+
         </div>
@@ -62,7 +62,7 @@ export const Footer = () => {
             around Ireland.
           </p>
           <a
-            className="flex pl-[9px] text-[12px] underline"
+            className="flex justify-end pr-[18px] text-[12px] underline"
             href="/useful-info/play-responsibly"
           >
             Responsible play information

@@ -38,7 +38,7 @@ export default function Navbar() {
             <div className="flex h-16 items-center justify-between pt-4 flex-row lg:flex-row-reverse">
               <div className="flex items-center w-2/3 lg:gap-[2rem] flex-row-reverse custom_width sm:justify-start">
                 <div className="flex-shrink-0 lg:mr-6">
-                  <Link to="/">
+                  <Link to="/" onClick={() => setResultsVisible(false)}>
                     <img
                       className="w-32 h-14"
                       src={mainLogo}
@@ -80,7 +80,9 @@ export default function Navbar() {
                       onToggle={handleResultsToggle}
                     >
                       <div className="w-[100%]">
-                        <ResultsDropDown />
+                        <ResultsDropDown
+                          setResultsVisible={setResultsVisible}
+                        />
                       </div>
                     </DropDown>
                   </div>

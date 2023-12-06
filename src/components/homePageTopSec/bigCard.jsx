@@ -26,10 +26,10 @@ const BigCard = () => {
             <img
               src={backgroundImage2}
               alt="logo background"
-              className="w-full h-full object-cover object-top"
+              className="sm:h-[190px] md:h-full w-full h-full object-cover object-top"
             />
           </div>
-          <div className="md:flex-row-reverse sm:flex-row-reverse w-full flex flex-row flex-wrap md:flex-nowrap lg:flex-col items-center lg:items-start px-4 py-4 justify-between md:space-y-4 relative">
+          <div className="md:flex-row-reverse sm:flex-row-reverse w-full flex flex-row flex-wrap md:flex-nowrap lg:flex-col items-center lg:items-start px-4 py-4 justify-between md:space-y-4 relative md:items-end">
             <div className="sm:flex sm:justify-end  sm:pr-[0px] sm:text-end lg:flex lg:justify-end md:self-center w-1/2 md:w-1/3 lg:w-full md:justify-end md:flex">
               <img
                 alt="white EuroMillions logo"
@@ -73,7 +73,7 @@ const BigCard = () => {
                 </p>
               </div>
             </div>
-            <div className="flex lg:w-full justify-end md:justify-end lg:flex-row md:w-1/3">
+            <div className="flex lg:w-full justify-end md:justify-start lg:justify-end lg:flex-row md:w-1/3">
               <a
                 aria-label="Play from €2.50 link"
                 className="no_hover_shadow on_hover flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"

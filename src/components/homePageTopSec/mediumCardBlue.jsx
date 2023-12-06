@@ -12,8 +12,8 @@ const MediumCardBlue = ({ backgroundImage, logo }) => {
             backgroundImage: `url("${backgroundImage}")`,
           }}
         >
-          <div className="sm:flex-row-reverse flex flex-row flex-wrap md:no-wrap items-center h-full justify-between">
-            <div className="sm:flex sm:justify-end self-start md:self-center filter drop-shadow w-1/2 md:w-1/3">
+          <div className="sm:flex-row md:flex-row-reverse flex flex-row flex-wrap md:no-wrap items-center h-full justify-between md:items-end ">
+            <div className="sm:flex sm:justify-start md:justify-end self-start md:self-center filter drop-shadow w-1/2 md:w-1/3">
               <img
                 alt="white millionaire raffle logo"
                 className="h-12 lg:h-16"
@@ -44,12 +44,15 @@ const MediumCardBlue = ({ backgroundImage, logo }) => {
                     </span>
                   </span>
                 </span>
+                <p className=" sm:right-[77px] text-white md:hidden text-sm font-normal pr-4 absolute bottom-0 right-0 pb-2.5 w-1/2 md:w-auto">
+                  *guaranteed
+                </p>
               </div>
             </div>
-            <div className="sm:justify-end flex flex-start h-auto md:flex-col md:items-end -mt-3 md:mt-0 bottom-4 w-1/2 md:w-1/3 md:justify-end false">
+            <div className="sm:justify-start flex flex-start h-auto md:flex-col md:items-start -mt-3 md:mt-0 bottom-4 w-1/2 md:w-1/3 md:justify-end false">
               <a
                 aria-label="Play for €25 link"
-                className="on_hover no_hover_shadow flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
+                className="on_hover no_hover_shadow flex justify-center self-start cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
                 href="/"
               >
                 <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
@@ -58,13 +61,10 @@ const MediumCardBlue = ({ backgroundImage, logo }) => {
                   </div>
                 </div>
               </a>
-              <p className="sm:text-end  hidden md:block text-white md:none text-sm md:pt-[2.5rem] font-normal pr-4 bottom-0 left-[16px] pb-2.5 w-1/2">
+              <p className="sm:text-start  hidden md:block text-white md:none text-sm  font-normal pr-4 bottom-0 left-[16px] pt-2.5 w-1/2">
                 *guaranteed
               </p>
             </div>
-            <p className="sm:absolute sm:right-[77px] text-white md:hidden text-sm font-normal pr-4 absolute bottom-0 right-0 pb-2.5 w-1/2 md:w-auto">
-              *guaranteed
-            </p>
           </div>
         </div>
       </button>

@@ -3,8 +3,8 @@ import radient_left from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-l
 import radient_right from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-right.svg';
 
 import './styles.css';
+import GameLogos from '../svg/GameLogos.jsx';
 const ResultsCard = ({
-  logo,
   JackportAmount,
   date,
   winingNumbers,
@@ -18,15 +18,21 @@ const ResultsCard = ({
   specialNumbers = false,
   winingNumbers2 = false,
   columnNumber = 6,
+  customClass,
 }) => {
   return (
     <div>
       <div className="relative shadow_custom my-2 lg:flex lg:justify-between bg-white rounded-md">
         <div className="lg:w-full flex flex-col justify-evenly">
           <div className="px-4 md:px-9">
-            <div className="bg-white flex flex-row-reverse justify-between pt-3 sm:pb-[0px] md:pb-3 rounded-t-lg">
+            <div className="bg-white flex flex-row justify-between pt-3 sm:pb-[0px] md:pb-3 rounded-t-lg">
               <div className="w-22 -mb-1">
-                <img src={logo} alt="Lotto logo" className="w-full h-full" />
+                <GameLogos
+                  logoName={secondLogo}
+                  width={108}
+                  color={winingColor}
+                  customClass={customClass}
+                />
               </div>
               <div className="text-right">
                 <p className="text-bold text-base sm:text-[14px] md:text-[15.5px] text-[#49636e]">
@@ -214,11 +220,17 @@ const ResultsCard = ({
             )}
             <div className="flex flex-1 flex-row md:justify-center lg:justify-start lg:flex-col lg:h-full lg:mb-auto z-1 gap-2 md:gap-0">
               <div className="mt-2 lg:flex hidden justify-start ">
-                <img
+                {/* <img
                   alt="logo"
                   className="ml-[1rem] w-11 md:w-12 lg:w-24 h-10"
                   src={secondLogo}
                   role="img"
+                /> */}
+                <GameLogos
+                  logoName={secondLogo}
+                  width={108}
+                  className="pl-[1rem]"
+                  color="#fff"
                 />
               </div>
               <div className="text_shadow_results items-center ml-2 my-auto md:flex md:ml-0 md:my-3 lg:ml-3 lg:flex-col lg:flex-grow lg:h-full lg:mt-0 lg:items-start">

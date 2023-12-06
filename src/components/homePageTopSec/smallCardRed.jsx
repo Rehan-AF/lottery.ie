@@ -22,7 +22,7 @@ const SmallCardRed = ({
     >
       {/*for mobile   */}
       <div
-        className={`on_hover maindiv sm:w-full md:hidden flex justify-between  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse ${
+        className={`on_hover maindiv sm:w-full md:hidden flex justify-between  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden sm:flex-row md:flex-row-reverse ${
           gradient === true ? 'relative' : ''
         }`}
         style={
@@ -42,7 +42,7 @@ const SmallCardRed = ({
         <div className="flex flex-col justify-between ">
           <img
             alt="white Lotto logo"
-            className="h-12"
+            className="h-12 sm:self-baseline"
             src={logoSrc}
             role="img"
           />
@@ -91,7 +91,7 @@ const SmallCardRed = ({
       {/* for medium screen */}
 
       <div
-        className={`on_hover maindiv items-center md:flex md:w-full xl:hidden justify-between hidden md  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse justify-center ${
+        className={`on_hover maindiv  md:flex md:w-full xl:hidden justify-between hidden md  bg-lottoCardBackground bg-left bg-cover bg-no-repeat text-white rounded-lg relative py-3 px-3 w-full h-full transition-shadow duration-200 hover:shadow-cardHov overflow-hidden flex-row-reverse justify-center md:items-end ${
           gradient === true ? 'relative' : ''
         }`}
         style={
@@ -108,7 +108,7 @@ const SmallCardRed = ({
             <img src={radient_left} alt="sda" />
           </div>
         )}
-        <div className="filter drop-shadow w-1/2 md:w-1/3 lg:w-auto flex justify-end">
+        <div className="sm:self-start md:self-center filter drop-shadow w-1/2 md:w-1/3 lg:w-auto flex justify-end">
           <img
             alt="white Daily Million logo"
             className="h-12"
@@ -142,14 +142,14 @@ const SmallCardRed = ({
             </span>
           </h3>
         </div>
-        <div className="md:text-end md:flex md:flex-col md:items-end md:w-1/3">
+        <div className="md:text-end md:flex md:flex-col md:items-start md:w-1/3">
           <div className="rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
             <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
               <span aria-label="play from €1">Play from €1</span>
             </div>
           </div>
 
-          <p className="text-left text-white text-x-sm font-bold  w-1/2 md:w-auto md:pt-10">
+          <p className="text-left text-white text-x-sm font-bold  w-1/2 md:w-auto md:pt=[0.625rem]">
             {/* *estimated */}
             {estimatedLabel}
           </p>

@@ -82,7 +82,7 @@ const HomePageTopSection = () => {
 
               <SmallCardRed
                 backgroundImage={backgroundImage5}
-                logoSrc={logo8}
+                logoSrc={logo7}
                 playLink="/"
                 playLabel="Play from €4"
                 drawDay="Sunday"

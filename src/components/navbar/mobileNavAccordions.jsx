@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const GamesAccordions = ({ isVisible }) => {
   return (
     <div>
@@ -178,7 +180,7 @@ export const GamesAccordions = ({ isVisible }) => {
   );
 };
 
-export const ResultsAccordion = ({ isVisible }) => {
+export const ResultsAccordion = ({ setPanelVisible, isVisible }) => {
   return (
     <div className="overflow-hidden transition-max-height duration-700 ease-in-out flex-1 bg-gray-100">
       <div className="flex flex-col sm:gap-[0.7rem] md:gap-[0.7rem] text-lg space-y-4 font-bold mb-2 px-6 py-4 sm:items-end md:items-end">
@@ -248,13 +250,14 @@ export const ResultsAccordion = ({ isVisible }) => {
           } Accordioncard flex flex-col items-start`}
           style={{ animationDuration: '0.9000000000000001s' }}
         >
-          <a
-            role="button"
-            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 text-gray-700 bg-white border-blue-800 active:bg-blue-lighter-04"
-            href="/results"
-          >
-            <span>view all results</span>
-          </a>
+          <Link to="/results ">
+            <button
+              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 text-gray-700 bg-white border-blue-800 active:bg-blue-lighter-04"
+              onClick={() => setPanelVisible(false)}
+            >
+              <span>view all results</span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,21 @@
+.slick-arrow::before {
+  color: white !important;
+  opacity: 1;
+  font-size: 40px;
+  border-radius: 50%;
+  height: 20px;
+  width: 30px;
+  /* background-color: black; */
+  filter: drop-shadow(0 0 0.3rem rgb(56, 56, 56));
+}
+.slick-arrow {
+  z-index: 10;
+  height: 100%;
+}
+.slick-next {
+  position: absolute;
+  right: -5px;
+}
+.slick-track {
+  padding-bottom: 1rem;
+}
