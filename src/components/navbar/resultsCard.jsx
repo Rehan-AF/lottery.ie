@@ -9,7 +9,7 @@ const ResultsCard = ({
     <div
       tabIndex="0"
       role="link"
-      className="w-[176px] h-[234px] card"
+      className="w-[176px] card"
       aria-label="Lotto"
       style={{
         animationDuration: `${animationDuration}s`,
@@ -27,7 +27,7 @@ const ResultsCard = ({
           }`,
         }}
       >
-        <div className="flex flex-col pt-10 h-full w-full justify-end items-center mb-6">
+        <div className="flex flex-col h-full w-full justify-end items-center mb-6">
           <div className="relative mb-10 filter drop-shadow">
             <img alt="logo" className="w-[100px]" src={logo} role="img" />
           </div>

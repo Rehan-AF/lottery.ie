@@ -16,7 +16,7 @@ import gameLogo_5 from '../../../assets/gameLogos/05.svg';
 import gameLogo_6 from '../../../assets/gameLogos/06.svg';
 import gameLogo_7 from '../../../assets/gameLogos/07.svg';
 import gameLogo_8 from '../../../assets/gameLogos/08.svg';
-import '../games/styles.css';
+import './styles.css';
 import ResultsCard from '../resultsCard';
 const responsive = {
   568: { items: 2 },
@@ -83,7 +83,7 @@ const items = [
     {data?.map((val, index) => {
       return (
         <>
-          {index >= 0 && index <= 3 ? (
+          {index >= 0 && index <= 5 ? (
             <div key={index} className="flex">
               <ResultsCard
                 logo={val.logo}
@@ -98,14 +98,14 @@ const items = [
     })}
   </div>,
   <div
-    className="item flex p-[1rem] flex-row gap-[0.5rem] justify-center"
+    className="item flex pt-[1rem] pb-[1rem] pl-[1rem] pr-[1rem] flex-row gap-[0.5rem] justify-start"
     data-value="2"
     key={2}
   >
     {data?.map((val, index) => {
       return (
         <>
-          {index >= 4 && index <= 7 ? (
+          {index >= 6 && index <= 7 ? (
             <div key={index} className="flex">
               <ResultsCard
                 logo={val.logo}
@@ -129,7 +129,7 @@ const ResultsCarousel = () => (
     controlsStrategy="alternate"
     autoWidth={true}
     infinite={true}
-    disableDotsControls={true}
+    disableDotsControls={false}
     keyboardNavigation={true}
   />
 );

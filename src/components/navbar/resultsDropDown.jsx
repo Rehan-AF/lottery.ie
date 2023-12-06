@@ -1,24 +1,11 @@
-import ResultsCard from './resultsCard';
-import lottoLogo from '../../assets/results/LottoWhite.svg';
-import EuroMillionsWhite from '../../assets/results/EuroMillionsWhite.svg';
-import EuroDreams from '../../assets/results/EuroDreams.svg';
-import DailyMillions from '../../assets/results/DailyMillion.svg';
-import Lotto54321 from '../../assets/results/Lotto54321.svg';
-import TellyBingo from '../../assets/results/TellyBingo.svg';
-import redbg from '../../assets/results/redbg.svg';
-import yellowBg from '../../assets/results/yellowBg.svg';
-import blueBg from '../../assets/cards/DailyMillion-back.png';
-import lottoBackStar from '../../assets/cards/Lotto-back-star.png';
-import greenBg from '../../assets/results/greenBg.svg';
-import purpleBg from '../../assets/results/purpleBg.svg';
 import { Link } from 'react-router-dom';
-import ResultsCarousel from './results/ResultsCarousel';
+import GameCarousel from '../resultsCarousel';
 
-const ResultsDropDown = () => {
+const ResultsDropDown = ({ setResultsVisible }) => {
   return (
     <div>
-      <div className="w-[1024px] flex justify-center">
-        <ResultsCarousel />
+      <div className="w-[1150px] flex justify-center">
+        <GameCarousel />
       </div>
       <div>
         <div
@@ -29,7 +16,9 @@ const ResultsDropDown = () => {
             <button
               className="flex pb-[1rem] justify-center cursor-pointer leading-normal text-base font-bold group-hover:text-gray-prompt items-center"
               role="button"
-              onClick={() => {}}
+              onClick={() => {
+                setResultsVisible(false);
+              }}
             >
               View All Results
               <span className="pl-1 pr-2">

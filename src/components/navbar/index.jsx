@@ -80,7 +80,9 @@ export default function Navbar() {
                       onToggle={handleResultsToggle}
                     >
                       <div className="w-[100%]">
-                        <ResultsDropDown />
+                        <ResultsDropDown
+                          setResultsVisible={setResultsVisible}
+                        />
                       </div>
                     </DropDown>
                   </div>

@@ -1,4 +1,4 @@
-import GameCarousel from './games/GameCarousel';
+import GameCarousel from '../gamesCarousel';
 
 const GamesDropDown = () => {
   return (
@@ -8,7 +8,7 @@ const GamesDropDown = () => {
           Play Draw Games
         </h6>
       </div>
-      <div className="w-[1024px] flex justify-center">
+      <div className="w-[1120px] flex justify-center">
         <GameCarousel />
       </div>
       <div className="flex justify-between mt-[1rem]">
