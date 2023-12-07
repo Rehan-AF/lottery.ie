@@ -35,9 +35,8 @@ export const Footer = () => {
   }, []);
   return (
     <div
-      className=" bg-[#ffffff]"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url("${backgroundImage}")`,
         backgroundRepeat: 'no-repeat',
         backgroundPositionX: 'right',
         backgroundPositionY: 'bottom',
@@ -83,12 +82,12 @@ export const Footer = () => {
             <div className="w-full  lg:w-1/4">
               <div
                 onClick={toggleLotteryVisibility}
-                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0 lg:flex-row"
+                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  sm:flex-row-reverse mt-4 lg:mt-0 lg:flex-row"
               >
-                <p className="font-bold mx-2 flex  lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-start">
+                <p className="font-bold mx-2 flex  lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-end">
                   Lottery
                 </p>
-                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5 sm:justify-end">
+                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5 sm:justify-start">
                   <svg
                     width="12"
                     height="8"
@@ -145,12 +144,12 @@ export const Footer = () => {
             <div className="w-full  lg:w-1/4">
               <div
                 onClick={toggleInfoVisibility}
-                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0 lg:flex-row"
+                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  sm:flex-row-reverse mt-4 lg:mt-0 lg:flex-row"
               >
-                <p className="font-bold mx-2 flex justify-start lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-start ">
+                <p className="font-bold mx-2 flex justify-start lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-end ">
                   Useful Information
                 </p>
-                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5 sm:justify-end">
+                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5 sm:justify-start">
                   <svg
                     width="12"
                     height="8"

@@ -1,5 +1,4 @@
-import { Bars3Icon } from '@heroicons/react/24/outline';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import smallLogo from '../../assets/smallLogo.svg';
 import { Disclosure } from '@headlessui/react';
