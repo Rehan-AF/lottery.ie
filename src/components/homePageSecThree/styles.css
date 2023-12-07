@@ -1,0 +1,9 @@
+.greenCardSecTwo {
+  background-image: url(../../assets/greenBack.png);
+  background-size: 'cover';
+}
+@media (max-width: 768px) {
+  .greenCardSecTwo {
+    background-image: url(../../assets/backgrounds/greenBack.svg);
+  }
+}

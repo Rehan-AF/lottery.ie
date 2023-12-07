@@ -44,7 +44,7 @@ const MediumCardBlue = ({ backgroundImage, logo }) => {
                     </span>
                   </span>
                 </span>
-                <p className=" sm:right-[77px] text-white md:hidden text-sm font-normal pr-4 absolute bottom-0 right-0 pb-2.5 w-1/2 md:w-auto">
+                <p className="sm:text-end text-white md:absolute md:hidden text-sm font-normal pr-4 absolute bottom-0 right-[0px] pb-2.5 w-1/2 md:w-auto">
                   *guaranteed
                 </p>
               </div>

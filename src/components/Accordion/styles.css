@@ -7,7 +7,7 @@
 }
 
 .opening_animation_accordion {
-  max-height: 500px; /* Adjust the value as needed */
+  max-height: 600px; /* Adjust the value as needed */
   transition: max-height 0.5s ease-in-out;
 }
 

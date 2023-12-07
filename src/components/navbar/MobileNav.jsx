@@ -16,11 +16,11 @@ const MobileNav = () => {
   return (
     <div className="">
       <div className="sm:flex items-center lg:hidden">
-        <div className="sm:flex w-1/3 justify-end sm:items-end sm:flex-row-reverse lg:hidden sm:gap-3">
+        <div className="sm:flex w-1/3  justify-end sm:items-center sm:flex-row-reverse lg:hidden sm:gap-3">
           <span className=" h-[31px] inline-flex flex-col justify-center px-[12px] text-[12px] font-bold uppercase border border-gray-900 rounded-full box-content lg:hidden ">
             Sign In
           </span>
-          <div className="sm:flex items-center mb-[10px] lg:hidden">
+          <div className="sm:flex items-center lg:hidden">
             <svg
               className="sm:block lg:hidden w-5 h-5"
               fill="none"

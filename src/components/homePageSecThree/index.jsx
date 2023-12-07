@@ -1,15 +1,10 @@
 import greenBack from '../../assets/greenBack.png';
 import '../shadow.css';
+import './styles.css';
 const HomePageSecThree = () => {
   return (
     <>
-      <div
-        className=" pt-[2rem] pb-[2rem] text-center text-white md:px-[105px] w-full flex flex-col items-center relative rounded-lg overflow-hidden xl:flex-row-reverse xl:items-center xl:justify-center xl:h-80 xl:text-left xl:px-1/12"
-        style={{
-          backgroundImage: `url(${greenBack})`,
-          backgroundSize: 'cover',
-        }}
-      >
+      <div className="greenCardSecTwo pt-[2rem] pb-[2rem] text-center text-white md:px-[105px] w-full flex flex-col items-center relative rounded-lg overflow-hidden xl:flex-row-reverse xl:items-center xl:justify-center xl:h-80 xl:text-left xl:px-1/12">
         <h2 className="text-white text-center z-10 md:text-[36px] md:pr-[0px] md:text-center lg:text-end whitespace-pre-wrap  lg:p-0 lg:flex-grow lg:max-w-2xl lg:pr-4 font-black text-[1.75rem] md:text-4xl md:text-4xl-xtra lg:justify-end">
           <span className="flex lg:justify-end items-end">
             Good Causes
