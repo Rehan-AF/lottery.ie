@@ -73,7 +73,7 @@ const SmallCardRed = ({
             </p>
           </div>
           <div>
-            <p className="text-end text-white text-x-sm font-bold pl-4  pt-[14px] md:w-auto">
+            <p className="text-end text-white text-x-sm pl-4  pt-[14px] md:w-auto">
               {/* *estimated */}
               {estimatedLabel}
             </p>
@@ -149,7 +149,7 @@ const SmallCardRed = ({
             </div>
           </div>
 
-          <p className="text-left text-white text-x-sm font-bold  w-1/2 md:w-auto md:pt=[0.625rem]">
+          <p className="text-left text-white text-x-sm  w-1/2 md:w-auto sm:pt-2.5 md:pt=[0.625rem]">
             {/* *estimated */}
             {estimatedLabel}
           </p>
@@ -206,7 +206,7 @@ const SmallCardRed = ({
                 </div>
               </a>
             </div>
-            <p className=" pl-2 text-white text-x-sm font-bold pr-4 absolute bottom-0 left-0 pb-2.5 w-1/2 md:w-auto">
+            <p className=" pl-2 text-white text-x-sm pr-4 absolute bottom-0 left-0 pb-2.5 w-1/2 md:w-auto">
               {estimatedLabel}
             </p>
             <div className="flex flex-col space-y-1 w-1/2 md:w-1/3 lg:w-auto">

@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom';
-
+import logo_01 from '../../assets/gameLogoBlack/01.svg';
+import logo_02 from '../../assets/gameLogoBlack/02.svg';
+import logo_03 from '../../assets/gameLogoBlack/03.svg';
+import logo_04 from '../../assets/gameLogoBlack/04.svg';
+import logo_05 from '../../assets/gameLogoBlack/05.svg';
+import logo_06 from '../../assets/gameLogoBlack/06.svg';
+import logo_07 from '../../assets/gameLogoBlack/07.svg';
+import logo_08 from '../../assets/gameLogoBlack/08.svg';
 export const GamesAccordions = ({ isVisible }) => {
   return (
     <div>
@@ -12,10 +19,10 @@ export const GamesAccordions = ({ isVisible }) => {
               } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.3s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
-                Lotto
+              <h6 className="flex justify-center sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <img src={logo_01} className="w-[80px]" />
               </h6>
-              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
@@ -37,10 +44,10 @@ export const GamesAccordions = ({ isVisible }) => {
               } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.4s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
-                EuroMillions
+              <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <img src={logo_02} className="w-[80px]" />
               </h6>
-              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
@@ -62,16 +69,16 @@ export const GamesAccordions = ({ isVisible }) => {
               } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.5s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
-                EuroDreams
+              <h6 className="sm:w-1/3 md:w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <img src={logo_03} className="w-[80px]" />
               </h6>
-              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span className="text-sm md:text-sm lg:text-3xl">
-                    €20,000
-                    <div className="text-sm md:text-sm">
+                    €20,000&nbsp;
+                    <span className="text-sm md:text-sm">
                       per month for 30 years*
-                    </div>
+                    </span>
                   </span>
                 </p>
                 <p>
@@ -87,10 +94,10 @@ export const GamesAccordions = ({ isVisible }) => {
               } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.6000000000000001s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
-                Daily Million
+              <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <img src={logo_04} className="w-[80px]" />
               </h6>
-              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
@@ -112,10 +119,10 @@ export const GamesAccordions = ({ isVisible }) => {
               } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.7s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
-                Lotto 5-4-3-2-1
+              <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <img src={logo_05} className="w-[80px]" />
               </h6>
-              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span>€125,000**</span>
                 </p>
@@ -132,10 +139,10 @@ export const GamesAccordions = ({ isVisible }) => {
               } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.8s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
-                Millionaire Raffle
+              <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <img src={logo_06} className="w-[80px]" />
               </h6>
-              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
@@ -160,10 +167,30 @@ export const GamesAccordions = ({ isVisible }) => {
               } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
               style={{ animationDuration: '0.9000000000000001s' }}
             >
-              <h6 className="w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
-                Instant Win Games
+              <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <img src={logo_07} className="w-[80px]" />
               </h6>
-              <div className="w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <p className="font-bold text-gray-700">
+                  Win prizes up to €250,000
+                </p>
+              </div>
+            </div>
+          </button>
+          <button
+            aria-label="Instant Win Games, Win prizes up to €250,000"
+            className="text-left"
+          >
+            <div
+              className={`${
+                isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+              } Accordioncard flex items-center space-x-1 active:bg-blue-100 w-full px-6 h-12 sm:flex-row-reverse md:flex-row-reverse`}
+              style={{ animationDuration: '0.9900000000000001s' }}
+            >
+              <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+                <img src={logo_08} className="w-[80px]" />
+              </h6>
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <p className="font-bold text-gray-700">
                   Win prizes up to €250,000
                 </p>
@@ -191,7 +218,7 @@ export const ResultsAccordion = ({ setPanelVisible, isVisible }) => {
           style={{ animationDuration: '0.3s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
-            Lotto
+            <img src={logo_01} className="w-[80px]" />
           </div>
         </div>
         <div
@@ -201,7 +228,7 @@ export const ResultsAccordion = ({ setPanelVisible, isVisible }) => {
           style={{ animationDuration: '0.4s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
-            EuroMillions
+            <img src={logo_02} className="w-[80px]" />
           </div>
         </div>
         <div
@@ -211,17 +238,17 @@ export const ResultsAccordion = ({ setPanelVisible, isVisible }) => {
           style={{ animationDuration: '0.5s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
-            EuroDreams
+            <img src={logo_03} className="w-[80px]" />
           </div>
         </div>
         <div
           className={`${
             isVisible ? 'Accordioncard animate-fadeToLeft' : ''
           } Accordioncard`}
-          style={{ animationDuration: '0.6000000000000001s' }}
+          style={{ animationDuration: '0.6s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
-            Daily Million
+            <img src={logo_04} className="w-[80px]" />
           </div>
         </div>
         <div
@@ -231,7 +258,7 @@ export const ResultsAccordion = ({ setPanelVisible, isVisible }) => {
           style={{ animationDuration: '0.7s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
-            Lotto 5-4-3-2-1
+            <img src={logo_05} className="w-[80px]" />
           </div>
         </div>
         <div
@@ -241,14 +268,34 @@ export const ResultsAccordion = ({ setPanelVisible, isVisible }) => {
           style={{ animationDuration: '0.8s' }}
         >
           <div className="font-bold text-lg" role="link" tabIndex="0">
-            Telly Bingo
+            <img src={logo_06} className="w-[80px]" />
+          </div>
+        </div>
+        <div
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard`}
+          style={{ animationDuration: '0.89s' }}
+        >
+          <div className="font-bold text-lg" role="link" tabIndex="0">
+            <img src={logo_07} className="w-[80px]" />
+          </div>
+        </div>
+        <div
+          className={`${
+            isVisible ? 'Accordioncard animate-fadeToLeft' : ''
+          } Accordioncard`}
+          style={{ animationDuration: '0.99s' }}
+        >
+          <div className="font-bold text-lg" role="link" tabIndex="0">
+            <img src={logo_08} className="w-[80px]" />
           </div>
         </div>
         <div
           className={`${
             isVisible ? 'Accordioncard animate-fadeToLeft' : ''
           } Accordioncard flex flex-col items-start`}
-          style={{ animationDuration: '0.9000000000000001s' }}
+          style={{ animationDuration: '1.09s' }}
         >
           <Link to="/results ">
             <button

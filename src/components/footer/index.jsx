@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import backgroundImage from '../../assets/backgrounds/footerBack.svg';
 export const Footer = () => {
   const [lotteryVisible, setLotteryVisible] = useState(true);
   const [infoVisible, setInfoVisible] = useState(true);
@@ -34,10 +34,18 @@ export const Footer = () => {
     };
   }, []);
   return (
-    <div className=" bg-[#ffffff]">
+    <div
+      className=" bg-[#ffffff]"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPositionX: 'right',
+        backgroundPositionY: 'bottom',
+      }}
+    >
       <section className="sm:hidden md:flex bg-[#49636e] text-white items-center justify-center md:h-[63px]">
         <div className=" flex items-center justify-center">
-          <div className=" text-[#49636e] font-bold h-[36px] w-[36px] bg-white rounded-full flex justify-center items-center">
+          <div className=" text-[#49636e] font-bold h-[36px] sm:w-[42px] md:w-[36px] bg-white rounded-full flex justify-center items-center">
             18+
           </div>
           <p className="pl-[9px] text-[0.75rem] font-bold heght-[1rem] border-r border-white pr-[18px]">
@@ -75,12 +83,12 @@ export const Footer = () => {
             <div className="w-full  lg:w-1/4">
               <div
                 onClick={toggleLotteryVisibility}
-                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0 sm:flex-row-reverse lg:flex-row"
+                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0 lg:flex-row"
               >
-                <p className="font-bold mx-2 flex  lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-end">
+                <p className="font-bold mx-2 flex  lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-start">
                   Lottery
                 </p>
-                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5 sm:justify-start">
+                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5 sm:justify-end">
                   <svg
                     width="12"
                     height="8"
@@ -137,12 +145,12 @@ export const Footer = () => {
             <div className="w-full  lg:w-1/4">
               <div
                 onClick={toggleInfoVisibility}
-                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0 sm:flex-row-reverse lg:flex-row"
+                className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  flex-row mt-4 lg:mt-0 lg:flex-row"
               >
-                <p className="font-bold mx-2 flex justify-start lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-end ">
+                <p className="font-bold mx-2 flex justify-start lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-start ">
                   Useful Information
                 </p>
-                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5 sm:justify-start">
+                <span className="lg:hidden flex items-center justify-end w-1/2 mx-5 sm:justify-end">
                   <svg
                     width="12"
                     height="8"
@@ -229,16 +237,15 @@ export const Footer = () => {
                   <div className="mr-4">
                     <a href="/" className="">
                       <svg
-                        width="28"
-                        height="20"
-                        viewBox="0 0 28 20"
-                        fill="none"
                         xmlns="http://www.w3.org/2000/svg"
+                        fill="#000000"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 32 32"
+                        version="1.1"
                       >
-                        <path
-                          d="M26.4899 3.275C26.1999 2.125 25.3099 1.225 24.1699 0.895002C22.1199 0.315002 13.8899 0.315002 13.8899 0.315002C13.8899 0.315002 5.66991 0.315002 3.60991 0.875002C2.46991 1.215 1.58991 2.125 1.28991 3.275C0.919906 5.415 0.739906 7.585 0.749906 9.765C0.739906 11.945 0.919906 14.115 1.28991 16.255C1.58991 17.405 2.46991 18.305 3.60991 18.635C5.68991 19.215 13.8899 19.215 13.8899 19.215C13.8899 19.215 22.1199 19.215 24.1699 18.655C25.3099 18.325 26.1899 17.425 26.4899 16.275C26.8599 14.135 27.0399 11.955 27.0299 9.785C27.0599 7.605 26.8799 5.425 26.4899 3.275ZM11.2699 13.805V5.715L18.1099 9.765L11.2699 13.805Z"
-                          fill="#2D4550"
-                        ></path>
+                        <title>telegram</title>
+                        <path d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z" />
                       </svg>
                     </a>
                   </div>
@@ -262,7 +269,7 @@ export const Footer = () => {
               </div>
             </div>
             <div className="w-full lg:py-0 py-4 mx-2 lg:mx-0 lg:order-3 mt-4 lg:mt-0  lg:w-1/4">
-              <div className="  flex flex-row-reverse gap-[1rem]">
+              <div className="flex flex-row-reverse sm:justify-center sm:items-center gap-[1rem]">
                 <span className="text-base py-3 font-bold tracking-wide text-gray-700">
                   How can we help
                 </span>
@@ -324,7 +331,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex justify-between pt-5 flex-col md:flex-row pb-[1rem] border-t border-[#1222282c] mr-4">
-          <div className="flex px-2  w-full items-center mt-4 space-x-4 sm:mt-0 justify-end">
+          <div className="flex px-2  w-full items-center mt-4 space-x-4 sm:mt-0 justify-center lg:justify-end">
             <h6 className="text-[13.5px] text-[#49636e] mt-2">
               &copy;2023 National Lottery
             </h6>
