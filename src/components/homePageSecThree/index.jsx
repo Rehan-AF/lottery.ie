@@ -1,4 +1,3 @@
-import greenBack from '../../assets/greenBack.png';
 import '../shadow.css';
 import './styles.css';
 const HomePageSecThree = () => {

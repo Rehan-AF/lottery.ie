@@ -1,6 +1,4 @@
-import backgroundImage from '../../assets/backgrounds/1_Mega-da-virada.svg';
 import backgroundImage2 from '../../assets/backgrounds/hero-background-43-cropped.svg';
-import YelloBack from '../../assets/cards/hero-background-4.svg';
 import logo from '../../assets/gameLogos/01.svg';
 import './styles.css';
 const BigCard = () => {
@@ -26,11 +24,11 @@ const BigCard = () => {
             <img
               src={backgroundImage2}
               alt="logo background"
-              className="sm:h-[190px] md:h-full w-full object-cover object-top"
+              className="sm:h-[190px] md:h-full !w-full !object-cover object-top"
             />
           </div>
           <div className="md:flex-row-reverse sm:flex-row-reverse w-full flex flex-row flex-wrap md:flex-nowrap lg:flex-col items-center lg:items-start px-4 py-4 justify-between md:space-y-4 relative md:items-end">
-            <div className="sm:flex sm:justify-end  sm:pr-[0px] sm:text-end lg:flex lg:justify-end md:self-center w-1/2 md:w-1/3 lg:w-full md:justify-end md:flex">
+            <div className="sm:flex sm:justify-start  sm:pr-[0px] sm:text-end lg:flex lg:justify-end md:self-center w-1/2 md:w-1/3 lg:w-full md:justify-end md:flex">
               <img
                 alt="white EuroMillions logo"
                 className="h-12 lg:h-16 filter drop-shadow"
@@ -68,7 +66,7 @@ const BigCard = () => {
                 className="w-full text-white"
                 style={{ textShadow: 'rgba(0, 0, 0, 0.3) 1px 1px' }}
               >
-                <p className="lg:text-start lg:left-[1rem] sm:text-end sm:pr-[16px] text-left text-white text-x-sm font-bold absolute bottom-3 w-1/2 md:right-[1.5rem] md:w-auto">
+                <p className="lg:text-start lg:left-[1rem] sm:text-end sm:pr-[16px] text-white text-x-sm font-bold absolute bottom-3 w-1/2 md:right-[1.5rem] md:w-auto">
                   *estimated
                 </p>
               </div>

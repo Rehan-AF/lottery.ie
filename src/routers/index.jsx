@@ -4,11 +4,8 @@ import Navbar from '../components/navbar';
 import Banner from '../components/navbar/banner';
 import { Footer } from '../components/footer';
 import ResultsPage from '../pages/resultsPage';
-import ResultsCard from '../components/resultsComponent/resultsCard';
 import MobileNav from '../components/navbar/MobileNav';
-import Template from '../components/template';
-import CustomArrows from '../components/navbar/games/GameCarousel';
-
+import ResultsHistoryPage from '../pages/resultsHistory';
 const Routers = () => {
   return (
     <div>
@@ -23,7 +20,7 @@ const Routers = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/results" element={<ResultsPage />} />
-          <Route path="/caroucel" element={<CustomArrows />} />
+          <Route path="/resultshistory" element={<ResultsHistoryPage />} />
         </Routes>
         <Footer />
       </Router>

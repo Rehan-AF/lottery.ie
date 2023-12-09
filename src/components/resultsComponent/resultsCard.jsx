@@ -1,4 +1,3 @@
-import redbg from '../../assets/results/redbg.svg';
 import radient_left from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-left.svg';
 import radient_right from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-right.svg';
 
