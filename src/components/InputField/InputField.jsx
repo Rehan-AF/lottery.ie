@@ -12,7 +12,6 @@ const FloatingLabelInput = ({
 }) => {
   const [inputValue, setInputValue] = useState(value);
   const [isFocused, setIsFocused] = useState(false);
-  console.log(name, errors);
   const handleFocus = () => {
     setIsFocused(true);
   };
