@@ -1,5 +1,5 @@
 import FloatingLabelInput from '../InputField/InputField';
-
+import backgroundImage from '../../assets/backgrounds/SigninPage.svg';
 import { useFormik } from 'formik';
 const validate = (values) => {
   const errors = {};
@@ -14,19 +14,19 @@ const validate = (values) => {
   // } else if (values.lastName.length > 20) {
   //   errors.lastName = 'Must be 20 characters or less';
   // }
-
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
   if (!values.password) {
-    errors.password = 'Required';
+    errors.password = 'Password is required';
   } else if (values.password.length < 8) {
     errors.password = 'Password must be at least 8 characters';
   }
 
-  if (!values.password) return errors;
+  if (!values.email) {
+    errors.email = 'Email is required';
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+    errors.email = 'Invalid email address';
+  }
+
+  return errors;
 };
 const SignIn = () => {
   const formik = useFormik({
@@ -43,9 +43,9 @@ const SignIn = () => {
   });
   console.log(formik.errors);
   return (
-    <div className="bg-[#d2e1e8] pt-[2rem] pb-[2rem] ">
-      <div className=" bg-white rounded-[20px] shadow-md max-w-[810px] w-full ml-auto mr-auto flex flex-col px-6 lg:pt-6 md:pt-6 lg:px-22 md:px-11">
-        <div className="flex items-center justify-center md:justify-between lg:justify-between pb-8">
+    <div className="sm:bg-white md:bg-[#d2e1e8] sm:px-[2rem] pt-[2rem] pb-[2rem] ">
+      <div className=" bg-white rounded-[20px] sm:shadow-none md:shadow-md max-w-[810px] w-full ml-auto mr-auto flex flex-col ">
+        <div className="flex items-center justify-center md:justify-between lg:justify-between pb-8 px-6 lg:pt-6 md:pt-6 lg:px-22 md:px-11">
           <svg
             className="hidden h-12 md:block lg:block w-13"
             viewBox="0 0 52 50"
@@ -78,7 +78,7 @@ const SignIn = () => {
               fill="#BED62F"
             ></path>
           </svg>
-          <h3 className="mt-auto text-center font-black text-3xl">
+          <h3 className="mt-auto text-center text-[#2c444e] font-black text-3xl">
             Sign in to continue
           </h3>
           <svg
@@ -128,7 +128,9 @@ const SignIn = () => {
                     errors={formik.errors.email}
                   />
                   {formik.errors.email ? (
-                    <div className="text-red-500">{formik.errors.email}</div>
+                    <div className="rtl text-end text-red-500">
+                      {formik.errors.email}
+                    </div>
                   ) : null}
                 </div>
                 <div>
@@ -142,7 +144,9 @@ const SignIn = () => {
                     errors={formik.errors.password}
                   />
                   {formik.errors.password ? (
-                    <div className="text-red-500">{formik.errors.password}</div>
+                    <div className="rtl text-end text-red-500">
+                      {formik.errors.password}
+                    </div>
                   ) : null}
                 </div>
               </div>
@@ -175,71 +179,70 @@ const SignIn = () => {
                 <button
                   id="signInButton"
                   type="submit"
-                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-blue-800 bg-green-500 border-green-400 active:bg-green-400"
+                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 hover:shadow-md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
                   style={{ width: '100%' }}
                 >
                   <span>Sign in</span>
                 </button>
                 <div className="flex flex-col sm:items-center mt-6 mb-12 gap-1 text-blue-900 underline">
-                  <div className="flex flex-wrap w-full justify-between">
+                  <div className="flex flex-wrap w-full justify-center">
                     <a className="text-sm" href="/account/forgotPassword">
                       Forgot Password?
                     </a>
-                    <br />
-                    <a className="text-sm" href="/account/forgotUsername">
-                      Other issues signing in?
-                    </a>
                   </div>
-                  <a className="text-sm" href="/account/resend-email">
-                    Get new email verification link
-                  </a>
                 </div>
               </div>
             </form>
           </div>
-          <div className="relative inline-flex justify-between px-4 py-6 mb-8 bg-cover bg-register-here-tablet rounded-xl">
-            <p className="w-6/12 text-lg font-bold text-white">
-              Create an account &amp; start playing!
-            </p>
-            <div className="mt-auto mb-auto text-center whitespace-pre">
-              <a
-                role="link"
-                className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 text-blue-800 bg-white active:bg-blue-lighter-04"
-                href="/register/step-1"
-              >
-                <span>Register Here</span>
-              </a>
-            </div>
-            <svg
-              className="absolute w-10 h-11 top-16 sm:top-16 -right-4"
-              viewBox="0 0 48.84 45.2"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-hidden="true"
+        </div>
+        <div
+          className="relative inline-flex justify-between px-4 py-6 bg-cover bg-register-here-tablet rounded-bl-xl rounded-br-xl"
+          style={{
+            background: `url("${backgroundImage}")`,
+            backgroundSize: 'cover',
+          }}
+        >
+          <p className="w-6/12 text-lg font-bold text-white">
+            Create an account &amp; start playing!
+          </p>
+          <div className="mt-auto mb-auto text-center whitespace-pre">
+            <a
+              role="link"
+              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 hover:shadow-md text-[#2c444e] bg-white active:bg-blue-lighter-04"
+              href="/register/step-1"
             >
-              <defs>
-                <style>
-                  {`.prefix__cls-1,.prefix__cls-2{fill:#bed62f;fill-rule:evenodd}.prefix__cls-2{fill:#40606f}`}
-                </style>
-              </defs>
-              <path
-                className="prefix__cls-1"
-                d="M6.92 3.34a12.72 12.72 0 011.37 1s1.58-.24 2-.25a4.09 4.09 0 01-.94 1.71 3.91 3.91 0 01.18 2 6.76 6.76 0 00-1.71-1 9.52 9.52 0 01-2.13.51 11.58 11.58 0 00.54-1.19s-1-.48-1.4-.61l1.87-.69a2.53 2.53 0 00.22-1.48zM4.31.78a6.63 6.63 0 01.69.51s.79-.12 1-.12a2.08 2.08 0 01-.48.83 2 2 0 01.08 1 3.36 3.36 0 00-.85-.49 5.22 5.22 0 01-1.06.25A5.54 5.54 0 004 2.17s-.51-.24-.69-.3l.92-.35a1.26 1.26 0 00.08-.74zM9.44.32a10 10 0 01.85.64s1-.14 1.24-.15A2.54 2.54 0 0111 1.88a2.28 2.28 0 01.1 1.22 4.45 4.45 0 00-1.1-.62 5.75 5.75 0 01-1.32.32A7.74 7.74 0 009 2.06s-.65-.3-.87-.38l1.17-.43a1.6 1.6 0 00.14-.93zM13.79 2.79a5.51 5.51 0 01.55.41s.64-.09.81-.09a1.65 1.65 0 01-.38.69 1.57 1.57 0 01.07.8 2.63 2.63 0 00-.69-.4 4 4 0 01-.86.2s.16-.31.22-.48c0 0-.42-.2-.57-.25l.75-.28a1 1 0 00.1-.6zM17.86 4.4a4 4 0 01.35.26s.39-.06.5-.06a1.16 1.16 0 01-.24.43.92.92 0 010 .49 1.76 1.76 0 00-.43-.25 2.13 2.13 0 01-.53.13 2.05 2.05 0 00.13-.3l-.31-.1.47-.18a.6.6 0 00.06-.42zM.53 0a3.07 3.07 0 01.34.26s.4-.06.5-.06a1 1 0 01-.23.43 1 1 0 010 .5A1.47 1.47 0 00.75.88 2.48 2.48 0 01.22 1 2.05 2.05 0 00.35.7L0 .55.47.38A.71.71 0 00.53 0zM15 13.1a3.07 3.07 0 01.34.26s.4-.06.5-.06a1 1 0 01-.23.43.92.92 0 010 .49 1.76 1.76 0 00-.43-.25 2.26 2.26 0 01-.54.13 1.77 1.77 0 00.14-.3l-.35-.15.47-.18a.69.69 0 00.1-.37zM2.17 17.78a4 4 0 01.35.26S2.91 18 3 18a1.09 1.09 0 01-.24.43 1 1 0 01.05.5 2 2 0 00-.43-.25 2.46 2.46 0 01-.54.12s.1-.19.14-.3l-.35-.15.46-.17a.62.62 0 00.08-.4zM6.74 16.33a5.9 5.9 0 01.56.42s.65-.09.82-.1a1.61 1.61 0 01-.39.7 1.5 1.5 0 01.07.81 2.78 2.78 0 00-.7-.41 3.76 3.76 0 01-.87.21 5.12 5.12 0 00.23-.49l-.57-.25.76-.28a1.05 1.05 0 00.09-.61zM4.47 8.61A5.9 5.9 0 015 9s.65-.09.82-.1a1.77 1.77 0 01-.39.7 1.62 1.62 0 01.07.81 2.78 2.78 0 00-.7-.41 3.76 3.76 0 01-.87.21 5.12 5.12 0 00.23-.49s-.43-.19-.58-.24l.77-.29a1.05 1.05 0 00.12-.58zM8.46 8.71a24.12 24.12 0 012.29 1.73s2.63-.39 3.32-.4a6.9 6.9 0 01-1.57 2.85 6.36 6.36 0 01.29 3.29 11.25 11.25 0 00-2.85-1.66 16.28 16.28 0 01-3.55.85 18.9 18.9 0 00.9-2s-1.73-.8-2.33-1l3.11-1.16a4.29 4.29 0 00.39-2.5z"
-              ></path>
-              <path
-                className="prefix__cls-1"
-                d="M12.51 6.75a13.63 13.63 0 011.37 1s1.57-.23 2-.24a4.1 4.1 0 01-.94 1.7 3.74 3.74 0 01.17 2 6.78 6.78 0 00-1.69-1 9.76 9.76 0 01-2.12.5 12.17 12.17 0 00.54-1.18s-1-.48-1.39-.6l1.85-.69a2.51 2.51 0 00.21-1.49z"
-              ></path>
-              <path
-                className="prefix__cls-1"
-                d="M48.48 14.55c-.53-.16-2.36-.29-7-.12s-9.66.33-9.87.29-4-4.2-7-6.85-3.38-2.82-3.42-2.69-1.15 9.58-4 12.19l-15.77 4S12.53 27.25 12.24 28a50 50 0 01-5.87 9.3 61.53 61.53 0 0018.92-2.19s5.09 2.27 13.49 10.13c0 0 2.36-7.06 1.38-11.85s-1.22-5.09-.08-6.14a36 36 0 006.57-8c2.03-3.69 2.35-4.53 1.83-4.7z"
-              ></path>
-              <path
-                className="prefix__cls-2"
-                d="M20.27 29a28.79 28.79 0 0014.19.29s-6.22 6.48-14.19-.29zM30.18 18.39a.93.93 0 00-.8.86c0 .46.1 3.28.25 4.62s.44 2.56 1.2 2.7 1.23-.08 1.23-1.51a26.22 26.22 0 00-.55-4.77c-.27-1.21-.7-1.92-1.33-1.9zM22.19 19.05a.92.92 0 00-.8.85c-.05.48.19 2.86.34 4.22s.35 3 1.11 3.11 1.24-.09 1.24-1.52a26.2 26.2 0 00-.56-4.71c-.27-1.27-.7-2-1.33-1.95z"
-              ></path>
-            </svg>
+              <span>Register Here</span>
+            </a>
           </div>
+          <svg
+            className="absolute w-10 h-11 top-16 sm:top-16 -right-4"
+            viewBox="0 0 48.84 45.2"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-hidden="true"
+          >
+            <defs>
+              <style>
+                {`.prefix__cls-1,.prefix__cls-2{fill:#bed62f;fill-rule:evenodd}.prefix__cls-2{fill:#40606f}`}
+              </style>
+            </defs>
+            <path
+              className="prefix__cls-1"
+              d="M6.92 3.34a12.72 12.72 0 011.37 1s1.58-.24 2-.25a4.09 4.09 0 01-.94 1.71 3.91 3.91 0 01.18 2 6.76 6.76 0 00-1.71-1 9.52 9.52 0 01-2.13.51 11.58 11.58 0 00.54-1.19s-1-.48-1.4-.61l1.87-.69a2.53 2.53 0 00.22-1.48zM4.31.78a6.63 6.63 0 01.69.51s.79-.12 1-.12a2.08 2.08 0 01-.48.83 2 2 0 01.08 1 3.36 3.36 0 00-.85-.49 5.22 5.22 0 01-1.06.25A5.54 5.54 0 004 2.17s-.51-.24-.69-.3l.92-.35a1.26 1.26 0 00.08-.74zM9.44.32a10 10 0 01.85.64s1-.14 1.24-.15A2.54 2.54 0 0111 1.88a2.28 2.28 0 01.1 1.22 4.45 4.45 0 00-1.1-.62 5.75 5.75 0 01-1.32.32A7.74 7.74 0 009 2.06s-.65-.3-.87-.38l1.17-.43a1.6 1.6 0 00.14-.93zM13.79 2.79a5.51 5.51 0 01.55.41s.64-.09.81-.09a1.65 1.65 0 01-.38.69 1.57 1.57 0 01.07.8 2.63 2.63 0 00-.69-.4 4 4 0 01-.86.2s.16-.31.22-.48c0 0-.42-.2-.57-.25l.75-.28a1 1 0 00.1-.6zM17.86 4.4a4 4 0 01.35.26s.39-.06.5-.06a1.16 1.16 0 01-.24.43.92.92 0 010 .49 1.76 1.76 0 00-.43-.25 2.13 2.13 0 01-.53.13 2.05 2.05 0 00.13-.3l-.31-.1.47-.18a.6.6 0 00.06-.42zM.53 0a3.07 3.07 0 01.34.26s.4-.06.5-.06a1 1 0 01-.23.43 1 1 0 010 .5A1.47 1.47 0 00.75.88 2.48 2.48 0 01.22 1 2.05 2.05 0 00.35.7L0 .55.47.38A.71.71 0 00.53 0zM15 13.1a3.07 3.07 0 01.34.26s.4-.06.5-.06a1 1 0 01-.23.43.92.92 0 010 .49 1.76 1.76 0 00-.43-.25 2.26 2.26 0 01-.54.13 1.77 1.77 0 00.14-.3l-.35-.15.47-.18a.69.69 0 00.1-.37zM2.17 17.78a4 4 0 01.35.26S2.91 18 3 18a1.09 1.09 0 01-.24.43 1 1 0 01.05.5 2 2 0 00-.43-.25 2.46 2.46 0 01-.54.12s.1-.19.14-.3l-.35-.15.46-.17a.62.62 0 00.08-.4zM6.74 16.33a5.9 5.9 0 01.56.42s.65-.09.82-.1a1.61 1.61 0 01-.39.7 1.5 1.5 0 01.07.81 2.78 2.78 0 00-.7-.41 3.76 3.76 0 01-.87.21 5.12 5.12 0 00.23-.49l-.57-.25.76-.28a1.05 1.05 0 00.09-.61zM4.47 8.61A5.9 5.9 0 015 9s.65-.09.82-.1a1.77 1.77 0 01-.39.7 1.62 1.62 0 01.07.81 2.78 2.78 0 00-.7-.41 3.76 3.76 0 01-.87.21 5.12 5.12 0 00.23-.49s-.43-.19-.58-.24l.77-.29a1.05 1.05 0 00.12-.58zM8.46 8.71a24.12 24.12 0 012.29 1.73s2.63-.39 3.32-.4a6.9 6.9 0 01-1.57 2.85 6.36 6.36 0 01.29 3.29 11.25 11.25 0 00-2.85-1.66 16.28 16.28 0 01-3.55.85 18.9 18.9 0 00.9-2s-1.73-.8-2.33-1l3.11-1.16a4.29 4.29 0 00.39-2.5z"
+            ></path>
+            <path
+              className="prefix__cls-1"
+              d="M12.51 6.75a13.63 13.63 0 011.37 1s1.57-.23 2-.24a4.1 4.1 0 01-.94 1.7 3.74 3.74 0 01.17 2 6.78 6.78 0 00-1.69-1 9.76 9.76 0 01-2.12.5 12.17 12.17 0 00.54-1.18s-1-.48-1.39-.6l1.85-.69a2.51 2.51 0 00.21-1.49z"
+            ></path>
+            <path
+              className="prefix__cls-1"
+              d="M48.48 14.55c-.53-.16-2.36-.29-7-.12s-9.66.33-9.87.29-4-4.2-7-6.85-3.38-2.82-3.42-2.69-1.15 9.58-4 12.19l-15.77 4S12.53 27.25 12.24 28a50 50 0 01-5.87 9.3 61.53 61.53 0 0018.92-2.19s5.09 2.27 13.49 10.13c0 0 2.36-7.06 1.38-11.85s-1.22-5.09-.08-6.14a36 36 0 006.57-8c2.03-3.69 2.35-4.53 1.83-4.7z"
+            ></path>
+            <path
+              className="prefix__cls-2"
+              d="M20.27 29a28.79 28.79 0 0014.19.29s-6.22 6.48-14.19-.29zM30.18 18.39a.93.93 0 00-.8.86c0 .46.1 3.28.25 4.62s.44 2.56 1.2 2.7 1.23-.08 1.23-1.51a26.22 26.22 0 00-.55-4.77c-.27-1.21-.7-1.92-1.33-1.9zM22.19 19.05a.92.92 0 00-.8.85c-.05.48.19 2.86.34 4.22s.35 3 1.11 3.11 1.24-.09 1.24-1.52a26.2 26.2 0 00-.56-4.71c-.27-1.27-.7-2-1.33-1.95z"
+            ></path>
+          </svg>
         </div>
       </div>
     </div>
