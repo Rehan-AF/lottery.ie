@@ -6,23 +6,26 @@ import { Footer } from '../components/footer';
 import ResultsPage from '../pages/resultsPage';
 import MobileNav from '../components/navbar/MobileNav';
 import ResultsHistoryPage from '../pages/resultsHistory';
+import {
+  LayoutWithNavbar,
+  LayoutWithouNavbar,
+} from '../components/template/Layout.jsx';
+import SignIn from '../components/signIn/signIn.jsx';
 const Routers = () => {
   return (
     <div>
       <Router>
-        <div className="sm:block lg:hidden px-[1rem] py-[2px]">
-          <MobileNav />
-        </div>
-        <div className="sm:hidden lg:block">
-          <Navbar />
-        </div>
-        <Banner />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/results" element={<ResultsPage />} />
-          <Route path="/resultshistory" element={<ResultsHistoryPage />} />
+          <Route path="/" element={<LayoutWithNavbar />}>
+            <Route path="" element={<Home />} />
+            <Route path="results" element={<ResultsPage />} />
+            <Route path="resultshistory" element={<ResultsHistoryPage />} />
+          </Route>
+          <Route path="/auth" element={<LayoutWithouNavbar />}>
+            <Route path="sign-in" element={<SignIn />} />
+            <Route path="sign-up" element={<p>sign up</p>} />
+          </Route>
         </Routes>
-        <Footer />
       </Router>
     </div>
   );
