@@ -1,14 +1,10 @@
 import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon } from '@heroicons/react/24/outline';
 import DropDown from '../dropDown';
-import SmallCard from '../homePageTopSec/smallCardBlue';
-import GamesCard from './gamesCard';
 import GamesDropDown from './gamesDropDown';
 import ResultsDropDown from './resultsDropDown';
-import Accorion from '../Accordion/index';
 import './navStyles.css';
 import { useState } from 'react';
-import { GamesAccordions, ResultsAccordion } from './mobileNavAccordions';
 import mainLogo from '../../assets/smallLogo.svg';
 import { Link } from 'react-router-dom';
 export default function Navbar() {

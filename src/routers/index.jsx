@@ -4,28 +4,28 @@ import Navbar from '../components/navbar';
 import Banner from '../components/navbar/banner';
 import { Footer } from '../components/footer';
 import ResultsPage from '../pages/resultsPage';
-import ResultsCard from '../components/resultsComponent/resultsCard';
 import MobileNav from '../components/navbar/MobileNav';
-import Template from '../components/template';
-import CustomArrows from '../components/navbar/games/GameCarousel';
-
+import ResultsHistoryPage from '../pages/resultsHistory';
+import {
+  LayoutWithNavbar,
+  LayoutWithouNavbar,
+} from '../components/template/Layout.jsx';
+import SignIn from '../components/signIn/signIn.jsx';
 const Routers = () => {
   return (
     <div>
       <Router>
-        <div className="sm:block lg:hidden px-[1rem] py-[2px]">
-          <MobileNav />
-        </div>
-        <div className="sm:hidden lg:block">
-          <Navbar />
-        </div>
-        <Banner />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/results" element={<ResultsPage />} />
-          <Route path="/caroucel" element={<CustomArrows />} />
+          <Route path="/" element={<LayoutWithNavbar />}>
+            <Route path="" element={<Home />} />
+            <Route path="results" element={<ResultsPage />} />
+            <Route path="resultshistory" element={<ResultsHistoryPage />} />
+          </Route>
+          <Route path="/auth" element={<LayoutWithouNavbar />}>
+            <Route path="sign-in" element={<SignIn />} />
+            <Route path="sign-up" element={<p>sign up</p>} />
+          </Route>
         </Routes>
-        <Footer />
       </Router>
     </div>
   );

@@ -39,17 +39,23 @@ const SmallCardRed = ({
             <img src={radient_left} alt="sda" />
           </div>
         )}
-        <div className="flex flex-col justify-between ">
+        <div className="flex flex-col items-start justify-between ">
           <img
             alt="white Lotto logo"
             className="h-12 sm:self-baseline"
             src={logoSrc}
             role="img"
           />
-          <button className="no_hover_shadow rounded-full border border-solid text-center px-3 py-1 border-white text-white   lg: group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
-            {/* Play from €4 */}
-            {playLabel}
-          </button>
+          <a
+            aria-label="Play from €2.50 link"
+            className="no_hover_shadow on_hover flex justify-center self-start cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
+          >
+            <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:bg-white">
+              <div className="uppercase font-bold leading-none sm:text-[12px]">
+                <span aria-label="play from €2.50">{playLabel}</span>
+              </div>
+            </div>
+          </a>
         </div>
 
         <div className="sm:w-[50%]">
@@ -144,7 +150,7 @@ const SmallCardRed = ({
         </div>
         <div className="md:text-end md:flex md:flex-col md:items-start md:w-1/3">
           <div className="rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
-            <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
+            <div className="uppercase text-[12px] font-bold leading-none">
               <span aria-label="play from €1">Play from €1</span>
             </div>
           </div>

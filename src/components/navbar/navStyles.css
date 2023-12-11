@@ -85,10 +85,10 @@
 
   @keyframes moveTextSmallScreen {
     0% {
-      transform: translateX(100%); /* Start from 100% (right) */
+      transform: translateX(-100%); /* Start from -100% (left) */
     }
     100% {
-      transform: translateX(-100%); /* Move to -100% (left) */
+      transform: translateX(100%); /* Move to 100% (right) */
     }
   }
 }

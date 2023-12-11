@@ -26,7 +26,7 @@ const CardGreen = () => {
             <div className="flex flex-col w-1/2 md:w-1/3 items-end">
               <div className="text-end flex flex-col h-full space-y-3">
                 <div className="flex flex-col">
-                  <span className="text-end text-sm sm:text-[12px] md:text-base font-bold shadow-text">
+                  <span className="text-end sm:text-[12px] md:text-base font-bold shadow-text">
                     One Millionaire Guaranteed
                   </span>
                   <span className="text-base md:text-lg shadow-text font-black leading-5">
@@ -53,13 +53,12 @@ const CardGreen = () => {
             </div>
             <div className=" flex flex-start md:flex-col md:items-start  h-auto -mt-3 md:mt-0 bottom-4 w-1/2 md:w-1/3 false">
               <a
-                aria-label="Play for €25 link"
-                className="no_hover_shadow md:self-start on_hover no_hover_shadow flex justify-center self-end cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
-                href="/"
+                aria-label="Play from €2.50 link"
+                className="no_hover_shadow self-start on_hover flex justify-center cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
               >
-                <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
-                  <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
-                    <span aria-label="play for €25">Play for €25</span>
+                <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:bg-white">
+                  <div className="uppercase text-sm font-bold leading-none sm:text-[12px]">
+                    <span aria-label="play from €2.50">Play from €25</span>
                   </div>
                 </div>
               </a>

@@ -17,7 +17,6 @@ import gameLogo_5 from '../../assets/gameLogos/05.svg';
 import gameLogo_6 from '../../assets/gameLogos/06.svg';
 import gameLogo_7 from '../../assets/gameLogos/07.svg';
 import gameLogo_8 from '../../assets/gameLogos/08.svg';
-import GamesCard from '../navbar/gamesCard';
 import ResultsCard from '../navbar/resultsCard';
 
 const data = [

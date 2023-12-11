@@ -1,0 +1,35 @@
+.input_container {
+  position: relative;
+  border: 1px solid rgb(189, 187, 187);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  height: 63px;
+}
+
+.floating-label {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  color: rgba(118, 118, 118, 1);
+  pointer-events: none;
+  transition: 0.2s ease-out;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding-top: 18px;
+  font-weight: 700;
+  outline: none;
+  color: rgba(118, 118, 118, 1);
+}
+
+.input_container.focused .floating-label {
+  top: 7px;
+  font-size: 12px;
+  right: 1rem;
+  color: rgba(118, 118, 118, 1);
+}

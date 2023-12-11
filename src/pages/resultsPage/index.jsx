@@ -1,6 +1,6 @@
 import Template from '../../components/template';
 import Results from '../../components/resultsComponent';
-const ResultsPage = ({ children }) => {
+const ResultsPage = () => {
   return (
     <div
       style={{

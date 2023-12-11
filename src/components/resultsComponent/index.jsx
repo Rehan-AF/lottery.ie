@@ -1,10 +1,3 @@
-import ResultsCard from './resultsCard';
-import lottoLogoRed from '../../assets/results/Lotto.svg';
-import lottoLogoWhite from '../../assets/results/LottoWhite.svg';
-import redImage from '../../assets/results/redbg.svg';
-import EuroMillions from '../../assets/results/EuroMillions.svg';
-import EuroMillionsWhite from '../../assets/results/EuroMillionsWhite.svg';
-import yelloBg from '../../assets/results/yellowBg.svg';
 import backgroundImage_1 from '../../assets/backgrounds/1_Mega-da-virada.svg';
 import backgroundImage_3 from '../../assets/backgrounds/7_Quina.svg';
 import backgroundImage_4 from '../../assets/backgrounds/6_Mega-Sena.svg';
@@ -12,19 +5,11 @@ import backgroundImage_5 from '../../assets/backgrounds/2_Milionaria.svg';
 import backgroundImage_6 from '../../assets/backgrounds/4_Dupla-Sena.svg';
 import backgroundImage_7 from '../../assets/backgrounds/5_Lotomania.svg';
 import backgroundImage_8 from '../../assets/backgrounds/8_Super-Sete.svg';
-import gameLogo_1 from '../../assets/gameLogos/01.svg';
-import gameLogo_2 from '../../assets/gameLogos/02.svg';
-import gameLogo_3 from '../../assets/gameLogos/03.svg';
-import gameLogo_4 from '../../assets/gameLogos/04.svg';
-import gameLogo_5 from '../../assets/gameLogos/05.svg';
-import gameLogo_6 from '../../assets/gameLogos/06.svg';
-import gameLogo_7 from '../../assets/gameLogos/07.svg';
-import gameLogo_8 from '../../assets/gameLogos/08.svg';
+import ResultsCard from './resultsCard';
 
 const data = [
   {
     name: 'game 1',
-    logo: lottoLogoRed,
     JackportAmount: '6,431,246',
     date: 'Sun 26/11/23',
     winingNumbers: [12, 34, 54, 64, 3, 9],
@@ -37,7 +22,6 @@ const data = [
   },
   {
     name: 'game 2',
-    logo: lottoLogoRed,
     JackportAmount: '6,431,246',
     date: 'Sun 26/11/23',
     winingNumbers: [13, 17, 21, 22, 37, 42, 23, 32, 43, 54, 12, 34, 56, 43, 23],
@@ -52,7 +36,6 @@ const data = [
   },
   {
     name: 'game 3',
-    logo: lottoLogoRed,
     JackportAmount: '6,431,246',
     date: 'Sun 26/11/23',
     winingNumbers: [12, 34, 54, 3, 9],
@@ -66,7 +49,6 @@ const data = [
   },
   {
     name: 'game 4',
-    logo: lottoLogoRed,
     JackportAmount: '6,431,246',
     date: 'Sun 26/11/23',
     winingNumbers: [12, 16, 27, 33, 44, 23],
@@ -79,7 +61,6 @@ const data = [
   },
   {
     name: 'game 5',
-    logo: lottoLogoRed,
     JackportAmount: '6,431,246',
     date: 'Sun 26/11/23',
     winingNumbers: [
@@ -95,7 +76,6 @@ const data = [
   },
   {
     name: 'game 6',
-    logo: EuroMillions,
     JackportAmount: '83,068,817',
     date: 'Wed 29/11/23',
     winingNumbers: [12, 34, 54, 64, 3, 12],
@@ -109,7 +89,6 @@ const data = [
   },
   {
     name: 'game 7',
-    logo: EuroMillions,
     JackportAmount: '83,068,817',
     date: 'Wed 29/11/23',
     winingNumbers: [12, 34, 54, 64, 3, 12],
@@ -123,7 +102,6 @@ const data = [
   },
   {
     name: 'game 8',
-    logo: EuroMillions,
     JackportAmount: '83,068,817',
     date: 'Wed 29/11/23',
     winingNumbers: [12, 16, 27, 33, 44, 23, 45],
@@ -149,7 +127,6 @@ const Results = () => {
           return (
             <div key={index}>
               <ResultsCard
-                logo={val.logo}
                 JackportAmount={val.JackportAmount}
                 date={val.date}
                 winingNumbers={val.winingNumbers}
