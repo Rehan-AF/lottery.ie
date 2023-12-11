@@ -11,6 +11,7 @@ import {
   LayoutWithouNavbar,
 } from '../components/template/Layout.jsx';
 import SignIn from '../components/signIn/signIn.jsx';
+import SignUp from '../components/SignUp/index.jsx';
 const Routers = () => {
   return (
     <div>
@@ -23,7 +24,7 @@ const Routers = () => {
           </Route>
           <Route path="/auth" element={<LayoutWithouNavbar />}>
             <Route path="sign-in" element={<SignIn />} />
-            <Route path="sign-up" element={<p>sign up</p>} />
+            <Route path="sign-up" element={<SignUp />} />
           </Route>
         </Routes>
       </Router>

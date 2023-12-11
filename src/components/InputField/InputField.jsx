@@ -12,7 +12,6 @@ const FloatingLabelInput = ({
 }) => {
   const [inputValue, setInputValue] = useState(value);
   const [isFocused, setIsFocused] = useState(false);
-  console.log(errors);
   const handleFocus = () => {
     setIsFocused(true);
   };
@@ -34,11 +33,13 @@ const FloatingLabelInput = ({
     <div
       className={`rtl input_container ${
         isFocused || inputValue ? 'focused' : ''
-      } ${errors ? '!border-red-500' : ''}`}
+      } ${
+        errors === false ? '' : '!border-red-500'
+      } max-w-[378px] lg:w-[378px]`}
     >
       <label
         className={`rtl text-end floating-label ${
-          errors ? '!text-red-500' : ''
+          errors === false ? '' : '!text-red-500'
         }`}
       >
         {label}
@@ -47,7 +48,7 @@ const FloatingLabelInput = ({
         id={id}
         type={type}
         name={name}
-        className="rtl text-end"
+        className="rtl text-end w-[100%] md:w-[300px]"
         value={inputValue}
         onChange={handleChange}
         onFocus={handleFocus}

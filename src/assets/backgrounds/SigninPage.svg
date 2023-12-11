@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 765.2 81" version="1.1" viewBox="0 0 765.2 81" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#c);}
+	.st1{fill:url(#SVGID_00000013877117030730851710000002746326314124968087_);filter:url(#a);}
+	.st2{mask:url(#b);}
+	.st3{fill:url(#SVGID_00000063604740072125335020000002517424537309657729_);}
+	.st4{opacity:0.8;fill:url(#SVGID_00000180358881510628200420000007706149434907522228_);enable-background:new    ;}
+	.st5{fill:url(#SVGID_00000178924932046236230300000011247207642513245602_);}
+</style>
+<linearGradient id="c" x1="382.5" x2="382.5" y1="93" y2="12" gradientTransform="matrix(1 0 0 -1 0 93)" gradientUnits="userSpaceOnUse">
+	<stop stop-color="#598DA5" offset="0"/>
+	<stop stop-color="#446C7E" offset="1"/>
+</linearGradient>
+<path class="st0" d="M0,0h765v81H0V0z"/>
+<defs>
+	<filter id="a" x="366.1" y="-277.5" width="585.5" height="637.4" filterUnits="userSpaceOnUse">
+		<feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+	</filter>
+</defs>
+<mask id="b" x="366.1" y="-277.5" width="585.5" height="637.4" maskUnits="userSpaceOnUse">
+	
+		<linearGradient id="g" x1="525.5" x2="525.5" y1="93" y2="12" gradientTransform="matrix(1 0 0 -1 0 93)" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#598DA5" offset="0"/>
+		<stop stop-color="#446C7E" offset="1"/>
+	</linearGradient>
+	<path d="m286 0h479v81h-479v-81z" fill="url(#g)" filter="url(#a)"/>
+</mask>
+<g class="st2">
+	
+		<linearGradient id="d" x1="654.41" x2="674.41" y1="446.69" y2="82.975" gradientTransform="matrix(1 0 0 -1 0 93)" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#6CA6C1" offset="0"/>
+		<stop stop-color="#40606F" stop-opacity=".5" offset=".6198"/>
+	</linearGradient>
+	<path d="m909.8 359.9s-335.9-95.7-528.3-347.4c0 0 328.7-102.1 570.1-289.9" fill="url(#d)"/>
+	
+		<linearGradient id="e" x1="610.8" x2="619.19" y1="128.12" y2="-17.486" gradientTransform="matrix(1 0 0 -1 0 93)" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#2D4550" stop-opacity=".45" offset="0"/>
+		<stop stop-color="#4B636E" stop-opacity=".63" offset="1"/>
+	</linearGradient>
+	<path d="m366.1 105.6s273.8-248 485.5-349.6c0 0-32.8 247.4-30 373.4" enable-background="new" fill="url(#e)" opacity=".8"/>
+	
+		<linearGradient id="f" x1="666.56" x2="680.08" y1="225.77" y2="-20.078" gradientTransform="matrix(1 0 0 -1 0 93)" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#4B636E" stop-opacity=".36" offset=".2515"/>
+		<stop stop-color="#2D4550" stop-opacity=".19" offset=".8005"/>
+	</linearGradient>
+	<path d="m909.8 359.9s-335.9-95.7-528.3-347.4c0 0 328.7-102.1 570.1-289.9" fill="url(#f)"/>
+</g>
+</svg>

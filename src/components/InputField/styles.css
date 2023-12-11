@@ -4,6 +4,8 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
   height: 63px;
+  max-width: 378px;
+  width: 100%;
 }
 
 .floating-label {
@@ -24,7 +26,7 @@ input {
   padding-top: 18px;
   font-weight: 700;
   outline: none;
-  color: rgba(118, 118, 118, 1);
+  color: #2c444e;
 }
 
 .input_container.focused .floating-label {
