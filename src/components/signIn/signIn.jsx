@@ -1,6 +1,7 @@
 import FloatingLabelInput from '../InputField/InputField';
 import backgroundImage from '../../assets/backgrounds/SigninPage.svg';
 import { useFormik } from 'formik';
+import { Link } from 'react-router-dom';
 const validate = (values) => {
   const errors = {};
   // if (!values.firstName) {
@@ -43,7 +44,7 @@ const SignIn = () => {
   });
   console.log(formik.errors);
   return (
-    <div className="sm:bg-white md:bg-[#d2e1e8] sm:px-[2rem] pt-[2rem] pb-[2rem] ">
+    <div className="sm:bg-white md:bg-[#d2e1e8] sm:px-[0rem] md:px-[2rem] pt-[2rem] pb-[2rem] ">
       <div className=" bg-white rounded-[20px] sm:shadow-none md:shadow-md max-w-[810px] w-full ml-auto mr-auto flex flex-col ">
         <div className="flex items-center justify-center md:justify-between lg:justify-between pb-8 px-6 lg:pt-6 md:pt-6 lg:px-22 md:px-11">
           <svg
@@ -113,11 +114,11 @@ const SignIn = () => {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-stretch self-center lg:w-92">
+        <div className="flex flex-col sm:w-full md:w-auto items-stretch self-center ">
           <div className="px-4">
             <form onSubmit={formik.handleSubmit}>
               <div className="flex flex-col gap-[1rem]">
-                <div>
+                <div className="sm:flex flex-col items-center md:block">
                   <FloatingLabelInput
                     label="Email"
                     id="email"
@@ -128,12 +129,12 @@ const SignIn = () => {
                     errors={formik.errors.email}
                   />
                   {formik.errors.email ? (
-                    <div className="rtl text-end text-red-500">
+                    <div className="rtl  sm:w-[376px] md:full text-end text-red-500">
                       {formik.errors.email}
                     </div>
                   ) : null}
                 </div>
-                <div>
+                <div className="sm:flex flex-col items-center md:block">
                   <FloatingLabelInput
                     id="password"
                     label="Password"
@@ -144,13 +145,13 @@ const SignIn = () => {
                     errors={formik.errors.password}
                   />
                   {formik.errors.password ? (
-                    <div className="rtl text-end text-red-500">
+                    <div className="rtl  sm:w-[376px] md:full text-end text-red-500">
                       {formik.errors.password}
                     </div>
                   ) : null}
                 </div>
               </div>
-              <div className="flex flex-row cursor-pointer justify-start items-center mt-2 mb-11">
+              <div className="flex flex-row cursor-pointer sm:w-[378px] md:w-full sm:mr-auto md:mr-o sm:ml-auto md:ml-o md:justify-start items-center mt-2 mb-11">
                 <input
                   className="inset-0 w-5 h-5 z-10 cursor-pointer "
                   type="checkbox"
@@ -175,15 +176,17 @@ const SignIn = () => {
                     </svg>
                   </div> */}
               </div>
-              <div className="mx-4 lg:mx-12">
-                <button
-                  id="signInButton"
-                  type="submit"
-                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 hover:shadow-md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
-                  style={{ width: '100%' }}
-                >
-                  <span>Sign in</span>
-                </button>
+              <div className="mx- lg:mx-12">
+                <div className="flex justify-center">
+                  <button
+                    id="signInButton"
+                    type="submit"
+                    className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 hover:shadow-md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
+                    style={{ width: '270px' }}
+                  >
+                    <span>Sign in</span>
+                  </button>
+                </div>
                 <div className="flex flex-col sm:items-center mt-6 mb-12 gap-1 text-blue-900 underline">
                   <div className="flex flex-wrap w-full justify-center">
                     <a className="text-sm" href="/account/forgotPassword">
@@ -196,7 +199,7 @@ const SignIn = () => {
           </div>
         </div>
         <div
-          className="relative inline-flex justify-between px-4 py-6 bg-cover bg-register-here-tablet rounded-bl-xl rounded-br-xl"
+          className="relative inline-flex justify-between px-4 py-6 bg-cover bg-register-here-tablet sm:rounded-none md:rounded-bl-xl md:rounded-br-xl"
           style={{
             background: `url("${backgroundImage}")`,
             backgroundSize: 'cover',
@@ -206,16 +209,16 @@ const SignIn = () => {
             Create an account &amp; start playing!
           </p>
           <div className="mt-auto mb-auto text-center whitespace-pre">
-            <a
+            <Link
               role="link"
               className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 hover:shadow-md text-[#2c444e] bg-white active:bg-blue-lighter-04"
-              href="/register/step-1"
+              to="/auth/sign-up"
             >
               <span>Register Here</span>
-            </a>
+            </Link>
           </div>
           <svg
-            className="absolute w-10 h-11 top-16 sm:top-16 -right-4"
+            className="absolute w-10 h-11 top-16 sm:hidden md:top-16 -right-4"
             viewBox="0 0 48.84 45.2"
             xmlns="http://www.w3.org/2000/svg"
             role="img"

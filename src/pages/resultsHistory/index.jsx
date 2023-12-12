@@ -14,11 +14,6 @@ const ResultsHistoryPage = () => {
           defaultActiveKey="2"
           items={[
             {
-              label: 'Tab 1',
-              key: '1',
-              children: 'Tab 3',
-            },
-            {
               label: 'View Results',
               key: '2',
               children: (
