@@ -43,9 +43,11 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <div className="sm:flex sm:items-center sm:flex-row-reverse lg:block sm:gap-3">
-                  <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-gray-light py-3 lg:hidden ">
-                    Sign In
-                  </span>
+                  <Link to="/auth/sign-in">
+                    <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-gray-light py-3 lg:hidden ">
+                      Sign In
+                    </span>
+                  </Link>
                   <svg
                     className="sm:block lg:hidden w-5 h-5"
                     fill="none"
@@ -97,17 +99,16 @@ export default function Navbar() {
                       fill="#2D4550"
                     ></path>
                   </svg>
-                  <a
-                    href="#"
-                    className="px-2 text-sm font-bold hover:text-gray-light text-gray-700 "
-                  >
-                    Register &nbsp;&nbsp;{' '}
+                  <div className="px-2 text-sm font-bold hover:text-gray-light text-gray-700 ">
+                    <Link to="auth/sign-up">Register &nbsp;&nbsp; </Link>
                     <span className=" border-l-2 pr-2 border-gray-700 ">
                       {' '}
                       &nbsp;
                     </span>
-                    <span className="text-gray-700 ">Sign In </span>
-                  </a>
+                    <Link to="auth/sign-in">
+                      <span className="text-gray-700 ">Sign In </span>
+                    </Link>
+                  </div>
 
                   <a
                     href="#"

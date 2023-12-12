@@ -3,6 +3,7 @@ import radient_right from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-
 
 import './styles.css';
 import GameLogos from '../svg/GameLogos.jsx';
+import { Link } from 'react-router-dom';
 const ResultsCard = ({
   JackportAmount,
   date,
@@ -175,12 +176,13 @@ const ResultsCard = ({
             <div className="flex flex-col justify-center md:flex-row md:items-center lg:justify-end px-9">
               <div className="mb-4.5 md:mb-7 md:mt-8 md:flex md:justify-start">
                 <div className="uppercase mt-4 md:mt-0 mx-auto lg:mx-0 w-8/10 md:w-72">
-                  <a
+                  <Link
+                    to="/resultshistory"
                     role="button"
                     className="on_hover_results flex items-center justify-center rounded-full border sm:text-[12px] md:text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-[#2c4b63] bg-white border-[#2c4b63] active:bg-blue-lighter-04"
                   >
                     <span>more results</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

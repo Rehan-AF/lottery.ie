@@ -82,7 +82,7 @@ const SignUp = () => {
     setSteps(2);
   };
   return (
-    <div className="bg-[#d6e4ea] pt-[2rem] pb-[2rem]">
+    <div className="sm:bg-white md:bg-[#d6e4ea] pt-[2rem] pb-[2rem]">
       <div className="max-w-[810px] pb-[2rem] bg-white rounded-xl sm:shadow-none md:shadow-md  w-full mr-auto ml-auto flex flex-col items-center justify-center">
         <div className="p-5 pb-7 flex justify-center">
           <div className="flex">
@@ -228,7 +228,7 @@ const SignUp = () => {
         >
           {steps === 1 && (
             <>
-              <div>
+              <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
                   label="Name"
                   id="firstName"
@@ -244,7 +244,7 @@ const SignUp = () => {
                   </div>
                 ) : null}
               </div>
-              <div>
+              <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
                   label="Surname"
                   id="surName"
@@ -260,7 +260,7 @@ const SignUp = () => {
                   </div>
                 ) : null}
               </div>
-              <div>
+              <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
                   label="Email"
                   id="email"
@@ -276,7 +276,7 @@ const SignUp = () => {
                   </div>
                 ) : null}
               </div>
-              <div>
+              <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
                   label="Password"
                   id="password"
@@ -292,7 +292,7 @@ const SignUp = () => {
                   </div>
                 ) : null}
               </div>
-              <div>
+              <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
                   label="Confirm Pasword"
                   id="confirmPassword"
@@ -312,7 +312,7 @@ const SignUp = () => {
           )}
           {steps === 2 ? (
             <>
-              <div>
+              <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
                   label="Phone Number"
                   id="phoneNumber"
@@ -328,7 +328,7 @@ const SignUp = () => {
                   </div>
                 ) : null}
               </div>
-              <div>
+              <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
                   label="Affiliate Code"
                   id="affiliateCode"
@@ -348,12 +348,14 @@ const SignUp = () => {
           ) : null}
           {steps === 3 && (
             <div className="px-4 sm:w-full md:w-[414px]">
-              <h3 className="mb-2 font-black text-3xl">One last thing!</h3>
-              <p className="mb-6">
+              <h3 className="mb-2 font-black text-end rtl text-3xl">
+                One last thing!
+              </h3>
+              <p className="rtl text-end mb-6">
                 You need to be a resident of the Republic of Ireland to
                 register.
               </p>
-              <div className="flex flex-row cursor-pointer justify-start items-start">
+              <div className="flex flex-row-reverse rtl cursor-pointer justify-start items-start">
                 <div className="w-5 h-5 relative-stacking">
                   <input
                     className="inset-0 w-5 h-5 z-10 cursor-pointer"
@@ -368,7 +370,7 @@ const SignUp = () => {
                   htmlFor="confirmation"
                   className="cursor-pointer w-full text-blue ml-2"
                 >
-                  <div className="text-md pl-3">
+                  <div className="text-end rtl text-md pl-3">
                     <p>I confirm that:</p>
                     <p className="mb-2">
                       - I am a legal resident of the Republic of Ireland and
@@ -409,7 +411,7 @@ const SignUp = () => {
             {steps === 1 ? (
               unlock === 1 ? (
                 <button
-                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-700 bg-green-500 border-gray-400"
+                  className="flex items-center justify-center hover:shadow-md rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-700 bg-green-500 border-[#c4dd32]"
                   onClick={handleStep}
                 >
                   <span>Continue</span>
@@ -427,7 +429,7 @@ const SignUp = () => {
             {steps === 2 ? (
               unlock === 2 ? (
                 <button
-                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-700 bg-green-500 border-gray-400"
+                  className="flex items-center hover:shadow-md justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-700 bg-[#c4dd32] border-[#c4dd32]"
                   type="submit"
                   onClick={() => setSteps(3)}
                 >
@@ -445,7 +447,7 @@ const SignUp = () => {
             {steps === 3 ? (
               unlock === 3 ? (
                 <button
-                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-700 bg-green-500 border-gray-400"
+                  className="flex items-center hover:shadow-md justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-700 bg-[#c4dd32] border-[#c4dd32]"
                   type="submit"
                 >
                   <span>Continue</span>

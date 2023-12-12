@@ -16,9 +16,11 @@ const MobileNav = () => {
     <div className="">
       <div className="sm:flex items-center lg:hidden">
         <div className="sm:flex w-1/3  justify-end sm:items-center sm:flex-row-reverse lg:hidden sm:gap-3">
-          <span className=" h-[31px] inline-flex flex-col justify-center px-[12px] text-[12px] font-bold uppercase border border-gray-900 rounded-full box-content lg:hidden ">
-            Sign In
-          </span>
+          <Link to="/auth/sign-in">
+            <span className=" h-[31px] inline-flex flex-col justify-center px-[12px] text-[12px] font-bold uppercase border border-gray-900 rounded-full box-content lg:hidden ">
+              Sign In
+            </span>
+          </Link>
           <div className="sm:flex items-center lg:hidden">
             <svg
               className="sm:block lg:hidden w-5 h-5"
@@ -91,12 +93,12 @@ const MobileNav = () => {
             <li className="flex items-center justify-between border-b-1 border-gray-300 w-screen py-3.5">
               <div className="px-2 mx-auto">
                 <span>Don&apos;t have an account?</span>&nbsp;
-                <a
-                  href=""
+                <Link
+                  to="auth/sign-up"
                   className="sm:px-1 py-3 text-base font-bold text-gray-800 underline uppercase"
                 >
                   Register today
-                </a>
+                </Link>
               </div>
               <button
                 aria-label="Close Menu"
