@@ -38,14 +38,14 @@ export default function Navbar() {
                     <img
                       className="w-32 h-14"
                       src={mainLogo}
-                      alt="Your Company"
+                      alt="لوگوی لوتوایران"
                     />
                   </Link>
                 </div>
                 <div className="sm:flex sm:items-center sm:flex-row-reverse lg:block sm:gap-3">
-                  <Link to="/auth/sign-in">
-                    <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-gray-light py-3 lg:hidden ">
-                      Sign In
+                  <Link to="auth/sign-in">
+                    <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-[#8ea5b1] py-3 lg:hidden ">
+                      ورود
                     </span>
                   </Link>
                   <svg
@@ -62,8 +62,8 @@ export default function Navbar() {
                 <div className="hidden lg:ml-6 lg:block ">
                   <div className="flex space-x-4 justify-center items-center pt-5">
                     <DropDown
-                      title={'Games'}
-                      position={-765}
+                      title="لوتوها"
+                      position={-898}
                       visible={gamesVisible}
                       onToggle={handleGamesToggle}
                     >
@@ -72,8 +72,8 @@ export default function Navbar() {
                       </div>
                     </DropDown>
                     <DropDown
-                      title={'Results'}
-                      position={-840}
+                      title={'نتایج'}
+                      position={-1093}
                       visible={resultsVisible}
                       onToggle={handleResultsToggle}
                     >
@@ -87,10 +87,10 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="hidden lg:ml-6 lg:block lg:w-full ">
+              <div className="hidden lg:ml-6 lg:block lg:w-full">
                 <div className="flex space-x-4 justify-center items-center pt-5 lg:justify-start">
                   <svg
-                    className="w-5 h-5"
+                    className="w-5 h-5 text-gray-700 hover:text-[#8ea5b1] cursor-pointer"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -99,14 +99,15 @@ export default function Navbar() {
                       fill="#2D4550"
                     ></path>
                   </svg>
-                  <div className="px-2 text-sm font-bold hover:text-gray-light text-gray-700 ">
-                    <Link to="auth/sign-up">Register &nbsp;&nbsp; </Link>
-                    <span className=" border-l-2 pr-2 border-gray-700 ">
-                      {' '}
-                      &nbsp;
-                    </span>
+                  <div className="px-2 text-sm font-bold hover:text-gray-light text-gray-700">
+                    <Link to="auth/sign-up" className="hover:text-[#8ea5b1]">
+                      ثبت نام &nbsp;
+                    </Link>
+                    <span className=" border-l-2 border-gray-700"></span>
                     <Link to="auth/sign-in">
-                      <span className="text-gray-700 ">Sign In </span>
+                      <span className="text-gray-700 pr-2 hover:text-[#8ea5b1]">
+                        ورود
+                      </span>
                     </Link>
                   </div>
 
@@ -114,7 +115,7 @@ export default function Navbar() {
                     href="#"
                     className="px-2 text-xs font-medium hover:text-gray-light text-gray-700  "
                   >
-                    Responsible Play
+                    وبلاگ لوتوایران
                   </a>
                 </div>
               </div>

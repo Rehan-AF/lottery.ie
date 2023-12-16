@@ -1,35 +1,62 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, ScrollRestoration } from 'react-router-dom';
 import Home from '../pages/home';
-import Navbar from '../components/navbar';
-import Banner from '../components/navbar/banner';
-import { Footer } from '../components/footer';
 import ResultsPage from '../pages/resultsPage';
-import MobileNav from '../components/navbar/MobileNav';
-import ResultsHistoryPage from '../pages/resultsHistory';
+import ResultsHistoryPage from '../pages/MegaDaViradaHistory/index.jsx';
 import {
   LayoutWithNavbar,
   LayoutWithouNavbar,
 } from '../components/template/Layout.jsx';
-import SignIn from '../components/signIn/signIn.jsx';
-import SignUp from '../components/SignUp/index.jsx';
-const Routers = () => {
-  return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<LayoutWithNavbar />}>
-            <Route path="" element={<Home />} />
-            <Route path="results" element={<ResultsPage />} />
-            <Route path="resultshistory" element={<ResultsHistoryPage />} />
-          </Route>
-          <Route path="/auth" element={<LayoutWithouNavbar />}>
-            <Route path="sign-in" element={<SignIn />} />
-            <Route path="sign-up" element={<SignUp />} />
-          </Route>
-        </Routes>
-      </Router>
-    </div>
-  );
-};
+import SignIn from '../pages/SignIn/signIn.jsx';
+import SignUp from '../pages/SignUp/index.jsx';
+import ForgotPassword from '../pages/forgotPassowrd/ForgotPassword.jsx';
+import LotofacilHistoryPage from '../pages/LotofacilHistory/index.jsx';
+import QuinaHistoryPage from '../pages/QuinaHistory/index.jsx';
+import MegaSanaHistoryPage from '../pages/MegaSenaHistory/index.jsx';
+import LotoManiaHistoryPage from '../pages/LotoManiaHistory/index.jsx';
+import DuplaSenaHistoryPage from '../pages/DuplaSenaHistory/index.jsx';
+import MillionariaHistoryPage from '../pages/MillionariaHistory/index.jsx';
+import SuperSeteHistoryPage from '../pages/SuperSeteHistory/index.jsx';
+import BasketPage from '../pages/BasketPage/BasketPage.jsx';
+import SelectionPage from '../pages/SelectionComponents/SelectionPage.jsx';
 
-export default Routers;
+const NewRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <div>
+        <LayoutWithNavbar />
+        <ScrollRestoration />
+      </div>
+    ),
+    children: [
+      { path: '', element: <Home /> },
+      { path: 'results', element: <ResultsPage /> },
+      { path: 'results/megaSanaVirda', element: <ResultsHistoryPage /> },
+      { path: 'results/lotofacil', element: <LotofacilHistoryPage /> },
+      { path: 'results/quina', element: <QuinaHistoryPage /> },
+      { path: 'results/mega-sana', element: <MegaSanaHistoryPage /> },
+      { path: 'results/loto-mania', element: <LotoManiaHistoryPage /> },
+      { path: 'results/dupla-sena', element: <DuplaSenaHistoryPage /> },
+      { path: 'results/millionaria', element: <MillionariaHistoryPage /> },
+      { path: 'results/super-sete', element: <SuperSeteHistoryPage /> },
+      { path: 'draw-games/basket', element: <BasketPage /> },
+      { path: 'draw-games/select', element: <SelectionPage /> },
+    ],
+  },
+  {
+    path: '/auth',
+    element: (
+      <div>
+        <LayoutWithouNavbar />
+        <ScrollRestoration />
+      </div>
+    ),
+    children: [
+      { path: 'sign-in', element: <SignIn /> },
+      { path: 'sign-up', element: <SignUp /> },
+      { path: 'forgot-password', element: <ForgotPassword /> },
+    ],
+  },
+]);
+
+export default NewRouter;

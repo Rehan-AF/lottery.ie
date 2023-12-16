@@ -19,8 +19,8 @@
   font-size: 1rem;
   width: 225px;
 }
-.ant-modal {
-  width: 346px !important;
+.ant-modal .css-dev-only-do-not-override-2q8sxy {
+  width: auto !important;
 }
 
 .ant-tabs-tab-active {
@@ -29,10 +29,10 @@
 .ant-tabs-tab-btn {
   display: flex;
   justify-content: flex-end;
-  color: '#2c444e';
+  color: #2c444e !important;
 }
 .ant-tabs-tab-active {
-  color: '#2c444e';
+  color: #2c444e !important;
 }
 :where(.css-dev-only-do-not-override-2q8sxy).ant-tabs .ant-tabs-ink-bar {
   background-color: #2c444e;
@@ -41,12 +41,12 @@
   height: 0.25rem !important;
 }
 :where(.css-dev-only-do-not-override-2q8sxy).ant-tabs .ant-tabs-tab:hover {
-  color: #2c444e;
+  color: #2c444e !important;
 }
 :where(.css-dev-only-do-not-override-2q8sxy).ant-tabs
   .ant-tabs-tab.ant-tabs-tab-active
   .ant-tabs-tab-btn {
-  color: #2c444e;
+  color: #2c444e !important;
 }
 /* Responsive styling */
 

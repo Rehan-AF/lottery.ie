@@ -35,7 +35,7 @@ const ResultsCard = ({
             role="link"
             className="on_hover py-1.5 px-3 mx-2 bg-black-alpha-20 rounded-full border border-solid border-white text-white group-hover:text-gray-800 group-hover:shadow-hover group-hover:bg-white ease-in-out duration-200"
           >
-            <h5 className="uppercase text-sm font-bold">View Results</h5>
+            <h5 className="uppercase text-sm font-bold">مشاهده نتایج</h5>
           </button>
         </div>
       </div>

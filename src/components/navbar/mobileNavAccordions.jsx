@@ -7,6 +7,7 @@ import logo_05 from '../../assets/gameLogoBlack/05.svg';
 import logo_06 from '../../assets/gameLogoBlack/06.svg';
 import logo_07 from '../../assets/gameLogoBlack/07.svg';
 import logo_08 from '../../assets/gameLogoBlack/08.svg';
+import './style.css';
 export const GamesAccordions = ({ isVisible }) => {
   return (
     <div>
@@ -22,17 +23,17 @@ export const GamesAccordions = ({ isVisible }) => {
               <h6 className="flex justify-center sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <img src={logo_01} className="w-[80px]" />
               </h6>
-              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem]  md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end rtl">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
                     className="text-lg md:text-3xl text-sm md:text-sm"
                   >
-                    <span>€7.2 Million*</span>
+                    <span>۳۸۵ میلیارد تومان</span>
                   </span>
                 </p>
                 <p>
-                  <span>Sunday, 12:45am</span>
+                  <span>یکشنبه ۱۲ مهر</span>
                 </p>
               </div>
             </div>
@@ -47,17 +48,17 @@ export const GamesAccordions = ({ isVisible }) => {
               <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <img src={logo_02} className="w-[80px]" />
               </h6>
-              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end rtl">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
                     className="text-lg md:text-3xl text-sm md:text-sm"
                   >
-                    <span>€200 Million**</span>
+                    <span>۵۰۰ میلیارد تومان</span>
                   </span>
                 </p>
                 <p>
-                  <span>Saturday, 12:30am</span>
+                  <span>شنبه ۱۲ مهر</span>
                 </p>
               </div>
             </div>
@@ -72,17 +73,14 @@ export const GamesAccordions = ({ isVisible }) => {
               <h6 className="sm:w-1/3 md:w-1/2 font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <img src={logo_03} className="w-[80px]" />
               </h6>
-              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end rtl">
                 <p className="font-bold text-gray-700">
                   <span className="text-sm md:text-sm lg:text-3xl">
-                    €20,000&nbsp;
-                    <span className="text-sm md:text-sm">
-                      per month for 30 years*
-                    </span>
+                    ۱۰۰ میلیارد تومن
                   </span>
                 </p>
                 <p>
-                  <span>Tomorrow, 12:30am</span>
+                  <span>پنجشنبه ۱۸ آذر ساعت ۱۸:۰۰</span>
                 </p>
               </div>
             </div>
@@ -97,17 +95,17 @@ export const GamesAccordions = ({ isVisible }) => {
               <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <img src={logo_04} className="w-[80px]" />
               </h6>
-              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end rtl">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
                     className="text-lg md:text-3xl text-sm md:text-sm"
                   >
-                    <span>€1 Million**</span>
+                    <span>۸۴۰ میلیارد تومن</span>
                   </span>
                 </p>
                 <p>
-                  <span>Tomorrow, 2:00am</span>
+                  <span>فردا ساعت ۱۲:۰۰</span>
                 </p>
               </div>
             </div>
@@ -122,12 +120,12 @@ export const GamesAccordions = ({ isVisible }) => {
               <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <img src={logo_05} className="w-[80px]" />
               </h6>
-              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end rtl">
                 <p className="font-bold text-gray-700">
-                  <span>€125,000**</span>
+                  <span>۱۹۲ میلیارد تومان</span>
                 </p>
                 <p>
-                  <span>Sunday, 12:45am</span>
+                  <span>دوشنبه ۱۸ مهر ساعت ۱۸:۰۰</span>
                 </p>
               </div>
             </div>
@@ -142,17 +140,17 @@ export const GamesAccordions = ({ isVisible }) => {
               <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <img src={logo_06} className="w-[80px]" />
               </h6>
-              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end rtl">
                 <p className="font-bold text-gray-700">
                   <span
                     aria-hidden="true"
                     className="text-lg md:text-3xl text-sm md:text-sm"
                   >
-                    <span>€1 Million**</span>
+                    <span>۳۴ میلیارد تومان</span>
                   </span>
                 </p>
                 <p>
-                  <span>32 days to go!</span>
+                  <span>فردا ساعت ۱۸:۰۰</span>
                 </p>
               </div>
             </div>
@@ -170,9 +168,17 @@ export const GamesAccordions = ({ isVisible }) => {
               <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <img src={logo_07} className="w-[80px]" />
               </h6>
-              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end rtl">
                 <p className="font-bold text-gray-700">
-                  Win prizes up to €250,000
+                  <span
+                    aria-hidden="true"
+                    className="text-lg md:text-3xl text-sm md:text-sm"
+                  >
+                    <span>۳۴ میلیارد تومان</span>
+                  </span>
+                </p>
+                <p>
+                  <span>فردا ساعت ۱۸:۰۰</span>
                 </p>
               </div>
             </div>
@@ -190,17 +196,23 @@ export const GamesAccordions = ({ isVisible }) => {
               <h6 className="sm:w-1/3 md:w-1/2  font-bold text-lg sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
                 <img src={logo_08} className="w-[80px]" />
               </h6>
-              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end">
+              <div className="sm:pr-[1rem] md:pr-[0rem] sm:w-full md:w-1/2 text-sm sm:flex md:flex sm:flex-col md:flex-col sm:items-end md:items-end rtl">
                 <p className="font-bold text-gray-700">
-                  Win prizes up to €250,000
+                  <span
+                    aria-hidden="true"
+                    className="text-lg md:text-3xl text-sm md:text-sm"
+                  >
+                    <span>۳۴ میلیارد تومان</span>
+                  </span>
                 </p>
-              </div>
-            </div>
+                <p>
+                  <span>فردا ساعت ۱۸:۰۰</span>
+                </p>
+              </div>            </div>
           </button>
         </div>
         <div className="w-full border-t text-sm px-6 py-2">
-          <p className="text-end">*estimated</p>
-          <p className="text-end">**guaranteed</p>
+          <p className="text-end">مبالغ تقریبی می باشند***</p>
         </div>
       </div>
     </div>
@@ -302,7 +314,7 @@ export const ResultsAccordion = ({ setPanelVisible, isVisible }) => {
               className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 text-gray-700 bg-white border-blue-800 active:bg-blue-lighter-04"
               onClick={() => setPanelVisible(false)}
             >
-              <span>view all results</span>
+              <span>مشاهده تمام نتایج</span>
             </button>
           </Link>
         </div>

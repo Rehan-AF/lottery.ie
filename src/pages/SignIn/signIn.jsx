@@ -1,7 +1,10 @@
-import FloatingLabelInput from '../InputField/InputField';
+import FloatingLabelInput from '../../components/InputField/InputField';
 import backgroundImage from '../../assets/backgrounds/SigninPage.svg';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
+import '../../App.css';
+import { useEffect, useState } from 'react';
 const validate = (values) => {
   const errors = {};
   // if (!values.firstName) {
@@ -30,6 +33,7 @@ const validate = (values) => {
   return errors;
 };
 const SignIn = () => {
+  const [unlock, setUnlock] = useState(false);
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -42,7 +46,16 @@ const SignIn = () => {
       alert(JSON.stringify(values, null, 2));
     },
   });
-  console.log(formik.errors);
+  useEffect(() => {
+    if (
+      formik.errors.email === undefined &&
+      formik.errors.password === undefined
+    ) {
+      setUnlock(true);
+    } else {
+      setUnlock(false);
+    }
+  }, [formik.errors]);
   return (
     <div className="sm:bg-white md:bg-[#d2e1e8] sm:px-[0rem] md:px-[2rem] pt-[2rem] pb-[2rem] ">
       <div className=" bg-white rounded-[20px] sm:shadow-none md:shadow-md max-w-[810px] w-full ml-auto mr-auto flex flex-col ">
@@ -127,12 +140,8 @@ const SignIn = () => {
                     onChange={formik.handleChange}
                     value={formik.values.email}
                     errors={formik.errors.email}
+                    touched={formik.touched.email}
                   />
-                  {formik.errors.email ? (
-                    <div className="rtl  sm:w-[376px] md:full text-end text-red-500">
-                      {formik.errors.email}
-                    </div>
-                  ) : null}
                 </div>
                 <div className="sm:flex flex-col items-center md:block">
                   <FloatingLabelInput
@@ -143,15 +152,11 @@ const SignIn = () => {
                     onChange={formik.handleChange}
                     value={formik.values.password}
                     errors={formik.errors.password}
+                    touched={formik.touched.password}
                   />
-                  {formik.errors.password ? (
-                    <div className="rtl  sm:w-[376px] md:full text-end text-red-500">
-                      {formik.errors.password}
-                    </div>
-                  ) : null}
                 </div>
               </div>
-              <div className="flex flex-row cursor-pointer sm:w-[378px] md:w-full sm:mr-auto md:mr-o sm:ml-auto md:ml-o md:justify-start items-center mt-2 mb-11">
+              <div className="flex flex-row cursor-pointer sm:w-[295px] md:w-full sm:mr-auto md:mr-o sm:ml-auto md:ml-o md:justify-start items-center mt-6 mb-11">
                 <input
                   className="inset-0 w-5 h-5 z-10 cursor-pointer "
                   type="checkbox"
@@ -178,20 +183,33 @@ const SignIn = () => {
               </div>
               <div className="mx- lg:mx-12">
                 <div className="flex justify-center">
-                  <button
-                    id="signInButton"
-                    type="submit"
-                    className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 hover:shadow-md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
-                    style={{ width: '270px' }}
-                  >
-                    <span>Sign in</span>
-                  </button>
+                  {formik.values.email &&
+                  formik.values.password &&
+                  unlock === true ? (
+                    <button
+                      id="signInButton"
+                      type="submit"
+                      className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
+                      style={{ width: '270px' }}
+                    >
+                      <span>Sign in</span>
+                    </button>
+                  ) : (
+                    <button
+                      id="signInButton"
+                      disabled
+                      className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
+                      style={{ width: '270px' }}
+                    >
+                      <span>Sign in</span>
+                    </button>
+                  )}
                 </div>
                 <div className="flex flex-col sm:items-center mt-6 mb-12 gap-1 text-blue-900 underline">
                   <div className="flex flex-wrap w-full justify-center">
-                    <a className="text-sm" href="/account/forgotPassword">
+                    <Link className="text-sm" to="/auth/forgot-password">
                       Forgot Password?
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -199,26 +217,27 @@ const SignIn = () => {
           </div>
         </div>
         <div
-          className="relative inline-flex justify-between px-4 py-6 bg-cover bg-register-here-tablet sm:rounded-none md:rounded-bl-xl md:rounded-br-xl"
+          className="relative inline-flex justify-between px-4 py-6 bg-cover bg-register-here-tablet sm:mx-[16px] md:mx-0 sm:rounded-tl-xl sm:rounded-tr-xl md:rounded-tl-none md:rounded-tr-none sm:rounded-bl-xl sm:rounded-br-xl sm:mb-[10rem] md:mb-[0px]"
           style={{
             background: `url("${backgroundImage}")`,
             backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
-          <p className="w-6/12 text-lg font-bold text-white">
+          <p className="w-6/12 sm:text-[16px] md:text-lg font-bold text-white">
             Create an account &amp; start playing!
           </p>
           <div className="mt-auto mb-auto text-center whitespace-pre">
             <Link
               role="link"
-              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 hover:shadow-md text-[#2c444e] bg-white active:bg-blue-lighter-04"
+              className="flex items-center justify-center rounded-full border sm:text-[12px] md:text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 hover:shadow-md text-[#2c444e] bg-white active:bg-blue-lighter-04"
               to="/auth/sign-up"
             >
               <span>Register Here</span>
             </Link>
           </div>
           <svg
-            className="absolute w-10 h-11 top-16 sm:hidden md:top-16 -right-4"
+            className="absolute sm:w-[40px] md:w-[51px] h-[49px] sm:top-[4rem] md:top-14 sm:right-[-12px] md:-right-4"
             viewBox="0 0 48.84 45.2"
             xmlns="http://www.w3.org/2000/svg"
             role="img"

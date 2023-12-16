@@ -9,3 +9,11 @@
   box-shadow: 0px 5px 8px rgba(51, 66, 77, 0.3);
   text-shadow: rgba(0, 0, 0, 0.3) 1px 1px;
 }
+
+.rtl {
+  direction: rtl;
+}
+
+.right {
+  text-align: right
+}

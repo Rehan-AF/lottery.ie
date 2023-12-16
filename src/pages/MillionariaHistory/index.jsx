@@ -1,12 +1,9 @@
 import { Tabs } from 'antd';
 import Template from '../../components/template';
 import GameLogos from '../../components/svg/GameLogos';
-import './styles.css';
-import ResultsHistory from '../../components/resultHistory';
-import DateRangeSelector from '../../components/dataRangeSelector';
-import RangeSelectorModal from '../../components/dataRangeSelector/rangeSelectorModal';
 import ViewResultsPage from './viewResultsPage';
-const ResultsHistoryPage = () => {
+import '../../App.css';
+const MillionariaHistoryPage = () => {
   return (
     <div className="bg-[#f2f6f8]">
       <div className="ml-auto mr-auto">
@@ -23,7 +20,7 @@ const ResultsHistoryPage = () => {
               ),
             },
             {
-              label: <GameLogos logoName="05" color="#1f2937" width="162" />,
+              label: <GameLogos logoName="05" color="#781ea5" width="162" />,
               key: '3',
               disabled: true,
             },
@@ -34,4 +31,4 @@ const ResultsHistoryPage = () => {
   );
 };
 
-export default ResultsHistoryPage;
+export default MillionariaHistoryPage;

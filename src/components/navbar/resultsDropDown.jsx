@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import GameCarousel from '../resultsCarousel';
+import lotofacillogo from '../../assets/gameLogos/02.svg';
+import '../navbar/style.css';
 
 const ResultsDropDown = ({ setResultsVisible }) => {
   return (
     <div>
-      <div className="w-[1150px] flex justify-center">
+      <div className="w-[1150px] pt-2 flex justify-center">
         <GameCarousel />
       </div>
       <div>
@@ -14,13 +16,13 @@ const ResultsDropDown = ({ setResultsVisible }) => {
         >
           <Link to="/results">
             <button
-              className="flex pb-[1rem] justify-center cursor-pointer leading-normal text-base font-bold group-hover:text-gray-prompt items-center"
+              className="rtl flex pb-[1rem] justify-center cursor-pointer leading-normal text-base font-bold group-hover:text-gray-prompt items-center"
               role="button"
               onClick={() => {
                 setResultsVisible(false);
               }}
             >
-              View All Results
+              مشاهده تمام نتایج
               <span className="pl-1 pr-2">
                 <svg
                   className="w-3 h-3"
@@ -33,7 +35,7 @@ const ResultsDropDown = ({ setResultsVisible }) => {
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
-                    d="M2.15862 0.925646C1.73039 0.427253 0.965493 0.356855 0.447051 0.765762C-0.0754328 1.17786 -0.15141 1.92164 0.28019 2.42395L2.49363 5L0.28019 7.57605C-0.15141 8.07836 -0.0754328 8.82214 0.447051 9.23424C0.965494 9.64314 1.73039 9.57275 2.15862 9.07435L4.94706 5.8291C5.35 5.36015 5.35212 4.64233 4.94706 4.1709L2.15862 0.925646Z"
+                    d="M3.84138 0.925646C4.26961 0.427253 5.03451 0.356855 5.55295 0.765762C6.07543 1.17786 6.15141 1.92164 5.71981 2.42395L3.50637 5L5.71981 7.57605C6.15141 8.07836 6.07543 8.82214 5.55295 9.23424C5.03451 9.64314 4.26961 9.57275 3.84138 9.07435L1.05294 5.8291C0.65 5.36015 0.647878 4.64233 1.05294 4.1709L3.84138 0.925646Z"
                     fill="currentColor"
                   ></path>
                 </svg>
@@ -51,14 +53,14 @@ const ResultsDropDown = ({ setResultsVisible }) => {
             }}
           >
             <img
-              alt="white Daily Million logo"
-              className="w-22 relative bottom-0.5"
-              src="https://www.lottery.ie/content/dam/pli/logos/centered/white/DailyMillion.svg"
+              alt="لوگوی لوتوفسیل"
+              className="w-16 relative bottom-0.5 lotofacil-logo-dropdown"
+              src={lotofacillogo}
               role="img"
             />
-            <p className="text-white text-lg">1 hour to go!</p>
-            <span className="flex text-lg font-bold">
-              <p className="text-white">€1 Million Guaranteed Jackpot</p>
+            <p className="text-white text-lg">مهلت خرید تا ساعت ۱۸:۰۰</p>
+            <span className="flex text-lg font-bold rtl">
+              <p className="text-white pr-2">مبلغ جکپات: ۱۷ میلیارد تومان</p>
             </span>
             <a
               aria-label="PLAY TODAY link"
@@ -67,7 +69,7 @@ const ResultsDropDown = ({ setResultsVisible }) => {
             >
               <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                 <div className="uppercase text-sm font-bold leading-none xsm:text-sm">
-                  <span aria-label="play today">PLAY TODAY</span>
+                  <span aria-label="play today">خرید بلیط</span>
                 </div>
               </div>
             </a>

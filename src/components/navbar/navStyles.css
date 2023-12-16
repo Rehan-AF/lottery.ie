@@ -112,3 +112,16 @@
     opacity: 1;
   }
 }
+
+.rtl {
+  direction: rtl;
+}  
+
+.ltr {
+  direction:ltr
+}
+
+.gamesCardButton {
+
+  font-size: 13px;
+}

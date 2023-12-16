@@ -12,6 +12,7 @@ const ResultsCard = ({
   secondLogo,
   nextDraw,
   drawAmount,
+  amountMultiplier,
   playFor,
   backgroundImage,
   gradient = false,
@@ -19,6 +20,7 @@ const ResultsCard = ({
   winingNumbers2 = false,
   columnNumber = 6,
   customClass,
+  link,
 }) => {
   return (
     <div>
@@ -36,10 +38,10 @@ const ResultsCard = ({
               </div>
               <div className="text-right">
                 <p className="text-bold text-base sm:text-[14px] md:text-[15.5px] text-[#49636e]">
-                  Jackpot
+                  مبلغ جکپات
                 </p>
-                <p className="font-black text-xl sm:text-[18px] md:text-[20px] text-[#49636e]">
-                  €{JackportAmount}
+                <p className="font-black text-xl sm:text-[18px] md:text-[20px] text-[#49636e] rtl">
+                  {JackportAmount} تومان
                 </p>
               </div>
             </div>
@@ -59,7 +61,7 @@ const ResultsCard = ({
                 <div className="justify-center flex flex-row flex-wrap gap-6 lg:gap-10">
                   <div className="flex-col">
                     <div className="leading-5 font-bold py-1.5 text-end text-[#49636e]">
-                      Winning numbers
+                      اعداد برنده شده
                     </div>
                     <div className="flex flex-col space-y-4">
                       <div
@@ -81,7 +83,7 @@ const ResultsCard = ({
                   {specialNumbers && (
                     <div className="flex-col">
                       <div className="leading-5 text-end font-bold py-1.5 text-[#49636e]">
-                        Clovers
+                        شبدرهای برنده
                       </div>
                       <div className="flex flex-col space-y-4">
                         <div className="flex gap-1.5">
@@ -146,7 +148,7 @@ const ResultsCard = ({
                   <div className="justify-center flex flex-row flex-wrap gap-6 lg:gap-10">
                     <div className="flex-col">
                       <div className="leading-5 font-bold py-1.5 text-end">
-                        Winning numbers
+                        اعداد برنده شده سری دوم
                       </div>
                       <div className="flex flex-col space-y-4">
                         <div className="grid grid-cols-6 gap-1.5 md:gap-2 flex-wrap">
@@ -177,11 +179,11 @@ const ResultsCard = ({
               <div className="mb-4.5 md:mb-7 md:mt-8 md:flex md:justify-start">
                 <div className="uppercase mt-4 md:mt-0 mx-auto lg:mx-0 w-8/10 md:w-72">
                   <Link
-                    to="/resultshistory"
+                    to={link}
                     role="button"
                     className="on_hover_results flex items-center justify-center rounded-full border sm:text-[12px] md:text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-[#2c4b63] bg-white border-[#2c4b63] active:bg-blue-lighter-04"
                   >
-                    <span>more results</span>
+                    <span>مشاهده تمام نتایج</span>
                   </Link>
                 </div>
               </div>
@@ -237,7 +239,7 @@ const ResultsCard = ({
               <div className="text_shadow_results items-center ml-2 my-auto md:flex md:ml-0 md:my-3 lg:ml-3 lg:flex-col lg:flex-grow lg:h-full lg:mt-0 lg:items-start">
                 <div className="text-end w-full">
                   <h1 className="text-white text-xl md:text-4xl lg:text-base lg:font-bold font-black mb-1 hidden lg:block">
-                    Next draw
+                    قرعه کشی بعدی
                   </h1>
                   <div className="text-white lg:font-bold text-base md:text-lg lg:text-xl">
                     {nextDraw}
@@ -245,28 +247,26 @@ const ResultsCard = ({
                 </div>
                 <div className="w-full flex lg:flex-col leading-4 justify-between lg:justify-start lg:my-auto flex-row items-end sm:items-center">
                   <div className="lg:flex justify-end ml-2 lg:ml-8 lg:mt-6 xsm:whitespace-nowrap ">
-                    <div className="lg:text-[49.7px] text-white text-base md:text-lg lg:text-6xl lg:flex hidden font-bold lg:font-black">
-                      €{drawAmount}*
+                    <div className="lg:text-[49.7px] text-white text-base md:text-lg lg:text-6xl lg:flex hidden font-bold lg:font-black rtl">
+                      {drawAmount} {amountMultiplier}
+                      <span style={{ fontSize: '30px' }}>تومان</span>
                     </div>
-                    <div className="text-white text-base md:text-lg lg:text-6xl lg:hidden font-bold lg:font-black">
-                      €{drawAmount}
+                    <div className="text-white text-base md:text-lg lg:text-6xl lg:hidden font-bold lg:font-black rtl">
+                      {drawAmount} {amountMultiplier} تومان
                     </div>
-                  </div>
-                  <div className="text-white font-normal md:mr-2 ml-2 lg:mt-9 md:ml-1 md:text-lg lg:hidden">
-                    (estimated)
                   </div>
                 </div>
               </div>
               <div className="flex lg:ml-11 md:mt-1.5 lg:mb-4 ml-auto md:ml-2 md:mb-2 lg:justify-end mr-2 lg:mr-3 pt-1 shrink-0 whitespace-nowrap">
                 <a
-                  aria-label="Play from €4 link"
+                  aria-label="Play from link"
                   className="flex justify-center group"
                   href="/draw-games/lotto"
                 >
                   <div className="on_hover_results lg:py-[10px] lg:px-[17px] m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
                     <div className="uppercase text-sm font-bold leading-none xsm:text-base">
-                      <span aria-label="play from €4">
-                        Play from €${playFor}
+                      <span aria-label="play from">
+                        خرید بلیط با {playFor} هزار تومان
                       </span>
                     </div>
                   </div>
@@ -274,7 +274,7 @@ const ResultsCard = ({
               </div>
               <div className="text-white justify-start lg:flex font-normal text-sm ml-2 mr-6 lg:flex-grow hidden">
                 <div className="text_shadow_results lg:mt-auto lg:mb-2">
-                  *estimated
+                  مبلغ تقریبی می باشد
                 </div>
               </div>
             </div>

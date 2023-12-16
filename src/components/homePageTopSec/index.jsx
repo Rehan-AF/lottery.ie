@@ -28,13 +28,13 @@ const HomePageTopSection = () => {
                 backgroundImage={backgroundImage2}
                 logoSrc={logo5}
                 playLink="/"
-                playLabel="Play from €4"
-                drawDay="Sunday"
-                drawTime=", 12:45am"
-                jackpotAmount="€200"
-                estimatedLabel="*estimated"
-                price=" Million*"
-                drew="Next draw"
+                playLabel="خرید بلیط با ۷۰ هزار تومان"
+                drawDay="یکشنبه"
+                drawTime="ساعت ۱۸:۰۰"
+                jackpotAmount="۱۷"
+                estimatedLabel="مبلغ تقریبی*"
+                price="میلیارد تومان"
+                drew="قرعه کشی بعدی"
               />
             </div>
             <div className="w-full xl:w-1/2 ">
@@ -42,13 +42,13 @@ const HomePageTopSection = () => {
               <SmallCardRed
                 logoSrc={logo2}
                 playLink="/"
-                playLabel="Play from €1"
-                drawDay="3 hours"
-                drawTime=" to go!"
-                jackpotAmount="€1"
-                estimatedLabel="*estimated"
-                price=" Million*"
-                drew="Only €1 per line"
+                playLabel="خرید بلیط با ۷۰ هزار تومان"
+                drawDay="یکشنبه"
+                drawTime="ساعت ۱۸:۰۰"
+                jackpotAmount="۳۴۸"
+                estimatedLabel="مبلغ تقریبی*"
+                price="میلیارد تومان"
+                drew="قرعه کشی بعدی"
                 gradient={true}
               />
             </div>
@@ -60,13 +60,13 @@ const HomePageTopSection = () => {
                 backgroundImage={backgroundImage4}
                 logoSrc={logo6}
                 playLink="/"
-                playLabel="Play from €1"
-                drawDay="Thursday"
-                drawTime="12:45am"
-                jackpotAmount="€125,000"
-                estimatedLabel="*estimated"
-                price=""
-                drew="Next draw"
+                playLabel="خرید بلیط با ۷۰ هزار تومان"
+                drawDay="یکشنبه"
+                drawTime="ساعت ۱۸:۰۰"
+                jackpotAmount="۴۹"
+                estimatedLabel="مبلغ تقریبی*"
+                price="میلیارد تومان"
+                drew="قرعه کشی بعدی"
               />
             </div>
             <div className="w-full xl:w-1/2 ">
@@ -76,13 +76,13 @@ const HomePageTopSection = () => {
                 backgroundImage={backgroundImage5}
                 logoSrc={logo7}
                 playLink="/"
-                playLabel="Play from €4"
-                drawDay="Sunday"
-                drawTime="12:45am"
-                jackpotAmount="€7.2"
-                estimatedLabel="*estimated"
-                price=" Million*"
-                drew="Next draw"
+                playLabel="خرید بلیط با ۷۰ هزار تومان"
+                drawDay="یکشنبه"
+                drawTime="ساعت ۱۸:۰۰"
+                jackpotAmount="۸۴۹"
+                estimatedLabel="مبلغ تقریبی*"
+                price="میلیارد تومان"
+                drew="قرعه کشی بعدی"
               />
             </div>
           </div>
