@@ -11,29 +11,13 @@ const ResultsHistory = ({
   columnNumber = 6,
   winingNumbers,
   specialNumbers,
-  // winingNumbers2,
+  data,
+  winingType = 'اعداد برنده شده',
 }) => {
-  const data = [
-    {
-      match: 'Jackpot',
-      winners: '0',
-      prize: '7,564,749',
-    },
-    {
-      match: 'Match 5 + Bonus',
-      winners: '0',
-      prize: '40,178',
-    },
-    {
-      match: 'Match 5',
-      winners: '16',
-      prize: '1,506',
-    },
-  ];
   return (
-    <div className="bg-white shadow-md rounded-t-lg max-w-[1156.7px] w-full mt-[0.3rem] mb-[0.7rem]">
+    <div className="bg-white shadow-md rounded-t-lg max-w-[880px] w-full mt-[0.3rem] mb-[0.7rem]">
       <div className="px-4 md:px-9">
-        <div className="bg-white flex flex-row justify-between pt-3 sm:pb-[0px] md:pb-3 rounded-t-lg">
+        <div className="bg-white flex flex-row justify-between pt-3 sm:pb-[0px] md:pb-2 rounded-t-lg">
           <div className="w-22 -mb-1">
             <GameLogos
               logoName={secondLogo}
@@ -51,7 +35,7 @@ const ResultsHistory = ({
             </p>
           </div>
         </div>
-        <div className="pb-4">
+        <div className="pb-[12px]">
           <div className="relative text-end">
             <span
               aria-hidden="true"
@@ -67,7 +51,7 @@ const ResultsHistory = ({
             <div className="justify-center flex flex-row flex-wrap gap-6 lg:gap-10">
               <div className="flex-col">
                 <div className="leading-5 font-bold py-1.5 text-end text-[#49636e]">
-                  Winning numbers
+                  {winingType}
                 </div>
                 <div className="flex flex-col space-y-4">
                   <div
@@ -149,31 +133,6 @@ const ResultsHistory = ({
               )}
             </div>
           </div>
-          {/* {winingNumbers2 && (
-            <div className="flex mt-[1rem] justify-center items-center lg:block">
-              <div className="justify-center flex flex-row flex-wrap gap-6 lg:gap-10">
-                <div className="flex-col">
-                  <div className="leading-5 font-bold py-1.5 text-end">
-                    Winning numbers
-                  </div>
-                  <div className="flex flex-col space-y-4">
-                    <div className="grid grid-cols-6 gap-1.5 md:gap-2 flex-wrap">
-                      {winingNumbers2?.map((val, index) => {
-                        return (
-                          <div
-                            className={`flex font-bold  md:w-[45px] md:h-[45px]  rounded-full justify-center items-center text-white ${`bg-[${winingColor}]`} w-7 h-7  md:text-2xl sm:text-[0.875rem]`}
-                            key={index}
-                          >
-                            {val}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )} */}
         </div>
       </div>
       <hr />

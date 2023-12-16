@@ -24,25 +24,25 @@
   color: #201f1f;
   font-weight: 700;
 }
-.ant-modal-header {
+/* .ant-modal-header {
   display: none;
 }
 .ant-modal-close {
   display: none;
-}
-.ant-modal-content {
+} */
+/* .ant-modal-content {
   width: 360px;
 }
 .ant-modal {
   width: 360px;
-}
+} */
 .ant-modal-footer {
   display: flex;
   justify-content: space-between;
 }
-:where(.css-dev-only-do-not-override-2q8sxy).ant-modal .ant-modal-content {
+/* :where(.css-dev-only-do-not-override-2q8sxy).ant-modal .ant-modal-content {
   padding: 20px 14px;
-}
+} */
 .rdrDayToday:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span:after,
 .rdrDayToday:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span:after,
 .rdrDayToday:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span:after,

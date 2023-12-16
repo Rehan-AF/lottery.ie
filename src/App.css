@@ -129,3 +129,156 @@ body {
 .react-datepicker__close-icon::after {
   background-color: #2d3748;
 }
+.rtl {
+  direction: rtl;
+  text-align: start;
+}
+.input_container {
+  position: relative;
+  border: 1px solid rgb(189, 187, 187);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  height: 63px;
+  max-width: 378px;
+  width: 100%;
+}
+
+.floating-label {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  color: rgba(118, 118, 118, 1);
+  pointer-events: none;
+  transition: 0.2s ease-out;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.input_container input {
+  border: none;
+  font-size: 1rem;
+  padding-top: 18px;
+  font-weight: 700;
+  outline: none;
+  color: #2c444e;
+}
+
+.input_container.focused .floating-label {
+  top: 7px;
+  font-size: 12px;
+  right: 1rem;
+  color: rgba(118, 118, 118, 1);
+}
+.shadow_md {
+  transition: box-shadow 0.15s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.shadow_md:hover {
+  box-shadow: 0px 3px 6px rgba(47, 55, 0, 0.36);
+}
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+.ant-tabs-top {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ant-tabs-nav-wrap {
+  max-width: 78.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row-reverse;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+.ant-tabs-tab {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+.ant-tabs-tab-btn {
+  font-size: 1rem;
+  width: 225px;
+}
+.ant-modal {
+  max-width: 756px !important;
+  width: auto !important;
+}
+.ant-modal-content {
+  padding: 0 !important;
+}
+.ant-modal-title {
+  display: none;
+}
+.ant-modal-close {
+  display: none;
+}
+.ant-tabs-tab-active {
+  font-weight: 700;
+}
+.ant-tabs-tab-btn {
+  display: flex;
+  justify-content: flex-end;
+  color: #2c444e !important;
+}
+.ant-tabs-tab-active {
+  color: #2c444e !important;
+}
+:where(.css-2q8sxy).ant-tabs .ant-tabs-ink-bar {
+  background-color: #2c444e !important;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-tabs .ant-tabs-ink-bar {
+  background-color: #2c444e !important;
+}
+.ant-tabs-ink-bar-animated {
+  height: 0.25rem !important;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-tabs .ant-tabs-tab:hover {
+  color: #2c444e !important;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-tabs
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  color: #2c444e !important;
+}
+/* Responsive styling */
+
+/* pl-[1rem] pr-[1rem] pt-4 max-w-[78.8rem] xl:mx-auto */
+.ant-tabs-tab-disabled {
+  width: 100% !important;
+  cursor: pointer !important;
+  margin: 0px !important;
+}
+@media (max-width: 500px) {
+  .ant-tabs-tab-btn {
+    width: 125px;
+  }
+  .ant-tabs-nav-list {
+    gap: 20px;
+  }
+  .ant-tabs-nav-wrap {
+    padding-top: 0;
+  }
+  .input_container {
+    height: 53px;
+  }
+  .floating-label {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    color: rgba(118, 118, 118, 1);
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  .input_container input {
+    border: none;
+    font-size: 14px;
+    padding-top: 16px;
+    font-weight: 700;
+    outline: none;
+    color: #2c444e;
+  }
+}

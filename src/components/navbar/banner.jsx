@@ -10,10 +10,10 @@ const Banner = () => {
         }}
       >
         <span className="inline-block align-middle hover:underline">
-          <b>
-            Win €20k a month for 30 years with our brand new game Eurodreams!
+          <b>*****{' '}
+            تماشای مراسم قرعه کشی، روزانه ساعت ۲:۳۰ بامداد در کانال رسمی یوتیوب مجموعه بین المللی لاتاری
           </b>{' '}
-          Click here to watch our new ad.{' '}
+          *****{' '}
         </span>
       </a>
     </a>

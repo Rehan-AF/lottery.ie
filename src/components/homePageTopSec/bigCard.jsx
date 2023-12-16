@@ -41,24 +41,24 @@ const BigCard = () => {
               style={{ textShadow: ' rgba(0, 0, 0, 0.3) 1px 1px' }}
             >
               <h1 className="lg:flex lg:justify-end leading-none sm:text-right text-sm md:text-base font-bold">
-                Next draw
+                قرعه کشی بعدی
               </h1>
               <h2 className="lg:flex lg:justify-end font-black sm:text-right text-base md:text-lg leading-6">
-                Tomorrow, 12:30am
+                چهارشنبه ساعت ۱۸:۰۰
               </h2>
               <h3
-                className="pl-1 text-xl sm:text-end sm:text-2xl md:text-3xl lg:text-4xl font-black pt-1"
+                className="pl-1 text-xl sm:text-end sm:text-2xl md:text-3xl lg:text-4xl font-black pt-1 rtl"
                 aria-label="85 Million Euro *"
               >
                 <span
                   aria-hidden="true"
-                  className="lg:flex lg:justify-end text-lg md:text-3xl lg:text-5xl"
+                  className="lg:flex text-lg md:text-3xl lg:text-5xl"
                 >
                   <span>
                     <strong className="text-4xl-xtra  md:text-6xl lg:text-6xl-xtra sm:text-[32px]">
-                      €85
+                      ۴۸۹
                     </strong>{' '}
-                    Million*
+                    میلیارد تومان
                   </span>
                 </span>
               </h3>
@@ -67,7 +67,7 @@ const BigCard = () => {
                 style={{ textShadow: 'rgba(0, 0, 0, 0.3) 1px 1px' }}
               >
                 <p className="lg:text-start lg:left-[1rem] sm:text-end sm:pr-[16px] text-white text-x-sm font-bold absolute bottom-3 w-1/2 md:right-[1.5rem] md:w-auto">
-                  *estimated
+                  مبلغ تقریبی می باشد*
                 </p>
               </div>
             </div>
@@ -79,7 +79,7 @@ const BigCard = () => {
               >
                 <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:bg-white">
                   <div className="uppercase text-sm font-bold leading-none sm:text-[12px]">
-                    <span aria-label="play from €2.50">Play from €2.50</span>
+                    <span aria-label="play from €2.50">خرید بلیط با ۱۰۰ هزار تومان</span>
                   </div>
                 </div>
               </a>

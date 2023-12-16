@@ -1,5 +1,6 @@
 import radient_left from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-left.svg';
 import radient_right from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-right.svg';
+import './styles.css';
 
 const SmallCardRed = ({
   backgroundImage,
@@ -64,7 +65,7 @@ const SmallCardRed = ({
               {/* Next draw */}
               {drew}
             </p>
-            <p className=" md:text-lg shadow-text leading-5 font-black text-[14px] text-end">
+            <p className="md:text-lg shadow-text leading-5 font-black text-[14px] text-end">
               {/* Tomorrow, 12:45am */}
               {`${drawDay}, ${drawTime}`}
             </p>
@@ -226,14 +227,14 @@ const SmallCardRed = ({
               </div>
               <h3
                 aria-label={`${jackpotAmount} *`}
-                className=" shadow-text break-words text-xl sm:text-2xl md:text-3xl font-black "
+                className=" shadow-text break-words text-xl sm:text-2xl md:text-3xl font-black rtl"
               >
                 <span aria-hidden="true" className="text-lg md:text-3xl">
                   <span>
                     <strong className=" md:text-5xl-xtra lg:text-5xl">
                       {jackpotAmount}
                     </strong>
-                    <span className="text-[16px]">{price}</span>
+                    <span className="text-[17px]"> {price}</span>
                   </span>
                 </span>
               </h3>

@@ -18,7 +18,7 @@ const MobileNav = () => {
         <div className="sm:flex w-1/3  justify-end sm:items-center sm:flex-row-reverse lg:hidden sm:gap-3">
           <Link to="/auth/sign-in">
             <span className=" h-[31px] inline-flex flex-col justify-center px-[12px] text-[12px] font-bold uppercase border border-gray-900 rounded-full box-content lg:hidden ">
-              Sign In
+              ورود
             </span>
           </Link>
           <div className="sm:flex items-center lg:hidden">
@@ -92,13 +92,13 @@ const MobileNav = () => {
           >
             <li className="flex items-center justify-between border-b-1 border-gray-300 w-screen py-3.5">
               <div className="px-2 mx-auto">
-                <span>Don&apos;t have an account?</span>&nbsp;
-                <Link
-                  to="auth/sign-up"
+                <span>کاربر جدید هستید؟</span>&nbsp;
+                <a
+                  href=""
                   className="sm:px-1 py-3 text-base font-bold text-gray-800 underline uppercase"
                 >
-                  Register today
-                </Link>
+                  ثبت نام در لوتوایران
+                </a>
               </div>
               <button
                 aria-label="Close Menu"
@@ -131,7 +131,7 @@ const MobileNav = () => {
                 className="block  py-3 text-base font-bold text-gray-800 pb-[12px]"
               >
                 <Accorion
-                  title="Games"
+                  title="لوتوهای فعال"
                   pading={true}
                   navbar={true}
                   animate={setGamesPanelVisible}
@@ -145,7 +145,7 @@ const MobileNav = () => {
                 className="block text-base font-bold text-gray-800 "
               >
                 <Accorion
-                  title="Results"
+                  title="نتایج لوتوها"
                   pading={true}
                   navbar={true}
                   animate={setResultsPanelVisible}
@@ -159,10 +159,10 @@ const MobileNav = () => {
 
               <Disclosure.Button
                 as="a"
-                href="#"
+                href="https://blog.lottoiran.com"
                 className="block px-6 py-3 text-base font-bold text-gray-800 border-gray-300 border-b-[1px] text-end"
               >
-                Scratch Cards
+                وبلاگ لوتوایران
               </Disclosure.Button>
             </div>
             <div className="pb-3">
@@ -172,28 +172,42 @@ const MobileNav = () => {
                   href="#"
                   className="block px-6 pb-2 text-sm font-medium text-gray-800 "
                 >
-                  How to Play
+                  سوالات متداول
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
                   className="block px-6 pb-2 text-sm font-medium text-gray-800 "
                 >
-                  Responsible Play
+                  تماس با پشتیبانی
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
                   className="block px-6 pb-2 text-sm font-medium text-gray-800 "
                 >
-                  Accessible results
+                  نحوه دریافت جایزه
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
                   className="block px-6 pb-2 text-sm font-medium text-gray-800 "
                 >
-                  Gaeilge | English
+                  استاندارد و امنیت قرعه کشی
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
+                >
+                  کانال تلگرام
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  className="block px-6 pb-2 text-sm font-medium text-gray-800 "
+                >
+                  صفحه اینستاگرام
                 </Disclosure.Button>
               </div>
             </div>

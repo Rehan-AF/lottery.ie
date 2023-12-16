@@ -25,27 +25,27 @@ const MediumCardBlue = ({ backgroundImage, logo }) => {
               <div className="sm:text-end flex flex-col h-full space-y-3">
                 <div className="flex flex-col">
                   <span className="sm:text-[12px] md:text-base font-bold shadow-text">
-                    One Millionaire Guaranteed
+                    قرعه کشی بعدی
                   </span>
                   <span className="text-base md:text-lg shadow-text font-black leading-5">
-                    34 days to go!
+                    دوشنبه ساعت ۱۸:۰۰
                   </span>
                 </div>
                 <span
-                  className="font-black shadow-text text-2xl md:text-3xl break-words"
+                  className="font-black shadow-text text-2xl md:text-3xl break-words rtl"
                   aria-label="1 Million Euro *"
                 >
                   <span aria-hidden="true" className="text-lg md:text-3xl">
                     <span>
                       <strong className="sm:text-[32px] text-5xl md:text-5xl-xtra lg:text-5xl">
-                        €1
+                        ۲۸
                       </strong>{' '}
-                      Million*
+                      میلیارد تومان
                     </span>
                   </span>
                 </span>
                 <p className="sm:text-end text-white md:absolute md:hidden text-sm font-normal pr-4 absolute bottom-0 right-[0px] pb-2.5 w-1/2 md:w-auto">
-                  *guaranteed
+                  مبلغ تقریبی*
                 </p>
               </div>
             </div>
@@ -56,12 +56,12 @@ const MediumCardBlue = ({ backgroundImage, logo }) => {
               >
                 <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:bg-white">
                   <div className="uppercase text-sm font-bold leading-none sm:text-[12px]">
-                    <span aria-label="play from €2.50">Play from €25</span>
+                    <span aria-label="play from €2.50">خرید بلیط با ۸۰ هزار تومان</span>
                   </div>
                 </div>
               </a>
               <p className="sm:text-start  hidden md:block text-white md:none text-sm  font-normal pr-4 bottom-0 left-[16px] pt-2.5 w-1/2">
-                *guaranteed
+                مبلغ تقریبی
               </p>
             </div>
           </div>

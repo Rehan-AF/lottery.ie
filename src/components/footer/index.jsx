@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import backgroundImage from '../../assets/backgrounds/footerBack.svg';
+import './styles.css';
 export const Footer = () => {
   const [lotteryVisible, setLotteryVisible] = useState(true);
   const [infoVisible, setInfoVisible] = useState(true);
@@ -43,20 +44,17 @@ export const Footer = () => {
       }}
     >
       <section className="sm:hidden md:flex bg-[#49636e] text-white items-center justify-center md:h-[63px]">
-        <div className=" flex items-center justify-center">
-          <div className=" text-[#49636e] font-bold h-[36px] sm:w-[42px] md:w-[36px] bg-white rounded-full flex justify-center items-center">
-            18+
-          </div>
+        <div className=" flex items-center justify-center rtl">
+          
           <p className="pl-[9px] text-[0.75rem] font-bold heght-[1rem] border-r border-white pr-[18px]">
-            Play responsibly, Play for fun. National Lottery funds Good Causes
-            around Ireland.
+          شانس آنقدرها هم که فکر می کنید تصادفی نیست، قبل از این که بلیط بخت آزمایی برنده جکپات شود باید شخصی آن را خریداری کرده باشد. (ورا نظریان)
           </p>
         </div>
         <a
           className="sm:hidden md:flex pl-[18px] text-[0.75rem]"
           href="/useful-info/play-responsibly"
         >
-          Responsible play information
+          همین حالا تنها با یک بلیط، شانس خودتو محک بزن
         </a>
       </section>
       <section className="sm:flex flex-row-reverse text-right md:hidden py-[12px] px-[16px] bg-[#49636e] text-white items-center justify-start pl-[1rem] ">
@@ -85,7 +83,7 @@ export const Footer = () => {
                 className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  sm:flex-row-reverse mt-4 lg:mt-0 lg:flex-row"
               >
                 <p className="font-bold mx-2 flex  lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-end">
-                  Lottery
+                  لوتوایران در یک نگاه
                 </p>
                 <span className="lg:hidden flex items-center w-1/2 mx-5 sm:justify-start">
                   <svg
@@ -111,7 +109,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      About us
+                      سوالات متداول
                     </a>
                   </li>
                   <li>
@@ -119,7 +117,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      Latest News
+                      تماس با پشتیبانی
                     </a>
                   </li>
                   <li>
@@ -127,7 +125,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      Careers
+                      وبلاگ لوتوایران
                     </a>
                   </li>
                   <li>
@@ -135,7 +133,31 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      Scratch Cards
+                      درباره لوتوایران
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                    >
+                      شرایط و قوانین
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                    >
+                      دریافت نمایندگی
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                    >
+                      استاندارد و امنیت قرعه کشی
                     </a>
                   </li>
                 </ul>
@@ -147,7 +169,7 @@ export const Footer = () => {
                 className="flex lg:justify-end border-b lg:border-b-0 border-gray-300 lg:hover:bg-inherit  sm:flex-row-reverse mt-4 lg:mt-0 lg:flex-row"
               >
                 <p className="font-bold mx-2 flex lg:justify-end  w-1/2 tracking-wide cursor-pointer text-gray-700 py-3 sm:justify-end ">
-                  Useful Information
+                  لوتوهای فعال
                 </p>
                 <span className="lg:hidden flex items-center w-1/2 mx-5 sm:justify-start">
                   <svg
@@ -173,7 +195,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      Find a store
+                      میلیونر
                     </a>
                   </li>
                   <li>
@@ -181,7 +203,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      FAQ
+                      مگاسنا
                     </a>
                   </li>
                   <li>
@@ -189,7 +211,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      How to claim your prize
+                      لوتوفسیل
                     </a>
                   </li>
                   <li>
@@ -197,7 +219,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      How to play - Games Info
+                      کوئینا
                     </a>
                   </li>
                   <li>
@@ -205,7 +227,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      Games End Notices
+                      لوتومانیا
                     </a>
                   </li>
                   <li>
@@ -213,7 +235,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      Syndicates
+                      دوپلاسنا
                     </a>
                   </li>
                   <li>
@@ -221,7 +243,7 @@ export const Footer = () => {
                       href="/"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
-                      Supported Browsers
+                      سوپرست
                     </a>
                   </li>
                 </ul>
@@ -230,7 +252,7 @@ export const Footer = () => {
             <div className="w-full   mt-4  lg:mt-0  lg:w-1/4">
               <div className="py-3 mx-2">
                 <p className="lg:text-end font-bold tracking-wide text-gray-700 mb-4 sm:flex sm:justify-end">
-                  Find Us
+                  شبکه های اجتماعی
                 </p>
                 <div className="flex flex-row lg:gap-[1rem] lg:justify-end sm:flex sm:justify-end">
                   <div className="mr-4">
@@ -266,15 +288,62 @@ export const Footer = () => {
                   </div>
                 </div>
               </div>
+              <div className="w-full   mt-4  lg:mt-0  lg:w-1/4"></div>
+              <div className="py-3 mx-2">
+                <p className="lg:text-end font-bold tracking-wide text-gray-700 mb-5 sm:flex sm:justify-end">
+                  راهنمای شرکت کنندگان
+                </p>
+                <ul className="lg:text-end space-y-2 my-3 sm:flex md:flex sm:self-end md:self-end sm:flex-col sm:items-end md:items-end">
+                  <li>
+                    <a
+                      href="/"
+                      className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                    >
+                      نحوه مشاهده برنامه زنده
+                    </a>
+                  </li>
+                </ul>
+                <ul className="lg:text-end space-y-2 my-3 sm:flex md:flex sm:self-end md:self-end sm:flex-col sm:items-end md:items-end">
+                  <li>
+                    <a
+                      href="/"
+                      className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                    >
+                      نحوه شرکت در قرعه کشی ها
+                    </a>
+                  </li>
+                </ul>
+                <ul className="lg:text-end space-y-2 my-3 sm:flex md:flex sm:self-end md:self-end sm:flex-col sm:items-end md:items-end">
+                  <li>
+                    <a
+                      href="/"
+                      className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                    >
+                      نحوه دریافت جایزه
+                    </a>
+                  </li>
+                </ul>
+                <ul className="lg:text-end space-y-2 my-3 sm:flex md:flex sm:self-end md:self-end sm:flex-col sm:items-end md:items-end">
+                  <li>
+                    <a
+                      href="/"
+                      className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
+                    >
+                      نتایج لوتوها
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
             </div>
             <div className="w-full lg:py-0 py-4 mx-2 lg:mx-0 lg:order-3 mt-4 lg:mt-0  lg:w-1/4">
               <div className="flex flex-row-reverse sm:justify-center sm:items-center gap-[1rem]">
                 <span className="text-base py-3 font-bold tracking-wide text-gray-700">
-                  How can we help
+                  نیاز به پشتیبانی دارید؟
                 </span>
                 <form className="flex flex-col items-center  md:flex-row">
                   <button className="h-8 px-[18px] rounded-full py-[4.5px] font-bold text-[13.5px] ms-[18px] bg-[#c4dc33] tracking-wide text-gray-700 transition duration-200  hover:shadow-lg shadow-md focus:shadow-outline focus:outline-none">
-                    CONTACT US
+                    تماس با ما
                   </button>
                 </form>
               </div>
@@ -310,18 +379,15 @@ export const Footer = () => {
                     </defs>
                   </svg>
                 </div>
-                <div className="para flex flex-col">
-                  <p className="text-end md:mt-4 text-[12px] mx-2 md:text-[13.5px] text-[#49636e] ">
-                    The National Lottery games on this website are promoted by
-                    Premier Lotteries Ireland Designated Activity Company under
-                    licence issued by the Minister for Public Expenditure and
-                    Reform in accordance with the National Lottery Act 2013.
+                <div className="para flex flex-col rtl">
+                  <p className="text-end md:mt-4 text-[12px] mx-2 md:text-[13.5px] text-[#49636e] right leading-[2]">
+                  لوتوایران اولین برگزار کننده لوتوهای بین المللی در ایران با نمایندگی لاتاری های رسمی دنیا.<br />  با انتخاب گسترده ای از لاتاری های بین المللی، قرعه کشی دولتی ایمن و تجربه کاربرپسند شانس خود را برای رسیدن به رویاهایتان محک بزنید.
                   </p>
                   <a
                     href="/"
                     className="text-[13.5px] mx-2  text-[#49636e] mt-2 underline text-end"
                   >
-                    Find out more
+                    اطلاعات بیشتر
                   </a>
                 </div>
               </div>
@@ -332,7 +398,7 @@ export const Footer = () => {
         <div className="flex justify-between pt-5 flex-col md:flex-row pb-[1rem] border-t border-[#1222282c] mr-4">
           <div className="flex px-2  w-full items-center mt-4 space-x-4 sm:mt-0 justify-center lg:justify-end">
             <h6 className="text-[13.5px] text-[#49636e] mt-2">
-              &copy;2023 National Lottery
+              &copy;2023 تمامی حقوق مادی و معنوی این وب سایت به شرکت لوتوایران تعلق دارد.
             </h6>
           </div>
         </div>

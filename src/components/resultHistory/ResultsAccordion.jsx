@@ -26,7 +26,7 @@ const ResultsAccorion = ({
         onClick={toggleLotteryVisibility}
         className={`flex ${
           center === true ? 'justify-center' : 'justify-between'
-        } ${pading === true ? 'px-[27px]' : 'px[0rem] py-3'} ${
+        } ${pading === true ? 'px-[27px]' : 'px[0rem] py-2'} ${
           navbar === true ? 'pb-[12px]' : 'pb[0px]'
         } m-h-[100%] gap-[1rem] items-center sm:flex-row-reverse md:flex-row-reverse md:hover:bg-[#f2f6f8] border-b lg:border-b-0 border-gray-300 text-[#2C444E]`}
       >

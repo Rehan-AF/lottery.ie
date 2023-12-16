@@ -1,7 +1,7 @@
 const ResultsTable = ({ data }) => {
   return (
     <div className="p-[1rem]">
-      <div className="text-center p-2 m-2 bg-message-info-light rounded-md border-1 border-blue-lighter-02">
+      <div className="border-[1px] border-blue-100 bg-[#eef0fd] text-[#49636e] text-[13.5px] text-center p-2 bg-message-info-light rounded-md border-1 border-blue-lighter-02">
         <p className="text-sm">
           There was no winner of the Lotto jackpot. In total, over 68,000
           players won prizes in the Lotto and Lotto Plus draws.
@@ -10,13 +10,15 @@ const ResultsTable = ({ data }) => {
       <table className="table-fixed w-full">
         <thead>
           <tr className="text-sm">
-            <th className="rtl p-2 pr-3 md:pr-9 min-h-12 w-1/4 text-left">
-              Prize
+            <th className="rtl p-2 md:pl-9 min-h-12 w-1/4 !text-center">
+              Match
             </th>
-            <th className="rtl sm:px-3 p-2 min-h-12 w-1/4 text-right">
+            <th className="rtl sm:px-3 p-2 min-h-12 w-1/4 !text-center">
               Winners{' '}
             </th>
-            <th className="rtl p-2 md:pl-9 min-h-12 w-1/4 text-right">Match</th>
+            <th className="rtl p-2 pl-3 md:pr-9 min-h-12 w-1/4 !text-center">
+              <div>Prize</div>
+            </th>
           </tr>
           {data?.map((val, index) => {
             return (
@@ -24,13 +26,16 @@ const ResultsTable = ({ data }) => {
                 className="min-h-12 border-b-[1px] border-gray-300 "
                 key={index}
               >
-                <td className="rtl text-left pr-2 py-2 pl-3 md:pr-9 text-sm flex flex-row flex-wrap justify-start">
+                <td className="rtl !text-center pr-2 md:pl-9 pl-2 text-sm text-gray-600">
+                  {val.match}
+                </td>
+
+                <td className="rtl !text-center pr-2 text-sm ">
+                  {val.winners}
+                </td>
+                <td className="rtl !text-center pr-2 py-2 pl-3 md:pr-9 text-sm flex flex-row flex-wrap justify-center">
                   €{val.prize}
                   <div className="ml-1"></div>
-                </td>
-                <td className="rtl text-right pr-2 text-sm">{val.winners}</td>
-                <td className="rtl text-right pr-2 md:pl-9 pl-2 text-sm text-gray-600">
-                  {val.match}
                 </td>
               </tr>
             );

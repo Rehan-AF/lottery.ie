@@ -23,9 +23,9 @@ const data = [
   {
     logo: gameLogo_1,
     background: backgroundImage_1,
-    date: 'Sunday, 12:45am',
-    amount: '7.2 Millions',
-    playFor: '4',
+    date: 'شنبه ساعت ۱۸:۰۰',
+    amount: '۱۲۰ میلیارد تومان',
+    playFor: '۷۰',
     animationDuration: 0.2,
   },
   {

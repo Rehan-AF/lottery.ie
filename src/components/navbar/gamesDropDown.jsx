@@ -4,8 +4,8 @@ const GamesDropDown = () => {
   return (
     <div>
       <div>
-        <h6 className="leading-6 mb-2 mt-2 font-black text-lg">
-          Play Draw Games
+        <h6 className="leading-6 mb-2 mt-2 font-black text-xsm rtl">
+          همین حالا شانس خود را محک بزنید
         </h6>
       </div>
       <div className="w-[1120px] flex justify-center">

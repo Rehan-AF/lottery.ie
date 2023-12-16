@@ -36,3 +36,7 @@
   left: 9px;
   transform: rotate(45deg);
 }
+
+.rtl {
+  direction: rtl;
+}
