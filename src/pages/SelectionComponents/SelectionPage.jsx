@@ -20,7 +20,7 @@ const SelectionPage = () => {
             <button className="flex text-blue-900  hover:text-white bg-lime-400 rounded-full cursor-pointer items-center px-3   z-1">
               <span>
                 <svg
-                  class="fill-current leading-none"
+                  className="fill-current leading-none"
                   width="18"
                   height="18"
                   viewBox="0 0 24 24"
@@ -28,14 +28,14 @@ const SelectionPage = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M13.1219 6.81753C13.6928 6.153 14.7127 6.05914 15.404 6.60435C16.1006 7.15381 16.2019 8.14552 15.6264 8.81526L12.6752 12.25L15.6264 15.6847C16.2019 16.3545 16.1006 17.3462 15.404 17.8956C14.7127 18.4409 13.6928 18.347 13.1219 17.6825L9.40394 13.3555C8.86669 12.7302 8.86386 11.7731 9.40394 11.1445L13.1219 6.81753Z"
                     fill="#2D4550"
                   ></path>
                 </svg>
               </span>
-              <span className='text-xs'>HOME</span>
+              <span className="text-xs">HOME</span>
             </button>
           </div>
 
@@ -71,12 +71,12 @@ const SelectionPage = () => {
               </p>
             </div>
             <div className="flex justify-center items-center flex-col">
-              {/* <div className="mb-4">
+              <div className="mb-4">
                 <NumberSelector />
               </div>
               <div className="mb-4">
                 <NumberSelector />
-              </div> */}
+              </div>
               <span className="my-3 text-gray-700 uppercase font-bold text-xl">
                 OR
               </span>
@@ -84,14 +84,14 @@ const SelectionPage = () => {
               <div className="mb-9">
                 <button className="flex relative text-center rounded-full py-3 pt-3 p-[3rem] border border-gray-300 w-full hover:shadow-hover cursor-pointer">
                   <svg
-                    class="w-6 h-6"
+                    className="w-6 h-6"
                     viewBox="0 0 25 25"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M12.0941 20.893C16.9661 20.893 20.9157 16.9434 20.9157 12.0714C20.9157 7.19934 16.9661 3.24977 12.0941 3.24977C7.22205 3.24977 3.27247 7.19934 3.27247 12.0714C3.27247 16.9434 7.22205 20.893 12.0941 20.893ZM12.0941 22.1254C17.6468 22.1254 22.1481 17.6241 22.1481 12.0714C22.1481 6.51869 17.6468 2.01733 12.0941 2.01733C6.54139 2.01733 2.04004 6.51869 2.04004 12.0714C2.04004 17.6241 6.54139 22.1254 12.0941 22.1254Z"
                       fill="#2D4550"
                     ></path>
@@ -111,15 +111,14 @@ const SelectionPage = () => {
                 </button>
               </div>
             </div>
-          
           </div>
         </div>
       </div>
       <div className=" bg-[#E7EFF3] flex flex-col justify-end items-end xl:pr-[128px]  2xl:pr-[146px] xl:pt-32 pt-[250px] md:pt-[340px] lg:pt-[360px] w-full ">
         <div className="hover:bg-gray-100 hover:shadow-md hover:bg-opacity-100  m-auto bg-white rounded-lg px-5  lg:px-5 lg:p-[0.5rem]  xl:max-w-[601px] mb-4 mt-4 mx-4 md:mx-32 xl:mx-[0px]">
-          <Accorion title="Lotto win odds" icon ={true} pading={false}>
+          <Accorion title="Lotto win odds" icon={true} pading={false}>
             <div className="  ">
-              <hr className='border w-full' />
+              <hr className="border w-full" />
               <p className="w-full  text-gray-700 pt-2  ">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
                 dolorum, nostrum illo vitae necessitatibus fugiat aspernatur
@@ -131,9 +130,9 @@ const SelectionPage = () => {
         </div>
         {/* 2 */}
         <div className=" hover:bg-gray-100 hover:shadow-md m-auto bg-white rounded-lg px-5  lg:px-5 lg:p-[0.5rem]  xl:max-w-[601px] mb-4 mx-4 md:mx-32 xl:mx-[0px] text-gray-700">
-          <Accorion title="How to Play" icon ={true} pading={false} >
+          <Accorion title="How to Play" icon={true} pading={false}>
             <div className="  ">
-            <hr className='border w-full' />
+              <hr className="border w-full" />
               <p className="w-full text-gray-700 mt-2 ">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
                 dolorum, nostrum illo vitae necessitatibus fugiat aspernatur
@@ -145,9 +144,9 @@ const SelectionPage = () => {
         </div>
         {/* 3 */}
         <div className="hover:bg-gray-100 hover:shadow-md  m-auto bg-white rounded-lg px-5  lg:px-5 lg:p-[0.5rem]  xl:max-w-[601px] mb-8 mx-4 md:mx-32 xl:mx-[0px]">
-          <Accorion title="Responsible Play" icon ={true} pading={false}>
+          <Accorion title="Responsible Play" icon={true} pading={false}>
             <div className=" mb-8 ">
-            <hr className='border w-full' />
+              <hr className="border w-full" />
               <p className="w-full text-gray-700  mt-2 ">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
                 dolorum, nostrum illo vitae necessitatibus fugiat aspernatur
@@ -159,23 +158,25 @@ const SelectionPage = () => {
         </div>
       </div>
 
-      <div class="flex-col md:flex-row flex bg-white shadow-2xl shadow-black fixed bottom-0 w-full z-20 py-4 px-4 md:px-7 lg:px-28 rounded-t-lg justify-between lg:justify-end items-center">
-        <div class="flex justify-between lg:justify-end w-full">
-          <div class="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
-            <div class="flex justify-end font-bold text-gray-700">from €2.00 per line</div>
+      <div className="flex-col md:flex-row flex bg-white shadow-2xl shadow-black fixed bottom-0 w-full z-20 py-4 px-4 md:px-7 lg:px-28 rounded-t-lg justify-between lg:justify-end items-center">
+        <div className="flex justify-between lg:justify-end w-full">
+          <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
+            <div className="flex justify-end font-bold text-gray-700">
+              from €2.00 per line
+            </div>
           </div>
         </div>
-        <div class="justify-between md:justify-end w-full flex flex-row  md:w-auto ">
+        <div className="justify-between md:justify-end w-full flex flex-row  md:w-auto ">
           <button
             disabled=""
-            class="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 mr-2 cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
+            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 mr-2 cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
             data-selected="false"
           >
             <span>back</span>
           </button>
           <button
             disabled=""
-            class="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
+            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
             data-selected="false"
           >
             <span>Next</span>

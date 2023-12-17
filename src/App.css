@@ -282,3 +282,34 @@ input::-ms-clear {
     color: #2c444e;
   }
 }
+
+@keyframes popFromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popAnimation {
+  animation: popFromTop 0.13s ease-out;
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(0.7);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popOutAnimation {
+  animation: popOut 0.2s ease-out;
+}
