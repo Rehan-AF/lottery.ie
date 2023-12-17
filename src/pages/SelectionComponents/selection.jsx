@@ -88,10 +88,16 @@ const NumberSelector = ({ numberOfWiningNumber = 50 }) => {
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
             </div>
+            <div
+              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+              aria-hidden="true"
+            >
+              <span className="absolute opacity-0 w-full h-full"></span>
+              <span aria-hidden="true"></span>
+            </div>
             <div className="absolute inline z-1 w-auto mx-auto top-1/3 left-0 right-0 text-center">
               <p aria-label="Enter Numbers" className="font-bold text-lg">
                 <span className="inline-flex relative">
-                  {' '}
                   <svg
                     width="15"
                     height="14"
@@ -106,7 +112,7 @@ const NumberSelector = ({ numberOfWiningNumber = 50 }) => {
                       fill="#2D4550"
                     ></path>
                   </svg>
-                </span>{' '}
+                </span>
                 <span> Enter Numbers</span>
               </p>
             </div>
