@@ -86,7 +86,7 @@ const NumberSelector = () => {
                 ></path>
               </svg>
             </span>{' '}
-            <span> Enter Numbers</span>
+            <span className='text-gray-700'> Enter Numbers</span>
           </p>
         </div>
       </button>
