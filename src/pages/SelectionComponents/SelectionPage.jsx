@@ -1,11 +1,7 @@
 import NumberSelector from './selection';
 
 const SelectionPage = () => {
-  return (
-    <div>
-      <NumberSelector />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default SelectionPage;
