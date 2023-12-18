@@ -18,14 +18,18 @@ import MillionariaHistoryPage from '../pages/MillionariaHistory/index.jsx';
 import SuperSeteHistoryPage from '../pages/SuperSeteHistory/index.jsx';
 import BasketPage from '../pages/BasketPage/BasketPage.jsx';
 import SelectionPage from '../pages/SelectionComponents/SelectionPage.jsx';
+import { Provider } from 'react-redux';
+import { store } from '../Store/store.js';
 
 const NewRouter = createBrowserRouter([
   {
     path: '/',
     element: (
       <div>
-        <LayoutWithNavbar />
-        <ScrollRestoration />
+        <Provider store={store}>
+          <LayoutWithNavbar />
+          <ScrollRestoration />
+        </Provider>
       </div>
     ),
     children: [
@@ -47,8 +51,10 @@ const NewRouter = createBrowserRouter([
     path: '/auth',
     element: (
       <div>
-        <LayoutWithouNavbar />
-        <ScrollRestoration />
+        <Provider store={store}>
+          <LayoutWithouNavbar />
+          <ScrollRestoration />
+        </Provider>
       </div>
     ),
     children: [

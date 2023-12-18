@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Modal } from 'antd';
 import SelectedNumbers from './SelectedNumbers';
-const NumberSelector = ({ numberOfWiningNumber = 50 }) => {
-  // const [loading, setLoading] = useState(false);
+import { useSelector } from 'react-redux';
+const NumberSelector = ({ numberOfWiningNumber = 50, index, values }) => {
+  const winingNumbers = useSelector(
+    (state) => state.productsSlice.winingNumber
+  );
   const [open, setOpen] = useState(false);
-  const [finalSelectedNumbers, setFinalSelectedNumbers] = useState(false);
+  const [finalSelectedNumbers, setFinalSelectedNumbers] = useState(values);
   const [applyPop, setApplyPop] = useState(false);
-  const [finalNumberList, setFinalNumberList] = useState([]);
   useEffect(() => {
     if (finalSelectedNumbers) {
       setApplyPop(true);
@@ -31,25 +33,40 @@ const NumberSelector = ({ numberOfWiningNumber = 50 }) => {
   return (
     <>
       <button
-        className="relative text-center rounded-full p-2 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min"
+        className="shadow_md relative text-center rounded-full p-2 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min"
         onClick={showModal}
       >
-        {finalSelectedNumbers ? (
+        {finalSelectedNumbers || winingNumbers[index] ? (
           <div className="inline-flex justify-center z-2 pt-1 mx-1 space-x-1">
-            {finalSelectedNumbers.map((val, index) => {
-              return (
-                <div
-                  className={` rounded-full flex font-bold justify-center text-white items-center relative bg-red-500 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
-                    applyPop ? 'popOutAnimation' : ''
-                  }`}
-                  aria-hidden="true"
-                  key={index}
-                >
-                  <span className="absolute opacity-0 w-full h-full"></span>
-                  <span aria-hidden="true">{val}</span>
-                </div>
-              );
-            })}
+            {winingNumbers[index]
+              ? winingNumbers[index]?.map((val, index) => {
+                  return (
+                    <div
+                      className={` rounded-full flex font-bold justify-center text-white items-center relative bg-red-500 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
+                        applyPop ? 'popOutAnimation' : ''
+                      }`}
+                      aria-hidden="true"
+                      key={index}
+                    >
+                      <span className="absolute opacity-0 w-full h-full"></span>
+                      <span aria-hidden="true">{val}</span>
+                    </div>
+                  );
+                })
+              : finalSelectedNumbers?.map((val, index) => {
+                  return (
+                    <div
+                      className={` rounded-full flex font-bold justify-center text-white items-center relative bg-red-500 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
+                        applyPop ? 'popOutAnimation' : ''
+                      }`}
+                      aria-hidden="true"
+                      key={index}
+                    >
+                      <span className="absolute opacity-0 w-full h-full"></span>
+                      <span aria-hidden="true">{val}</span>
+                    </div>
+                  );
+                })}
           </div>
         ) : (
           <div className="inline-flex justify-center z-2 pt-1 mx-1 space-x-1">
@@ -131,6 +148,8 @@ const NumberSelector = ({ numberOfWiningNumber = 50 }) => {
             number={numberOfWiningNumber}
             setFinalSelectedNumbers={setFinalSelectedNumbers}
             handleCancel={handleCancel}
+            values={values}
+            index={index}
           />
         </div>
       </Modal>

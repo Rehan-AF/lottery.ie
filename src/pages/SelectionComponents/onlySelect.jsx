@@ -1,27 +1,18 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateWiningNumberAtIndex } from '../../Store';
+import { pushNumbersToWiningNumbers } from '../../Store';
 
-const SelectedNumbers = ({
-  numbers = 50,
-  setFinalSelectedNumbers,
-  handleCancel,
-  values,
-  index,
-}) => {
+const OnlySelect = ({ numbers = 50, handleCancel }) => {
   const dispatch = useDispatch();
   const winingNumbers = useSelector(
     (state) => state.productsSlice.winingNumber
   );
-  const [selectedNumbers, setSelectedNumbers] = useState(values);
+  const [selectedNumbers, setSelectedNumbers] = useState([]);
   const handleSubmit = () => {
     handleCancel();
-    dispatch(
-      updateWiningNumberAtIndex({ index: index, newValue: selectedNumbers })
-    );
-    setTimeout(() => {
-      setFinalSelectedNumbers(selectedNumbers);
-    }, 300);
+    dispatch(pushNumbersToWiningNumbers(selectedNumbers));
+
+    setSelectedNumbers([]);
   };
   const handleCheckboxChange = (number) => {
     if (selectedNumbers.includes(number)) {
@@ -33,10 +24,8 @@ const SelectedNumbers = ({
   const isNumbersAlreadySelected = () => {
     const sortedSelectedNumbers = selectedNumbers.slice().sort((a, b) => a - b);
 
-    return winingNumbers.some(
-      (numbersArray, arrayIndex) =>
-        arrayIndex !== index &&
-        numbersArray.every((num, index) => num === sortedSelectedNumbers[index])
+    return winingNumbers.some((numbersArray) =>
+      numbersArray.every((num, index) => num === sortedSelectedNumbers[index])
     );
   };
 
@@ -104,6 +93,7 @@ const SelectedNumbers = ({
         </div>
         <div className=" flex space-x-1">{renderSelectedNumbers()}</div>
       </div>
+      {/* :::::::::::::::: display selected Numbers end  :::::::::::::::::::::*/}
       {isNumbersAlreadySelected() ? (
         <div className="flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error">
           <svg
@@ -130,7 +120,6 @@ const SelectedNumbers = ({
           </div>
         </div>
       ) : null}
-      {/* :::::::::::::::: display selected Numbers end  :::::::::::::::::::::*/}
       <div className="bg-white px-2 mt-2">
         <div className="border-gray-300 border-b-1 py-1 mb-2 flex justify-between">
           <span className="p-1 text-base text-left flex gap-x-3">
@@ -172,7 +161,8 @@ const SelectedNumbers = ({
             <span>Reset</span>
           </button>
         )}
-        {selectedNumbers.length === 6 ? (
+        {selectedNumbers.length === 6 &&
+        isNumbersAlreadySelected() === false ? (
           <button
             data-elem-add-num-button="true"
             className="shadow_md flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-1/2 mx-2 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] border-green-400 active:bg-green-400"
@@ -197,4 +187,4 @@ const SelectedNumbers = ({
   );
 };
 
-export default SelectedNumbers;
+export default OnlySelect;

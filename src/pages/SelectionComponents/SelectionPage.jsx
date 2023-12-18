@@ -2,8 +2,20 @@ import NumberSelector from './selection';
 import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
 import logo from '../../assets/logo.svg';
 import Accorion from '../../components/Accordion';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import OnlyNumberSelector from './onlyNumberSelector';
+import deleteLogo from '../../assets/deleteLogo.svg';
+import { deleteWiningNumber } from '../../Store';
 
 const SelectionPage = () => {
+  const dispatch = useDispatch();
+  const winingNumbers = useSelector(
+    (state) => state.productsSlice.winingNumber
+  );
+  const handleDelele = (i) => {
+    dispatch(deleteWiningNumber(i));
+  };
   return (
     <div>
       <div
@@ -72,11 +84,36 @@ const SelectionPage = () => {
             </div>
             <div className="flex justify-center items-center flex-col">
               <div className="mb-4">
-                <NumberSelector />
+                {winingNumbers.length > 0 ? (
+                  winingNumbers?.map((val, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="flex justify-center items-center gap-[0.45rem] mb-[1rem]"
+                      >
+                        <div className="font-bold text-gray-700 w-4 text-center">
+                          {index + 1}
+                        </div>
+                        <NumberSelector index={index} values={val} />
+                        <div
+                          onClick={() => handleDelele(index)}
+                          className="cursor-pointer"
+                        >
+                          <img src={deleteLogo} width={22} />
+                        </div>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <OnlyNumberSelector />
+                )}
               </div>
-              <div className="mb-4">
-                <NumberSelector />
-              </div>
+              {winingNumbers.length < 10 ? (
+                <div className="mb-4">
+                  <OnlyNumberSelector />
+                </div>
+              ) : null}
+
               <span className="my-3 text-gray-700 uppercase font-bold text-xl">
                 OR
               </span>
