@@ -1,15 +1,15 @@
+
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
 import NumberSelector from './selection';
-// import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
-// import logo from '../../assets/logo.svg';
 import Accorion from '../../components/Accordion';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-import deleteLogo from '../../assets/deleteLogo.svg';
+
 import { deleteWiningNumber, pushNumbersToWiningNumbers } from '../../Store';
+import GameLogos from '../../components/svg/GameLogos';
 
 const Selection1Page = () => {
   const numbersToBeSelected = 6;
@@ -58,7 +58,11 @@ const Selection1Page = () => {
             width: '100%',
             backgroundSize: 'cover',
           }}
-        ></div>
+
+        
+        >
+      
+        </div>
         <div className="flex flex-col lg:flex-row w-full px-4 md:px-6 lg:px-0 lg:pl-0 h-full z-1 lg:justify-center">
           <div className="flex flex-col">
             <div className="flex items-start z-10 absolute lg:static mt-2">
@@ -84,16 +88,17 @@ const Selection1Page = () => {
               </button>
             </div>
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
-              <div className="mb-3 mt-2 lg:mt-3">
-                <img
-                  src={logo}
-                  alt="logo"
-                  className="drop-shadow filter w-25 h-12 w-[200px] lg:h-full mb-3"
-                />
+              <div className=" mt-2 lg:mt-3 flex justify-end z-10 mb-4">
+              <GameLogos
+              logoName="05"
+              width="170"
+              color="white"
+              customClass={"game"}
+            />
               </div>
               <div className="flex lg:block justify-between flex-col z-10">
                 <div className="flex flex-col">
-                  <h3 className="text-white shadow-text text-3xl md:text-4xl lg:text-5xl font-black">
+                  <h3 className="text-white shadow-text text-3xl md:text-4xl lg:text-5xl font-black rtl">
                     <span
                       aria-label="€9.2 Million Jackpot   estimated"
                       className=""
@@ -103,11 +108,11 @@ const Selection1Page = () => {
                   </h3>
                 </div>
                 <div className="flex flex-row lg:flex-col justify-between">
-                  <p className="text-white shadow-text font-bold lg:mt-2 lg:text-xl">
+                  <p className="text-white shadow-text font-bold lg:mt-2 lg:text-xl rtl">
                     Thursday, 12:45am
                   </p>
                   <div className="flex lg:flex-col justify-between lg:justify-start sm:mt-0.5 items-baseline">
-                    <div className="text-white shadow-text font-bold lg:py-8 text-sm lg:text-base">
+                    <div className="text-white shadow-text font-bold lg:py-8 text-sm lg:text-base w-full rtl" >
                       * estimated
                     </div>
                   </div>
@@ -118,7 +123,7 @@ const Selection1Page = () => {
           <div className="flex flex-col m-4 w-full md:w-125 lg:w-5/12 self-center lg:flex-grow">
             <div className="md:px-0 z-10 w-full">
               <div className="bg-white rounded-lg shadow w-full p-4 md:p-8 mb-8 flex flex-col at-element-marker">
-                <div className="flex flex-col items-start mb-4">
+                <div className="flex flex-col items-end mb-4">
                   <div className="flex flex-row space-x-2 pb-1">
                     <h3
                       className="text-gray-700 text-2xl capitalize font-bold"
@@ -292,7 +297,7 @@ const Selection1Page = () => {
             <div className="px-4 md:px-0">
               <div className="w-full">
                 <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
-                  <Accorion title="Lotto win odds" icon={true} pading={false}>
+                  <Accorion title="Lotto win odds" icon={true} pading={false} direction={true}>
                     <div className=" px-4 ">
                       <hr className="border w-full" />
                       <p className="w-full  text-gray-700 pt-2  ">
@@ -307,7 +312,7 @@ const Selection1Page = () => {
                 </div>
               </div>
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
-                <Accorion title="How to Play" icon={true} pading={false}>
+                <Accorion title="How to Play" icon={true} pading={false} direction={true}>
                   <div className="px-4  ">
                     <hr className="border w-full" />
                     <p className="w-full text-gray-700 mt-2 ">
@@ -321,7 +326,7 @@ const Selection1Page = () => {
                 </Accorion>
               </div>
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
-                <Accorion title="How to Play" icon={true} pading={false}>
+                <Accorion title="How to Play" icon={true} pading={false} direction={true}>
                   <div className=" ">
                     <hr className="border w-full" />
                     <p className="w-full text-gray-700 mt-2 ">
