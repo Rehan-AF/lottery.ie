@@ -79,7 +79,7 @@ const BasketPage = () => {
     <div>
       <div className="lg:container mx-auto p-4 lg:pl-20 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
         <div className="col-start-1 col-end-1 lg:col-start-1 lg:col-end-10 whitespace-nowrap">
-          <h1 className="pr-4 text-3xl font-black py-4 mt-5 text-[#4b636e]">
+          <h1 className="pr-4 text-3xl font-black py-4 mt-5 text-[#4b636e] rtl">
             Your Basket
           </h1>
         </div>
