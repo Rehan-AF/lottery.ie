@@ -26,6 +26,7 @@ const data = [
     amount: '200 Millions',
     playFor: '2.50',
     animationDuration: 0.26,
+    link: 'select',
   },
   {
     logo: gameLogo_3,
@@ -34,6 +35,7 @@ const data = [
     amount: '20,000',
     playFor: '2.50',
     animationDuration: 0.32,
+    link: 'select',
   },
   {
     logo: gameLogo_4,
@@ -42,6 +44,7 @@ const data = [
     amount: '1 Million',
     playFor: '1',
     animationDuration: 0.38,
+    link: 'select',
   },
   {
     logo: gameLogo_5,
@@ -50,6 +53,7 @@ const data = [
     amount: '125,000',
     playFor: '1',
     animationDuration: 0.44,
+    link: 'select',
   },
   {
     logo: gameLogo_6,
@@ -58,6 +62,7 @@ const data = [
     amount: '1 Million',
     playFor: '25',
     animationDuration: 0.5,
+    link: 'select',
   },
   {
     logo: gameLogo_7,
@@ -66,6 +71,7 @@ const data = [
     amount: '125,000',
     playFor: '1',
     animationDuration: 0.55,
+    link: 'select',
   },
 ];
 const BasketPage = () => {
@@ -105,6 +111,7 @@ const BasketPage = () => {
                     playFor={val.playFor}
                     date={val.date}
                     gradient={val.gradient}
+                    link={val.link}
                   />
                 </div>
               );

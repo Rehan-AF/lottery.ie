@@ -201,19 +201,20 @@ input::-ms-clear {
   font-size: 1rem;
   width: 225px;
 }
-.ant-modal {
+/* .ant-modal {
   max-width: 756px !important;
   width: auto !important;
-}
+} */
 .ant-modal-content {
   padding: 0 !important;
+  height: 100% !important;
 }
 .ant-modal-title {
   display: none;
 }
-.ant-modal-close {
+/* .ant-modal-close {
   display: none;
-}
+} */
 .ant-tabs-tab-active {
   font-weight: 700;
 }
@@ -280,6 +281,20 @@ input::-ms-clear {
     font-weight: 700;
     outline: none;
     color: #2c444e;
+  }
+  .ant-modal-content {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0px !important;
+  }
+  .ant-modal {
+    width: 100vw;
+    margin: 0;
+    top: -8px;
+  }
+  .ant-modal-wrap {
+    overflow: hidden !important;
   }
 }
 

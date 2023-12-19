@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import background from '../../assets/backgrounds/5_Lotomania.svg';
 
 export const BasketCard = ({
@@ -7,6 +8,7 @@ export const BasketCard = ({
   playFor,
   date,
   gradient = false,
+  link,
 }) => {
   return (
     <div className="md:flex-grow">
@@ -32,17 +34,15 @@ export const BasketCard = ({
           </p>
           <p className="text-white text-sm xsm:text-base">{date}</p>
         </div>
-        <a
-          aria-label="Play from €2.50 link"
-          className="flex justify-center cursor-pointer"
-          href="/draw-games/euromillions"
-        >
-          <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-700 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
-            <div className="uppercase sm:text-[12px] md:text-sm font-bold leading-none xsm:text-sm">
-              <span aria-label="play from €2.50">Play from €{playFor}</span>
+        <Link to={`/draw-games/${link}`}>
+          <button className="flex justify-center cursor-pointer">
+            <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-700 bg-blue-900 bg-opacity-20 group-hover:shadow-hover group-hover:bg-white">
+              <div className="uppercase sm:text-[12px] md:text-sm font-bold leading-none xsm:text-sm">
+                <span aria-label="play from €2.50">Play from €{playFor}</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </button>
+        </Link>
       </a>
     </div>
   );

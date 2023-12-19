@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
 import deleteLogo from '../../assets/deleteLogo.svg';
-import { deleteWiningNumber } from '../../Store';
+import { deleteWiningNumber, pushNumbersToWiningNumbers } from '../../Store';
 
 const SelectionPage = () => {
   const dispatch = useDispatch();
@@ -15,6 +15,33 @@ const SelectionPage = () => {
   );
   const handleDelele = (i) => {
     dispatch(deleteWiningNumber(i));
+  };
+  const generateUniqueNumbers = (winingNumbers) => {
+    const getRandomInt = (min, max) =>
+      Math.floor(Math.random() * (max - min + 1)) + min;
+
+    const isNumbersAlreadySelected = (numbersArray) =>
+      winingNumbers.some((existingArray) =>
+        existingArray.every((num) => numbersArray.includes(num))
+      );
+
+    let uniqueNumbersArray = [];
+
+    while (uniqueNumbersArray.length < 6) {
+      const randomNumber = getRandomInt(0, 50);
+      if (
+        !uniqueNumbersArray.includes(randomNumber) &&
+        !isNumbersAlreadySelected([...uniqueNumbersArray, randomNumber])
+      ) {
+        uniqueNumbersArray.push(randomNumber);
+      }
+    }
+
+    return uniqueNumbersArray;
+  };
+  const getRandomNumbers = () => {
+    const newNumbersArray = generateUniqueNumbers(winingNumbers);
+    dispatch(pushNumbersToWiningNumbers(newNumbersArray));
   };
   return (
     <div>
@@ -113,39 +140,45 @@ const SelectionPage = () => {
                   <OnlyNumberSelector />
                 </div>
               ) : null}
-
-              <span className="my-3 text-gray-700 uppercase font-bold text-xl">
-                OR
-              </span>
+              {winingNumbers.length < 10 ? (
+                <span className="my-3 text-gray-700 uppercase font-bold text-xl">
+                  OR
+                </span>
+              ) : null}
 
               <div className="mb-9">
-                <button className="flex relative text-center rounded-full py-3 pt-3 p-[3rem] border border-gray-300 w-full hover:shadow-hover cursor-pointer">
-                  <svg
-                    className="w-6 h-6"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                {winingNumbers.length < 10 ? (
+                  <button
+                    className="flex relative text-center rounded-full py-3 pt-3 p-[3rem] border border-gray-300 w-full hover:shadow-hover cursor-pointer"
+                    onClick={getRandomNumbers}
                   >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M12.0941 20.893C16.9661 20.893 20.9157 16.9434 20.9157 12.0714C20.9157 7.19934 16.9661 3.24977 12.0941 3.24977C7.22205 3.24977 3.27247 7.19934 3.27247 12.0714C3.27247 16.9434 7.22205 20.893 12.0941 20.893ZM12.0941 22.1254C17.6468 22.1254 22.1481 17.6241 22.1481 12.0714C22.1481 6.51869 17.6468 2.01733 12.0941 2.01733C6.54139 2.01733 2.04004 6.51869 2.04004 12.0714C2.04004 17.6241 6.54139 22.1254 12.0941 22.1254Z"
-                      fill="#2D4550"
-                    ></path>
-                    <path
-                      d="M9.52979 15.0838C9.93454 15.0838 10.316 15.0059 10.6584 14.8736L11.0398 15.3406L11.9739 14.5934L11.647 14.1964C12.0595 13.7372 12.3008 13.1145 12.3008 12.3984C12.3008 10.8182 11.1177 9.71295 9.52979 9.71295C7.9419 9.71295 6.75098 10.8182 6.75098 12.3984C6.75098 13.9785 7.9419 15.0838 9.52979 15.0838ZM9.52979 13.9006C8.66579 13.9006 8.11314 13.239 8.11314 12.3984C8.11314 11.5499 8.66579 10.8961 9.52979 10.8961C10.386 10.8961 10.9387 11.5499 10.9387 12.3984C10.9387 12.6708 10.8764 12.9199 10.7752 13.1378L10.2848 12.5462L9.35854 13.2935L9.83336 13.8695C9.73217 13.8928 9.63098 13.9006 9.52979 13.9006Z"
-                      fill="#2D4550"
-                    ></path>
-                    <path
-                      d="M14.4436 14.9904V13.2468H15.7046C16.8722 13.2468 17.5104 12.4606 17.5104 11.5266C17.5104 10.5847 16.8722 9.79857 15.7046 9.79857H13.1048V14.9904H14.4436ZM15.5256 12.0792H14.4436V10.9661H15.5256C15.8836 10.9661 16.1483 11.1685 16.1483 11.5266C16.1483 11.8768 15.8836 12.0792 15.5256 12.0792Z"
-                      fill="#2D4550"
-                    ></path>
-                  </svg>
-                  <span className="pl-1 text-gray-700">
-                    {' '}
-                    Add Quick Pick Line
-                  </span>
-                </button>
+                    <svg
+                      className="w-6 h-6"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M12.0941 20.893C16.9661 20.893 20.9157 16.9434 20.9157 12.0714C20.9157 7.19934 16.9661 3.24977 12.0941 3.24977C7.22205 3.24977 3.27247 7.19934 3.27247 12.0714C3.27247 16.9434 7.22205 20.893 12.0941 20.893ZM12.0941 22.1254C17.6468 22.1254 22.1481 17.6241 22.1481 12.0714C22.1481 6.51869 17.6468 2.01733 12.0941 2.01733C6.54139 2.01733 2.04004 6.51869 2.04004 12.0714C2.04004 17.6241 6.54139 22.1254 12.0941 22.1254Z"
+                        fill="#2D4550"
+                      ></path>
+                      <path
+                        d="M9.52979 15.0838C9.93454 15.0838 10.316 15.0059 10.6584 14.8736L11.0398 15.3406L11.9739 14.5934L11.647 14.1964C12.0595 13.7372 12.3008 13.1145 12.3008 12.3984C12.3008 10.8182 11.1177 9.71295 9.52979 9.71295C7.9419 9.71295 6.75098 10.8182 6.75098 12.3984C6.75098 13.9785 7.9419 15.0838 9.52979 15.0838ZM9.52979 13.9006C8.66579 13.9006 8.11314 13.239 8.11314 12.3984C8.11314 11.5499 8.66579 10.8961 9.52979 10.8961C10.386 10.8961 10.9387 11.5499 10.9387 12.3984C10.9387 12.6708 10.8764 12.9199 10.7752 13.1378L10.2848 12.5462L9.35854 13.2935L9.83336 13.8695C9.73217 13.8928 9.63098 13.9006 9.52979 13.9006Z"
+                        fill="#2D4550"
+                      ></path>
+                      <path
+                        d="M14.4436 14.9904V13.2468H15.7046C16.8722 13.2468 17.5104 12.4606 17.5104 11.5266C17.5104 10.5847 16.8722 9.79857 15.7046 9.79857H13.1048V14.9904H14.4436ZM15.5256 12.0792H14.4436V10.9661H15.5256C15.8836 10.9661 16.1483 11.1685 16.1483 11.5266C16.1483 11.8768 15.8836 12.0792 15.5256 12.0792Z"
+                        fill="#2D4550"
+                      ></path>
+                    </svg>
+                    <span className="pl-1 text-gray-700">
+                      {' '}
+                      Add Quick Pick Line
+                    </span>
+                  </button>
+                ) : null}
               </div>
             </div>
           </div>
