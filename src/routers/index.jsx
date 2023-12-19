@@ -17,7 +17,6 @@ import DuplaSenaHistoryPage from '../pages/DuplaSenaHistory/index.jsx';
 import MillionariaHistoryPage from '../pages/MillionariaHistory/index.jsx';
 import SuperSeteHistoryPage from '../pages/SuperSeteHistory/index.jsx';
 import BasketPage from '../pages/BasketPage/BasketPage.jsx';
-import SelectionPage from '../pages/SelectionComponents/SelectionPage.jsx';
 import { Provider } from 'react-redux';
 import { store } from '../Store/store.js';
 import Selection1Page from '../pages/SelectionComponents/Selection1Page.jsx';
@@ -45,7 +44,7 @@ const NewRouter = createBrowserRouter([
       { path: 'results/millionaria', element: <MillionariaHistoryPage /> },
       { path: 'results/super-sete', element: <SuperSeteHistoryPage /> },
       { path: 'draw-games/basket', element: <BasketPage /> },
-      { path: 'draw-games/select', element: <SelectionPage /> },
+      { path: 'draw-games/select', element: <Selection1Page /> },
       { path: 'draw-games/select1', element: <Selection1Page /> },
     ],
   },
