@@ -20,6 +20,7 @@ import BasketPage from '../pages/BasketPage/BasketPage.jsx';
 import SelectionPage from '../pages/SelectionComponents/SelectionPage.jsx';
 import { Provider } from 'react-redux';
 import { store } from '../Store/store.js';
+import Selection1Page from '../pages/SelectionComponents/Selection1Page.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -45,6 +46,7 @@ const NewRouter = createBrowserRouter([
       { path: 'results/super-sete', element: <SuperSeteHistoryPage /> },
       { path: 'draw-games/basket', element: <BasketPage /> },
       { path: 'draw-games/select', element: <SelectionPage /> },
+      { path: 'draw-games/select1', element: <Selection1Page /> },
     ],
   },
   {
