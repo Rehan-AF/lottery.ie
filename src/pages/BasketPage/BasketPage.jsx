@@ -1,6 +1,7 @@
 import background from '../../assets/basketBack.svg';
 import logoBack from '../../assets/basketLogo.svg';
 import { BasketCard } from './basketCard';
+
 import backgroundImage_1 from '../../assets/backgrounds/1_Mega-da-virada.svg';
 import backgroundImage_3 from '../../assets/backgrounds/7_Quina.svg';
 import backgroundImage_4 from '../../assets/backgrounds/6_Mega-Sena.svg';
@@ -16,6 +17,7 @@ import gameLogo_5 from '../../assets/gameLogos/05.svg';
 import gameLogo_6 from '../../assets/gameLogos/06.svg';
 import gameLogo_7 from '../../assets/gameLogos/07.svg';
 import gameLogo_8 from '../../assets/gameLogos/08.svg';
+import Card from '../../components/Card';
 
 const data = [
   {
@@ -77,12 +79,16 @@ const data = [
 const BasketPage = () => {
   return (
     <div>
-      <div className="lg:container mx-auto p-4 lg:pl-20 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
-        <div className="col-start-1 col-end-1 lg:col-start-1 lg:col-end-10 whitespace-nowrap">
-          <h1 className="pr-4 text-3xl font-black py-4 mt-5 text-[#4b636e] rtl">
+      <div className="lg:container mx-auto p-4 lg:pl-20 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 ">
+        <div className="col-start-1 col-end-1 lg:col-start-1 lg:col-end-10 whitespace-nowrap lg:w-[950px] xl:w-[1000px] rtl">
+          <h1 className="lg:pr-4 text-3xl font-black py-4 mt-5 text-[#4b636e] flex rtl">
             Your Basket
           </h1>
         </div>
+      </div>
+      
+    <div className='flex justify-center items-center w-full'>
+      <Card />
       </div>
       <div
         className="bg-[url(../../assets/basketBack.svg)] bg-top bg-no-repeat bg-cover"
