@@ -7,7 +7,9 @@ import ConfirmationModal from './ConfirmationModal';
 const OnlyNumberSelector = ({
   numberOfWiningNumber = 50,
   index,
-  mainColor = 'sky',
+  mainColor,
+  backgroundColor,
+  buttonNotSelectedColor,
   numbersToBeSelected = 5,
 }) => {
   const [open, setOpen] = useState(false);
@@ -48,7 +50,7 @@ const OnlyNumberSelector = ({
         <div
           className={` border flex items-center justify-center cursor-pointer rounded-full  sm:w-9 md:w-[49px] sm:h-9 md:h-[49px] border-1 bg-white text-base font-bold ${
             selectedNumbers.includes(i)
-              ? `!bg-${mainColor}-500 text-white border-${mainColor}-500`
+              ? `!bg-[${mainColor}] text-white border-[${mainColor}]`
               : ' text-[#2f4751] border-gray-500'
           } ${isDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
           key={i}
@@ -75,7 +77,7 @@ const OnlyNumberSelector = ({
         <div className="" key={i}>
           {selectedNumbers[i] ? (
             <div
-              className={`self-auto bg-${mainColor}-500 border-${mainColor}-500 flex font-bold rounded-full justify-center items-end relative w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl text-white bg-game-lotto popAnimation`}
+              className={`self-auto bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl text-white bg-game-lotto popAnimation`}
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full text-x-sm">
@@ -85,7 +87,7 @@ const OnlyNumberSelector = ({
             </div>
           ) : (
             <div
-              className={`rounded-full flex font-bold justify-center items-center relative bg-${mainColor}-800 opacity-30 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl`}
+              className={`rounded-full flex font-bold justify-center items-center relative bg-[${buttonNotSelectedColor}] opacity-30 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl`}
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
@@ -117,42 +119,42 @@ const OnlyNumberSelector = ({
       >
         <div className="inline-flex justify-center z-2 mx-1 space-x-1">
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
@@ -193,7 +195,7 @@ const OnlyNumberSelector = ({
           <div>
             {/* ::::::::::::::::: display selected Numbers start  :::::::::::::::::::::*/}
             <div
-              className={`flex justify-center flex-col items-center bg-${mainColor}-200 h-[126x] p-5 sm:rounded-none md:rounded-tr-lg md:rounded-tl-lg`}
+              className={`flex justify-center flex-col items-center bg-[${backgroundColor}] h-[126x] p-5 sm:rounded-none md:rounded-tr-lg md:rounded-tl-lg`}
             >
               <div className=" uppercase font-bold text-gray-700 flex justify-center py-3">
                 Game line 1
