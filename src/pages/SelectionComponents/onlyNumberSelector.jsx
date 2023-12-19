@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Modal } from 'antd';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { pushNumbersToWiningNumbers } from '../../Store';
+import ConfirmationModal from './ConfirmationModal';
+
 const OnlyNumberSelector = ({
   numberOfWiningNumber = 50,
   index,
@@ -10,11 +11,12 @@ const OnlyNumberSelector = ({
   numbersToBeSelected = 5,
 }) => {
   const [open, setOpen] = useState(false);
+  const [selectedNumbers, setSelectedNumbers] = useState([]);
+  const [unlock, setUnlock] = useState(false);
   const dispatch = useDispatch();
   const winingNumbers = useSelector(
     (state) => state.productsSlice.winingNumber
   );
-  const [selectedNumbers, setSelectedNumbers] = useState([]);
   const handleSubmit = () => {
     handleCancel();
     dispatch(pushNumbersToWiningNumbers(selectedNumbers));
@@ -156,7 +158,7 @@ const OnlyNumberSelector = ({
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
-          <div className="absolute inline z-1 w-auto mx-auto sm:top-1/5 md:top-1/4 left-0 right-0 text-center">
+          <div className="absolute inline z-1 w-auto text-gray-700 mx-auto sm:top-1/5 md:top-1/4 left-0 right-0 text-center">
             <p aria-label="Enter Numbers" className="font-bold text-lg">
               <span className="inline-flex relative">
                 <svg
@@ -199,8 +201,12 @@ const OnlyNumberSelector = ({
               <div className=" flex space-x-1">{renderSelectedNumbers()}</div>
             </div>
             {/* :::::::::::::::: display selected Numbers end  :::::::::::::::::::::*/}
-            {isNumbersAlreadySelected() ? (
-              <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error">
+            <ConfirmationModal
+              opneValue={isNumbersAlreadySelected()}
+              setUnlock={setUnlock}
+            />
+            {isNumbersAlreadySelected() === true && unlock === false ? (
+              <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error gap-2 rtl">
                 <svg
                   width="16"
                   height="16"
@@ -226,13 +232,13 @@ const OnlyNumberSelector = ({
               </div>
             ) : null}
             <div className="bg-white px-2 mt-2">
-              <div className="border-gray-300 border-b-1 py-1 flex justify-between">
+              <div className="border-gray-300 border-b-1 py-1 flex flex-row-reverse justify-between ">
                 <span className="p-1 text-base text-left flex gap-x-3">
-                  <h6 className="font-bold">
+                  <h6 className="font-bold rtl">
                     Pick {numbersToBeSelected} numbers
                   </h6>
                 </span>
-                <p className="py-1">
+                <p className="py-1 flex flex-row-reverse">
                   <span>
                     <b>{selectedNumbers.length}</b> of {numbersToBeSelected}
                   </span>
@@ -270,8 +276,9 @@ const OnlyNumberSelector = ({
                   <span>Reset</span>
                 </button>
               )}
-              {selectedNumbers.length === numbersToBeSelected &&
-              isNumbersAlreadySelected() === false ? (
+              {(selectedNumbers.length === numbersToBeSelected &&
+                isNumbersAlreadySelected() === false) ||
+              unlock === true ? (
                 <button
                   data-elem-add-num-button="true"
                   className="shadow_md flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-1/2 mx-2 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] border-green-400 active:bg-green-400"
