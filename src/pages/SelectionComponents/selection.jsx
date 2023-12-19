@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 import { Modal } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateWiningNumberAtIndex } from '../../Store';
+import ConfirmationModal from './ConfirmationModal';
 const NumberSelector = ({
   numberOfWiningNumber = 50,
   index,
   values,
-  mainColor = 'purple',
+  mainColor = 'sky',
+  backgroundColor = 'red',
+  buttonNotSelectedColor = 'crimson',
   numbersToBeSelected = 6,
 }) => {
   const winingNumbers = useSelector(
@@ -15,6 +18,7 @@ const NumberSelector = ({
   const [open, setOpen] = useState(false);
   const [finalSelectedNumbers, setFinalSelectedNumbers] = useState(values);
   const [applyPop, setApplyPop] = useState(false);
+  const [unlock, setUnlock] = useState(false);
   const dispatch = useDispatch();
   const [selectedNumbers, setSelectedNumbers] = useState(values);
   const handleSubmit = () => {
@@ -53,7 +57,7 @@ const NumberSelector = ({
         <div
           className={` border flex items-center justify-center cursor-pointer rounded-full  sm:w-9 md:w-[49px] sm:h-9 md:h-[49px] border-1 bg-white text-base font-bold ${
             selectedNumbers.includes(i)
-              ? `!bg-${mainColor}-500 text-white border-${mainColor}-500`
+              ? `!bg-[${mainColor}] text-white border-[${mainColor}]`
               : ' text-[#2f4751] border-gray-500'
           } ${isDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
           key={i}
@@ -77,10 +81,10 @@ const NumberSelector = ({
     const elements = [];
     for (let i = 0; i <= numbersToBeSelected - 1; i++) {
       elements.push(
-        <div className="" key={i}>
+        <div key={i}>
           {selectedNumbers[i] ? (
             <div
-              className={`self-auto bg-${mainColor}-500 border-${mainColor}-500 flex font-bold rounded-full justify-center items-end relative sm:w-7 sm:h-7 md:w-10 md:h-10 text-base md:text-2xl text-white bg-game-lotto popAnimation`}
+              className={`self-auto bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 sm:h-8 md:w-10 md:h-10 text-base md:text-2xl text-white bg-game-lotto popAnimation`}
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full text-x-sm">
@@ -90,7 +94,7 @@ const NumberSelector = ({
             </div>
           ) : (
             <div
-              className={`rounded-full flex font-bold justify-center items-center relative bg-${mainColor}-800 opacity-30 sm:w-7 sm:h-7 md:w-10 md:h-10 text-base md:text-2xl`}
+              className={`rounded-full flex font-bold justify-center items-center relative bg-[${buttonNotSelectedColor}] opacity-30 sm:w-7 sm:h-7 md:w-10 md:h-10 text-base md:text-2xl`}
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
@@ -134,7 +138,7 @@ const NumberSelector = ({
               ? winingNumbers[index]?.map((val, index) => {
                   return (
                     <div
-                      className={` rounded-full flex font-bold justify-center text-white items-end relative bg-${mainColor}-500 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
+                      className={` rounded-full flex font-bold justify-center text-white items-end relative bg-[${mainColor}] w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
                         applyPop ? 'popOutAnimation' : ''
                       }`}
                       aria-hidden="true"
@@ -148,7 +152,7 @@ const NumberSelector = ({
               : finalSelectedNumbers?.map((val, index) => {
                   return (
                     <div
-                      className={` rounded-full flex font-bold justify-center text-white items-end relative bg-${mainColor}-500 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
+                      className={` rounded-full flex font-bold justify-center text-white items-end relative bg-[${mainColor}] w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
                         applyPop ? 'popOutAnimation' : ''
                       }`}
                       aria-hidden="true"
@@ -240,15 +244,15 @@ const NumberSelector = ({
           <div>
             {/* ::::::::::::::::: display selected Numbers start  :::::::::::::::::::::*/}
             <div
-              className={`flex justify-center flex-col items-center bg-${mainColor}-200 h-[126x] p-5 sm:rounded-none md:rounded-tr-lg md:rounded-tl-lg`}
+              className={`flex justify-center flex-col items-center bg-[${backgroundColor}] h-[126x] p-5 sm:rounded-none md:rounded-tr-lg md:rounded-tl-lg`}
             >
               <div className=" uppercase font-bold text-gray-700 flex justify-center py-3">
                 Game line 1
               </div>
               <div className=" flex space-x-1">{renderSelectedNumbers()}</div>
             </div>
-            {isNumbersAlreadySelected() ? (
-              <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error">
+            {isNumbersAlreadySelected() === true && unlock === false ? (
+              <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error rtl gap-2">
                 <svg
                   width="16"
                   height="16"
@@ -274,6 +278,10 @@ const NumberSelector = ({
               </div>
             ) : null}
             {/* :::::::::::::::: display selected Numbers end  :::::::::::::::::::::*/}
+            <ConfirmationModal
+              opneValue={isNumbersAlreadySelected()}
+              setUnlock={setUnlock}
+            />
             <div className="bg-white px-2 mt-2">
               <div className="border-gray-300 border-b-1 py-1 mb-2 flex justify-between">
                 <span className="p-1 text-base text-left flex gap-x-3">
@@ -319,7 +327,9 @@ const NumberSelector = ({
                   <span>Reset</span>
                 </button>
               )}
-              {selectedNumbers.length === numbersToBeSelected ? (
+              {(selectedNumbers.length === numbersToBeSelected &&
+                isNumbersAlreadySelected() === false) ||
+              unlock === true ? (
                 <button
                   data-elem-add-num-button="true"
                   className="shadow_md flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-1/2 mx-2 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] border-green-400 active:bg-green-400"

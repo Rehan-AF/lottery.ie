@@ -1,4 +1,3 @@
-
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
@@ -58,11 +57,7 @@ const Selection1Page = () => {
             width: '100%',
             backgroundSize: 'cover',
           }}
-
-        
-        >
-      
-        </div>
+        ></div>
         <div className="flex flex-col lg:flex-row w-full px-4 md:px-6 lg:px-0 lg:pl-0 h-full z-1 lg:justify-center">
           <div className="flex flex-col">
             <div className="flex items-start z-10 absolute lg:static mt-2">
@@ -89,12 +84,12 @@ const Selection1Page = () => {
             </div>
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
               <div className=" mt-2 lg:mt-3 flex justify-end z-10 mb-4">
-              <GameLogos
-              logoName="05"
-              width="170"
-              color="white"
-              customClass={"game"}
-            />
+                <GameLogos
+                  logoName="05"
+                  width="170"
+                  color="white"
+                  customClass={'game'}
+                />
               </div>
               <div className="flex lg:block justify-between flex-col z-10">
                 <div className="flex flex-col">
@@ -112,7 +107,7 @@ const Selection1Page = () => {
                     Thursday, 12:45am
                   </p>
                   <div className="flex lg:flex-col justify-between lg:justify-start sm:mt-0.5 items-baseline">
-                    <div className="text-white shadow-text font-bold lg:py-8 text-sm lg:text-base w-full rtl" >
+                    <div className="text-white shadow-text font-bold lg:py-8 text-sm lg:text-base w-full rtl">
                       * estimated
                     </div>
                   </div>
@@ -154,7 +149,9 @@ const Selection1Page = () => {
                                 index={index}
                                 values={val}
                                 numbersToBeSelected={numbersToBeSelected}
-                                mainColor="red"
+                                mainColor="#e3262d"
+                                backgroundColor="#fad3d4"
+                                buttonNotSelectedColor="#f39ea2"
                               />
                               <div
                                 onClick={() => handleDelele(index)}
@@ -191,7 +188,9 @@ const Selection1Page = () => {
                         <div className="mb-[1rem]">
                           <OnlyNumberSelector
                             numbersToBeSelected={numbersToBeSelected}
-                            mainColor="red"
+                            mainColor="#e3262d"
+                            backgroundColor="#fad3d4"
+                            buttonNotSelectedColor="#f39ea2"
                           />
                         </div>
                       )}
@@ -201,7 +200,9 @@ const Selection1Page = () => {
                         <div className="mb-4">
                           <OnlyNumberSelector
                             numbersToBeSelected={numbersToBeSelected}
-                            mainColor="red"
+                            mainColor="#e3262d"
+                            backgroundColor="#fad3d4"
+                            buttonNotSelectedColor="#f39ea2"
                           />
                         </div>
 
@@ -297,7 +298,12 @@ const Selection1Page = () => {
             <div className="px-4 md:px-0">
               <div className="w-full">
                 <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
-                  <Accorion title="Lotto win odds" icon={true} pading={false} direction={true}>
+                  <Accorion
+                    title="Lotto win odds"
+                    icon={true}
+                    pading={false}
+                    direction={true}
+                  >
                     <div className=" px-4 ">
                       <hr className="border w-full" />
                       <p className="w-full  text-gray-700 pt-2  ">
@@ -312,7 +318,12 @@ const Selection1Page = () => {
                 </div>
               </div>
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
-                <Accorion title="How to Play" icon={true} pading={false} direction={true}>
+                <Accorion
+                  title="How to Play"
+                  icon={true}
+                  pading={false}
+                  direction={true}
+                >
                   <div className="px-4  ">
                     <hr className="border w-full" />
                     <p className="w-full text-gray-700 mt-2 ">
@@ -326,7 +337,12 @@ const Selection1Page = () => {
                 </Accorion>
               </div>
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
-                <Accorion title="How to Play" icon={true} pading={false} direction={true}>
+                <Accorion
+                  title="How to Play"
+                  icon={true}
+                  pading={false}
+                  direction={true}
+                >
                   <div className=" ">
                     <hr className="border w-full" />
                     <p className="w-full text-gray-700 mt-2 ">
