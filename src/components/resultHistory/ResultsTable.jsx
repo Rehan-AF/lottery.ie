@@ -11,13 +11,13 @@ const ResultsTable = ({ data }) => {
         <thead>
           <tr className="text-sm">
             <th className="rtl p-2 md:pl-9 min-h-12 w-1/4 !text-center">
-              Match
+              تعداد حدس درست
             </th>
             <th className="rtl sm:px-3 p-2 min-h-12 w-1/4 !text-center">
-              Winners{' '}
+              تعداد برندگان{' '}
             </th>
             <th className="rtl p-2 pl-3 md:pr-9 min-h-12 w-1/4 !text-center">
-              <div>Prize</div>
+              <div>مبلغ جایزه</div>
             </th>
           </tr>
           {data?.map((val, index) => {
