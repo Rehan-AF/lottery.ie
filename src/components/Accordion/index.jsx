@@ -8,6 +8,7 @@ const Accorion = ({
   navbar = false,
   animate = false,
   icon = false,
+  direction =false
 }) => {
   const [lotteryVisible, setLotteryVisible] = useState(false);
 
@@ -29,7 +30,8 @@ const Accorion = ({
           center === true ? 'justify-center' : 'justify-between'
         } ${pading === true ? 'px-[27px]' : 'px[0rem] py-3'} ${
           navbar === true ? 'pb-[12px]' : 'pb[0px]'
-        } m-h-[100%] items-center sm:flex-row-reverse md:flex-row-reverse md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]`}
+        } 
+        ${direction === false ? "m-h-[100%] items-center sm:flex-row-reverse md:flex-row-reverse md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]" :"m-h-[100%] items-center sm:flex-row md:flex-row md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]" } `}
       >
         <p className="font-bold tracking-wide cursor-pointer text-gray-700 ">
           {title}
