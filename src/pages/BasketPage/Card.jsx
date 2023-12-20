@@ -1,18 +1,22 @@
 import React from 'react';
 import GameLogos from '../../components/svg/GameLogos';
 import ResultsAccorion from '../../components/resultHistory/ResultsAccordion';
-
+const data = [
+  { winingN: [34, 67, 78, 78 ,80, 12] },
+  { winingN: [34, 67, 78, 78, 23, 14] },
+  { winingN: [34, 67, 78, 78, 14, 16] },
+];
 const Card = () => {
   return (
     <>
       <div>
-        <span className="text-gray-700  font-black text-xl flex rtl pb-4">
+        <span className="text-[#2C444E]  font-semibold text-xl flex rtl pb-4">
           Your basket items
         </span>
 
         <div className="flex justify-center flex-col w-full items-center">
-          <div className=" bg-white rounded-lg w-[350px] lg:w-[880px] flex flex-col justify-center shadow-md ">
-            <div className="bg-white rounded-t-lg flex items-center justify-between px-4 mt-8 pt-3">
+          <div className=" bg-white rounded-lg w-[350px] md:w-[650px] lg:w-[880px] flex flex-col justify-center shadow-md ">
+            <div className="bg-white rounded-t-lg flex items-center justify-between px-4 mt-2 pt-3">
               <GameLogos logoName="05" color="orange" width="120" />
               <div className="flex items-center">
                 <button aria-label="edit" role="link" className="pr-2">
@@ -60,109 +64,44 @@ const Card = () => {
             </div>
             <div className="bg-white flex items-start justify-between px-4 pt-4 pb-4">
               <div>
-                <p className="text-gray-700">2 Lines </p>
-                <p className="text-gray-700">for 1 Draw</p>
+                <p className="text-[#2C444E]">2 Lines </p>
+                <p className="text-[#2C444E]">for 1 Draw</p>
               </div>
               <div className="bg-blue-100 rounded-md py-1 px-2">
-                <p className="text-gray-700 font-bold">€5.00</p>
+                <p className="text-[#2C444E] font-bold">€5.00</p>
               </div>
             </div>
             <ResultsAccorion title="details" center={true}>
               <div className="bg-gray-100 px-4 pt-2 pb-3 border-t-1 border-grey-300 rounded-b-md">
                 <div className="mb-3 mt-2 self-center flex flex-col items-center">
-                  <div className="w-auto space-y-6 flex flex-col">
-                    <div className="flex flex-col">
-                      <div className="mb-2 flex gap-2">
-                        <div className="flex gap-1.5 md:gap-2 flex-wrap">
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            4
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            5
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            6
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            7
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            8
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            20
-                          </div>
-                        </div>
-                        <div className="flex gap-1.5 md:gap-2 flex-wrap"></div>
-                      </div>
-                    </div>
-                    <div className="flex flex-col">
-                      <div className="mb-2 flex gap-2">
-                        <div className="flex gap-1.5 md:gap-2 flex-wrap">
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            4
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            5
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            6
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            7
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            19
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            31
-                          </div>
-                        </div>
-                        <div className="flex gap-1.5 md:gap-2 flex-wrap"></div>
-                      </div>
-                    </div>
-                    <div className="flex flex-col">
-                      <div className="mb-2 flex gap-2">
-                        <div className="flex gap-1.5 md:gap-2 flex-wrap">
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            5
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            6
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            7
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            17
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            18
-                          </div>
-                          <div className="flex font-bold rounded-full justify-center items-center relative text-white bg-red-800 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl">
-                            19
-                          </div>
-                        </div>
-                        <div className="flex gap-1.5 md:gap-2 flex-wrap"></div>
-                      </div>
-                    </div>
+                    <div className=''>
+              {data.map((val, index) => {
+                return (
+                  <div key={index} className='mb-4 flex  gap-1.5 md:gap-2 flex-wrap '>
+                    {val.winingN.map((value, index) => {
+                      return <div key={index} className='flex p-[1.4rem] font-bold rounded-full  justify-center items-center relative text-white bg-[#E3262D] w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl mb-4'>{value}</div>;
+                    })}
                   </div>
+                );
+              })}
+              </div>
                 </div>
                 <section className="flex flex-col pb-1">
                   <div className="flex justify-between">
-                    <p>3 Lines</p>
-                    <p className="text-right text-dark-blue">€6.00</p>
+                    <p className='text-[#2C444E]'>3 Lines</p>
+                    <p className="text-right text-[#2C444E]">€6.00</p>
                   </div>
                   <div className="flex justify-between">
-                    <p aria-label="Number of Draws">No. of draws</p>
-                    <p className="text-right">1</p>
+                    <p aria-label="Number of Draws " className='text-[#2C444E]'>No. of draws</p>
+                    <p className="text-right text-[#2C444E]">1</p>
                   </div>
                 </section>
                 <section className="flex justify-between text-lg border-t-1 pt-1">
-                  <h4 className="text-dark-blue font-bold">Total</h4>
-                  <h4 className="text-dark-blue font-bold">€6.00</h4>
+                  <h4 className="text-[#2C444E] font-bold">Total</h4>
+                  <h4 className="text-[#2C444E] font-bold">€6.00</h4>
                 </section>
               </div>
+            
             </ResultsAccorion>
           </div>
         </div>

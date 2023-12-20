@@ -79,9 +79,9 @@ const data = [
 const BasketPage = () => {
   return (
     <div>
-      <div className="lg:container mx-auto p-4 lg:pl-20 flex justify-center ">
-        <div className="whitespace-nowrap lg:w-[950px] xl:w-[1000px] rtl">
-          <h1 className="lg:pr-4 text-3xl font-black py-4 mt-5 text-[#4b636e] flex rtl">
+      <div className="lg:container mx-auto p-4 lg:pl-20  ">
+        <div className="whitespace-nowrap w-full  xl:w-[80%] rtl">
+          <h1 className="lg:pr-4 text-3xl font-black py-4 mt-5  text-[#4b636e] flex rtl">
             Your Basket
           </h1>
         </div>
