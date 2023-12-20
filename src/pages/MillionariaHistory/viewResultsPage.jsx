@@ -2,6 +2,7 @@
 import ResultsHistory from '../../components/resultHistory';
 // import CustomDatepicker from '../../components/DatePicker/1';
 import backgroundImage_7 from '../../assets/backgrounds/5_Lotomania.svg';
+import RangeSelectorModal from '../../components/dataRangeSelector/rangeSelectorModal';
 const tableData = [
   {
     match: 'Jackpot',
@@ -27,7 +28,7 @@ const tableData = [
 const ViewResultsPage = () => {
   return (
     <div className="flex flex-col items-center">
-      {/* <RangeSelectorModal /> */}
+      <RangeSelectorModal />
       {/* <CustomDatepicker /> */}
       <div className="flex justify-end sm:w-full lg:w-[880px] pt-[2rem]">
         <h2
