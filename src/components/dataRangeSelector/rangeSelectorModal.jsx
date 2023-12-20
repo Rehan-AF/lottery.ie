@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, Modal } from 'antd';
 import DateRangeSelector from './index';
 import './styles.css';
+import NewDatePicker from '../newDatePicker/NewDatePicker';
 const RangeSelectorModal = () => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -74,7 +75,7 @@ const RangeSelectorModal = () => {
           </button>,
         ]}
       >
-        <DateRangeSelector setDate={setDate} />
+        <NewDatePicker setDate={setDate} />
       </Modal>
     </>
   );

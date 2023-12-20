@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "iranSans";
+  src: url("./fonts/eot/IRANSansWeb.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/woff2/IRANSansWeb.woff2") format("woff2"),
+    /* Modern Browsers */ url("./fonts/woff/IRANSansWeb.woff") format("woff"),
+    /* Modern Browsers */ url("./fonts/ttf/IRANSansWeb.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 900px;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: auto;
+}
+
+body {
+  margin: 0;
+  font-family: iranSans !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+.rmdp-arrow-container {
+  background-color: rgb(243, 243, 243) !important;
+  padding: 20px 20px 20px 20px !important;
+}
+.rmdp-arrow-container:hover {
+  background-color: #95ac02 !important;
+  padding: 20px 20px 20px 20px !important;
+}
+
+.rmdp-arrow {
+  margin-top: -2px !important;
+  color: black !important;
+}
+.rmdp-arrow:hover {
+  margin-top: -2px !important;
+
+  color: rgb(243, 0, 0) !important;
+}
+.rmdp-range.start {
+  background-color: #4b636e !important;
+  color: white !important;
+}
+/* .rmdp-range.start:hover{
+  background-color: red!important;
+} */
+.sd :hover {
+  background-color: #e4f37f !important;
+}
+
+.rmdp-day span :hover {
+  background-color: #e4f37f !important;
+  /* border: 1px solid red!important;
+  padding: 2px!important; */
+}
+.rmdp-range-hover {
+  background-color: #e4f37f !important;
+  color: black !important;
+}
+.rmdp-range.end {
+  background-color: #4b636e !important;
+  color: white !important;
+}
+.rmdp-header-values {
+  font-size: 18px !important;
+  /* font-weight: bold!important; */
+}
+.rmdp-week {
+}
+.rmdp-week-day {
+  color: #95ac02 !important;
+}
+
+.rmdp-header {
+  background-color: #e4f37f !important;
+  border-radius: 10px;
+}
+.rmdp-range {
+  background-color: rgba(196, 221, 50, 255) !important;
+  color: rgb(0, 0, 0) !important;
+  box-shadow: none !important;
+}
+.rmdp-range:hover {
+  background-color: #e4f37f !important;
+  color: rgb(0, 0, 0) !important;
+  box-shadow: none !important;
+}
