@@ -8,7 +8,7 @@ const Accorion = ({
   navbar = false,
   animate = false,
   icon = false,
-  direction =false
+  direction = false,
 }) => {
   const [lotteryVisible, setLotteryVisible] = useState(false);
 
@@ -27,18 +27,23 @@ const Accorion = ({
       <div
         onClick={toggleLotteryVisibility}
         className={`flex ${
-          center === true ? 'justify-center' : 'justify-between'
-        } ${pading === true ? 'px-[27px]' : 'px[0rem] py-3'} ${
-          navbar === true ? 'pb-[12px]' : 'pb[0px]'
+          center === true ? 'justify-center' : 'justify-end '
         } 
-        ${direction === false ? "m-h-[100%] items-center sm:flex-row-reverse md:flex-row-reverse md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]" :"m-h-[100%] items-center sm:flex-row md:flex-row md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]" } `}
+        ${pading === true ? 'px-[27px]' : 'px[0rem] py-3'} 
+        ${navbar === true ? 'pb-[12px]' : 'pb[0px]'} 
+       
+        ${
+          direction === false
+            ? 'm-h-[100%] items-center sm:flex-row-reverse md:flex-row-reverse md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]'
+            : 'm-h-[100%] items-center sm:flex-row md:flex-row md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]'
+        } `}
       >
-        <p className="font-bold tracking-wide cursor-pointer text-gray-700 ">
+        <p className="font-bold tracking-wide cursor-pointer text-gray-700 px-3">
           {title}
         </p>
         {icon ? (
           <svg
-             width="14"
+            width="14"
             height="14"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +52,6 @@ const Accorion = ({
                 ? 'transform rotate-45 transition-transform ease-in-out'
                 : 'transform rotate-0 transition-transform ease-in-out'
             }`}
-
           >
             <path
               fill-rule="evenodd"
