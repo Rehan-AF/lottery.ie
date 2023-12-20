@@ -143,6 +143,14 @@ body {
   width: 100%;
 }
 
+.input_container1 {
+  position: relative;
+  border: 1px solid rgb(189, 187, 187);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  height: 63px;
+
+}
 .floating-label {
   position: absolute;
   top: 18px;
@@ -162,8 +170,22 @@ body {
   outline: none;
   color: #2c444e;
 }
+.input_container1 input {
+  border: none;
+  font-size: 1rem;
+  padding-top: 18px;
+  font-weight: 700;
+  outline: none;
+  color: #2c444e;
+}
 
 .input_container.focused .floating-label {
+  top: 7px;
+  font-size: 12px;
+  right: 1rem;
+  color: rgba(118, 118, 118, 1);
+}
+.input_container1.focused .floating-label {
   top: 7px;
   font-size: 12px;
   right: 1rem;
@@ -264,6 +286,9 @@ input::-ms-clear {
   .input_container {
     height: 53px;
   }
+  .input_container1 {
+    height: 53px;
+  }
   .floating-label {
     position: absolute;
     top: 13px;
@@ -275,6 +300,14 @@ input::-ms-clear {
     font-weight: 700;
   }
   .input_container input {
+    border: none;
+    font-size: 14px;
+    padding-top: 16px;
+    font-weight: 700;
+    outline: none;
+    color: #2c444e;
+  }
+  .input_container1 input {
     border: none;
     font-size: 14px;
     padding-top: 16px;
