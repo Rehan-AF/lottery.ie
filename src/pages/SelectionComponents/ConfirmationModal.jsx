@@ -28,7 +28,7 @@ const ConfirmationModal = ({ opneValue = false, setUnlock }) => {
         footer={[]}
       >
         <div className="p-5 pb-2">
-          <div className="p-4">
+          <div className="p-4 rtl flex flex-col justify-center items-center">
             <div className="flex gap-2 font-bold items-center mb-[1rem]">
               <svg
                 viewBox="64 64 896 896"

@@ -17,7 +17,7 @@ import gameLogo_5 from '../../assets/gameLogos/05.svg';
 import gameLogo_6 from '../../assets/gameLogos/06.svg';
 import gameLogo_7 from '../../assets/gameLogos/07.svg';
 import gameLogo_8 from '../../assets/gameLogos/08.svg';
-import Card from '../../components/Card';
+import Card from './Card';
 
 const data = [
   {
@@ -79,49 +79,50 @@ const data = [
 const BasketPage = () => {
   return (
     <div>
-      <div className="lg:container mx-auto p-4 lg:pl-20 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 ">
-        <div className="col-start-1 col-end-1 lg:col-start-1 lg:col-end-10 whitespace-nowrap lg:w-[950px] xl:w-[1000px] rtl">
+      <div className="lg:container mx-auto p-4 lg:pl-20 flex justify-center ">
+        <div className="whitespace-nowrap lg:w-[950px] xl:w-[1000px] rtl">
           <h1 className="lg:pr-4 text-3xl font-black py-4 mt-5 text-[#4b636e] flex rtl">
             Your Basket
           </h1>
         </div>
       </div>
-      
-    <div className='flex justify-center items-center w-full'>
-      <Card />
-      </div>
       <div
         className="bg-[url(../../assets/basketBack.svg)] bg-top bg-no-repeat bg-cover"
         style={{ backgroundImage: `url("${background}")` }}
       >
-        <div className="flex flex-col items-center justify-center text-center my-3">
-          <img src={logoBack} className="" />
-          <div className="my-4 flex flex-col items-center text-center">
-            <p className="font-black sm:text-[20px] md:text-2xl text-blue-dark text-[#2f4751]">
-              Your basket is currently empty!
-            </p>
-            <p className="sm:text-[14px] md:text-[15.5px] text-[#2f4751]">
-              Tap below to play some games
-            </p>
-          </div>
+        <div className="flex justify-center items-center w-full">
+          <Card />
         </div>
-        <div className="flex justify-center">
-          <div className="flex flex-wrap justify-center gap-4 max-w-[880px] pb-[58px]">
-            {data?.map((val, index) => {
-              return (
-                <div key={index}>
-                  <BasketCard
-                    background={val.background}
-                    logo={val.logo}
-                    amount={val.amount}
-                    playFor={val.playFor}
-                    date={val.date}
-                    gradient={val.gradient}
-                    link={val.link}
-                  />
-                </div>
-              );
-            })}
+        <div>
+          <div className="flex flex-col items-center justify-center text-center my-3">
+            <img src={logoBack} className="" />
+            <div className="my-4 flex flex-col items-center text-center">
+              <p className="font-black sm:text-[20px] md:text-2xl text-blue-dark text-[#2f4751]">
+                Your basket is currently empty!
+              </p>
+              <p className="sm:text-[14px] md:text-[15.5px] text-[#2f4751]">
+                Tap below to play some games
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center gap-4 max-w-[880px] pb-[58px]">
+              {data?.map((val, index) => {
+                return (
+                  <div key={index}>
+                    <BasketCard
+                      background={val.background}
+                      logo={val.logo}
+                      amount={val.amount}
+                      playFor={val.playFor}
+                      date={val.date}
+                      gradient={val.gradient}
+                      link={val.link}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
