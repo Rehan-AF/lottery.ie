@@ -21,6 +21,8 @@ import { Provider } from 'react-redux';
 import { store } from '../Store/store.js';
 import Selection1Page from '../pages/SelectionComponents/Selection1Page.jsx';
 import ProfileLayout from '../components/template/ProfileLayout.jsx';
+import ChangePassword from '../components/Profile/ChangePassword.jsx';
+
 
 const NewRouter = createBrowserRouter([
   {
@@ -47,6 +49,7 @@ const NewRouter = createBrowserRouter([
       { path: 'draw-games/basket', element: <BasketPage /> },
       { path: 'draw-games/select', element: <Selection1Page /> },
       { path: 'draw-games/select1', element: <Selection1Page /> },
+     
     ],
   },
   {
@@ -73,8 +76,12 @@ const NewRouter = createBrowserRouter([
           <ProfileLayout />
           <ScrollRestoration />
         </Provider>
+      
       </div>
     ),
+    children:[
+      { path: 'account', element: <ChangePassword /> },
+    ]
   },
 ]);
 
