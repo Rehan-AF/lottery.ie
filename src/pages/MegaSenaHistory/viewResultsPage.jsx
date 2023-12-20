@@ -3,6 +3,7 @@ import ResultsHistory from '../../components/resultHistory';
 // import backgroundImage_1 from '../../assets/backgrounds/1_Mega-da-virada.svg';
 // import CustomDatepicker from '../../components/DatePicker/1';
 import backgroundImage_4 from '../../assets/backgrounds/6_Mega-Sena.svg';
+import RangeSelectorModal from '../../components/dataRangeSelector/rangeSelectorModal';
 const tableData = [
   {
     match: 'Jackpot',
@@ -28,8 +29,7 @@ const tableData = [
 const ViewResultsPage = () => {
   return (
     <div className="flex flex-col items-center">
-      {/* <RangeSelectorModal /> */}
-      {/* <CustomDatepicker /> */}
+      <RangeSelectorModal /> {/* <CustomDatepicker /> */}
       <div className="flex justify-end sm:w-full lg:w-[880px] pt-[2rem]">
         <h2
           aria-label="rtl Last draw, Thursday, December 7th, 2023"
@@ -38,7 +38,6 @@ const ViewResultsPage = () => {
           Thu 07/12/23
         </h2>
       </div>
-
       <ResultsHistory
         name="megasena"
         JackportAmount="6,431,246"

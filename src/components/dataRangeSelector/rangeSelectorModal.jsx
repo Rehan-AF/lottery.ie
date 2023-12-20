@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, Modal } from 'antd';
 import DateRangeSelector from './index';
 import './styles.css';
@@ -6,17 +6,31 @@ import NewDatePicker from '../newDatePicker/NewDatePicker';
 const RangeSelectorModal = () => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
-  const [date, setDate] = useState(false);
+  const [date, setDateValue] = useState(false);
+  const [showDate, setShowDate] = useState(false);
   const showModal = () => {
     setOpen(true);
   };
 
   const handleOk = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setOpen(false);
-    }, 300);
+    // console.log(val[0].day, val[0].month.name, val[0].year, 'vvalues');
+    // console.log(val[1].day, val[1].month.name, val[1].year, 'vvalues');
+
+    setShowDate([
+      {
+        day: date[0].day,
+        month: date[0].month.name,
+        year: date[0].year,
+      },
+      {
+        day: date[1].day,
+        month: date[1].month.name,
+        year: date[1].year,
+      },
+    ]);
+
+    setOpen(false);
+    // console.log(showDate, 'showdate');
   };
 
   const handleCancel = () => {
@@ -26,13 +40,23 @@ const RangeSelectorModal = () => {
   return (
     <>
       <button
-        className="bg-white shadow-md w-full p-[9px] rounded-md max-w-[1156.8px] flex justify-between"
+        className="bg-white shadow-md  p-[9px] rounded-md max-w-[880px] w-full rtl flex justify-between"
         onClick={showModal}
       >
         <p className="text-[#2c445e] text-[1rem] font-bold">
-          {date
-            ? `${date[0].startDate} - ${date[0].endDate}`
-            : 'Filter By Date'}
+          {showDate ? (
+            <div className="flex gap-2">
+              <div>
+                {showDate[0].day}/{showDate[0].month}/{showDate[0].year}
+              </div>
+              -
+              <div>
+                {showDate[1].day}/{showDate[1].month}/{showDate[1].year}`
+              </div>
+            </div>
+          ) : (
+            'Filter By Date'
+          )}
         </p>
         <svg
           width="22px"
@@ -55,14 +79,20 @@ const RangeSelectorModal = () => {
         title="Title"
         onOk={handleOk}
         onCancel={handleCancel}
-        footer={[
+        footer={[]}
+        closeIcon={false}
+      >
+        <div className="">
+          <NewDatePicker setDateValue={setDateValue} />
+        </div>
+        <div className="flex justify-around">
           <button
             className="w-[144px] h-[54px] flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-[#1f2937] bg-white active:bg-blue-lighter-04"
             key="back"
             onClick={handleCancel}
           >
             Cancle
-          </button>,
+          </button>
           <button
             key="submit"
             type="primary"
@@ -72,10 +102,8 @@ const RangeSelectorModal = () => {
             className="w-[144px] h-[54px] flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-[#1f2937] bg-[#c4dc33] active:bg-blue-lighter-04"
           >
             Ok
-          </button>,
-        ]}
-      >
-        <NewDatePicker setDate={setDate} />
+          </button>
+        </div>
       </Modal>
     </>
   );

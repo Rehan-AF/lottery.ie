@@ -11,14 +11,18 @@ import InputIcon from 'react-multi-date-picker/components/input_icon';
 // import weekends from 'react-multi-date-picker/plugins/highlight_weekends';
 // import Toolbar from 'react-multi-date-picker/plugins/toolbar';
 import { Calendar } from 'react-multi-date-picker';
-// import moment from 'jalali-moment';
+import moment from 'jalali-moment';
 import './stylesIndex.css';
 const weekDays = ['ش', 'ی', 'د', 'س', 'چ', 'پ', 'ج'];
+// const convertToShamsi = (date) => {
+//   const moment = require('jalali-moment');
+//   return moment(date).locale('fa').format('jYYYY/jMM/jDD');
+// };
+
 const convertToShamsi = (date) => {
-  const moment = require('jalali-moment');
   return moment(date).locale('fa').format('jYYYY/jMM/jDD');
 };
-const NewDatePicker = ({ setDate }) => {
+const NewDatePicker = ({ setDateValue }) => {
   const [numberOfMonths, setNumberOfMonths] = useState(
     getInitialNumberOfMonths()
   );
@@ -27,7 +31,7 @@ const NewDatePicker = ({ setDate }) => {
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     setValue(yesterday);
-    setDate(yesterday);
+    setDateValue(yesterday);
   };
 
   const handleLast7DaysClick = () => {
@@ -39,8 +43,7 @@ const NewDatePicker = ({ setDate }) => {
     const formattedEndDate = convertToShamsi(today);
 
     setValue([startDate, today]);
-    setDate([startDate, today]);
-
+    setDateValue([startDate, today]);
     console.log(
       `Start Date: ${formattedStartDate}, End Date: ${formattedEndDate}`
     );
@@ -53,7 +56,7 @@ const NewDatePicker = ({ setDate }) => {
       return day;
     });
     setValue(last30Days);
-    setDate(last30Days);
+    setDateValue(last30Days);
   };
 
   useEffect(() => {
@@ -83,10 +86,9 @@ const NewDatePicker = ({ setDate }) => {
 
   const arrows = {};
   const [value, setValue] = useState();
-  const handleChange = () => {
-    setValue;
-    setDate;
-  };
+  // const handleChange = (val) => {
+  //   setDateValue(val);
+  // };
   return (
     <div
       style={{
@@ -94,14 +96,13 @@ const NewDatePicker = ({ setDate }) => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        padding: '50px',
         fontSize: '18px',
         fontWeight: 'bolder',
       }}
     >
       <Calendar
         value={value}
-        onChange={handleChange}
+        onChange={setDateValue}
         // renderButton={(direction, handleClick) => (
         //   <button onClick={handleClick}>
         //     {direction === "right" ? ">" : "<"}

@@ -2,7 +2,7 @@ import React from 'react';
 import GameLogos from '../../components/svg/GameLogos';
 import ResultsAccorion from '../../components/resultHistory/ResultsAccordion';
 const data = [
-  { winingN: [34, 67, 78, 78 ,80, 12] },
+  { winingN: [34, 67, 78, 78, 80, 12] },
   { winingN: [34, 67, 78, 78, 23, 14] },
   { winingN: [34, 67, 78, 78, 14, 16] },
 ];
@@ -74,34 +74,46 @@ const Card = () => {
             <ResultsAccorion title="details" center={true}>
               <div className="bg-gray-100 px-4 pt-2 pb-3 border-t-1 border-grey-300 rounded-b-md">
                 <div className="mb-3 mt-2 self-center flex flex-col items-center">
-                    <div className=''>
-              {data.map((val, index) => {
-                return (
-                  <div key={index} className='mb-4 flex  gap-1.5 md:gap-2 flex-wrap '>
-                    {val.winingN.map((value, index) => {
-                      return <div key={index} className='flex p-[1.4rem] font-bold rounded-full  justify-center items-center relative text-white bg-[#E3262D] w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl mb-4'>{value}</div>;
+                  <div className="">
+                    {data.map((val, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className="mb-4 flex  gap-1.5 md:gap-2 flex-wrap "
+                        >
+                          {val.winingN.map((value, index) => {
+                            return (
+                              <div
+                                key={index}
+                                className="flex p-[1.4rem] font-bold rounded-full  justify-center items-center relative text-white bg-[#E3262D] w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl mb-4"
+                              >
+                                {value}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
                     })}
                   </div>
-                );
-              })}
-              </div>
                 </div>
                 <section className="flex flex-col pb-1">
                   <div className="flex justify-between">
-                    <p className='text-[#2C444E]'>3 Lines</p>
+                    <p className="text-[#2C444E]">3 Lines</p>
                     <p className="text-right text-[#2C444E]">€6.00</p>
                   </div>
                   <div className="flex justify-between">
-                    <p aria-label="Number of Draws " className='text-[#2C444E]'>No. of draws</p>
+                    <p aria-label="Number of Draws " className="text-[#2C444E]">
+                      No. of draws
+                    </p>
                     <p className="text-right text-[#2C444E]">1</p>
                   </div>
                 </section>
+                <hr />
                 <section className="flex justify-between text-lg border-t-1 pt-1">
                   <h4 className="text-[#2C444E] font-bold">Total</h4>
                   <h4 className="text-[#2C444E] font-bold">€6.00</h4>
                 </section>
               </div>
-            
             </ResultsAccorion>
           </div>
         </div>
