@@ -18,8 +18,8 @@ const ProfileLayout = () => {
           <div className="self-stretch flex-1 items-stretch flex justify-center bg-blue-lighter-03 lg:bg-blue-lighter-05 h-full">
             <Outlet />
           </div>
-          <div className="bg-[#dde9ee] hidden lg:block flex-shrink-0 bg-blue-lighter-03 py-16">
-            <div className="hidden text-[#2c444e] lg:block flex-shrink-0 bg-blue-lighter-03 py-16 rtl">
+          <div className="bg-[#dde9ee] hidden lg:block flex-shrink-0 bg-blue-lighter-03 py-10">
+            <div className="hidden text-[#2c444e] lg:block flex-shrink-0 bg-blue-lighter-03 py-10 rtl">
               <nav>
                 <section
                   aria-labelledby="header-Profile"
@@ -29,7 +29,7 @@ const ProfileLayout = () => {
                     id="header-Profile"
                     className="text-lg font-bold pb-2 lg:px-7"
                   >
-                    Profile
+                    Dashboard
                   </h3>
                   <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
                     <a
@@ -119,132 +119,6 @@ const ProfileLayout = () => {
                       </div>
                       My Tickets
                     </a>
-                    <a
-                      href="/account/favourite-numbers/lotto"
-                      className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
-                    >
-                      <div className="pl-3">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M6.48508 4.58337C6.07258 4.58337 5.68425 4.67004 5.32841 4.84087C4.62425 5.18004 4.11175 5.76837 3.88591 6.49837C3.59425 7.44171 3.77591 8.55837 4.41091 9.72587C4.72175 10.2984 5.12425 10.8334 5.67925 11.4084C6.14675 11.8925 6.71175 12.4 7.56841 13.1059C7.97258 13.4392 9.41258 14.5909 10.0001 15.06C10.5942 14.585 12.0267 13.4392 12.4292 13.1075C13.2734 12.4134 13.8567 11.89 14.3209 11.4075C14.8759 10.8325 15.2792 10.2975 15.5892 9.72671C16.2251 8.55754 16.4059 7.44171 16.1142 6.49837C15.8884 5.76837 15.3759 5.18004 14.6701 4.84004C13.4709 4.26171 11.7767 4.76587 11.0559 5.90421L10.0001 7.57004L8.94425 5.90421C8.43591 5.10171 7.47091 4.58337 6.48508 4.58337ZM10.0009 16.6625L9.47091 16.2375C9.03924 15.8925 7.23591 14.4517 6.77341 14.0709C5.87841 13.3334 5.28258 12.7967 4.78008 12.2759C4.14424 11.6175 3.67758 10.9967 3.31258 10.3225C2.51258 8.85337 2.29841 7.40254 2.69174 6.12837C3.02174 5.06337 3.76591 4.20587 4.78674 3.71504C5.31174 3.46171 5.88341 3.33337 6.48508 3.33337C7.90924 3.33337 9.25674 4.06254 10.0001 5.23504C10.7434 4.06254 12.0901 3.33337 13.5151 3.33337C14.1167 3.33337 14.6884 3.46171 15.2126 3.71421C16.2342 4.20587 16.9784 5.06337 17.3084 6.12837C17.7017 7.40171 17.4867 8.85171 16.6876 10.3234C16.3226 10.9959 15.8559 11.6159 15.2209 12.275C14.7217 12.7942 14.1059 13.3475 13.2242 14.0725C11.6351 15.3825 10.9092 15.9817 10.5151 16.2325L10.5234 16.2417L10.0009 16.6625Z"
-                            fill="#2D4550"
-                          ></path>
-                        </svg>
-                      </div>
-                      My Favourite Numbers
-                    </a>
-                    <a
-                      href="/account/financial-transactions"
-                      className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
-                    >
-                      <div className="pl-3">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <mask id="path-1-inside-1_10182:14117" fill="white">
-                            <rect
-                              x="1"
-                              y="5"
-                              width="18"
-                              height="10"
-                              rx="1"
-                            ></rect>
-                          </mask>
-                          <rect
-                            x="1"
-                            y="5"
-                            width="18"
-                            height="10"
-                            rx="1"
-                            stroke="#2D4550"
-                            strokeWidth="2.5"
-                            mask="url(#path-1-inside-1_10182:14117)"
-                          ></rect>
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="2.5"
-                            stroke="#2D4550"
-                          ></circle>
-                          <path
-                            d="M4.5 6C4.5 7.38071 3.38071 8.5 2 8.5"
-                            stroke="#2D4550"
-                          ></path>
-                          <path
-                            d="M18 8.5C16.6193 8.5 15.5 7.38071 15.5 6"
-                            stroke="#2D4550"
-                          ></path>
-                          <path
-                            d="M2 11.5C3.38071 11.5 4.5 12.6193 4.5 14"
-                            stroke="#2D4550"
-                          ></path>
-                          <path
-                            d="M15.5 14C15.5 12.6193 16.6193 11.5 18 11.5"
-                            stroke="#2D4550"
-                          ></path>
-                          <line
-                            x1="3.75"
-                            y1="2.5"
-                            x2="15.25"
-                            y2="2.5"
-                            stroke="#2D4550"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                          ></line>
-                          <line
-                            x1="15.25"
-                            y1="17.5"
-                            x2="3.75"
-                            y2="17.5"
-                            stroke="#2D4550"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                          ></line>
-                          <path
-                            d="M15 1L16 2.5L15 4"
-                            stroke="#2D4550"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                          ></path>
-                          <path
-                            d="M4 19L3 17.5L4 16"
-                            stroke="#2D4550"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                          ></path>
-                        </svg>
-                      </div>
-                      Financial Transactions
-                    </a>
-                    <a
-                      href="/account/logout"
-                      className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold hidden lg:flex"
-                    >
-                      <div className="pl-3">
-                        <svg
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M4.6 4.60002L11 4.60003L11 3.00002L4.6 3.00002C3.72 3.00002 3 3.72002 3 4.60002L3 15.8C3 16.68 3.72 17.4 4.6 17.4L11 17.4L11 15.8L4.6 15.8L4.6 4.60002Z"></path>
-                          <path d="M12.8798 7.31983L13.9998 6.19983L17.9998 10.1998L13.9998 14.1998L12.8798 13.0798L14.9598 10.9998L6.7998 10.9998L6.7998 9.39983L14.9598 9.39983L12.8798 7.31983Z"></path>
-                        </svg>
-                      </div>
-                      Log Out
-                    </a>
                   </div>
                 </section>
                 <section
@@ -255,7 +129,7 @@ const ProfileLayout = () => {
                     id="header-responsible-play"
                     className="text-lg font-bold pb-2 lg:px-7"
                   >
-                    Responsible Play
+                    Finincial
                   </h3>
                   <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
                     <a
@@ -272,7 +146,7 @@ const ProfileLayout = () => {
                           <path d="M15.2002 5.28667V3.46667H1.3335V10.4C1.33583 11.3851 1.54804 12.3584 1.95602 13.255C2.36399 14.1517 2.95835 14.9511 3.6995 15.6H1.3335V17.3333H15.2002V15.6H12.8342C13.3988 15.1031 13.8789 14.5177 14.2555 13.8667H14.3335C15.4081 13.8678 16.4448 13.4695 17.2423 12.7492C18.0398 12.0289 18.5412 11.038 18.6492 9.96884C18.7572 8.89965 18.4641 7.82848 17.8268 6.96326C17.1894 6.09805 16.2533 5.50052 15.2002 5.28667ZM13.4668 10.4C13.4668 11.7791 12.919 13.1018 11.9438 14.077C10.9686 15.0522 9.64596 15.6 8.26683 15.6C6.8877 15.6 5.56506 15.0522 4.58987 14.077C3.61469 13.1018 3.06683 11.7791 3.06683 10.4V5.20001H13.4668V10.4ZM16.1795 11.3707C15.8525 11.6933 15.4458 11.9236 15.0008 12.038C15.1322 11.5019 15.1992 10.952 15.2002 10.4V7.08934C15.6116 7.23613 15.9794 7.48421 16.2696 7.81068C16.5599 8.13715 16.7632 8.53149 16.8608 8.95728C16.9584 9.38307 16.9471 9.82659 16.828 10.2469C16.709 10.6672 16.4859 11.0507 16.1795 11.362V11.3707Z"></path>
                         </svg>
                       </div>
-                      Take a Break
+                      Deposit
                     </a>
                     <a
                       href="/account/locked-games"
@@ -294,7 +168,7 @@ const ProfileLayout = () => {
                           ></path>
                         </svg>
                       </div>
-                      Locked Games
+                      Withdraw
                     </a>
                     <a
                       href="/account/spending-limits"
@@ -318,7 +192,7 @@ const ProfileLayout = () => {
                           ></path>
                         </svg>
                       </div>
-                      Spending Limits
+                      Finincial Transaction
                     </a>
                   </div>
                 </section>
@@ -347,7 +221,7 @@ const ProfileLayout = () => {
                           <path d="M16.4 3H3.6C2.72 3 2.008 3.72 2.008 4.6L2 14.2C2 15.08 2.72 15.8 3.6 15.8H16.4C17.28 15.8 18 15.08 18 14.2V4.6C18 3.72 17.28 3 16.4 3ZM15.6 14.2H4.4C3.96 14.2 3.6 13.84 3.6 13.4V6.2L9.152 9.672C9.672 10 10.328 10 10.848 9.672L16.4 6.2V13.4C16.4 13.84 16.04 14.2 15.6 14.2ZM10 8.6L3.6 4.6H16.4L10 8.6Z"></path>
                         </svg>
                       </div>
-                      Notifications
+                      Support
                     </a>
                     <a
                       href="/account/id-verification"
@@ -364,7 +238,7 @@ const ProfileLayout = () => {
                           <path d="M8.57499 11.2083L6.64166 9.26662L5.40833 10.5083L8.57499 13.6833L14.6917 7.54995L13.4583 6.30829L8.57499 11.2083Z"></path>
                         </svg>
                       </div>
-                      ID Verification
+                      My Referrals
                     </a>
                     <a
                       href="/account/change-password"
@@ -397,27 +271,7 @@ const ProfileLayout = () => {
                           <path d="M15.2 4.2H13.6C13.6 2.432 12.168 1 10.4 1C8.632 1 7.2 2.432 7.2 4.2H5.6C4.72 4.2 4 4.92 4 5.8V15.4C4 16.28 4.72 17 5.6 17H15.2C16.08 17 16.8 16.28 16.8 15.4V5.8C16.8 4.92 16.08 4.2 15.2 4.2ZM10.4 2.6C11.28 2.6 12 3.32 12 4.2H8.8C8.8 3.32 9.52 2.6 10.4 2.6ZM15.2 15.4H5.6V5.8H7.2V7.4C7.2 7.84 7.56 8.2 8 8.2C8.44 8.2 8.8 7.84 8.8 7.4V5.8H12V7.4C12 7.84 12.36 8.2 12.8 8.2C13.24 8.2 13.6 7.84 13.6 7.4V5.8H15.2V15.4Z"></path>
                         </svg>
                       </div>
-                      Marketing Preferences
-                    </a>
-                    <a
-                      href="/account/close-account"
-                      className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
-                    >
-                      <div className="pl-3">
-                        <svg
-                          className="w-5 h-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M3.94925 2.05827C3.42709 1.53612 2.58052 1.53612 2.05836 2.05827C1.53621 2.58042 1.53621 3.427 2.05837 3.94915L8.10917 9.99996L2.0583 16.0508C1.53615 16.573 1.53615 17.4196 2.0583 17.9417C2.58045 18.4639 3.42703 18.4639 3.94918 17.9417L10.0001 11.8908L16.0509 17.9417C16.573 18.4638 17.4196 18.4638 17.9418 17.9417C18.4639 17.4195 18.4639 16.5729 17.9418 16.0508L11.8909 9.99996L17.9417 3.94919C18.4639 3.42704 18.4639 2.58046 17.9417 2.05831C17.4196 1.53616 16.573 1.53616 16.0508 2.05831L10.0001 8.10908L3.94925 2.05827Z"
-                          ></path>
-                        </svg>
-                      </div>
-                      Close Account
+                      Log Out
                     </a>
                   </div>
                 </section>
