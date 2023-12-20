@@ -160,7 +160,7 @@ const OnlyNumberSelector = ({
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
-          <div className="absolute inline z-1 w-auto text-gray-700 mx-auto sm:top-1/5 md:top-1/4 left-0 right-0 text-center">
+          <div className="absolute inline z-1 w-auto text-[#49636e] mx-auto sm:top-1/5 md:top-1/4 left-0 right-0 text-center">
             <p aria-label="Enter Numbers" className="font-bold text-lg">
               <span className="inline-flex relative">
                 <svg

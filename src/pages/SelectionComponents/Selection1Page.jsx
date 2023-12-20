@@ -47,7 +47,7 @@ const Selection1Page = () => {
     dispatch(pushNumbersToWiningNumbers(newNumbersArray));
   };
   return (
-    <div className="bg-blue-100 relative flex justify-center min-h-screen">
+    <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
       <div className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center">
         <div
           className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-56 lg:h-80 top-0"
@@ -359,8 +359,11 @@ const Selection1Page = () => {
           </div>
         </div>
       </div>
-      <div className="flex-col md:flex-row flex bg-white shadow fixed bottom-0 w-full z-20 py-4 px-4 md:px-7 lg:px-28 rounded-t-lg justify-between lg:justify-end items-center">
-        <div className="flex justify-between lg:justify-end w-full">
+      <div
+        className="flex-col md:flex-row flex bg-white fixed bottom-0 w-full z-20 py-4 px-4 md:px-7 lg:px-28 rounded-t-lg justify-between lg:justify-end items-center"
+        style={{ boxShadow: '0px 0px 10px #80808078' }}
+      >
+        <div className="flex justify-between lg:justify-end w-full rtl">
           {winingNumbers.length ? (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
               <div className="flex justify-end font-bold text-gray-700">
