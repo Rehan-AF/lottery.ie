@@ -90,7 +90,7 @@ export default function Navbar() {
 
               <div className="hidden lg:ml-6 lg:block lg:w-full">
                 <div className="flex space-x-4 justify-center items-center pt-5 lg:justify-start">
-                  <Link to="draw-games/basket">
+                  <Link to="/draw-games/basket">
                     <svg
                       className="w-5 h-5 text-gray-700 hover:text-[#8ea5b1] cursor-pointer"
                       fill="none"

@@ -20,6 +20,7 @@ import BasketPage from '../pages/BasketPage/BasketPage.jsx';
 import { Provider } from 'react-redux';
 import { store } from '../Store/store.js';
 import Selection1Page from '../pages/SelectionComponents/Selection1Page.jsx';
+import ProfileLayout from '../components/template/ProfileLayout.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -63,6 +64,17 @@ const NewRouter = createBrowserRouter([
       { path: 'sign-up', element: <SignUp /> },
       { path: 'forgot-password', element: <ForgotPassword /> },
     ],
+  },
+  {
+    path: '/account',
+    element: (
+      <div>
+        <Provider store={store}>
+          <ProfileLayout />
+          <ScrollRestoration />
+        </Provider>
+      </div>
+    ),
   },
 ]);
 
