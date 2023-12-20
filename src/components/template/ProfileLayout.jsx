@@ -19,7 +19,7 @@ const ProfileLayout = () => {
             <Outlet />
           </div>
           <div className="bg-[#dde9ee] hidden lg:block flex-shrink-0 bg-blue-lighter-03 py-16">
-            <div className="hidden text-[#2c444e] lg:block flex-shrink-0 bg-blue-lighter-03 py-16">
+            <div className="hidden text-[#2c444e] lg:block flex-shrink-0 bg-blue-lighter-03 py-16 rtl">
               <nav>
                 <section
                   aria-labelledby="header-Profile"
