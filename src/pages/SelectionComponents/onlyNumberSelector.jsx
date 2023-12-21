@@ -52,7 +52,7 @@ const OnlyNumberSelector = ({
             selectedNumbers.includes(i)
               ? `!bg-[${mainColor}] text-white border-[${mainColor}]`
               : ' text-[#2f4751] border-gray-500'
-          } ${isDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+          } ${isDisabled ? 'opacity-40 cursor-not-allowed' : ''}`}
           key={i}
           onClick={() => !isDisabled && handleCheckboxChange(i)}
         >
@@ -77,7 +77,7 @@ const OnlyNumberSelector = ({
         <div className="" key={i}>
           {selectedNumbers[i] ? (
             <div
-              className={`self-auto bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl text-white bg-game-lotto popAnimation`}
+              className={`self-auto bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl text-white bg-game-lotto popAnimation`}
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full text-x-sm">
@@ -87,7 +87,7 @@ const OnlyNumberSelector = ({
             </div>
           ) : (
             <div
-              className={`rounded-full flex font-bold justify-center items-center relative bg-[${buttonNotSelectedColor}] opacity-30 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl`}
+              className={`rounded-full flex font-bold justify-center items-center relative bg-[${buttonNotSelectedColor}] opacity-30 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl`}
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>

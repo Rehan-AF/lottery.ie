@@ -43,7 +43,7 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <div className="sm:flex sm:items-center sm:flex-row-reverse lg:block sm:gap-3">
-                  <Link to="auth/sign-in">
+                  <Link to="/auth/sign-in">
                     <span className="inline-flex flex-col justify-center px-4 text-sm font-bold leading-none uppercase border border-gray-900 rounded-full box-content hover:text-[#8ea5b1] py-3 lg:hidden ">
                       ورود
                     </span>
@@ -103,11 +103,11 @@ export default function Navbar() {
                     </svg>
                   </Link>
                   <div className="px-2 text-sm font-bold hover:text-gray-light text-gray-700">
-                    <Link to="auth/sign-up" className="hover:text-[#8ea5b1]">
+                    <Link to="/auth/sign-up" className="hover:text-[#8ea5b1]">
                       ثبت نام &nbsp;
                     </Link>
                     <span className=" border-l-2 border-gray-700"></span>
-                    <Link to="auth/sign-in">
+                    <Link to="/auth/sign-in">
                       <span className="text-gray-700 pr-2 hover:text-[#8ea5b1]">
                         ورود
                       </span>

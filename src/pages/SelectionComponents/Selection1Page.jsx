@@ -31,7 +31,7 @@ const Selection1Page = () => {
     let uniqueNumbersArray = [];
 
     while (uniqueNumbersArray.length < 6) {
-      const randomNumber = getRandomInt(0, 50);
+      const randomNumber = getRandomInt(1, 50);
       if (
         !uniqueNumbersArray.includes(randomNumber) &&
         !isNumbersAlreadySelected([...uniqueNumbersArray, randomNumber])

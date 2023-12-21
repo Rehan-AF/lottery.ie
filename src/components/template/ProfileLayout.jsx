@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import MobileNav from '../navbar/MobileNav';
 import Navbar from '../navbar';
@@ -241,7 +240,7 @@ const ProfileLayout = () => {
                       My Referrals
                     </a>
                     <Link
-                     to="account"
+                      to="account"
                       className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                     >
                       <div className="pl-3">
