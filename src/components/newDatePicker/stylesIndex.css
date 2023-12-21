@@ -92,3 +92,10 @@ body {
 .rmdp-shadow {
   box-shadow: none !important;
 }
+@media (max-height: 500px), (max-width: 500px) {
+  .rmdp-day,
+  .rmdp-week-day {
+    height: 40px !important;
+    width: 40px !important;
+  }
+}

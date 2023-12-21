@@ -110,6 +110,7 @@ const OnlyNumberSelector = ({
   };
   const handleCancel = () => {
     setOpen(false);
+    setSelectedNumbers([]);
   };
   return (
     <>

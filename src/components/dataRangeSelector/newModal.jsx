@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Modal.css'; // Import your custom CSS file
 import NewDatePicker from '../newDatePicker/NewDatePicker';
 
