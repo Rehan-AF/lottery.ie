@@ -1,22 +1,17 @@
 import background from '../../assets/basketBack.svg';
 import logoBack from '../../assets/basketLogo.svg';
 import { BasketCard } from './basketCard';
-
-import backgroundImage_1 from '../../assets/backgrounds/1_Mega-da-virada.svg';
 import backgroundImage_3 from '../../assets/backgrounds/7_Quina.svg';
 import backgroundImage_4 from '../../assets/backgrounds/6_Mega-Sena.svg';
 import backgroundImage_5 from '../../assets/backgrounds/2_Milionaria.svg';
 import backgroundImage_6 from '../../assets/backgrounds/4_Dupla-Sena.svg';
 import backgroundImage_7 from '../../assets/backgrounds/5_Lotomania.svg';
-import backgroundImage_8 from '../../assets/backgrounds/8_Super-Sete.svg';
-import gameLogo_1 from '../../assets/gameLogos/01.svg';
 import gameLogo_2 from '../../assets/gameLogos/02.svg';
 import gameLogo_3 from '../../assets/gameLogos/03.svg';
 import gameLogo_4 from '../../assets/gameLogos/04.svg';
 import gameLogo_5 from '../../assets/gameLogos/05.svg';
 import gameLogo_6 from '../../assets/gameLogos/06.svg';
 import gameLogo_7 from '../../assets/gameLogos/07.svg';
-import gameLogo_8 from '../../assets/gameLogos/08.svg';
 import Card from './Card';
 
 const data = [
@@ -123,6 +118,31 @@ const BasketPage = () => {
                 );
               })}
             </div>
+          </div>
+        </div>
+        <div class="flex-row flex bg-white shadow fixed bottom-0 w-full z-20 py-4 px-4 md:px-7 lg:px-28 rounded-t-lg justify-between lg:justify-end items-center"
+           style={{ boxShadow: '0px 0px 10px #80808078' }}>
+          <div class="flex justify-between lg:justify-end w-full"
+       
+          >
+            <div class="flex flex-col justify-between lg:mr-24">
+              <div class="flex justify-end font-bold ">
+                <span class="font-bold text-xl ">
+                  <span class="flex flex-col lg:flex-row lg:items-center text-[#2C444E]">
+                    Total:{' '}
+                    <span class="text-3xl font-black lg:ml-1 text-[#2C444E]">€6.00</span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row w-full md:w-auto">
+            <button
+              class="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 shadow-button hover:shadow-button-hov p-6 text-gray-700 bg-[#c4dc33]  active:bg-[#C4DC33]"
+              data-selected="false"
+            >
+              <span className='text-[2C444E]'>Buy Now</span>
+            </button>
           </div>
         </div>
       </div>

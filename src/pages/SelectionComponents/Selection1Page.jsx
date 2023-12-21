@@ -121,13 +121,13 @@ const Selection1Page = () => {
                 <div className="flex flex-col items-end mb-4">
                   <div className="flex flex-row space-x-2 pb-1">
                     <h3
-                      className="text-gray-700 text-2xl capitalize font-bold"
+                      className="text-[#2C444E] text-2xl capitalize font-bold"
                       aria-level="3"
                     >
                       Play Lotto
                     </h3>
                   </div>
-                  <h2 className="text-blue">
+                  <h2 className="text-[#49636E]">
                     Enter a minimum of 2 lines below.
                   </h2>
                 </div>
@@ -210,7 +210,7 @@ const Selection1Page = () => {
                           className="my-3 uppercase font-bold text-xl"
                           aria-label="or"
                         >
-                          <span>or</span>
+                          <span className='text-[#2C444E]'>or</span>
                         </p>
                         <button
                           className="relative text-center rounded-full py-3 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
@@ -299,7 +299,7 @@ const Selection1Page = () => {
               <div className="w-full">
                 <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                   <Accorion
-                  center ={false}
+                    center={false}
                     title="Lotto win odds"
                     icon={true}
                     pading={false}
@@ -320,7 +320,7 @@ const Selection1Page = () => {
               </div>
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
-                center={false}
+                  center={false}
                   title="How to Play"
                   icon={true}
                   pading={false}
@@ -340,7 +340,7 @@ const Selection1Page = () => {
               </div>
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
-                center={false}
+                  center={false}
                   title="Responsible Play"
                   icon={true}
                   pading={false}
@@ -363,10 +363,10 @@ const Selection1Page = () => {
         </div>
       </div>
       <div
-        className="flex-col md:flex-row flex bg-white fixed bottom-0 w-full z-20 py-4 px-4 md:px-7 lg:px-28 rounded-t-lg justify-between lg:justify-end items-center"
+        className="flex-col md:flex-row flex bg-white fixed bottom-0 w-full z-20 py-4 px-4 md:px-7 lg:px-28 rounded-t-lg justify-between items-center"
         style={{ boxShadow: '0px 0px 10px #80808078' }}
       >
-        <div className="flex justify-between lg:justify-end w-full rtl">
+        <div className="flex  w-full rtl">
           {winingNumbers.length ? (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
               <div className="flex justify-end font-bold text-gray-700">
@@ -374,17 +374,17 @@ const Selection1Page = () => {
               </div>
             </div>
           ) : (
-            <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
+            <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0 pr-3">
               <div className="flex justify-end font-bold text-gray-700">
                 from €2.00 per line
               </div>
             </div>
           )}
         </div>
-        <div className="justify-between md:justify-end flex flex-row w-full md:w-auto">
+        <div className="justify-between items-center md:justify-end flex flex-row w-full md:w-auto">
           <button
             disabled=""
-            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 mr-2 cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
+            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-68 lg:w-64 h-14 mr-2 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
             data-selected="false"
           >
             <span className="text-gray-700">back</span>
@@ -392,14 +392,14 @@ const Selection1Page = () => {
           {winingNumbers.length < 2 ? (
             <button
               disabled=""
-              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
+              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
               data-selected="false"
             >
-              <span className="text-gray-700">Add to basket</span>
+              <span className="text-gray-700 py-3">Add to basket</span>
             </button>
           ) : (
             <button
-              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] border-green-400 active:bg-green-400"
+              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 shadow-button hover:shadow-button-hov p-6 text-gray-700 bg-[#c4dc33]  active:bg-[#C4DC33]"
               data-selected="false"
             >
               <span>Add to basket</span>
