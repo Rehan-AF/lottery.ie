@@ -3,6 +3,7 @@ import { Button, Modal } from 'antd';
 import DateRangeSelector from './index';
 import './styles.css';
 import NewDatePicker from '../newDatePicker/NewDatePicker';
+import NewModal from './newModal';
 const RangeSelectorModal = () => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);

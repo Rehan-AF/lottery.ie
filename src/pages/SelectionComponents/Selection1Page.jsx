@@ -31,7 +31,7 @@ const Selection1Page = () => {
     let uniqueNumbersArray = [];
 
     while (uniqueNumbersArray.length < 6) {
-      const randomNumber = getRandomInt(0, 50);
+      const randomNumber = getRandomInt(1, 50);
       if (
         !uniqueNumbersArray.includes(randomNumber) &&
         !isNumbersAlreadySelected([...uniqueNumbersArray, randomNumber])
@@ -299,7 +299,7 @@ const Selection1Page = () => {
               <div className="w-full">
                 <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                   <Accorion
-                  center ={false}
+                    center={false}
                     title="Lotto win odds"
                     icon={true}
                     pading={false}
@@ -320,7 +320,7 @@ const Selection1Page = () => {
               </div>
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
-                center={false}
+                  center={false}
                   title="How to Play"
                   icon={true}
                   pading={false}
@@ -340,7 +340,7 @@ const Selection1Page = () => {
               </div>
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
-                center={false}
+                  center={false}
                   title="Responsible Play"
                   icon={true}
                   pading={false}

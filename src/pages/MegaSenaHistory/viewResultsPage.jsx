@@ -4,6 +4,7 @@ import ResultsHistory from '../../components/resultHistory';
 // import CustomDatepicker from '../../components/DatePicker/1';
 import backgroundImage_4 from '../../assets/backgrounds/6_Mega-Sena.svg';
 import RangeSelectorModal from '../../components/dataRangeSelector/rangeSelectorModal';
+import NewModalDateRangePicker from '../../components/dataRangeSelector/newModal';
 const tableData = [
   {
     match: 'Jackpot',
@@ -29,7 +30,9 @@ const tableData = [
 const ViewResultsPage = () => {
   return (
     <div className="flex flex-col items-center">
-      <RangeSelectorModal /> {/* <CustomDatepicker /> */}
+      <NewModalDateRangePicker />
+      {/* <RangeSelectorModal />  */}
+      {/* <CustomDatepicker /> */}
       <div className="flex justify-end sm:w-full lg:w-[880px] pt-[2rem]">
         <h2
           aria-label="rtl Last draw, Thursday, December 7th, 2023"

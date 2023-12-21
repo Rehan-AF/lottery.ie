@@ -1,4 +1,3 @@
-import React from 'react';
 import GameLogos from '../../components/svg/GameLogos';
 import ResultsAccorion from '../../components/resultHistory/ResultsAccordion';
 const data = [

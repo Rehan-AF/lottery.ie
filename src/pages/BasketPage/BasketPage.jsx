@@ -2,21 +2,17 @@ import background from '../../assets/basketBack.svg';
 import logoBack from '../../assets/basketLogo.svg';
 import { BasketCard } from './basketCard';
 
-import backgroundImage_1 from '../../assets/backgrounds/1_Mega-da-virada.svg';
 import backgroundImage_3 from '../../assets/backgrounds/7_Quina.svg';
 import backgroundImage_4 from '../../assets/backgrounds/6_Mega-Sena.svg';
 import backgroundImage_5 from '../../assets/backgrounds/2_Milionaria.svg';
 import backgroundImage_6 from '../../assets/backgrounds/4_Dupla-Sena.svg';
 import backgroundImage_7 from '../../assets/backgrounds/5_Lotomania.svg';
-import backgroundImage_8 from '../../assets/backgrounds/8_Super-Sete.svg';
-import gameLogo_1 from '../../assets/gameLogos/01.svg';
 import gameLogo_2 from '../../assets/gameLogos/02.svg';
 import gameLogo_3 from '../../assets/gameLogos/03.svg';
 import gameLogo_4 from '../../assets/gameLogos/04.svg';
 import gameLogo_5 from '../../assets/gameLogos/05.svg';
 import gameLogo_6 from '../../assets/gameLogos/06.svg';
 import gameLogo_7 from '../../assets/gameLogos/07.svg';
-import gameLogo_8 from '../../assets/gameLogos/08.svg';
 import Card from './Card';
 
 const data = [

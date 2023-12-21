@@ -1,0 +1,55 @@
+/* Modal fade-in animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal fade-out animation */
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Modal container styles */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: modalFadeIn 0.3s ease-in-out;
+  z-index: 90;
+}
+
+/* Modal styles */
+.modal {
+  background-color: white;
+  padding: 0.2rem 0.4rem 0.6rem 0.4rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: modalFadeIn 0.3s ease-in-out;
+  z-index: 100;
+}
+
+/* ... (unchanged) */
+
+/* Hide modal during fade-out animation */
+.modal-container.fade-out {
+  animation: modalFadeOut 0.3s ease-in-out;
+}

@@ -1,9 +1,6 @@
 import { Tabs } from 'antd';
 import Template from '../../components/template';
 import GameLogos from '../../components/svg/GameLogos';
-import ResultsHistory from '../../components/resultHistory';
-import DateRangeSelector from '../../components/dataRangeSelector';
-import RangeSelectorModal from '../../components/dataRangeSelector/rangeSelectorModal';
 import ViewResultsPage from './viewResultsPage';
 import '../../App.css';
 const ResultsHistoryPage = () => {
