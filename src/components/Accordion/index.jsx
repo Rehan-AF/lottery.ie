@@ -38,7 +38,7 @@ const Accorion = ({
             : 'm-h-[100%] items-center sm:flex-row md:flex-row md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]'
         } `}
       >
-        <p className="font-bold tracking-wide cursor-pointer text-gray-700 px-3">
+        <p className=" tracking-wide cursor-pointer text-[#2C444E] font-black  px-3">
           {title}
         </p>
         {icon ? (
