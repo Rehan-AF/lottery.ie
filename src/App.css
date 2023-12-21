@@ -368,3 +368,6 @@ input::-ms-clear {
 .popOutAnimation {
   animation: popOut 0.2s ease-out;
 }
+.shadowCustom:hover{
+  box-shadow: 0px 8px 16px rgba(51,66,77,.3);
+}

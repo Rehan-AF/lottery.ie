@@ -213,7 +213,7 @@ const Selection1Page = () => {
                           <span className='text-[#2C444E]'>or</span>
                         </p>
                         <button
-                          className="relative text-center rounded-full py-3 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
+                          className="shadowCustom lg:min-w-[301px] relative text-center rounded-full py-4 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
                           onClick={getRandomNumbers}
                         >
                           <div className="flex justify-center z-2 items-center">
