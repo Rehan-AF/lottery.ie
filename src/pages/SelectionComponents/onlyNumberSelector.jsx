@@ -115,54 +115,55 @@ const OnlyNumberSelector = ({
   return (
     <>
       <button
-        className="shadow_md relative text-center rounded-full p-2 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min"
+        className="shadowCustom relative text-center rounded-full p-4 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min lg:min-w-[301px]"
         onClick={showModal}
       >
-        <div className="inline-flex justify-center z-2 mx-1 space-x-1">
+        <div className="inline-flex justify-center z-2 mx-1 space-x-1 lg:min-w-[295px]">
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-10 sm:h-8 md:h-10 text-base md:text-2xl"
+            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
             aria-hidden="true"
           >
             <span className="absolute opacity-0 w-full h-full"></span>
             <span aria-hidden="true"></span>
           </div>
-          <div className="absolute inline z-1 w-auto text-[#49636e] mx-auto sm:top-1/5 md:top-1/4 left-0 right-0 text-center">
-            <p aria-label="Enter Numbers" className="font-bold text-lg">
+          <div className="absolute inline z-1 w-auto text-[#49636e] mx-auto sm:top-1/5 md:top-[30%] left-0 right-0 text-center">
+            <p aria-label="Enter Numbers" className="font-bold text-lg items-center flex justify-center">
+
               <span className="inline-flex relative">
                 <svg
                   width="15"
@@ -179,7 +180,7 @@ const OnlyNumberSelector = ({
                   ></path>
                 </svg>
               </span>
-              <span> Enter Numbers</span>
+              <span className='text-[#49636E] pl-1'> Enter Numbers</span>
             </p>
           </div>
         </div>

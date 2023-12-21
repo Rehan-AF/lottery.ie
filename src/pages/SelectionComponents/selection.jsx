@@ -129,22 +129,22 @@ const NumberSelector = ({
   return (
     <>
       <button
-        className="shadow_md relative text-center rounded-full p-2 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min"
+        className="shadowCustom relative text-center rounded-full p-4 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min lg:min-w-[301px]"
         onClick={showModal}
       >
         {finalSelectedNumbers || winingNumbers[index] ? (
-          <div className="inline-flex justify-center z-2 mx-1 space-x-1">
+          <div className="inline-flex justify-center z-2 mx-1 space-x-1 lg:min-w-[295px]">
             {winingNumbers[index]
               ? winingNumbers[index]?.map((val, index) => {
                   return (
                     <div
-                      className={` rounded-full flex font-bold justify-center text-white items-end relative bg-[${mainColor}] w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
+                      className={` rounded-full flex font-bold  justify-center text-white items-center relative bg-[${mainColor}] w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl ${
                         applyPop ? 'popOutAnimation' : ''
                       }`}
                       aria-hidden="true"
                       key={index}
                     >
-                      <span className="absolute opacity-0 w-full h-full"></span>
+                      {/* <span className="absolute opacity-0 w-full h-full"></span> */}
                       <span aria-hidden="true">{val}</span>
                     </div>
                   );
@@ -152,7 +152,7 @@ const NumberSelector = ({
               : finalSelectedNumbers?.map((val, index) => {
                   return (
                     <div
-                      className={` rounded-full flex font-bold justify-center text-white items-end relative bg-[${mainColor}] w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl ${
+                      className={` rounded-full flex font-bold justify-center text-white items-end relative bg-[${mainColor}] w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl ${
                         applyPop ? 'popOutAnimation' : ''
                       }`}
                       aria-hidden="true"
@@ -167,42 +167,42 @@ const NumberSelector = ({
         ) : (
           <div className="inline-flex justify-center z-2 pt-1 mx-1 space-x-1">
             <div
-              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl"
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
             </div>
             <div
-              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl"
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
             </div>
             <div
-              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl"
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
             </div>
             <div
-              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl"
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
             </div>
             <div
-              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl"
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
             </div>
             <div
-              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7 md:w-10 h-7 md:h-10 text-base md:text-2xl"
+              className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl"
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full"></span>
@@ -226,7 +226,7 @@ const NumberSelector = ({
                     ></path>
                   </svg>
                 </span>
-                <span> Enter Numbers</span>
+                <span className='text-[#49636E] pl-1'> Enter Numbers</span>
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ const NumberSelector = ({
               <div className=" flex space-x-1">{renderSelectedNumbers()}</div>
             </div>
             {isNumbersAlreadySelected() === true && unlock === false ? (
-              <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error rtl gap-2">
+              <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error rtl ga4">
                 <svg
                   width="16"
                   height="16"
