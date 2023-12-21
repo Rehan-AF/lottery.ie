@@ -66,11 +66,13 @@ const Card = () => {
                 <p className="text-[#2C444E]">2 Lines </p>
                 <p className="text-[#2C444E]">for 1 Draw</p>
               </div>
-              <div className="bg-blue-100 rounded-md py-1 px-2">
+              <div className="bg-[#E7EFF3] rounded-md py-1 px-3">
                 <p className="text-[#2C444E] font-bold">€5.00</p>
               </div>
             </div>
+            <hr />
             <ResultsAccorion title="details" center={true}>
+              <hr />
               <div className="bg-gray-100 px-4 pt-2 pb-3 border-t-1 border-grey-300 rounded-b-md">
                 <div className="mb-3 mt-2 self-center flex flex-col items-center">
                   <div className="">
@@ -91,9 +93,11 @@ const Card = () => {
                             );
                           })}
                         </div>
+                       
                       );
                     })}
                   </div>
+                  <hr />
                 </div>
                 <section className="flex flex-col pb-1">
                   <div className="flex justify-between">
