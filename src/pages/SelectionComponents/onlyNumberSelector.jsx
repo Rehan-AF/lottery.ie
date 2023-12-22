@@ -211,7 +211,7 @@ const OnlyNumberSelector = ({
               opneValue={isNumbersAlreadySelected()}
               setUnlock={setUnlock}
             />
-            {isNumbersAlreadySelected() === true && unlock === false ? (
+            {/* {isNumbersAlreadySelected() === true && unlock === false ? (
               <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error gap-2 rtl">
                 <svg
                   width="16"
@@ -236,7 +236,7 @@ const OnlyNumberSelector = ({
                   </span>
                 </div>
               </div>
-            ) : null}
+            ) : null} */}
             <div className="bg-white px-2 mt-2">
               <div className="border-gray-300 border-b-1 py-1 flex flex-row-reverse justify-between ">
                 <span className="p-1 text-base text-left flex gap-x-3">

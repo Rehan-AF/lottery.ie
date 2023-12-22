@@ -226,7 +226,7 @@ const NumberSelector = ({
                     ></path>
                   </svg>
                 </span>
-                <span className='text-[#49636E] pl-1'> Enter Numbers</span>
+                <span className="text-[#49636E] pl-1"> Enter Numbers</span>
               </p>
             </div>
           </div>
@@ -251,7 +251,7 @@ const NumberSelector = ({
               </div>
               <div className=" flex space-x-1">{renderSelectedNumbers()}</div>
             </div>
-            {isNumbersAlreadySelected() === true && unlock === false ? (
+            {/* {isNumbersAlreadySelected() === true && unlock === false ? (
               <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error rtl ga4">
                 <svg
                   width="16"
@@ -276,7 +276,7 @@ const NumberSelector = ({
                   </span>
                 </div>
               </div>
-            ) : null}
+            ) : null} */}
             {/* :::::::::::::::: display selected Numbers end  :::::::::::::::::::::*/}
             <ConfirmationModal
               opneValue={isNumbersAlreadySelected()}
