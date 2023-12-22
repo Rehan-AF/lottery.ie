@@ -381,10 +381,10 @@ const Selection1Page = () => {
             </div>
           )}
         </div>
-        <div className="justify-between items-center md:justify-end flex flex-row w-full md:w-auto">
+        <div className=" justify-between items-center md:justify-end flex flex-row w-full md:w-auto">
           <button
             disabled=""
-            className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-68 lg:w-64 h-14 mr-2 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
+            className="flex shadow_md items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-68 lg:w-64 h-14 mr-2 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
             data-selected="false"
           >
             <span className="text-gray-700">back</span>
@@ -392,14 +392,14 @@ const Selection1Page = () => {
           {winingNumbers.length < 2 ? (
             <button
               disabled=""
-              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
+              className="flex shadow_md items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
               data-selected="false"
             >
               <span className="text-gray-700 py-3">Add to basket</span>
             </button>
           ) : (
             <button
-              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 shadow-button hover:shadow-button-hov p-6 text-gray-700 bg-[#c4dc33]  active:bg-[#C4DC33]"
+              className="flex shadow_md items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 shadow-button hover:shadow-button-hov p-6 text-gray-700 bg-[#c4dc33]  active:bg-[#C4DC33]"
               data-selected="false"
             >
               <span>Add to basket</span>
