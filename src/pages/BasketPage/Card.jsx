@@ -16,7 +16,7 @@ const Card = () => {
         <div className="flex justify-center flex-col w-full items-center">
           <div className=" bg-white rounded-lg w-[350px] md:w-[650px] lg:w-[880px] flex flex-col justify-center shadow-md ">
             <div className="bg-white rounded-t-lg flex items-center justify-between px-4 mt-2 pt-3">
-              <GameLogos logoName="05" color="orange" width="120" />
+              <GameLogos logoName="05" color="#2A2A85" width="120" />
               <div className="flex items-center">
                 <button aria-label="edit" role="link" className="pr-2">
                   <svg
