@@ -162,8 +162,10 @@ const OnlyNumberSelector = ({
             <span aria-hidden="true"></span>
           </div>
           <div className="absolute inline z-1 w-auto text-[#49636e] mx-auto sm:top-1/5 md:top-[30%] left-0 right-0 text-center">
-            <p aria-label="Enter Numbers" className="font-bold text-lg items-center flex justify-center">
-
+            <p
+              aria-label="Enter Numbers"
+              className="font-bold text-lg items-center flex justify-center"
+            >
               <span className="inline-flex relative">
                 <svg
                   width="15"
@@ -180,7 +182,7 @@ const OnlyNumberSelector = ({
                   ></path>
                 </svg>
               </span>
-              <span className='text-[#49636E] pl-1'> Enter Numbers</span>
+              <span className="text-[#49636E] pl-1"> Enter Numbers</span>
             </p>
           </div>
         </div>
