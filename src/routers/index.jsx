@@ -22,6 +22,7 @@ import { store } from '../Store/store.js';
 import Selection1Page from '../pages/SelectionComponents/Selection1Page.jsx';
 import ProfileLayout from '../components/template/ProfileLayout.jsx';
 import ChangePassword from '../components/Profile/ChangePassword.jsx';
+import MyDetails from '../components/Profile/MyDetails.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -78,7 +79,7 @@ const NewRouter = createBrowserRouter([
     ),
     children: [
       { path: 'change-password', element: <ChangePassword /> },
-      { path: 'my-details', element: <ChangePassword /> },
+      { path: 'my-details', element: <MyDetails /> },
     ],
   },
 ]);

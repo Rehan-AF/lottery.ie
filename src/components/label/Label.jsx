@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import flag from '../../assets/iranFlag.svg';
+import { Tooltip } from 'antd';
 
 const DynamicLabel = ({
   label = 'label',
@@ -10,6 +11,9 @@ const DynamicLabel = ({
   value = false,
   errors = false,
   touched = false,
+  disable = false,
+  tooltip = false,
+  tooltipText = '',
 }) => {
   const [inputValue, setInputValue] = useState(value);
   const [isFocused, setIsFocused] = useState(false);
@@ -20,6 +24,11 @@ const DynamicLabel = ({
     setIsFocused(true);
     setIsFieldUsed(true);
   };
+  useEffect(() => {
+    if (disable === true) {
+      setIsFocused(true);
+    }
+  }, [disable]);
   useEffect(() => {
     if (inputValue === '') {
       setIsFieldUsed(false);
@@ -54,6 +63,8 @@ const DynamicLabel = ({
           (errors && isFieldUsed) || (errors && touched)
             ? '!border-red-500'
             : ''
+        } ${
+          disable === true ? 'border-[#adadad]' : ''
         } max-w-[503px] sm:w-[309px] md:w-[503px]`}
       >
         <label
@@ -61,7 +72,7 @@ const DynamicLabel = ({
             (errors && isFieldUsed) || (errors && touched)
               ? '!text-red-500'
               : ''
-          }`}
+          } ${disable === true ? '!text-[#adadad]' : ''}`}
         >
           {label}
         </label>
@@ -70,7 +81,17 @@ const DynamicLabel = ({
             type === 'password' ? 'flex justify-between items-center' : ''
           }`}
         >
-          
+          {type === 'tel' && (
+            <div className="absolute left-0">
+              <img src={flag} className="w-[48px]" />
+              <div
+                className="absolute left-[60px] top-[15px]"
+                style={{ direction: 'ltr' }}
+              >
+                +98
+              </div>
+            </div>
+          )}
           <input
             id={id}
             type={
@@ -80,10 +101,11 @@ const DynamicLabel = ({
                   : 'password'
                 : 'text'
             }
+            disabled={disable}
             name={name}
             className={`rtl bg-transparent ${
               type === 'password' ? 'w-[calc(100%-35px)]' : 'w-full'
-            } `}
+            } ${disable === true ? '!text-[#adadad]' : ''}`}
             value={inputValue}
             onChange={handleChange}
             onFocus={handleFocus}
@@ -118,6 +140,57 @@ const DynamicLabel = ({
               )}
             </button>
           )}
+          <div className="absolute flex items-center gap-2 left-0 top-1/2 transform -translate-y-1/2 cursor-pointer">
+            {tooltip === true ? (
+              <Tooltip
+                placement="bottom"
+                color={'#2c444e'}
+                key={'red'}
+                title={tooltipText}
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                    stroke="#2D4550"
+                    strokeWidth="2"
+                  ></path>
+                  <path
+                    d="M8.88867 8.88894C8.88867 8.27529 9.38613 7.77783 9.99978 7.77783C10.6134 7.77783 11.1109 8.27529 11.1109 8.88894V15.0001C11.1109 15.6137 10.6134 16.1112 9.99978 16.1112C9.38613 16.1112 8.88867 15.6137 8.88867 15.0001V8.88894Z"
+                    fill="#2D4550"
+                  ></path>
+                  <rect
+                    x="8.61133"
+                    y="3.88867"
+                    width="2.77778"
+                    height="2.77778"
+                    rx="1.38889"
+                    fill="#2D4550"
+                  ></rect>
+                </svg>
+              </Tooltip>
+            ) : null}
+            {disable === true ? (
+              <svg
+                className="w-4 "
+                viewBox="0 0 16 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M2.23324 18.144H14.32C15.2479 18.144 16 17.3916 16 16.464V7.7294C16 6.80148 15.2479 6.0494 14.32 6.0494H13.9966V5.71984H13.986C13.9848 2.56088 11.4234 0 8.26416 0C5.10408 0 2.5698 2.56172 2.5698 5.7218C2.5698 5.83744 2.56532 5.94468 2.56504 6.0494H2.23352C1.3056 6.0494 0.55352 6.80148 0.55352 7.7294V16.464C0.55324 17.3919 1.30504 18.144 2.23324 18.144ZM8.25268 2.01684C10.2942 2.01684 11.949 3.67164 11.9498 5.71256H11.9568V6.0494H4.57208V6.0228C4.56256 5.92536 4.55528 5.82456 4.55528 5.71396C4.55556 3.6722 6.21092 2.01684 8.25268 2.01684ZM2.55944 8.74524C2.55944 8.37396 2.86044 8.07324 3.23144 8.07324H13.3201C13.6911 8.07324 13.9921 8.37396 13.9921 8.74524V15.4594C13.9921 15.8306 13.6911 16.1314 13.3201 16.1314H3.23144C2.86044 16.1314 2.55944 15.8304 2.55944 15.4594V8.74524ZM8.11296 14.1058H8.44896C8.91124 14.1058 9.28588 13.7312 9.28588 13.2689V10.9472C9.28588 10.4849 8.91124 10.1102 8.44896 10.1102H8.11296C7.65068 10.1102 7.27604 10.4849 7.27604 10.9472V13.2689C7.27576 13.7312 7.65068 14.1058 8.11296 14.1058Z"
+                  fill="#ADADAD"
+                ></path>
+              </svg>
+            ) : null}
+          </div>
         </div>
       </div>
       {(errors && isFieldUsed) || (errors && touched) ? (
