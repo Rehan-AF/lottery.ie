@@ -2,6 +2,7 @@ import { Link, Outlet } from 'react-router-dom';
 import MobileNav from '../navbar/MobileNav';
 import Navbar from '../navbar';
 import { Footer } from '../footer';
+import ProfileSideBar from '../Profile/ProfileSideBar';
 
 const ProfileLayout = () => {
   return (
@@ -12,8 +13,11 @@ const ProfileLayout = () => {
       <div className="sm:hidden lg:block">
         <Navbar />
       </div>
-      <div className="bg-[#c5d8e1] mt-4 p-5">
-        <div className="bg-white max-w-[1200px] lg:rounded-xl lg:flex lg:flex-row lg:shadow lg:overflow-hidden col-span-full mx-auto">
+      <div className="sm:block lg:hidden bg-[#c5d8e1] pt-[2px]">
+        <ProfileSideBar />
+      </div>
+      <div className="bg-[#c5d8e1] sm:mt-0 lg:mt-4 sm:p-0 lg:p-5">
+        <div className="bg-white max-w-[1200px] sm:rounded-none lg:rounded-xl lg:flex lg:flex-row lg:shadow lg:overflow-hidden col-span-full mx-auto">
           <div className="self-stretch flex-1 items-stretch flex justify-center bg-blue-lighter-03 lg:bg-blue-lighter-05 h-full">
             <Outlet />
           </div>
@@ -240,7 +244,7 @@ const ProfileLayout = () => {
                       My Referrals
                     </a>
                     <Link
-                      to="account"
+                      to="change-password"
                       className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                     >
                       <div className="pl-3">

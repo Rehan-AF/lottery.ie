@@ -31,7 +31,10 @@ const ChangePassword = () => {
     },
   });
   useEffect(() => {
-    if (formik.errors.password === undefined && formik.errors.Newpassword === undefined) {
+    if (
+      formik.errors.password === undefined &&
+      formik.errors.Newpassword === undefined
+    ) {
       setUnlock(true);
     } else {
       setUnlock(false);
@@ -39,13 +42,8 @@ const ChangePassword = () => {
   }, [formik.errors]);
   return (
     <div className=" w-full flex flex-col items-center">
-      <div class="border-b border-gray-300 flex h-14 items-center justify-center lg:h-24  w-full mb-6">
-        <button
-          class="left-2 top-0 bottom-0 absolute flex items-center lg:hidden"
-          aria-label="Open Menu"
-          role="button"
-        ></button>
-        <h1 class="font-black text-lg md:text-xl text-[#334A54]">
+      <div className="border-b border-gray-300 h-14 items-center justify-center sm:hidden lg:flex lg:h-24  w-full mb-6">
+        <h1 className="font-black text-lg md:text-xl text-[#334A54]">
           Change Password
         </h1>
       </div>
@@ -84,30 +82,28 @@ const ChangePassword = () => {
         </div>
 
         <div className="mx-lg:mx-12 mt-20 mb-6 justify-center flex items-center">
-      
-                  {formik.values.Newpassword &&
-                  formik.values.password &&
-                  unlock === true ? (
-                    <button
-                      id="signInButton"
-                      type="submit"
-                      className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
-                      style={{ width: '270px' }}
-                    >
-                      <span>save changes</span>
-                    </button>
-                  ) : (
-                    <button
-                      id="signInButton"
-                      disabled
-                      className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
-                      style={{ width: '270px' }}
-                    >
-                      <span>save changes</span>
-                    </button>
-                  )}
-                </div>
-       
+          {formik.values.Newpassword &&
+          formik.values.password &&
+          unlock === true ? (
+            <button
+              id="signInButton"
+              type="submit"
+              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
+              style={{ width: '270px' }}
+            >
+              <span>save changes</span>
+            </button>
+          ) : (
+            <button
+              id="signInButton"
+              disabled
+              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
+              style={{ width: '270px' }}
+            >
+              <span>save changes</span>
+            </button>
+          )}
+        </div>
       </form>
     </div>
   );
