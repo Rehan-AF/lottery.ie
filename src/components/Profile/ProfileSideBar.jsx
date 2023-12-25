@@ -15,6 +15,9 @@ const ProfileSideBar = () => {
     if (location.pathname === '/account/change-password') {
       setSelectedRoute('Change Password');
     }
+    if (location.pathname === '/account/my-details') {
+      setSelectedRoute('My Details');
+    }
   }, [location]);
 
   return (
@@ -134,8 +137,8 @@ const ProfileSideBar = () => {
                           </div>
                           My Dashboard
                         </a>
-                        <a
-                          href="/account/details"
+                        <Link
+                          to="/account/my-details"
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -161,7 +164,7 @@ const ProfileSideBar = () => {
                             </svg>
                           </div>
                           My Details
-                        </a>
+                        </Link>
                         <a
                           href="/account/tickets"
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"

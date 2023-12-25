@@ -76,7 +76,10 @@ const NewRouter = createBrowserRouter([
         </Provider>
       </div>
     ),
-    children: [{ path: 'change-password', element: <ChangePassword /> }],
+    children: [
+      { path: 'change-password', element: <ChangePassword /> },
+      { path: 'my-details', element: <ChangePassword /> },
+    ],
   },
 ]);
 
