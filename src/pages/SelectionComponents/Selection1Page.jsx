@@ -1,9 +1,6 @@
-import React from 'react';
-import logo from '../../assets/logo.svg';
 import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
 import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
 
@@ -210,7 +207,7 @@ const Selection1Page = () => {
                           className="my-3 uppercase font-bold text-xl"
                           aria-label="or"
                         >
-                          <span className='text-[#2C444E]'>or</span>
+                          <span className="text-[#2C444E]">or</span>
                         </p>
                         <button
                           className="shadowCustom lg:min-w-[301px] relative text-center rounded-full py-4 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
@@ -306,8 +303,8 @@ const Selection1Page = () => {
                     direction={true}
                   >
                     <div className=" px-4 ">
-                      <hr className="border w-full" />
-                      <p className="w-full  text-gray-700 pt-2  ">
+                      <hr className="border w-full sm:hidden lg:block" />
+                      <p className="w-full rtl  text-gray-700 pt-2">
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Earum dolorum, nostrum illo vitae necessitatibus
                         fugiat aspernatur quae ad! Saepe consequatur corporis
@@ -327,8 +324,8 @@ const Selection1Page = () => {
                   direction={true}
                 >
                   <div className="px-4  ">
-                    <hr className="border w-full" />
-                    <p className="w-full text-gray-700 mt-2 ">
+                    <hr className="border w-full mt-2 sm:hidden lg:block" />
+                    <p className="w-full rtl text-gray-700 ">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                       Earum dolorum, nostrum illo vitae necessitatibus fugiat
                       aspernatur quae ad! Saepe consequatur corporis
@@ -347,8 +344,8 @@ const Selection1Page = () => {
                   direction={true}
                 >
                   <div className=" ">
-                    <hr className="border w-full" />
-                    <p className="w-full text-gray-700 mt-2 ">
+                    <hr className="border w-full sm:hidden lg:block" />
+                    <p className="w-full rtl text-gray-700 mt-2 ">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                       Earum dolorum, nostrum illo vitae necessitatibus fugiat
                       aspernatur quae ad! Saepe consequatur corporis
@@ -389,7 +386,7 @@ const Selection1Page = () => {
           >
             <span className="text-gray-700">back</span>
           </button>
-          {winingNumbers.length < 2 ? (
+          {winingNumbers.length < 1 ? (
             <button
               disabled=""
               className="flex shadow_md items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
@@ -399,7 +396,8 @@ const Selection1Page = () => {
             </button>
           ) : (
             <button
-              className="flex shadow_md items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 shadow-button hover:shadow-button-hov p-6 text-gray-700 bg-[#c4dc33]  active:bg-[#C4DC33]"
+              className="flex shadow_md items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 shadow-button hover:shadow-button-hov p-6 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10] 
+              "
               data-selected="false"
             >
               <span>Add to basket</span>

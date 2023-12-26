@@ -45,9 +45,10 @@ export const Footer = () => {
     >
       <section className="sm:hidden md:flex bg-[#49636e] text-white items-center justify-center md:h-[63px]">
         <div className=" flex items-center justify-center rtl">
-          
           <p className="pl-[9px] text-[0.75rem] font-bold heght-[1rem] border-r border-white pr-[18px]">
-          شانس آنقدرها هم که فکر می کنید تصادفی نیست، قبل از این که بلیط بخت آزمایی برنده جکپات شود باید شخصی آن را خریداری کرده باشد. (ورا نظریان)
+            شانس آنقدرها هم که فکر می کنید تصادفی نیست، قبل از این که بلیط بخت
+            آزمایی برنده جکپات شود باید شخصی آن را خریداری کرده باشد. (ورا
+            نظریان)
           </p>
         </div>
         <a
@@ -333,7 +334,6 @@ export const Footer = () => {
                     </a>
                   </li>
                 </ul>
-
               </div>
             </div>
             <div className="w-full lg:py-0 py-4 mx-2 lg:mx-0 lg:order-3 mt-4 lg:mt-0  lg:w-1/4">
@@ -342,7 +342,7 @@ export const Footer = () => {
                   نیاز به پشتیبانی دارید؟
                 </span>
                 <form className="flex flex-col items-center  md:flex-row">
-                  <button className="h-8 px-[18px] rounded-full py-[4.5px] font-bold text-[13.5px] ms-[18px] bg-[#c4dc33] tracking-wide text-gray-700 transition duration-200  hover:shadow-lg shadow-md focus:shadow-outline focus:outline-none">
+                  <button className="h-8 px-[18px] rounded-full py-[4.5px] font-bold text-[13.5px] ms-[18px] bg-[#c4dc33] active:bg-[#b1cc10] tracking-wide text-gray-700 transition duration-200  hover:shadow-lg shadow-md focus:shadow-outline focus:outline-none">
                     تماس با ما
                   </button>
                 </form>
@@ -381,7 +381,11 @@ export const Footer = () => {
                 </div>
                 <div className="para flex flex-col rtl">
                   <p className="text-end md:mt-4 text-[12px] mx-2 md:text-[13.5px] text-[#49636e] right leading-[2]">
-                  لوتوایران اولین برگزار کننده لوتوهای بین المللی در ایران با نمایندگی لاتاری های رسمی دنیا.<br />  با انتخاب گسترده ای از لاتاری های بین المللی، قرعه کشی دولتی ایمن و تجربه کاربرپسند شانس خود را برای رسیدن به رویاهایتان محک بزنید.
+                    لوتوایران اولین برگزار کننده لوتوهای بین المللی در ایران با
+                    نمایندگی لاتاری های رسمی دنیا.
+                    <br /> با انتخاب گسترده ای از لاتاری های بین المللی، قرعه
+                    کشی دولتی ایمن و تجربه کاربرپسند شانس خود را برای رسیدن به
+                    رویاهایتان محک بزنید.
                   </p>
                   <a
                     href="/"
@@ -398,7 +402,8 @@ export const Footer = () => {
         <div className="flex justify-between pt-5 flex-col md:flex-row pb-[1rem] border-t border-[#1222282c] mr-4">
           <div className="flex px-2  w-full items-center mt-4 space-x-4 sm:mt-0 justify-center lg:justify-end">
             <h6 className="text-[13.5px] text-[#49636e] mt-2">
-              &copy;2023 تمامی حقوق مادی و معنوی این وب سایت به شرکت لوتوایران تعلق دارد.
+              &copy;2023 تمامی حقوق مادی و معنوی این وب سایت به شرکت لوتوایران
+              تعلق دارد.
             </h6>
           </div>
         </div>

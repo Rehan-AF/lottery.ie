@@ -100,7 +100,7 @@ const RangeSelectorModal = () => {
             loading={loading}
             disabled={date === false ? true : false}
             onClick={handleOk}
-            className="w-[144px] h-[54px] flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-[#1f2937] bg-[#c4dc33] active:bg-blue-lighter-04"
+            className="w-[144px] h-[54px] flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-[#1f2937] bg-[#c4dc33] active:bg-[#b1cc10] active:bg-blue-lighter-04"
           >
             Ok
           </button>

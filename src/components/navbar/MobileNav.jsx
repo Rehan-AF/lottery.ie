@@ -22,7 +22,7 @@ const MobileNav = () => {
             </span>
           </Link>
           <div className="sm:flex items-center lg:hidden">
-            <Link to="draw-games/basket">
+            <Link to="/draw-games/basket">
               <svg
                 className="sm:block lg:hidden w-5 h-5"
                 fill="none"
