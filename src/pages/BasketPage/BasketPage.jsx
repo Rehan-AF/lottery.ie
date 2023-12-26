@@ -141,7 +141,7 @@ const BasketPage = () => {
           </div>
           <div className="flex flex-row w-full md:w-auto">
             <button
-              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 shadow-button hover:shadow-button-hov p-6 text-gray-700 bg-[#c4dc33]  active:bg-[#C4DC33]"
+              className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 shadow-button hover:shadow-button-hov p-6 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10]  active:bg-[#c4dc33] active:bg-[#b1cc10]"
               data-selected="false"
             >
               <span className="text-[2C444E]">Buy Now</span>

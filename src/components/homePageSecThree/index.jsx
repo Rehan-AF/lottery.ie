@@ -68,7 +68,7 @@ const SecondPart = () => {
         </p>
 
         <button
-          className=" flex md:self-center items-center hover:shadow-xl justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-72 p-4 text-gray-700 bg-[#c4dc33]  border-green-400 active:bg-green-400 lg:text-end lg:self-end"
+          className=" flex md:self-center items-center hover:shadow-xl justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-72 p-4 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10]  border-[#b1cc10]  lg:text-end lg:self-end"
           data-selected="false"
         >
           <span>learn more</span>

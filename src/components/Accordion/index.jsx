@@ -27,18 +27,21 @@ const Accorion = ({
       <div
         onClick={toggleLotteryVisibility}
         className={`flex ${
-          center === true ? 'justify-center' : 'justify-end '
+          center === true
+            ? 'justify-center'
+            : direction === true
+            ? 'justify-end gap-2'
+            : 'justify-between '
         } 
         ${pading === true ? 'px-[27px]' : 'px[0rem] py-3'} 
         ${navbar === true ? 'pb-[12px]' : 'pb[0px]'} 
-       
         ${
           direction === false
             ? 'm-h-[100%] items-center sm:flex-row-reverse md:flex-row-reverse md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]'
-            : 'm-h-[100%] items-center sm:flex-row md:flex-row md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]'
+            : 'm-h-[100%] justify-end items-center sm:flex-row md:flex-row md:hover:bg-inherit border-b lg:border-b-0 border-gray-300 text-[#2C444E]'
         } `}
       >
-        <p className=" tracking-wide cursor-pointer text-[#2C444E] font-black  px-3">
+        <p className=" tracking-wide cursor-pointer text-[#2C444E] font-black ">
           {title}
         </p>
         {icon ? (
@@ -54,8 +57,8 @@ const Accorion = ({
             }`}
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M8.59182 11.8214C8.59182 12.7002 7.8798 13.4122 7.00108 13.4122C6.57414 13.4122 6.17144 13.2417 5.87578 12.9461C5.58026 12.6506 5.41001 12.2478 5.41001 11.8212L5.40978 8.59098L2.17988 8.59098C1.75294 8.59098 1.35024 8.42055 1.05458 8.12489C0.75906 7.82937 0.588814 7.42658 0.588814 6.99992C0.588814 6.12119 1.30083 5.40918 2.17955 5.40918L5.41001 5.40918L5.41001 2.17872C5.41001 1.29999 6.12203 0.587978 7.00076 0.587977C7.87948 0.587978 8.59182 1.30031 8.59182 2.17904L8.59182 5.40895L11.822 5.40918C12.7007 5.40918 13.413 6.12151 13.413 7.00024C13.413 7.87897 12.701 8.59098 11.8223 8.59098H8.59182V11.8214Z"
               fill="currentColor"
             ></path>

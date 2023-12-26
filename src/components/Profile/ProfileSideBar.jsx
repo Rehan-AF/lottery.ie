@@ -71,10 +71,10 @@ const ProfileSideBar = () => {
             className={`pt-[15px] navPanel ${panelVisible ? 'open' : 'close'}`}
           >
             {/* SideBar Content START */}
-            <div className="bg-[#e7eff3]">
+            <div className="bg-[#e7eff3] text-[#2c444e]">
               <div className="bg-[#e7eff3] rtl absolute inset-0 bg-blue-lighter-04 pointer-events-auto overflow-y-auto sm:block md:block lg:hidden">
                 <div className="border-b border-gray-300 flex h-14 items-center justify-center lg:h-24 relative">
-                  <h1 className="font-black text-lg md:text-xl">
+                  <h1 className="font-black text-[#2c444e] text-lg md:text-xl">
                     Manage account
                     <button
                       className="right-5 top-0 bottom-0 absolute flex items-center lg:hidden"

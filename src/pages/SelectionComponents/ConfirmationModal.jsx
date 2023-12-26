@@ -49,7 +49,7 @@ const ConfirmationModal = ({ opneValue = false, setUnlock }) => {
                   <span className="text-gray-700">cancle</span>
                 </button>
                 <button
-                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] border-green-400 active:bg-green-400"
+                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10] border-[#b1cc10] "
                   data-selected="false"
                   onClick={handleOk}
                 >
