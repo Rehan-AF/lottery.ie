@@ -87,8 +87,8 @@ const ProfileLayout = () => {
                       </div>
                       My Details
                     </Link>
-                    <a
-                      href="/account/tickets"
+                    <Link
+                      to="/account/my-tickets"
                       className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                     >
                       <div className="pl-3">
@@ -121,7 +121,7 @@ const ProfileLayout = () => {
                         </svg>
                       </div>
                       My Tickets
-                    </a>
+                    </Link>
                   </div>
                 </section>
                 <section
