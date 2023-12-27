@@ -27,6 +27,7 @@ import LotofacilSelectionPage from '../pages/SelectionComponents/LotofacilSelect
 import QuinaSelectionPage from '../pages/SelectionComponents/QuinaSelectionPage.jsx';
 import MegaSanaSelectionPage from '../pages/SelectionComponents/MegaSenaSelection.jsx';
 import MillionariaSelectionPage from '../pages/SelectionComponents/MillionariaSelectionPage.jsx';
+import MyTickets from '../components/Profile/MyTickets.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -100,6 +101,7 @@ const NewRouter = createBrowserRouter([
     children: [
       { path: 'change-password', element: <ChangePassword /> },
       { path: 'my-details', element: <MyDetails /> },
+      { path: 'my-tickets', element: <MyTickets /> },
     ],
   },
 ]);
