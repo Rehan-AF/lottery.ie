@@ -5,23 +5,26 @@ import { pushNumbersToWiningNumbers } from '../../Store';
 import ConfirmationModal from './ConfirmationModal';
 
 const OnlyNumberSelector = ({
-  numberOfWiningNumber = 50,
+  numberOfWiningNumber,
   index,
   mainColor,
   backgroundColor,
   buttonNotSelectedColor,
-  numbersToBeSelected = 5,
+  numbersToBeSelected,
+  numberOfColumns,
+  dispatchFunction,
+  winingNumbers,
 }) => {
   const [open, setOpen] = useState(false);
   const [selectedNumbers, setSelectedNumbers] = useState([]);
   const [unlock, setUnlock] = useState(false);
   const dispatch = useDispatch();
-  const winingNumbers = useSelector(
-    (state) => state.productsSlice.winingNumber
-  );
+  // const winingNumbers = useSelector(
+  //   (state) => state.productsSlice.winingNumber
+  // );
   const handleSubmit = () => {
     handleCancel();
-    dispatch(pushNumbersToWiningNumbers(selectedNumbers));
+    dispatch(dispatchFunction(selectedNumbers));
 
     setSelectedNumbers([]);
   };
@@ -39,7 +42,21 @@ const OnlyNumberSelector = ({
       numbersArray.every((num, index) => num === sortedSelectedNumbers[index])
     );
   };
-
+  const renderSkeletonForNumbers = () => {
+    const elements = [];
+    for (let i = 0; i < numbersToBeSelected; i++) {
+      elements.push(
+        <div
+          className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl !m-0"
+          aria-hidden="true"
+        >
+          <span className="absolute opacity-0 w-full h-full"></span>
+          <span aria-hidden="true"></span>
+        </div>
+      );
+    }
+    return elements;
+  };
   const renderNumbers = () => {
     const elements = [];
     for (let i = 1; i <= numberOfWiningNumber; i++) {
@@ -74,7 +91,7 @@ const OnlyNumberSelector = ({
     const elements = [];
     for (let i = 0; i <= numbersToBeSelected - 1; i++) {
       elements.push(
-        <div className="" key={i}>
+        <div className="!m-0" key={i}>
           {selectedNumbers[i] ? (
             <div
               className={`self-auto bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl text-white bg-game-lotto popAnimation`}
@@ -112,6 +129,14 @@ const OnlyNumberSelector = ({
     setOpen(false);
     setSelectedNumbers([]);
   };
+
+  /**
+   * 
+   *  className={`grid gap-[0.5rem] space-x-1`}
+      style={{
+      gridTemplateColumns: `repeat(${numberOfColumns}, minmax(0, 1fr))`,
+      }}
+   */
   return (
     <>
       <button
@@ -120,48 +145,14 @@ const OnlyNumberSelector = ({
       >
         <div className="inline-flex justify-center z-2 mx-1 space-x-1 lg:min-w-[295px]">
           <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
-            aria-hidden="true"
+            className={`grid gap-[4px] space-x-1`}
+            style={{
+              gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
+            }}
           >
-            <span className="absolute opacity-0 w-full h-full"></span>
-            <span aria-hidden="true"></span>
+            {renderSkeletonForNumbers()}
           </div>
-          <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
-            aria-hidden="true"
-          >
-            <span className="absolute opacity-0 w-full h-full"></span>
-            <span aria-hidden="true"></span>
-          </div>
-          <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
-            aria-hidden="true"
-          >
-            <span className="absolute opacity-0 w-full h-full"></span>
-            <span aria-hidden="true"></span>
-          </div>
-          <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
-            aria-hidden="true"
-          >
-            <span className="absolute opacity-0 w-full h-full"></span>
-            <span aria-hidden="true"></span>
-          </div>
-          <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
-            aria-hidden="true"
-          >
-            <span className="absolute opacity-0 w-full h-full"></span>
-            <span aria-hidden="true"></span>
-          </div>
-          <div
-            className="rounded-full flex font-bold justify-center items-center relative bg-gray-100 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl"
-            aria-hidden="true"
-          >
-            <span className="absolute opacity-0 w-full h-full"></span>
-            <span aria-hidden="true"></span>
-          </div>
-          <div className="absolute inline z-1 w-auto text-[#49636e] mx-auto sm:top-1/5 md:top-[30%] left-0 right-0 text-center">
+          <div className="absolute inset-0 flex items-center justify-center text-[#49636e]">
             <p
               aria-label="Enter Numbers"
               className="font-bold text-lg items-center flex justify-center"
@@ -204,7 +195,14 @@ const OnlyNumberSelector = ({
               <div className=" uppercase font-bold text-gray-700 flex justify-center py-3">
                 Game line 1
               </div>
-              <div className=" flex space-x-1">{renderSelectedNumbers()}</div>
+              <div
+                className={`grid gap-[4px] space-x-1`}
+                style={{
+                  gridTemplateColumns: `repeat(${numberOfColumns}, minmax(0, 1fr))`,
+                }}
+              >
+                {renderSelectedNumbers()}
+              </div>
             </div>
             {/* :::::::::::::::: display selected Numbers end  :::::::::::::::::::::*/}
             <ConfirmationModal

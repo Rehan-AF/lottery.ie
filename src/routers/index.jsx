@@ -23,6 +23,10 @@ import Selection1Page from '../pages/SelectionComponents/Selection1Page.jsx';
 import ProfileLayout from '../components/template/ProfileLayout.jsx';
 import ChangePassword from '../components/Profile/ChangePassword.jsx';
 import MyDetails from '../components/Profile/MyDetails.jsx';
+import LotofacilSelectionPage from '../pages/SelectionComponents/LotofacilSelectionPage.jsx';
+import QuinaSelectionPage from '../pages/SelectionComponents/QuinaSelectionPage.jsx';
+import MegaSanaSelectionPage from '../pages/SelectionComponents/MegaSenaSelection.jsx';
+import MillionariaSelectionPage from '../pages/SelectionComponents/MillionariaSelectionPage.jsx';
 import MyTickets from '../components/Profile/MyTickets.jsx';
 
 const NewRouter = createBrowserRouter([
@@ -50,6 +54,22 @@ const NewRouter = createBrowserRouter([
       { path: 'draw-games/basket', element: <BasketPage /> },
       { path: 'draw-games/select', element: <Selection1Page /> },
       { path: 'draw-games/select1', element: <Selection1Page /> },
+      {
+        path: 'draw-games/lotofacil-Selection',
+        element: <LotofacilSelectionPage />,
+      },
+      {
+        path: 'draw-games/quina-Selection',
+        element: <QuinaSelectionPage />,
+      },
+      {
+        path: 'draw-games/mega-sena-Selection',
+        element: <MegaSanaSelectionPage />,
+      },
+      {
+        path: 'draw-games/millionaria-Selection',
+        element: <MillionariaSelectionPage />,
+      },
     ],
   },
   {
@@ -81,7 +101,7 @@ const NewRouter = createBrowserRouter([
     children: [
       { path: 'change-password', element: <ChangePassword /> },
       { path: 'my-details', element: <MyDetails /> },
-      { path: 'my-tickets', element: <MyTickets />},
+      { path: 'my-tickets', element: <MyTickets /> },
     ],
   },
 ]);

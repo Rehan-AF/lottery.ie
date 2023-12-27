@@ -24,7 +24,7 @@ const data = [
     amount: '200 Millions',
     playFor: '2.50',
     animationDuration: 0.26,
-    link: 'select',
+    link: 'lotofacil-Selection',
   },
   {
     logo: gameLogo_3,
@@ -33,7 +33,7 @@ const data = [
     amount: '20,000',
     playFor: '2.50',
     animationDuration: 0.32,
-    link: 'select',
+    link: 'quina-Selection',
   },
   {
     logo: gameLogo_4,
@@ -42,7 +42,7 @@ const data = [
     amount: '1 Million',
     playFor: '1',
     animationDuration: 0.38,
-    link: 'select',
+    link: 'mega-sena-Selection',
   },
   {
     logo: gameLogo_5,
@@ -51,7 +51,7 @@ const data = [
     amount: '125,000',
     playFor: '1',
     animationDuration: 0.44,
-    link: 'select',
+    link: 'millionaria-Selection',
   },
   {
     logo: gameLogo_6,

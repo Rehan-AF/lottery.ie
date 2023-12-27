@@ -1,31 +1,24 @@
-import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
+import background from '../../assets/backgrounds/7_Quina.svg';
 import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-
-import {
-  deleteWiningNumber,
-  pushNumbersToWiningNumbers,
-  updateWiningNumberAtIndex,
-} from '../../Store';
+import { quinaPush, quinaupdate, quinaDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
-const Selection1Page = () => {
-  const numbersToBeSelected = 6;
-  const numbersToBeSelectedFrom = 50;
-  const numberOfColumns = 6;
+const QuinaSelectionPage = () => {
+  const numbersToBeSelected = 5;
+  const numbersToBeSelectedFrom = 80;
+  const numberOfColumns = 5;
   const colors = {
-    mainColor: '#e3262d',
-    backgroundColor: '#fad3d4',
-    buttonNotSelectedColor: '#f39ea2',
+    mainColor: '#0094b3',
+    backgroundColor: '#a1e1ef',
+    buttonNotSelectedColor: '#70c9dd',
   };
   const dispatch = useDispatch();
-  const winingNumbers = useSelector(
-    (state) => state.productsSlice.winingNumber
-  );
+  const winingNumbers = useSelector((state) => state.productsSlice.quinaNumber);
   const handleDelele = (i) => {
-    dispatch(deleteWiningNumber(i));
+    dispatch(quinaDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -50,20 +43,21 @@ const Selection1Page = () => {
 
     return uniqueNumbersArray;
   };
-  const getRandomNumbers = () => {
+  const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(pushNumbersToWiningNumbers(newNumbersArray));
+    dispatch(quinaPush(newNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
       <div className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center">
         <div
-          className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-56 lg:h-80 top-0"
+          className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-[16rem] lg:h-[22rem] top-0"
           style={{
             backgroundImage: `url("${background}")`,
             backgroundRepeat: 'no-repeat',
             width: '100%',
             backgroundSize: 'cover',
+            backgroundPositionY: 'center',
           }}
         ></div>
         <div className="flex flex-col lg:flex-row w-full px-4 md:px-6 lg:px-0 lg:pl-0 h-full z-1 lg:justify-center">
@@ -93,7 +87,7 @@ const Selection1Page = () => {
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
               <div className=" mt-2 lg:mt-3 flex justify-end z-10 mb-4">
                 <GameLogos
-                  logoName="05"
+                  logoName="03"
                   width="170"
                   color="white"
                   customClass={'game'}
@@ -164,7 +158,7 @@ const Selection1Page = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={updateWiningNumberAtIndex}
+                                dispatchFunction={quinaupdate}
                                 winingNumbers={winingNumbers}
                               />
                               <div
@@ -209,7 +203,7 @@ const Selection1Page = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={pushNumbersToWiningNumbers}
+                            dispatchFunction={quinaPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -227,7 +221,7 @@ const Selection1Page = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={pushNumbersToWiningNumbers}
+                            dispatchFunction={quinaPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -240,7 +234,7 @@ const Selection1Page = () => {
                         </p>
                         <button
                           className="shadowCustom lg:min-w-[301px] relative text-center rounded-full py-4 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
-                          onClick={getRandomNumbers}
+                          onClick={getRandomNumbersLoto}
                         >
                           <div className="flex justify-center z-2 items-center">
                             <div
@@ -438,4 +432,4 @@ const Selection1Page = () => {
   );
 };
 
-export default Selection1Page;
+export default QuinaSelectionPage;
