@@ -23,6 +23,7 @@ import Selection1Page from '../pages/SelectionComponents/Selection1Page.jsx';
 import ProfileLayout from '../components/template/ProfileLayout.jsx';
 import ChangePassword from '../components/Profile/ChangePassword.jsx';
 import MyDetails from '../components/Profile/MyDetails.jsx';
+import MyTickets from '../components/Profile/MyTickets.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -80,6 +81,7 @@ const NewRouter = createBrowserRouter([
     children: [
       { path: 'change-password', element: <ChangePassword /> },
       { path: 'my-details', element: <MyDetails /> },
+      { path: 'my-tickets', element: <MyTickets />},
     ],
   },
 ]);
