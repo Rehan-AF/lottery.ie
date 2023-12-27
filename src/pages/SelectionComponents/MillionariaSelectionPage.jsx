@@ -1,31 +1,28 @@
-import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
+import background from '../../assets/backgrounds/2_Milionaria.svg';
 import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-
-import {
-  deleteWiningNumber,
-  pushNumbersToWiningNumbers,
-  updateWiningNumberAtIndex,
-} from '../../Store';
+import radiant_left from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-left.svg';
+import radiant_right from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-right.svg';
+import { lotofacilPush, lotofacilupdate, lotofacilDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
-const Selection1Page = () => {
+const MillionariaSelectionPage = () => {
   const numbersToBeSelected = 6;
   const numbersToBeSelectedFrom = 50;
   const numberOfColumns = 6;
   const colors = {
-    mainColor: '#e3262d',
-    backgroundColor: '#fad3d4',
-    buttonNotSelectedColor: '#f39ea2',
+    mainColor: '#2A2A85',
+    backgroundColor: '#BDBDFA',
+    buttonNotSelectedColor: '#2D4E95',
   };
   const dispatch = useDispatch();
   const winingNumbers = useSelector(
-    (state) => state.productsSlice.winingNumber
+    (state) => state.productsSlice.lotofacilNumber
   );
   const handleDelele = (i) => {
-    dispatch(deleteWiningNumber(i));
+    dispatch(lotofacilDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -50,9 +47,9 @@ const Selection1Page = () => {
 
     return uniqueNumbersArray;
   };
-  const getRandomNumbers = () => {
+  const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(pushNumbersToWiningNumbers(newNumbersArray));
+    dispatch(lotofacilPush(newNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
@@ -64,6 +61,7 @@ const Selection1Page = () => {
             backgroundRepeat: 'no-repeat',
             width: '100%',
             backgroundSize: 'cover',
+            backgroundPositionY: 'center',
           }}
         ></div>
         <div className="flex flex-col lg:flex-row w-full px-4 md:px-6 lg:px-0 lg:pl-0 h-full z-1 lg:justify-center">
@@ -164,7 +162,7 @@ const Selection1Page = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={updateWiningNumberAtIndex}
+                                dispatchFunction={lotofacilupdate}
                                 winingNumbers={winingNumbers}
                               />
                               <div
@@ -209,7 +207,7 @@ const Selection1Page = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={pushNumbersToWiningNumbers}
+                            dispatchFunction={lotofacilPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -227,7 +225,7 @@ const Selection1Page = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={pushNumbersToWiningNumbers}
+                            dispatchFunction={lotofacilPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -240,7 +238,7 @@ const Selection1Page = () => {
                         </p>
                         <button
                           className="shadowCustom lg:min-w-[301px] relative text-center rounded-full py-4 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
-                          onClick={getRandomNumbers}
+                          onClick={getRandomNumbersLoto}
                         >
                           <div className="flex justify-center z-2 items-center">
                             <div
@@ -438,4 +436,4 @@ const Selection1Page = () => {
   );
 };
 
-export default Selection1Page;
+export default MillionariaSelectionPage;
