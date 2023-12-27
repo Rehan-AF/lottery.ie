@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReusableCard = ({
   backgroundUrl,
-  useBackgroundImage = false,
+  useBackgroundImage = true,
   logoSrc,
   nextDraw,
   jackpotAmount,
@@ -13,33 +13,35 @@ const ReusableCard = ({
   guaranteedEstamated,
 }) => {
   return (
-    <button className="group text-left mx-2" role="link">
+    <button className="group text-left " role="link">
       <div
         className="bg-left bg-cover bg-no-repeat text-white rounded-lg relative pt-2 w-60 h-80 md:w-62 md:h-88 lg:h-96 lg:w-80 flex-none"
-        style={{ backgroundImage: `url("${backgroundUrl}")` }}
+        style={useBackgroundImage ? { backgroundImage: `url("${backgroundUrl}")` } : { background: "linear-gradient(to right, #800080, #9932CC, #BA55D3)" }}
+
+       
       
         
       >
-        <div className="container px-5 mt-2 mx-auto">
-          <div className="grid sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
-            <div className="col-span-11">
+        <div className="container px-5 mt-2 ">
+          <div className=" flex  md:grid  md:grid-cols-8 lg:grid-cols-12">
+            <div className="  md:col-span-11 rtl ">
               <img
                 alt="EuroMillions logo"
-                className="h-10"
+                className="h-10 w-[96]"
                 src={logoSrc}
                 role="img"
               />
               <h1 className="pt-4 pb-1 text-base font-bold text-lg">
                 {DrawText}
               </h1>
-              <h2 className="leading-5 font-black text-xl">{nextDraw}</h2>
+              <h2 className="leading-5 font-black text-xl w-[200px] md:w-auto">{nextDraw}</h2>
               <h3
                 aria-label={`Jackpot Amount: ${jackpotAmount}`}
                 className="pt-8 text-white pb-10 lg:text-4xl font-black text-3xl"
               >
                 <span aria-hidden="true" className="text-lg md:text-3xl">
                   <span>
-                    <strong className="text-5xl md:text-5xl-xtra lg:text-5xl">
+                    <strong className="text-4xl md:text-5xl-xtra lg:text-5xl">
                       {jackpotAmount}
                     </strong>{' '}
                    {Millions}
