@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRef } from 'react';
 import './scroll.css';
 import Card from '../../components/Card';
@@ -8,12 +7,6 @@ import backgroundimage2 from '../../assets/backgrounds/card2.svg';
 import backgroundimage3 from '../../assets/backgrounds/card3.svg';
 import backgroundimage4 from '../../assets/backgrounds/card4.svg';
 import backgroundimage6 from '../../assets/backgrounds/card6.svg';
-
-import logo1 from '../../assets/ticketsCard1.svg';
-import logo2 from '../../assets/cards/DailyMillion.svg';
-import logo3 from '../../assets/cards/Lotto.svg';
-import logo4 from '../../assets/cards/logo4.svg';
-import logo6 from '../../assets/cards/logo6.svg';
 import ReusableCard from './TicketComponent';
 const MyTickets = () => {
   const carouselRef = useRef(null);
@@ -52,7 +45,7 @@ const MyTickets = () => {
             <img src={Starlogo} alt="" />
           </div>
           <div className="max-w-xs font-bold text-lg text-[#2C444E]">
-            You haven't got any Draw Based Games at the moment
+            You haven&apos;t got any Draw Based Games at the moment
           </div>
         </div>
       </div>
@@ -67,7 +60,7 @@ const MyTickets = () => {
           {/* 1 */}
           <ReusableCard
             backgroundUrl={backgroundimage1}
-            logoSrc={logo1}
+            logoSrc="01"
             nextDraw="Tomorrow, 12:30am"
             jackpotAmount="€17"
             buttonText="Play from €2.50"
@@ -78,7 +71,7 @@ const MyTickets = () => {
           {/* 2 */}
           <ReusableCard
             backgroundUrl={backgroundimage2}
-            logoSrc={logo2}
+            logoSrc="02"
             DrawText="Only €1 per line"
             nextDraw="Tomorrow, 2:00am"
             jackpotAmount="€1"
@@ -89,7 +82,7 @@ const MyTickets = () => {
           {/* 3 */}
           <ReusableCard
             backgroundUrl={backgroundimage3}
-            logoSrc={logo3}
+            logoSrc="03"
             DrawText="Next draw"
             nextDraw="Thursday, 12:45am"
             jackpotAmount="€10.2"
@@ -100,7 +93,7 @@ const MyTickets = () => {
           {/* 4 */}
           <ReusableCard
             backgroundUrl={backgroundimage4}
-            logoSrc={logo4}
+            logoSrc="04"
             useBackgroundImage={false}
             DrawText="Next draw"
             nextDraw="Friday, 12:30am"
@@ -113,7 +106,7 @@ const MyTickets = () => {
 
           <ReusableCard
             backgroundUrl={backgroundimage4}
-            logoSrc={logo4}
+            logoSrc="05"
             DrawText="Next draw"
             nextDraw="Thursday, 12:45am"
             jackpotAmount="€125,000*"
@@ -124,7 +117,7 @@ const MyTickets = () => {
           {/* 6 */}
           <ReusableCard
             backgroundUrl={backgroundimage6}
-            logoSrc={logo6}
+            logoSrc="07"
             DrawText="One Millionaire Guaranteed"
             nextDraw="Monday, 3:00am"
             jackpotAmount="€1"

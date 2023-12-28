@@ -1,26 +1,24 @@
-import background from '../../assets/backgrounds/2_Milionaria.svg';
+import background from '../../assets/backgrounds/5_Lotomania.svg';
 import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-import { lotofacilPush, lotofacilupdate, lotofacilDelete } from '../../Store';
+import { quinaPush, quinaupdate, quinaDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
-const MillionariaSelectionPage = () => {
+const LotoManiaSelectionPage = () => {
   const numbersToBeSelected = 6;
   const numbersToBeSelectedFrom = 50;
-  const numberOfColumns = 8;
+  const numberOfColumns = 6;
   const colors = {
-    mainColor: '#2A2A85',
-    backgroundColor: '#BDBDFA',
-    buttonNotSelectedColor: '#2D4E95',
+    mainColor: '#f6a500',
+    backgroundColor: '#ffe4ac',
+    buttonNotSelectedColor: '#fabe45',
   };
   const dispatch = useDispatch();
-  const winingNumbers = useSelector(
-    (state) => state.productsSlice.lotofacilNumber
-  );
+  const winingNumbers = useSelector((state) => state.productsSlice.quinaNumber);
   const handleDelele = (i) => {
-    dispatch(lotofacilDelete(i));
+    dispatch(quinaDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -47,13 +45,13 @@ const MillionariaSelectionPage = () => {
   };
   const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(lotofacilPush(newNumbersArray));
+    dispatch(quinaPush(newNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
       <div className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center">
         <div
-          className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-56 lg:h-80 top-0"
+          className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-[16rem] lg:h-[22rem] top-0"
           style={{
             backgroundImage: `url("${background}")`,
             backgroundRepeat: 'no-repeat',
@@ -89,7 +87,7 @@ const MillionariaSelectionPage = () => {
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
               <div className=" mt-2 lg:mt-3 flex justify-end z-10 mb-4">
                 <GameLogos
-                  logoName="05"
+                  logoName="06"
                   width="170"
                   color="white"
                   customClass={'game'}
@@ -160,9 +158,8 @@ const MillionariaSelectionPage = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={lotofacilupdate}
+                                dispatchFunction={quinaupdate}
                                 winingNumbers={winingNumbers}
-                                special={true}
                               />
                               <div
                                 onClick={() => handleDelele(index)}
@@ -206,9 +203,8 @@ const MillionariaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={lotofacilPush}
+                            dispatchFunction={quinaPush}
                             winingNumbers={winingNumbers}
-                            specialNum={true}
                           />
                         </div>
                       )}
@@ -225,9 +221,8 @@ const MillionariaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={lotofacilPush}
+                            dispatchFunction={quinaPush}
                             winingNumbers={winingNumbers}
-                            specialNum={true}
                           />
                         </div>
 
@@ -437,4 +432,4 @@ const MillionariaSelectionPage = () => {
   );
 };
 
-export default MillionariaSelectionPage;
+export default LotoManiaSelectionPage;
