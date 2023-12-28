@@ -1,31 +1,26 @@
-import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
+import background from '../../assets/backgrounds/6_Mega-Sena.svg';
 import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-
-import {
-  deleteWiningNumber,
-  pushNumbersToWiningNumbers,
-  updateWiningNumberAtIndex,
-} from '../../Store';
+import { megaSenaPush, megaSenaupdate, megaSenaDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
-const Selection1Page = () => {
+const MegaSanaSelectionPage = () => {
   const numbersToBeSelected = 6;
-  const numbersToBeSelectedFrom = 50;
+  const numbersToBeSelectedFrom = 60;
   const numberOfColumns = 6;
   const colors = {
-    mainColor: '#e3262d',
-    backgroundColor: '#fad3d4',
-    buttonNotSelectedColor: '#f39ea2',
+    mainColor: '#11822f',
+    backgroundColor: '#e5efac',
+    buttonNotSelectedColor: '#37934f',
   };
   const dispatch = useDispatch();
   const winingNumbers = useSelector(
-    (state) => state.productsSlice.winingNumber
+    (state) => state.productsSlice.megaSenaNumber
   );
   const handleDelele = (i) => {
-    dispatch(deleteWiningNumber(i));
+    dispatch(megaSenaDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -50,15 +45,15 @@ const Selection1Page = () => {
 
     return uniqueNumbersArray;
   };
-  const getRandomNumbers = () => {
+  const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(pushNumbersToWiningNumbers(newNumbersArray));
+    dispatch(megaSenaPush(newNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
       <div className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center">
         <div
-          className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-56 lg:h-80 top-0"
+          className=" absolute bg-cover bg-no-repeat w-full h-60 sm:h-[17rem] md:h-[18rem] lg:h-[23rem] top-0"
           style={{
             backgroundImage: `url("${background}")`,
             backgroundRepeat: 'no-repeat',
@@ -93,7 +88,7 @@ const Selection1Page = () => {
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
               <div className=" mt-2 lg:mt-3 flex justify-end z-10 mb-4">
                 <GameLogos
-                  logoName="05"
+                  logoName="04"
                   width="170"
                   color="white"
                   customClass={'game'}
@@ -164,7 +159,7 @@ const Selection1Page = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={updateWiningNumberAtIndex}
+                                dispatchFunction={megaSenaupdate}
                                 winingNumbers={winingNumbers}
                               />
                               <div
@@ -209,7 +204,7 @@ const Selection1Page = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={pushNumbersToWiningNumbers}
+                            dispatchFunction={megaSenaPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -227,7 +222,7 @@ const Selection1Page = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={pushNumbersToWiningNumbers}
+                            dispatchFunction={megaSenaPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -240,7 +235,7 @@ const Selection1Page = () => {
                         </p>
                         <button
                           className="shadowCustom lg:min-w-[301px] relative text-center rounded-full py-4 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
-                          onClick={getRandomNumbers}
+                          onClick={getRandomNumbersLoto}
                         >
                           <div className="flex justify-center z-2 items-center">
                             <div
@@ -438,4 +433,4 @@ const Selection1Page = () => {
   );
 };
 
-export default Selection1Page;
+export default MegaSanaSelectionPage;

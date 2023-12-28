@@ -4,17 +4,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateWiningNumberAtIndex } from '../../Store';
 import ConfirmationModal from './ConfirmationModal';
 const NumberSelector = ({
-  numberOfWiningNumber = 50,
+  numberOfWiningNumber,
   index,
   values,
   mainColor = 'sky',
   backgroundColor = 'red',
   buttonNotSelectedColor = 'crimson',
-  numbersToBeSelected = 6,
+  numbersToBeSelected,
+  numberOfColumns,
+  dispatchFunction,
+  winingNumbers,
 }) => {
-  const winingNumbers = useSelector(
-    (state) => state.productsSlice.winingNumber
-  );
+  // const winingNumbers = useSelector(
+  //   (state) => state.productsSlice.winingNumber
+  // );
   const [open, setOpen] = useState(false);
   const [finalSelectedNumbers, setFinalSelectedNumbers] = useState(values);
   const [applyPop, setApplyPop] = useState(false);
@@ -23,9 +26,7 @@ const NumberSelector = ({
   const [selectedNumbers, setSelectedNumbers] = useState(values);
   const handleSubmit = () => {
     handleCancel();
-    dispatch(
-      updateWiningNumberAtIndex({ index: index, newValue: selectedNumbers })
-    );
+    dispatch(dispatchFunction({ index: index, newValue: selectedNumbers }));
     setTimeout(() => {
       setFinalSelectedNumbers(selectedNumbers);
     }, 300);
@@ -81,10 +82,10 @@ const NumberSelector = ({
     const elements = [];
     for (let i = 0; i <= numbersToBeSelected - 1; i++) {
       elements.push(
-        <div className="" key={i}>
+        <div className="!m-0" key={i}>
           {selectedNumbers[i] ? (
             <div
-              className={`self-auto bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl text-white bg-game-lotto popAnimation`}
+              className={`self-auto !m-0 bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl text-white bg-game-lotto popAnimation`}
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full text-x-sm">
@@ -94,7 +95,7 @@ const NumberSelector = ({
             </div>
           ) : (
             <div
-              className={`rounded-full flex font-bold justify-center items-center relative bg-[${buttonNotSelectedColor}] opacity-30 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl`}
+              className={`rounded-full !m-0 flex font-bold justify-center items-center relative bg-[${buttonNotSelectedColor}] opacity-30 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl`}
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
@@ -133,12 +134,17 @@ const NumberSelector = ({
         onClick={showModal}
       >
         {finalSelectedNumbers || winingNumbers[index] ? (
-          <div className="inline-flex justify-center z-2 mx-1 space-x-1 lg:min-w-[295px]">
+          <div
+            className="grid gap-[4px] z-2 space-x-1 lg:min-w-[295px]"
+            style={{
+              gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
+            }}
+          >
             {winingNumbers[index]
               ? winingNumbers[index]?.map((val, index) => {
                   return (
                     <div
-                      className={` rounded-full flex font-bold  justify-center text-white items-center relative bg-[${mainColor}] w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl ${
+                      className={` rounded-full !m-0 flex font-bold  justify-center text-white items-center relative bg-[${mainColor}] w-7  md:w-[45px] h-7 md:h-[45px] text-base md:text-2xl ${
                         applyPop ? 'popOutAnimation' : ''
                       }`}
                       aria-hidden="true"
@@ -249,7 +255,14 @@ const NumberSelector = ({
               <div className=" uppercase font-bold text-gray-700 flex justify-center py-3">
                 Game line 1
               </div>
-              <div className=" flex space-x-1">{renderSelectedNumbers()}</div>
+              <div
+                className={`grid gap-[4px] space-x-1`}
+                style={{
+                  gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
+                }}
+              >
+                {renderSelectedNumbers()}
+              </div>
             </div>
             {/* {isNumbersAlreadySelected() === true && unlock === false ? (
               <div className="bg-[#fcf3f3] text-red-500 flex flex-row items-center bg-message-error-light py-2 px-6 text-sm text-message-error rtl ga4">

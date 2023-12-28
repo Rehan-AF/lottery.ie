@@ -3,29 +3,26 @@ import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-
-import {
-  deleteWiningNumber,
-  pushNumbersToWiningNumbers,
-  updateWiningNumberAtIndex,
-} from '../../Store';
+import radiant_left from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-left.svg';
+import radiant_right from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-right.svg';
+import { lotofacilPush, lotofacilupdate, lotofacilDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
-const Selection1Page = () => {
-  const numbersToBeSelected = 6;
-  const numbersToBeSelectedFrom = 50;
-  const numberOfColumns = 6;
+const LotofacilSelectionPage = () => {
+  const numbersToBeSelected = 15;
+  const numbersToBeSelectedFrom = 25;
+  const numberOfColumns = 8;
   const colors = {
-    mainColor: '#e3262d',
-    backgroundColor: '#fad3d4',
-    buttonNotSelectedColor: '#f39ea2',
+    mainColor: '#781ea5',
+    backgroundColor: '#f3e5fa',
+    buttonNotSelectedColor: '#cea9e1',
   };
   const dispatch = useDispatch();
   const winingNumbers = useSelector(
-    (state) => state.productsSlice.winingNumber
+    (state) => state.productsSlice.lotofacilNumber
   );
   const handleDelele = (i) => {
-    dispatch(deleteWiningNumber(i));
+    dispatch(lotofacilDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -50,9 +47,9 @@ const Selection1Page = () => {
 
     return uniqueNumbersArray;
   };
-  const getRandomNumbers = () => {
+  const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(pushNumbersToWiningNumbers(newNumbersArray));
+    dispatch(lotofacilPush(newNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
@@ -60,12 +57,16 @@ const Selection1Page = () => {
         <div
           className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-56 lg:h-80 top-0"
           style={{
-            backgroundImage: `url("${background}")`,
+            backgroundImage:
+              'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
             backgroundRepeat: 'no-repeat',
             width: '100%',
             backgroundSize: 'cover',
           }}
-        ></div>
+        >
+          <img src={radiant_left} className="absolute bottom-0" />
+          <img src={radiant_right} className="absolute right-0 top-0" />
+        </div>
         <div className="flex flex-col lg:flex-row w-full px-4 md:px-6 lg:px-0 lg:pl-0 h-full z-1 lg:justify-center">
           <div className="flex flex-col">
             <div className="flex items-start z-10 absolute lg:static mt-2">
@@ -93,7 +94,7 @@ const Selection1Page = () => {
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
               <div className=" mt-2 lg:mt-3 flex justify-end z-10 mb-4">
                 <GameLogos
-                  logoName="05"
+                  logoName="02"
                   width="170"
                   color="white"
                   customClass={'game'}
@@ -164,7 +165,7 @@ const Selection1Page = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={updateWiningNumberAtIndex}
+                                dispatchFunction={lotofacilupdate}
                                 winingNumbers={winingNumbers}
                               />
                               <div
@@ -209,7 +210,7 @@ const Selection1Page = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={pushNumbersToWiningNumbers}
+                            dispatchFunction={lotofacilPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -227,7 +228,7 @@ const Selection1Page = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={pushNumbersToWiningNumbers}
+                            dispatchFunction={lotofacilPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -240,7 +241,7 @@ const Selection1Page = () => {
                         </p>
                         <button
                           className="shadowCustom lg:min-w-[301px] relative text-center rounded-full py-4 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
-                          onClick={getRandomNumbers}
+                          onClick={getRandomNumbersLoto}
                         >
                           <div className="flex justify-center z-2 items-center">
                             <div
@@ -438,4 +439,4 @@ const Selection1Page = () => {
   );
 };
 
-export default Selection1Page;
+export default LotofacilSelectionPage;
