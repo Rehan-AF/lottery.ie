@@ -28,6 +28,8 @@ import QuinaSelectionPage from '../pages/SelectionComponents/QuinaSelectionPage.
 import MegaSanaSelectionPage from '../pages/SelectionComponents/MegaSenaSelection.jsx';
 import MillionariaSelectionPage from '../pages/SelectionComponents/MillionariaSelectionPage.jsx';
 import MyTickets from '../components/Profile/MyTickets.jsx';
+import DuplaSenaSelectionPage from '../pages/SelectionComponents/duplaSenaSelectionPage.jsx';
+import LotoManiaSelectionPage from '../pages/SelectionComponents/lotoManiaSelectionPage.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -69,6 +71,14 @@ const NewRouter = createBrowserRouter([
       {
         path: 'draw-games/millionaria-Selection',
         element: <MillionariaSelectionPage />,
+      },
+      {
+        path: 'draw-games/dupla-sena-Selection',
+        element: <DuplaSenaSelectionPage />,
+      },
+      {
+        path: 'draw-games/loto-mania-Selection',
+        element: <LotoManiaSelectionPage />,
       },
     ],
   },

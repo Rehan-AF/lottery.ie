@@ -60,7 +60,7 @@ const data = [
     amount: '1 Million',
     playFor: '25',
     animationDuration: 0.5,
-    link: 'select',
+    link: 'dupla-sena-Selection',
   },
   {
     logo: gameLogo_7,
@@ -69,7 +69,7 @@ const data = [
     amount: '125,000',
     playFor: '1',
     animationDuration: 0.55,
-    link: 'select',
+    link: 'loto-mania-Selection',
   },
 ];
 const BasketPage = () => {

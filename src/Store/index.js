@@ -78,6 +78,7 @@ const productsSlice = createSlice({
     megaSenareset(state) {
       state.megaSenaNumber = [];
     },
+    // millionaria state
   },
 });
 
