@@ -17,19 +17,22 @@ const MyTickets = () => {
     }
   };
 
-  const scrollRight = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollLeft += 550;
-    }
-  };
-  return (
-    <div>
-      <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
-        <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-          My Tickets
-        </h1>
-      </div>
 
+
+    const scrollRight = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollLeft += 550;
+        }
+    };
+    return (
+        <div>
+
+            <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
+                <h1 className="font-black text-lg md:text-xl text-[#32444e]">
+                    My Tickets
+                </h1>
+            </div>
+         
       <Card
         LotteryName="first lottery"
         Time="12:am"
