@@ -17,22 +17,19 @@ const MyTickets = () => {
     }
   };
 
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollLeft += 550;
+    }
+  };
+  return (
+    <div>
+      <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
+        <h1 className="font-black text-lg md:text-xl text-[#32444e]">
+          My Tickets
+        </h1>
+      </div>
 
-
-    const scrollRight = () => {
-        if (carouselRef.current) {
-            carouselRef.current.scrollLeft += 550;
-        }
-    };
-    return (
-        <div>
-
-            <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
-                <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-                    My Tickets
-                </h1>
-            </div>
-         
       <Card
         LotteryName="first lottery"
         Time="12:am"
@@ -54,7 +51,7 @@ const MyTickets = () => {
       </div>
       <div>
         <div className="flex justify-between pb-4 pr-4 text-[#2C444E] rtl">
-          <h3 className="font-black text-3xl">Play Now:</h3>
+          <h3 className="font-black text-3xl">Play Now</h3>
         </div>
         <div
           className=" overflow-x-scroll space-x-3 max-w-[936px] w-full flex mx-3  p-2  custom-scrollbar "
@@ -100,9 +97,9 @@ const MyTickets = () => {
             useBackgroundImage={false}
             DrawText="Next draw"
             nextDraw="Friday, 12:30am"
-            jackpotAmount="€20,000 "
+            jackpotAmount="€20 "
             buttonText="Play from €2.50"
-            Millions="per month for 30 years*"
+            Millions="Million*"
             guaranteedEstamated="*guaranteed"
           />
           {/* 5 */}

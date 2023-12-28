@@ -113,8 +113,8 @@ const ProfileSideBar = () => {
                         Dashboard
                       </h3>
                       <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
-                        <a
-                          href="/account/dashboard"
+                        <Link
+                          href="/"
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -136,7 +136,7 @@ const ProfileSideBar = () => {
                             </svg>
                           </div>
                           My Dashboard
-                        </a>
+                        </Link>
                         <Link
                           to="/account/my-details"
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
@@ -165,8 +165,8 @@ const ProfileSideBar = () => {
                           </div>
                           My Details
                         </Link>
-                        <a
-                          href="/account/tickets"
+                        <Link
+                          href="/account/my-tickets"
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -199,7 +199,7 @@ const ProfileSideBar = () => {
                             </svg>
                           </div>
                           My Tickets
-                        </a>
+                        </Link>
                       </div>
                     </section>
                     <section
@@ -214,7 +214,7 @@ const ProfileSideBar = () => {
                       </h3>
                       <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
                         <a
-                          href="/account/take-a-break"
+                          href=""
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -230,7 +230,7 @@ const ProfileSideBar = () => {
                           Deposit
                         </a>
                         <a
-                          href="/account/locked-games"
+                          href=""
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -252,7 +252,7 @@ const ProfileSideBar = () => {
                           Withdraw
                         </a>
                         <a
-                          href="/account/spending-limits"
+                          href=""
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -289,7 +289,7 @@ const ProfileSideBar = () => {
                       </h3>
                       <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
                         <a
-                          href="/account/notifications"
+                          href=""
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -305,7 +305,7 @@ const ProfileSideBar = () => {
                           Support
                         </a>
                         <a
-                          href="/account/id-verification"
+                          href=""
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -343,7 +343,7 @@ const ProfileSideBar = () => {
                         </Link>
 
                         <a
-                          href="/account/logout"
+                          href=""
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold lg:flex"
                         >
                           <div className="pl-3">
