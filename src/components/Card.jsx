@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import GameLogos from "./svg/GameLogos";
+import { useState } from 'react';
+import GameLogos from './svg/GameLogos';
 const data2 = [1, 2, 7, 6, 3, 8];
-import copyicon from "../assets/cards/copy-icon.svg";
-import NumberCheckerModal from "./Profile/NumberChecker";
-import { message } from "antd";
+import copyicon from '../assets/cards/copy-icon.svg';
+import NumberCheckerModal from './Profile/NumberChecker';
+import { message } from 'antd';
 
 const GameCard = ({
-  LotteryColor = "#E3262D",
+  LotteryColor = '#E3262D',
   Time,
   WinningAmount,
   logoSrc,
@@ -18,23 +18,19 @@ const GameCard = ({
   const [messageApi, contextHolder] = message.useMessage();
   const success = () => {
     messageApi.open({
-      type: "success",
-      content: "copied",
+      type: 'success',
+      content: 'copied',
     });
   };
   const copyToClipboard = (text) => {
-    // Create a temporary textarea element
-    const textarea = document.createElement("textarea");
+    const textarea = document.createElement('textarea');
     textarea.value = text;
 
-    // Append the textarea to the document
     document.body.appendChild(textarea);
 
-    // Select the text in the textarea
     textarea.select();
-    document.execCommand("copy");
+    document.execCommand('copy');
 
-    // Remove the textarea from the document
     document.body.removeChild(textarea);
   };
   return (
@@ -59,7 +55,6 @@ const GameCard = ({
 
           <div className="col-span-1 flex justify-center">
             <h5 className=" font-bold md:font-bold  text-xs md:text-base text-[#2C444E]">
-              {" "}
               {Time}
             </h5>
           </div>
@@ -78,14 +73,14 @@ const GameCard = ({
             <GameLogos
               logoName={logoSrc}
               color={color}
-              customClass={"ticket"}
+              customClass={'ticket'}
               width={100}
             />
           </div>
 
-          <div className=" sm:order-3 md:order-2 px-2 md:px-4 md:col-span-1 sm:col-span-2  lg:px-8 flex flex-col md:justify-center md:items-center w-full">
-            <div className="flex my-2">
-              {data2.map((val, index) => {
+          <div className=" sm:order-3 md:order-2 px-2 justify-center md:px-4 md:col-span-1 sm:col-span-2  lg:px-8 flex flex-col md:justify-center md:items-center w-full">
+            <div className="flex my-2 justify-center">
+              {data.map((val, index) => {
                 return (
                   <div
                     key={index}
@@ -100,7 +95,6 @@ const GameCard = ({
           <div className="w-full sm:order-2 md:order-3  flex md:justify-end col-span-1 items-center ">
             <div className="bg-[#E7EFF3] rounded-md px-1 md:px-3">
               <h5 className=" font-bold md:font-extrabold  text-[11px] md:text-base text-[#2C444E] ">
-                {" "}
                 {WinningAmount}
               </h5>
             </div>
