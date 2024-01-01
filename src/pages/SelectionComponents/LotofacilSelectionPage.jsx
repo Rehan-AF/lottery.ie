@@ -7,11 +7,13 @@ import radiant_left from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-l
 import radiant_right from '../../assets/backgrounds/3_Purple- Lotofacil/radiant-right.svg';
 import { lotofacilPush, lotofacilupdate, lotofacilDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
+import { useMediaQuery } from 'react-responsive';
 
 const LotofacilSelectionPage = () => {
-  const numbersToBeSelected = 15;
-  const numbersToBeSelectedFrom = 25;
-  const numberOfColumns = 8;
+  const numbersToBeSelected = 20;
+  const numbersToBeSelectedFrom = 100;
+  const isLargeScreen = useMediaQuery({ minWidth: 768 });
+  const numberOfColumns = isLargeScreen ? 10 : 8;
   const colors = {
     mainColor: '#781ea5',
     backgroundColor: '#f3e5fa',
@@ -44,7 +46,7 @@ const LotofacilSelectionPage = () => {
         uniqueNumbersArray.push(randomNumber);
       }
     }
-
+    uniqueNumbersArray.sort((a, b) => a - b);
     return uniqueNumbersArray;
   };
   const getRandomNumbersLoto = () => {

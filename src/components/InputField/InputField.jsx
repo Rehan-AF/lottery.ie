@@ -7,7 +7,7 @@ const FloatingLabelInput = ({
   type,
   name,
   onChange,
-  value = false,
+  value = '',
   errors = false,
   touched = false,
 }) => {
@@ -71,12 +71,9 @@ const FloatingLabelInput = ({
           }`}
         >
           {type === 'tel' && (
-            <div className="absolute left-0">
-              <img src={flag} className="w-[48px]" />
-              <div
-                className="absolute left-[60px] top-[15px]"
-                style={{ direction: 'ltr' }}
-              >
+            <div className="absolute left-0 flex flex-row-reverse items-center top-1/2 transform -translate-y-1/2">
+              <img src={flag} className="w-[38px]" />
+              <div className="ml-2" style={{ direction: 'ltr' }}>
                 +98
               </div>
             </div>
