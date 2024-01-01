@@ -18,6 +18,9 @@ const ProfileSideBar = () => {
     if (location.pathname === '/account/my-details') {
       setSelectedRoute('My Details');
     }
+    if (location.pathname === '/account/my-tickets') {
+      setSelectedRoute('My Tickets');
+    }
   }, [location]);
 
   return (
@@ -115,6 +118,9 @@ const ProfileSideBar = () => {
                       <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
                         <Link
                           href="/"
+                          onClick={() => {
+                            setPanelVisible(false);
+                          }}
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -139,6 +145,9 @@ const ProfileSideBar = () => {
                         </Link>
                         <Link
                           to="/account/my-details"
+                          onClick={() => {
+                            setPanelVisible(false);
+                          }}
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -166,7 +175,10 @@ const ProfileSideBar = () => {
                           My Details
                         </Link>
                         <Link
-                          href="/account/my-tickets"
+                          to="/account/my-tickets"
+                          onClick={() => {
+                            setPanelVisible(false);
+                          }}
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
