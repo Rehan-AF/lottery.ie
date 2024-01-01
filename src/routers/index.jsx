@@ -109,8 +109,9 @@ const NewRouter = createBrowserRouter([
       </div>
     ),
     children: [
-      { path: 'change-password', element: <ChangePassword /> },
+      { path: '', element: <MyDetails /> },
       { path: 'my-details', element: <MyDetails /> },
+      { path: 'change-password', element: <ChangePassword /> },
       { path: 'my-tickets', element: <MyTickets /> },
     ],
   },

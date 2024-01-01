@@ -42,7 +42,7 @@ const MillionariaSelectionPage = () => {
         uniqueNumbersArray.push(randomNumber);
       }
     }
-
+    uniqueNumbersArray.sort((a, b) => a - b);
     return uniqueNumbersArray;
   };
   const getRandomNumbersLoto = () => {

@@ -29,12 +29,12 @@ const validate = (values) => {
   if (!values.phoneNumber) {
     errors.phoneNumber = 'required';
   }
-  if (!values.affiliateCode) {
-    errors.affiliateCode = 'required';
-  }
-  if (!values.acceptTermsAndConditions) {
-    errors.acceptTermsAndConditions = 'required';
-  }
+  // if (!values.affiliateCode) {
+  //   errors.affiliateCode = 'required';
+  // }
+  // if (!values.acceptTermsAndConditions) {
+  //   errors.acceptTermsAndConditions = 'required';
+  // }
 
   return errors;
 };
@@ -51,7 +51,7 @@ const SignUp = () => {
       confirmPassword: '',
       phoneNumber: '',
       affiliateCode: '',
-      acceptTermsAndConditions: false,
+      // acceptTermsAndConditions: false,
     },
     validate,
     onSubmit: (values) => {
@@ -68,15 +68,12 @@ const SignUp = () => {
     ) {
       setUnlock(1);
     }
-    if (
-      formik.errors.phoneNumber === undefined &&
-      formik.errors.affiliateCode === undefined
-    ) {
+    if (formik.errors.phoneNumber === undefined) {
       setUnlock(2);
     }
-    if (formik.errors.acceptTermsAndConditions === undefined) {
-      setUnlock(3);
-    }
+    // if (formik.errors.acceptTermsAndConditions === undefined) {
+    //   setUnlock(3);
+    // }
     if (
       formik.errors.firstName ||
       formik.errors.lastName ||
@@ -388,14 +385,14 @@ const SignUp = () => {
                   name="affiliateCode"
                   type="text"
                   onChange={formik.handleChange}
-                  value={formik.values.affiliateCode}
-                  errors={formik.errors.affiliateCode}
-                  touched={formik.touched.affiliateCode}
+                  // value={}
+                  // errors={}
+                  // touched={}
                 />
               </div>
             </>
           ) : null}
-          {steps === 3 && (
+          {/* {steps === 3 && (
             <div className="px-4 sm:w-[350px] md:w-[414px]">
               <h3 className="mb-2 font-black text-end rtl text-3xl">
                 One last thing!
@@ -452,7 +449,7 @@ const SignUp = () => {
                 </label>
               </div>
             </div>
-          )}
+          )} */}
 
           {/* {formik.errors.email ? <div>{formik.errors.email}</div> : null} */}
 
@@ -480,7 +477,7 @@ const SignUp = () => {
               unlock === 2 ? (
                 <button
                   id="signInButton"
-                  onClick={() => setSteps(3)}
+                  onClick={() => alert(formik.values)}
                   className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
                 >
                   <span>Continue</span>
@@ -494,7 +491,7 @@ const SignUp = () => {
                 </button>
               )
             ) : null}
-            {steps === 3 ? (
+            {/* {steps === 3 ? (
               unlock === 3 ? (
                 <button
                   id="signInButton"
@@ -511,7 +508,7 @@ const SignUp = () => {
                   <span>Continue</span>
                 </button>
               )
-            ) : null}
+            ) : null} */}
           </div>
         </form>
       </div>

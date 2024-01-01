@@ -47,7 +47,7 @@ const Selection1Page = () => {
         uniqueNumbersArray.push(randomNumber);
       }
     }
-
+    uniqueNumbersArray.sort((a, b) => a - b);
     return uniqueNumbersArray;
   };
   const getRandomNumbers = () => {
