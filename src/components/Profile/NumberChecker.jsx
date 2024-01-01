@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive';
 import '../../components/dataRangeSelector/Modal.css';
 const NumberCheckerModal = ({
   open = false,
@@ -7,6 +8,8 @@ const NumberCheckerModal = ({
   winingNumber = [45, 6, 5, 8, 12, 1],
   selectedSlip = [23, 45, 34, 5, 6],
 }) => {
+  const isLargeScreen = useMediaQuery({ minWidth: 786 });
+  const numberOfColumns = isLargeScreen ? 12 : 8;
   const handleOk = () => {
     setOpen(false);
   };
@@ -48,7 +51,12 @@ const NumberCheckerModal = ({
             <div className="p-5 pb-2">
               <div className="flex flex-col justify-end">
                 <div className="rtl">Selected Slip</div>
-                <div className="flex justify-end gap-[4px]">
+                <div
+                  className="grid justify-end rtl gap-[4px]"
+                  style={{
+                    gridTemplateColumns: `repeat(${numberOfColumns}, minmax(0, 1fr))`,
+                  }}
+                >
                   {selectedSlip.map((val, index) => {
                     return (
                       <div
@@ -62,6 +70,9 @@ const NumberCheckerModal = ({
                             : ' text-[#2f4751] border-gray-500'
                         } `}
                         key={index}
+                        style={{
+                          order: ` ${numberOfColumns - index}`,
+                        }}
                       >
                         <div aria-hidden="true">{val}</div>
                         <input
@@ -76,12 +87,17 @@ const NumberCheckerModal = ({
                   })}
                 </div>
               </div>
-              <div className="p-4 flex flex-col justify-start">
+              <div className="flex flex-col justify-start">
                 <div className="rtl">
                   All number
                   <hr />
                 </div>
-                <div className="flex justify-end flex-wrap gap-[4px]">
+                <div
+                  className="grid  grid-cols-12 justify-end flex-wrap gap-[4px]"
+                  style={{
+                    gridTemplateColumns: `repeat(${numberOfColumns}, minmax(0, 1fr))`,
+                  }}
+                >
                   {renderNumbers()}
                 </div>
               </div>
