@@ -12,7 +12,7 @@ import { useMediaQuery } from 'react-responsive';
 const LotofacilSelectionPage = () => {
   const numbersToBeSelected = 20;
   const numbersToBeSelectedFrom = 100;
-  const isLargeScreen = useMediaQuery({ minWidth: 1200 });
+  const isLargeScreen = useMediaQuery({ minWidth: 768 });
   const numberOfColumns = isLargeScreen ? 10 : 8;
   const colors = {
     mainColor: '#781ea5',
