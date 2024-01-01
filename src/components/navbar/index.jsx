@@ -8,11 +8,9 @@ import { useState } from 'react';
 import mainLogo from '../../assets/smallLogo.svg';
 import { Link } from 'react-router-dom';
 export default function Navbar() {
+  // eslint-disable-next-line no-unused-vars
   const [panelVisible, setPanelVisible] = useState(false);
 
-  const togglePanel = () => {
-    setPanelVisible(!panelVisible);
-  };
   const [gamesVisible, setGamesVisible] = useState(false);
   const [resultsVisible, setResultsVisible] = useState(false);
 
@@ -28,6 +26,7 @@ export default function Navbar() {
 
   return (
     <Disclosure as="nav" className="bg-white">
+      {/* eslint-disable-next-line no-unused-vars */}
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-white shadow-button">

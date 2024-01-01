@@ -3,7 +3,7 @@ import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-import { quinaPush, quinaupdate, quinaDelete } from '../../Store';
+import { lotoManiaPush, lotoManiaupdate, lotoManiaDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
 const LotoManiaSelectionPage = () => {
@@ -16,9 +16,11 @@ const LotoManiaSelectionPage = () => {
     buttonNotSelectedColor: '#fabe45',
   };
   const dispatch = useDispatch();
-  const winingNumbers = useSelector((state) => state.productsSlice.quinaNumber);
+  const winingNumbers = useSelector(
+    (state) => state.productsSlice.lotoManiaNumber
+  );
   const handleDelele = (i) => {
-    dispatch(quinaDelete(i));
+    dispatch(lotoManiaDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -45,7 +47,7 @@ const LotoManiaSelectionPage = () => {
   };
   const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(quinaPush(newNumbersArray));
+    dispatch(lotoManiaPush(newNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
@@ -87,7 +89,7 @@ const LotoManiaSelectionPage = () => {
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
               <div className=" mt-2 lg:mt-3 flex justify-end z-10 mb-4">
                 <GameLogos
-                  logoName="06"
+                  logoName="07"
                   width="170"
                   color="white"
                   customClass={'game'}
@@ -158,7 +160,7 @@ const LotoManiaSelectionPage = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={quinaupdate}
+                                dispatchFunction={lotoManiaupdate}
                                 winingNumbers={winingNumbers}
                               />
                               <div
@@ -203,7 +205,7 @@ const LotoManiaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={quinaPush}
+                            dispatchFunction={lotoManiaPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -221,7 +223,7 @@ const LotoManiaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={quinaPush}
+                            dispatchFunction={lotoManiaPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>

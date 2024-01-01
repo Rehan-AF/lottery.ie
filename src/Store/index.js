@@ -5,6 +5,8 @@ const initialState = {
   lotofacilNumber: [],
   quinaNumber: [],
   megaSenaNumber: [],
+  DuplaSenaNumber: [],
+  lotoManiaNumber: [],
 };
 
 const productsSlice = createSlice({
@@ -78,7 +80,40 @@ const productsSlice = createSlice({
     megaSenareset(state) {
       state.megaSenaNumber = [];
     },
-    // millionaria state
+    // DuplaSena state
+    DuplaSenaPush(state, action) {
+      state.DuplaSenaNumber.push(action.payload);
+    },
+    DuplaSenaupdate(state, action) {
+      const { index, newValue } = action.payload;
+      if (state.DuplaSenaNumber[index]) {
+        state.DuplaSenaNumber[index] = newValue;
+      }
+    },
+    DuplaSenaDelete(state, action) {
+      const indexToDelete = action.payload;
+      state.DuplaSenaNumber.splice(indexToDelete, 1);
+    },
+    DuplaSenareset(state) {
+      state.DuplaSenaNumber = [];
+    },
+    // DuplaSena state
+    lotoManiaPush(state, action) {
+      state.lotoManiaNumber.push(action.payload);
+    },
+    lotoManiaupdate(state, action) {
+      const { index, newValue } = action.payload;
+      if (state.lotoManiaNumber[index]) {
+        state.lotoManiaNumber[index] = newValue;
+      }
+    },
+    lotoManiaDelete(state, action) {
+      const indexToDelete = action.payload;
+      state.lotoManiaNumber.splice(indexToDelete, 1);
+    },
+    lotoManiareset(state) {
+      state.lotoManiaNumber = [];
+    },
   },
 });
 
@@ -99,6 +134,14 @@ export const {
   megaSenaupdate,
   megaSenaDelete,
   megaSenareset,
+  DuplaSenaPush,
+  DuplaSenaupdate,
+  DuplaSenaDelete,
+  DuplaSenareset,
+  lotoManiaPush,
+  lotoManiaupdate,
+  lotoManiaDelete,
+  lotoManiareset,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;

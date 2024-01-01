@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Modal } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { updateWiningNumberAtIndex } from '../../Store';
+import { useDispatch } from 'react-redux';
+// import { updateWiningNumberAtIndex } from '../../Store';
 import ConfirmationModal from './ConfirmationModal';
 const NumberSelector = ({
   numberOfWiningNumber,
