@@ -1,10 +1,10 @@
 import React from "react";
 import GameLogos from "./svg/GameLogos";
 const data2 = [[1, 2, 7, 6, 3, 8]];
-import copyicon from "../assets/cards/copy-icon.svg"
+import copyicon from "../assets/cards/copy-icon.svg";
 
 const GameCard = ({
-  LotteryColor="#E3262D",
+  LotteryColor = "#E3262D",
   Time,
   WinningAmount,
   logoSrc,
@@ -15,7 +15,7 @@ const GameCard = ({
   return (
     <div className="  rounded-lg border border-gray-300  shadow-lg mx-6 mt-5 ">
       <div className="flex justify-between items-center bg-[#E7EFF3] border-t rounded-lg px-2 md:px-4 py-2 lg:px-8 ">
-        <div className="flex justify-center items-center"> 
+        <div className="flex justify-center items-center">
           <h5 className=" font-bold md:font-bold  text-xs md:text-base text-[#32444e] pr-2">
             {SerialId}
           </h5>
@@ -29,9 +29,9 @@ const GameCard = ({
           </h5>
         </div>
         <div>
-          <div className={ `bg-[${LotteryColor}] w-8  rounded-full border-transparent h-8`}>
-            
-          </div>
+          <div
+            className={`bg-[${LotteryColor}] w-8  rounded-full border-transparent h-8`}
+          ></div>
         </div>
       </div>
 
@@ -71,7 +71,7 @@ const GameCard = ({
             </h5>
           </div>
           <h5 className=" pl-2 md:pr-1 md:font-[600]  text-sm md:text-base text-[#2C444E] font-bold flex justify-center items-center">
-           : Win Amount
+            : Win Amount
           </h5>
         </div>
       </div>
