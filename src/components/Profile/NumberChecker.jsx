@@ -49,8 +49,12 @@ const NumberCheckerModal = ({
         <div className="modal-container" onClick={handleCancel}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <div className="p-5 pb-2">
-              <div className="flex flex-col justify-end">
-                <div className="rtl">Selected Slip</div>
+              <div className="flex flex-col justify-end mb-4">
+                <div className="rtl mb-3">
+                  <p className="mb-2">Selected Slip</p>
+                  <hr />
+                </div>
+
                 <div
                   className="grid justify-end rtl gap-[4px]"
                   style={{
@@ -88,8 +92,8 @@ const NumberCheckerModal = ({
                 </div>
               </div>
               <div className="flex flex-col justify-start">
-                <div className="rtl">
-                  All number
+                <div className="rtl mb-4">
+                  <p className="mb-3">All number</p>
                   <hr />
                 </div>
                 <div
@@ -101,16 +105,16 @@ const NumberCheckerModal = ({
                   {renderNumbers()}
                 </div>
               </div>
-              <div className="justify-between md:justify-end flex flex-row w-full md:w-auto">
+              <div className="justify-center flex flex-row w-full md:w-auto mt-10">
                 <button
-                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 mr-2 cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
+                  className="shadow_md flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 mr-2  p-4 text-gray-700 bg-white border-gray-700"
                   data-selected="false"
                   onClick={handleCancel}
                 >
                   <span className="text-gray-700">cancle</span>
                 </button>
                 <button
-                  className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10] border-[#b1cc10] "
+                  className="shadow_md flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10] border-[#b1cc10] "
                   data-selected="false"
                   onClick={handleOk}
                 >
