@@ -84,9 +84,7 @@ const SignUp = () => {
       setUnlock(0);
     }
   }, [formik.errors]);
-  const handleStep = () => {
-    setSteps(2);
-  };
+
   return (
     <div className="sm:bg-white md:bg-[#d6e4ea] pt-[2rem] pb-[2rem]">
       <div className="max-w-[810px] pb-[2rem] bg-white rounded-xl sm:shadow-none md:shadow-md  w-full mr-auto ml-auto flex flex-col items-center justify-center">

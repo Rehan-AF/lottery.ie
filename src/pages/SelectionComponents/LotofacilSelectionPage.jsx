@@ -1,4 +1,3 @@
-import background from '../../assets/backgrounds/LottoPlaySlipBack-dsk.svg';
 import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';

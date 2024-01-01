@@ -17,7 +17,7 @@ const MillionariaSelectionPage = () => {
   };
   const dispatch = useDispatch();
   const winingNumbers = useSelector(
-    (state) => state.productsSlice.lotofacilNumber
+    (state) => state.productsSlice.lotoManiaNumber
   );
   const handleDelele = (i) => {
     dispatch(lotofacilDelete(i));

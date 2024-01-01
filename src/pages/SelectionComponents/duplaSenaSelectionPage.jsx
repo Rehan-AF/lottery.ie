@@ -3,7 +3,7 @@ import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-import { quinaPush, quinaupdate, quinaDelete } from '../../Store';
+import { DuplaSenaPush, DuplaSenaupdate, DuplaSenaDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
 const DuplaSenaSelectionPage = () => {
@@ -16,9 +16,11 @@ const DuplaSenaSelectionPage = () => {
     buttonNotSelectedColor: '#f39ea2',
   };
   const dispatch = useDispatch();
-  const winingNumbers = useSelector((state) => state.productsSlice.quinaNumber);
+  const winingNumbers = useSelector(
+    (state) => state.productsSlice.DuplaSenaNumber
+  );
   const handleDelele = (i) => {
-    dispatch(quinaDelete(i));
+    dispatch(DuplaSenaDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -45,7 +47,7 @@ const DuplaSenaSelectionPage = () => {
   };
   const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(quinaPush(newNumbersArray));
+    dispatch(DuplaSenaPush(newNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
@@ -158,7 +160,7 @@ const DuplaSenaSelectionPage = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={quinaupdate}
+                                dispatchFunction={DuplaSenaupdate}
                                 winingNumbers={winingNumbers}
                               />
                               <div
@@ -203,7 +205,7 @@ const DuplaSenaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={quinaPush}
+                            dispatchFunction={DuplaSenaPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -221,7 +223,7 @@ const DuplaSenaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={quinaPush}
+                            dispatchFunction={DuplaSenaPush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
