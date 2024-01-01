@@ -40,14 +40,14 @@ const MyTickets = () => {
                 </h1>
             </div>
          
-      <Card
-        LotteryName="first lottery"
-        Time="12:am"
-        WinningAmount="1200$"
+            <Card
+        LotteryName=""
+        Time="2023/12/20 12:am 1890"
+        WinningAmount="766,777,890"
         logoSrc="01"
         color="red"
         TicketId="1"
-        SerialId="247#444"
+        SerialId="247444fdb66777"
       />
       <div className="px-4 py-6 max-w-lg mx-auto">
         <div className="flex flex-col items-center text-center">
