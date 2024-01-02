@@ -3,8 +3,16 @@ import NumberSelector from './selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
 import OnlyNumberSelector from './onlyNumberSelector';
-import { lotofacilPush, lotofacilupdate, lotofacilDelete } from '../../Store';
+import {
+  millionariaPush,
+  millionariaupdate,
+  millionariaDelete,
+  milliSpecialDelete,
+  milliSpecialPush,
+} from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
+import OnlyNumberSelectorMilli from './selectionComponentsForMellions/onlyNumberSelector';
+import NumberSelectorMilli from './selectionComponentsForMellions/selection';
 
 const MillionariaSelectionPage = () => {
   const numbersToBeSelected = 6;
@@ -17,10 +25,14 @@ const MillionariaSelectionPage = () => {
   };
   const dispatch = useDispatch();
   const winingNumbers = useSelector(
-    (state) => state.productsSlice.lotoManiaNumber
+    (state) => state.productsSlice.millionariaNumber
+  );
+  const winingSpecialNumbers = useSelector(
+    (state) => state.productsSlice.milliSpecialNumber
   );
   const handleDelele = (i) => {
-    dispatch(lotofacilDelete(i));
+    dispatch(millionariaDelete(i));
+    dispatch(milliSpecialDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -45,9 +57,27 @@ const MillionariaSelectionPage = () => {
     uniqueNumbersArray.sort((a, b) => a - b);
     return uniqueNumbersArray;
   };
+  const generateSpecialUniqueNumbers = () => {
+    const getRandomInt = (min, max) =>
+      Math.floor(Math.random() * (max - min + 1)) + min;
+
+    let number1, number2;
+
+    do {
+      number1 = getRandomInt(1, 5);
+      number2 = getRandomInt(1, 5);
+    } while (number1 === number2);
+
+    const sortedNumbers = [number1, number2].sort((a, b) => a - b);
+
+    return sortedNumbers;
+  };
   const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(lotofacilPush(newNumbersArray));
+    const newSoecialNumbersArray = generateSpecialUniqueNumbers();
+
+    dispatch(millionariaPush(newNumbersArray));
+    dispatch(milliSpecialPush(newSoecialNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
@@ -149,7 +179,7 @@ const MillionariaSelectionPage = () => {
                               <div className="font-bold text-gray-700 w-4 text-center">
                                 {index + 1}
                               </div>
-                              <NumberSelector
+                              <NumberSelectorMilli
                                 index={index}
                                 values={val}
                                 numbersToBeSelected={numbersToBeSelected}
@@ -160,7 +190,7 @@ const MillionariaSelectionPage = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={lotofacilupdate}
+                                dispatchFunction={millionariaupdate}
                                 winingNumbers={winingNumbers}
                                 special={true}
                               />
@@ -197,7 +227,7 @@ const MillionariaSelectionPage = () => {
                         })
                       ) : (
                         <div className="mb-[1rem]">
-                          <OnlyNumberSelector
+                          <OnlyNumberSelectorMilli
                             numbersToBeSelected={numbersToBeSelected}
                             numberOfWiningNumber={numbersToBeSelectedFrom}
                             numberOfColumns={numberOfColumns}
@@ -206,7 +236,7 @@ const MillionariaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={lotofacilPush}
+                            dispatchFunction={millionariaPush}
                             winingNumbers={winingNumbers}
                             specialNum={true}
                           />
@@ -216,7 +246,7 @@ const MillionariaSelectionPage = () => {
                     {winingNumbers.length < 10 ? (
                       <div className="flex flex-col items-center">
                         <div className="mb-4">
-                          <OnlyNumberSelector
+                          <OnlyNumberSelectorMilli
                             numbersToBeSelected={numbersToBeSelected}
                             numberOfWiningNumber={numbersToBeSelectedFrom}
                             numberOfColumns={numberOfColumns}
@@ -225,7 +255,7 @@ const MillionariaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={lotofacilPush}
+                            dispatchFunction={millionariaPush}
                             winingNumbers={winingNumbers}
                             specialNum={true}
                           />
