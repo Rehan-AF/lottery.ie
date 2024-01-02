@@ -76,6 +76,7 @@ const ProfileSideBar = () => {
       </div>
       {/* start nav */}
       <Disclosure as="nav" className="bg-white">
+        {/* eslint-disable-next-line no-unused-vars */}
         {({ open }) => (
           <div
             className={`pt-[15px] navPanel ${panelVisible ? 'open' : 'close'}`}

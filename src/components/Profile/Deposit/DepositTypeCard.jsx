@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DepositTypeCard = ({ logo, title, subTitle, description, link }) => {

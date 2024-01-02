@@ -1,4 +1,3 @@
-import React from 'react';
 import GameLogos from '../svg/GameLogos';
 
 const ReusableCard = ({

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const CreditCardPayment = () => {
   const onSubmit = (e) => {
     e.preventDefault();
