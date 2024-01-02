@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import smallLogo from '../../assets/smallLogo.svg';
+import { Link } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
-import Accorion from '../Accordion';
 import { useLocation } from 'react-router-dom';
-// import { GamesAccordions, ResultsAccordion } from './mobileNavAccordions';
+
 const ProfileSideBar = () => {
   const [panelVisible, setPanelVisible] = useState(false);
   const [selectedRoute, setSelectedRoute] = useState('My Details');
