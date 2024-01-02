@@ -30,10 +30,10 @@ const ReusableCard = ({
           <div className=" flex  md:grid  md:grid-cols-8 lg:grid-cols-12">
             <div className="sm:relative sm:-right-5 md:right-4  md:col-span-12 rtl ">
               <GameLogos logoName={logoSrc} className="h-10 w-[96]" />
-              <h1 className="pt-4 pb-1 text-base font-bold text-lg">
+              <h1 className="pt-4 pb-1 sm:text-[14px] font-bold text-lg">
                 {DrawText}
               </h1>
-              <h2 className="leading-5 font-black text-xl w-[200px] md:w-auto">
+              <h2 className="leading-5 font-black sm:text-[17px] text-xl w-[200px] md:w-auto">
                 {nextDraw}
               </h2>
               <h3
