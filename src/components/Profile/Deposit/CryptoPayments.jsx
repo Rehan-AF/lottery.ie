@@ -9,6 +9,7 @@ import solana from '../../../assets/coins/solana.svg';
 import tron from '../../../assets/coins/tron.svg';
 import ustd from '../../../assets/coins/ustd.svg';
 import xpr from '../../../assets/coins/xpr.svg';
+import { useState } from 'react';
 const data = [
   {
     logo: bitcoinlogo,
@@ -56,6 +57,12 @@ const CryptoPayments = () => {
   const onSubmit = (e) => {
     e.preventDefault();
   };
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleCardSelection = (cardNumber) => {
+    setSelectedCard(selectedCard === cardNumber ? null : cardNumber);
+    console.log(selectedCard);
+  };
   return (
     <div>
       <div className="px-5 rtl">
@@ -64,7 +71,14 @@ const CryptoPayments = () => {
       <div className="flex flex-wrap gap-[1rem] mt-6 mb-6 justify-end pr-[1rem]">
         {data?.map((val, index) => {
           return (
-            <CryptoPaymnetCard key={index} logo={val.logo} title={val.title} />
+            <CryptoPaymnetCard
+              key={index}
+              logo={val.logo}
+              title={val.title}
+              cardNumber={index}
+              onSelect={handleCardSelection}
+              isSelected={selectedCard === index}
+            />
           );
         })}
       </div>

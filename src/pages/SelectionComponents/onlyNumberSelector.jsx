@@ -14,6 +14,7 @@ const OnlyNumberSelector = ({
   numberOfColumns,
   dispatchFunction,
   winingNumbers,
+  rounded = true,
 }) => {
   const [open, setOpen] = useState(false);
   const [selectedNumbers, setSelectedNumbers] = useState([]);
@@ -140,7 +141,9 @@ const OnlyNumberSelector = ({
   return (
     <>
       <button
-        className="shadowCustom relative text-center rounded-full p-4 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min lg:min-w-[301px]"
+        className={`shadowCustom relative text-center ${
+          rounded ? 'rounded-full' : 'rounded-lg'
+        } p-4 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min lg:min-w-[301px]`}
         onClick={showModal}
       >
         <div className="inline-flex justify-center z-2 mx-1 space-x-1 lg:min-w-[295px]">

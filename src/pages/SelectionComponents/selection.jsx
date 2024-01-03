@@ -14,6 +14,7 @@ const NumberSelector = ({
   numberOfColumns,
   dispatchFunction,
   winingNumbers,
+  rounded = true,
 }) => {
   // const winingNumbers = useSelector(
   //   (state) => state.productsSlice.winingNumber
@@ -130,7 +131,9 @@ const NumberSelector = ({
   return (
     <>
       <button
-        className="shadowCustom relative text-center rounded-full p-4 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min lg:min-w-[301px]"
+        className={`shadowCustom relative text-center ${
+          rounded ? 'rounded-full' : 'rounded-lg'
+        }  p-4 border border-gray-300 hover:shadow-hover cursor-pointer bg-white w-min lg:min-w-[301px]`}
         onClick={showModal}
       >
         {finalSelectedNumbers || winingNumbers[index] ? (
