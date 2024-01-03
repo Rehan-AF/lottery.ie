@@ -143,7 +143,7 @@ const NumberSelectorMilli = ({
               className="sm:w-[32px] sm:h-[32px] md:w-[45px] md:h-[45px]"
               style={
                 selectedSpeicalNumbers[i]
-                  ? { fill: 'rgb(42, 42, 133)' }
+                  ? { fill: '#E0AA3E' }
                   : { fill: '#929bdc' }
               }
             >
@@ -207,9 +207,8 @@ const NumberSelectorMilli = ({
             viewBox="0 0 511.999 511.999"
             className="sm:w-[28px] sm:h-[28px] md:w-[45px] md:h-[45px]"
             style={{
-              fill: isElementSelected
-                ? 'rgb(42, 42, 133)'
-                : 'rgba(42, 42, 133,0.5)',
+              fill: isElementSelected ? '#E0AA3E' : '#E0AA3E',
+              opacity: isElementSelected ? '1' : '0.8',
             }}
           >
             <path d="M420.364,255.999L420.364,255.999l-185.261-20.898L256,420.364  c9.672,24.942,23.54,48.725,43.281,68.465c30.894,30.894,80.984,30.894,111.878,0c15.089-15.089,22.788-34.758,23.137-54.532  c19.775-0.35,39.443-8.048,54.532-23.137c30.895-30.894,30.895-80.984,0-111.878C469.088,279.54,445.305,265.671,420.364,255.999z"></path>
@@ -288,7 +287,7 @@ const NumberSelectorMilli = ({
                     <div
                       key={index}
                       className={`relative  ${
-                        applyPop ? 'popOutAnimation' : ''
+                        applyPop ? 'popOutAnimation ' : ''
                       }`}
                     >
                       <svg
@@ -300,7 +299,7 @@ const NumberSelectorMilli = ({
                         viewBox="0 0 511.999 511.999"
                         className="sm:w-[28px] sm:h-[28px] md:w-[45px] md:h-[45px]"
                         style={{
-                          fill: 'rgb(42, 42, 133)',
+                          fill: '#E0AA3E',
                         }}
                       >
                         <path d="M420.364,255.999L420.364,255.999l-185.261-20.898L256,420.364  c9.672,24.942,23.54,48.725,43.281,68.465c30.894,30.894,80.984,30.894,111.878,0c15.089-15.089,22.788-34.758,23.137-54.532  c19.775-0.35,39.443-8.048,54.532-23.137c30.895-30.894,30.895-80.984,0-111.878C469.088,279.54,445.305,265.671,420.364,255.999z"></path>

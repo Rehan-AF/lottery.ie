@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import GameLogos from './svg/GameLogos';
-const data2 = [1, 2, 7, 6, 3, 8];
 import copyicon from '../assets/cards/copy-icon.svg';
 import NumberCheckerModal from './Profile/NumberChecker';
 import { message } from 'antd';
+const data2 = [29, 30, 31, 32, 33, 34];
 
 const GameCard = ({
   LotteryColor = '#E3262D',
@@ -13,6 +13,8 @@ const GameCard = ({
   SerialId,
   color,
   data = data2,
+  winingNumbers = [29, 30, 32, 34, 36, 37],
+  numberOfColumns = 6,
 }) => {
   const [opneValue, setOpneValue] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
@@ -79,14 +81,30 @@ const GameCard = ({
           </div>
 
           <div className=" sm:order-3 md:order-2 px-2 justify-center md:px-4 md:col-span-1 sm:col-span-2  lg:px-8 flex flex-col md:justify-center md:items-center w-full">
-            <div className="flex my-2 justify-center">
+            <div className="flex my-2 gap-[4px] justify-center">
               {data.map((val, index) => {
                 return (
                   <div
+                    className={` border flex items-center justify-center cursor-pointer rounded-full  sm:w-9 md:w-[49px] sm:h-9 md:h-[49px] border-1 bg-white text-base font-bold ${
+                      winingNumbers.includes(val)
+                        ? `!bg-[${color}] ${
+                            data.includes(val) ? 'opacity-[1]' : 'opacity-[0.5]'
+                          } text-white border-[${color}]`
+                        : ' !bg-gray-300 text-[#2f4751] border-gray-300'
+                    } `}
                     key={index}
-                    className={` mr-1 md:mr-1  text-white border-none flex items-center justify-center cursor-pointer rounded-full w-8 h-8 md:w-11 md:h-11 border-1 border-gray-600 bg-[${LotteryColor}] text-xl font-bold`}
+                    style={{
+                      order: ` ${numberOfColumns - index}`,
+                    }}
                   >
-                    {val}
+                    <div aria-hidden="true">{val}</div>
+                    <input
+                      type="checkbox"
+                      className="opacity-0 absolute"
+                      name="balls"
+                      aria-label={val}
+                      value={val}
+                    />
                   </div>
                 );
               })}
@@ -105,10 +123,10 @@ const GameCard = ({
         </div>
       </div>
       <NumberCheckerModal
-        selectedSlip={data2}
+        selectedSlip={data}
         open={opneValue}
         setOpen={setOpneValue}
-        winingNumber={[1, 23, 7, 12, 34, 8]}
+        winingNumber={winingNumbers}
         mainColor={LotteryColor}
       />
     </>

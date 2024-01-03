@@ -53,22 +53,55 @@ const data = [
 ];
 
 const CryptoPayments = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
-      <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
-        <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-          Deposit Crypto
-        </h1>
-      </div>
       <div className="px-5 rtl">
         <h3 className="text-[22px] font-bold">Select Method</h3>
       </div>
-      <div className="flex flex-wrap gap-[1rem] mt-6 mb-6 justify-evenly">
+      <div className="flex flex-wrap gap-[1rem] mt-6 mb-6 justify-end pr-[1rem]">
         {data?.map((val, index) => {
           return (
             <CryptoPaymnetCard key={index} logo={val.logo} title={val.title} />
           );
         })}
+      </div>
+      <div className="w-full">
+        <div className="leading-loose p-[1rem]">
+          <form
+            className=" rtl w-full p-10 bg-white w-full rounded shadow-xl"
+            onSubmit={onSubmit}
+          >
+            <div className="mt-4">
+              <label
+                className="block text-sm text-gray-00 px-[1rem] mb-2"
+                htmlFor="cus_name"
+              >
+                Amount<span className="text-red-500">*</span>
+              </label>
+              <input
+                className="w-full px-[1rem] py-2 text-gray-700 rounded bg-[#f5f9fa] outline-none"
+                id="cus_name"
+                name="cus_name"
+                type="number"
+                required=""
+                placeholder="Amount"
+                aria-label="Name"
+              />
+            </div>
+
+            <div className="mt-4">
+              <button
+                className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                type="submit"
+              >
+                Continue
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

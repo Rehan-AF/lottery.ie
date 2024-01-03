@@ -9,8 +9,8 @@ import GameLogos from '../../components/svg/GameLogos';
 import { useMediaQuery } from 'react-responsive';
 
 const LotofacilSelectionPage = () => {
-  const numbersToBeSelected = 20;
-  const numbersToBeSelectedFrom = 100;
+  const numbersToBeSelected = 15;
+  const numbersToBeSelectedFrom = 25;
   const isLargeScreen = useMediaQuery({ minWidth: 768 });
   const numberOfColumns = isLargeScreen ? 10 : 8;
   const colors = {
