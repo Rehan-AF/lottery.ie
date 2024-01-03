@@ -111,9 +111,9 @@ const NumberCheckerModal = ({
                             ? `!bg-[${mainColor}] ${
                                 selectedSlip.includes(val)
                                   ? 'opacity-[1]'
-                                  : ' !bg-gray-300 !text-[#2f4751] border-gray-300'
+                                  : '!bg-green-500 text-[#2f4751] border-green-500'
                               } text-white border-[${mainColor}]`
-                            : '!bg-gray-300 text-[#2f4751] border-gray-300'
+                            : '!bg-green-500 text-[#2f4751] border-green-500'
                         } `}
                         key={index}
                         style={{

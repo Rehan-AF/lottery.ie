@@ -7,9 +7,9 @@ import { lotoManiaPush, lotoManiaupdate, lotoManiaDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
 const LotoManiaSelectionPage = () => {
-  const numbersToBeSelected = 6;
-  const numbersToBeSelectedFrom = 50;
-  const numberOfColumns = 6;
+  const numbersToBeSelected = 50;
+  const numbersToBeSelectedFrom = 100;
+  const numberOfColumns = 10;
   const colors = {
     mainColor: '#f6a500',
     backgroundColor: '#ffe4ac',
@@ -162,6 +162,7 @@ const LotoManiaSelectionPage = () => {
                                 }
                                 dispatchFunction={lotoManiaupdate}
                                 winingNumbers={winingNumbers}
+                                rounded={false}
                               />
                               <div
                                 onClick={() => handleDelele(index)}
@@ -207,6 +208,7 @@ const LotoManiaSelectionPage = () => {
                             }
                             dispatchFunction={lotoManiaPush}
                             winingNumbers={winingNumbers}
+                            rounded={false}
                           />
                         </div>
                       )}
@@ -225,6 +227,7 @@ const LotoManiaSelectionPage = () => {
                             }
                             dispatchFunction={lotoManiaPush}
                             winingNumbers={winingNumbers}
+                            rounded={false}
                           />
                         </div>
 

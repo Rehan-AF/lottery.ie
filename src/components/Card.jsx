@@ -2,19 +2,22 @@ import { useState } from 'react';
 import GameLogos from './svg/GameLogos';
 import copyicon from '../assets/cards/copy-icon.svg';
 import NumberCheckerModal from './Profile/NumberChecker';
-import { message } from 'antd';
+import { Tooltip, message } from 'antd';
 const data2 = [29, 30, 31, 32, 33, 34];
 
 const GameCard = ({
   LotteryColor = '#E3262D',
   Time,
+  date,
   WinningAmount,
   logoSrc,
-  SerialId,
+  TicketID,
+  serialID,
   color,
   data = data2,
   winingNumbers = [29, 30, 32, 34, 36, 37],
   numberOfColumns = 6,
+  status,
 }) => {
   const [opneValue, setOpneValue] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
@@ -37,19 +40,19 @@ const GameCard = ({
   };
   return (
     <>
-      <div className="  rounded-lg border border-gray-300  shadow-lg mx-6 mt-5 cursor-pointer z-0">
+      <div className="  rounded-lg border border-gray-300  shadow-lg mx-6 mt-5 z-0">
         <div className="flex  justify-between items-center  md:grid md:grid-cols-3 bg-[#E7EFF3] border-t rounded-lg px-2 md:px-4 py-2 lg:px-8 ">
           <div className="flex justify-start items-center col-span-1">
             <h5 className=" font-bold md:font-bold  text-xs md:text-base text-[#32444e] pr-2">
               {contextHolder}
-              {SerialId}
+              {TicketID}
             </h5>
             <div
               onClick={() => {
-                copyToClipboard(SerialId);
+                copyToClipboard(TicketID);
                 success();
               }}
-              className="z-10"
+              className="z-10  cursor-pointer"
             >
               <img src={copyicon} alt="" className="w-4 h-4" />
             </div>
@@ -57,18 +60,20 @@ const GameCard = ({
 
           <div className="col-span-1 flex justify-center">
             <h5 className=" font-bold md:font-bold  text-xs md:text-base text-[#2C444E]">
-              {Time}
+              {date} | {Time} | {serialID}
             </h5>
           </div>
           <div className="col-span-1 flex justify-end">
-            <div
-              className={`bg-[${LotteryColor}] w-8  rounded-full border-transparent h-8`}
-            ></div>
+            <Tooltip title={status} className=" cursor-pointer">
+              <div
+                className={`bg-[${LotteryColor}] w-8  rounded-full border-transparent h-8`}
+              ></div>
+            </Tooltip>
           </div>
         </div>
 
         <div
-          className=" grid grid-cols-2  md:grid-cols-3 items-center py-2  px-2 md:px-4 lg:px-8    gap-2 "
+          className=" grid grid-cols-2  cursor-pointer  md:grid-cols-3 items-center py-2  px-2 md:px-4 lg:px-8    gap-2 "
           onClick={() => setOpneValue(true)}
         >
           <div className="w-full order-1  col-span-1">
