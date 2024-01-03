@@ -1,13 +1,13 @@
-import { useRef } from "react";
-import "./scroll.css";
-import Card from "../../components/Card";
-import Starlogo from "../../assets/starLogo.svg";
-import backgroundimage1 from "../../assets/backgrounds/EuroMillions.svg";
-import backgroundimage2 from "../../assets/backgrounds/card2.svg";
-import backgroundimage3 from "../../assets/backgrounds/card3.svg";
-import backgroundimage4 from "../../assets/backgrounds/card4.svg";
-import backgroundimage6 from "../../assets/backgrounds/card6.svg";
-import ReusableCard from "./TicketComponent";
+import { useRef } from 'react';
+import './scroll.css';
+import Card from '../../components/Card';
+import Starlogo from '../../assets/starLogo.svg';
+import backgroundimage1 from '../../assets/backgrounds/EuroMillions.svg';
+import backgroundimage2 from '../../assets/backgrounds/card2.svg';
+import backgroundimage3 from '../../assets/backgrounds/card3.svg';
+import backgroundimage4 from '../../assets/backgrounds/card4.svg';
+import backgroundimage6 from '../../assets/backgrounds/card6.svg';
+import ReusableCard from './TicketComponent';
 const MyTickets = () => {
   const carouselRef = useRef(null);
 
@@ -32,7 +32,7 @@ const MyTickets = () => {
 
       <Card
         LotteryName=""
-        Time="2023/12/20 12:am 1890"
+        Time="2023/12/20 | 12:00 am"
         WinningAmount="766,777,890"
         logoSrc="01"
         color="red"

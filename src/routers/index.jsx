@@ -117,8 +117,6 @@ const NewRouter = createBrowserRouter([
       { path: 'change-password', element: <ChangePassword /> },
       { path: 'my-tickets', element: <MyTickets /> },
       { path: 'deposit', element: <DepositPage /> },
-      { path: 'deposit-card', element: <CreditCardPayment /> },
-      { path: 'deposit-crypto', element: <CryptoPayments /> },
     ],
   },
 ]);

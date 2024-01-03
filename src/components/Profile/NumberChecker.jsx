@@ -71,7 +71,7 @@ const NumberCheckerModal = ({
                                   ? 'opacity-[1]'
                                   : 'opacity-[0.5]'
                               } text-white border-[${mainColor}]`
-                            : ' text-[#2f4751] border-gray-500'
+                            : ' !bg-gray-300 text-[#2f4751] border-gray-300'
                         } `}
                         key={index}
                         style={{
@@ -93,16 +93,44 @@ const NumberCheckerModal = ({
               </div>
               <div className="flex flex-col justify-start">
                 <div className="rtl mb-4">
-                  <p className="mb-3">All number</p>
+                  <p className="mb-3">Winning numbers</p>
                   <hr />
                 </div>
                 <div
-                  className="grid  grid-cols-12 justify-end flex-wrap gap-[4px]"
+                  className="grid justify-end rtl gap-[4px]"
                   style={{
                     gridTemplateColumns: `repeat(${numberOfColumns}, minmax(0, 1fr))`,
                   }}
                 >
-                  {renderNumbers()}
+                  {/* {renderNumbers()} */}
+                  {winingNumber.map((val, index) => {
+                    return (
+                      <div
+                        className={` border flex items-center justify-center cursor-pointer rounded-full  sm:w-9 md:w-[49px] sm:h-9 md:h-[49px] border-1 bg-white text-base font-bold ${
+                          winingNumber.includes(val)
+                            ? `!bg-[${mainColor}] ${
+                                selectedSlip.includes(val)
+                                  ? 'opacity-[1]'
+                                  : ' !bg-gray-300 !text-[#2f4751] border-gray-300'
+                              } text-white border-[${mainColor}]`
+                            : '!bg-gray-300 text-[#2f4751] border-gray-300'
+                        } `}
+                        key={index}
+                        style={{
+                          order: ` ${numberOfColumns - index}`,
+                        }}
+                      >
+                        <div aria-hidden="true">{val}</div>
+                        <input
+                          type="checkbox"
+                          className="opacity-0 absolute"
+                          name="balls"
+                          aria-label={val}
+                          value={val}
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               <div className="justify-center flex flex-row w-full md:w-auto mt-10">
