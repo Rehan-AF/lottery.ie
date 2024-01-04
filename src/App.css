@@ -377,3 +377,80 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.ant-table-wrapper {
+  box-shadow: 0 3px 5px #0000000b;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.6rem;
+}
+
+.ant-table-cell {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+.ant-table-row {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  /* border-radius: 0.25rem; */
+  /* border: 0; */
+  /* transition: all; */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.2s;
+  background-color: #fff;
+  cursor: pointer;
+}
+.ant-table-row:hover {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  border-radius: 0.25rem;
+  border: none;
+  /* transition: all; */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.2s;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(47, 55, 0, 0.233);
+  z-index: 10;
+  position: relative;
+}
+&& tbody > tr:hover > td {
+  background: #fff !important;
+}
+.ant-table-cell {
+  font-weight: 500;
+  font-family: iron-sans !important;
+  color: #54474e;
+}
+
+&& thead > tr > th::before {
+  background-color: none !important;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before,
+:where(.css-dev-only-do-not-override-2q8sxy).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > td:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before {
+  background-color: none !important;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-table-wrapper
+  .ant-table-ping-right:not(.ant-table-has-fix-right)
+  .ant-table-container::after {
+  box-shadow: none;
+}
+:where(.css-dev-only-do-not-override-2q8sxy).ant-table-wrapper
+  .ant-table-ping-left:not(.ant-table-has-fix-left)
+  .ant-table-container::before {
+  box-shadow: none;
+}

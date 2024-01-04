@@ -31,8 +31,7 @@ import MyTickets from '../components/Profile/MyTickets.jsx';
 import DuplaSenaSelectionPage from '../pages/SelectionComponents/duplaSenaSelectionPage.jsx';
 import LotoManiaSelectionPage from '../pages/SelectionComponents/lotoManiaSelectionPage.jsx';
 import DepositPage from '../components/Profile/Deposit/DepositPage.jsx';
-import CreditCardPayment from '../components/Profile/Deposit/CreditCardPayment.jsx';
-import CryptoPayments from '../components/Profile/Deposit/CryptoPayments.jsx';
+import WithdrawPage from '../components/Profile/withdraw/WithdrawPage.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -117,6 +116,7 @@ const NewRouter = createBrowserRouter([
       { path: 'change-password', element: <ChangePassword /> },
       { path: 'my-tickets', element: <MyTickets /> },
       { path: 'deposit', element: <DepositPage /> },
+      { path: 'withdraw', element: <WithdrawPage /> },
     ],
   },
 ]);

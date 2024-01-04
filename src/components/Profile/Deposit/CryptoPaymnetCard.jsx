@@ -14,18 +14,21 @@ const CryptoPaymnetCard = ({
       <div
         className={` ${
           isSelected
-            ? 'bg-[#e3a800] ease-in transition-all'
+            ? 'bg-[#c3dc338f] ease-in transition-all'
             : 'bg-[#f5f6f9] ease-in transition-all'
-        } p-5 rounded-lg shadow_md shadow-md flex flex-col items-center`}
+        } sm:p-2 sm:pt-3 md:pt-5 md:p-5 rounded-lg shadow_md shadow-md flex flex-col items-center`}
       >
-        <img src={logo} className="w-[100px] h-[40px]" />
+        <img
+          src={logo}
+          className="sm:w-[80px] sm:h-[40px] md:w-[100px] md:h-[40px]"
+        />
         <h3 className="mt-3 font-semibold">{title}</h3>
         <button
           className={`${
             isSelected
               ? 'bg-[#ffff] ease-in transition-all'
               : 'bg-[#dbe0ee] ease-in transition-all'
-          } text-[#324792] w-full shadow_md py-2 px-4 mt-4 rounded-lg text-sm font-semibold `}
+          } text-[#324792] w-full shadow_md py-2 px-4 sm:mt-2 md:mt-4 rounded-lg text-sm font-semibold `}
           onClick={handleClick}
         >
           Continue
