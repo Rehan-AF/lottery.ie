@@ -68,7 +68,7 @@ const CryptoPayments = () => {
       <div className="px-5 rtl">
         <h3 className="text-[22px] font-bold">Select Method</h3>
       </div>
-      <div className="flex flex-wrap gap-[1rem] mt-6 mb-6 justify-end pr-[1rem]">
+      <div className="flex flex-wrap sm:gap-[0.7rem] md:gap-[1rem] mt-6 mb-6 sm:justify-center md:justify-end sm:pr-0 md:pr-[1rem]">
         {data?.map((val, index) => {
           return (
             <CryptoPaymnetCard
@@ -85,7 +85,7 @@ const CryptoPayments = () => {
       <div className="w-full">
         <div className="leading-loose p-[1rem]">
           <form
-            className=" rtl w-full p-10 bg-white w-full rounded shadow-xl"
+            className=" rtl p-10 bg-white w-full rounded shadow-xl"
             onSubmit={onSubmit}
           >
             <div className="mt-4">
@@ -107,12 +107,23 @@ const CryptoPayments = () => {
             </div>
 
             <div className="mt-4">
-              <button
-                className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
-                type="submit"
-              >
-                Continue
-              </button>
+              {selectedCard ? (
+                <button
+                  className="px-4 py-1 shadow_md text-[#374151] border ease-in-out transition-all border-[#c4dc33] font-bold tracking-wider bg-[#c4dc33] rounded-full"
+                  type="submit"
+                  // disabled={!selectedCard ? true : false}
+                >
+                  Continue
+                </button>
+              ) : (
+                <button
+                  className="px-4 py-1 text-[#374151] border border-[#374151] ease-in-out transition-all font-bold tracking-wider bg-[#e5e7eb] rounded-full"
+                  type="submit"
+                  disabled={true}
+                >
+                  Continue
+                </button>
+              )}
             </div>
           </form>
         </div>

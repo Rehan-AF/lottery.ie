@@ -1,4 +1,7 @@
+import { useState } from 'react';
+
 const CreditCardPayment = () => {
+  const [selectedCard, setSelectedCard] = useState();
   const onSubmit = (e) => {
     e.preventDefault();
   };
@@ -27,16 +30,28 @@ const CreditCardPayment = () => {
               required=""
               placeholder="Your Name"
               aria-label="Name"
+              onChange={(e) => setSelectedCard(e.target.value)}
             />
           </div>
 
           <div className="mt-4">
-            <button
-              className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
-              type="submit"
-            >
-              Continue
-            </button>
+            {selectedCard ? (
+              <button
+                className="px-4 py-1 shadow_md text-[#374151] border ease-in-out transition-all border-[#c4dc33] font-bold tracking-wider bg-[#c4dc33] rounded-full"
+                type="submit"
+                // disabled={!selectedCard ? true : false}
+              >
+                Continue
+              </button>
+            ) : (
+              <button
+                className="px-4 py-1 text-[#374151] border border-[#374151] ease-in-out transition-all font-bold tracking-wider bg-[#e5e7eb] rounded-full"
+                type="submit"
+                disabled={true}
+              >
+                Continue
+              </button>
+            )}
           </div>
         </form>
       </div>

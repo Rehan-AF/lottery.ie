@@ -28,6 +28,9 @@ const ProfileSideBar = () => {
     if (location.pathname === '/account/deposit-crypto') {
       setSelectedRoute('Deposit Crypto');
     }
+    if (location.pathname === '/account/withdraw') {
+      setSelectedRoute('withdraw');
+    }
   }, [location]);
 
   return (
@@ -252,8 +255,8 @@ const ProfileSideBar = () => {
                           </div>
                           Deposit
                         </Link>
-                        <a
-                          href=""
+                        <Link
+                          to="/account/withdraw"
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -273,7 +276,7 @@ const ProfileSideBar = () => {
                             </svg>
                           </div>
                           Withdraw
-                        </a>
+                        </Link>
                         <a
                           href=""
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"

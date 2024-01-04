@@ -151,8 +151,8 @@ const ProfileLayout = () => {
                       </div>
                       Deposit
                     </Link>
-                    <a
-                      href=""
+                    <Link
+                      to="/account/withdraw"
                       className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                     >
                       <div className="pl-3">
@@ -172,7 +172,7 @@ const ProfileLayout = () => {
                         </svg>
                       </div>
                       Withdraw
-                    </a>
+                    </Link>
                     <a
                       href=""
                       className="py-2 flex lg:px-7 lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
