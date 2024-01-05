@@ -1,12 +1,12 @@
 import { Table } from 'antd';
-import NewWithdrawModal from './NewWithdrawModal';
+import NewWithdrawModal from '../withdraw/NewWithdrawModal';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import banCircle from '../../../assets/banCircle.svg';
 import cancleCircle from '../../../assets/cancleCircle.svg';
 import checkCircle from '../../../assets/checkCircle.svg';
 
-const WithdrawPage = () => {
+const Referrals = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 786 });
   const [opneValue, setOpneValue] = useState();
   return (
@@ -67,7 +67,7 @@ const WithdrawPage = () => {
   );
 };
 
-export default WithdrawPage;
+export default Referrals;
 
 const Status = (status) => {
   if (status === 'new') {

@@ -32,6 +32,7 @@ import DuplaSenaSelectionPage from '../pages/SelectionComponents/duplaSenaSelect
 import LotoManiaSelectionPage from '../pages/SelectionComponents/lotoManiaSelectionPage.jsx';
 import DepositPage from '../components/Profile/Deposit/DepositPage.jsx';
 import WithdrawPage from '../components/Profile/withdraw/WithdrawPage.jsx';
+import Referrals from '../components/Profile/Referrals/Referrals.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -117,6 +118,7 @@ const NewRouter = createBrowserRouter([
       { path: 'my-tickets', element: <MyTickets /> },
       { path: 'deposit', element: <DepositPage /> },
       { path: 'withdraw', element: <WithdrawPage /> },
+      { path: 'referrals', element: <Referrals /> },
     ],
   },
 ]);

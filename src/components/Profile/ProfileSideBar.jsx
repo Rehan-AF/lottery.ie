@@ -29,7 +29,10 @@ const ProfileSideBar = () => {
       setSelectedRoute('Deposit Crypto');
     }
     if (location.pathname === '/account/withdraw') {
-      setSelectedRoute('withdraw');
+      setSelectedRoute('Withdraw');
+    }
+    if (location.pathname === '/account/referrals') {
+      setSelectedRoute('Referrals');
     }
   }, [location]);
 
