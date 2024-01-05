@@ -1,4 +1,4 @@
-import { Table } from 'antd';
+import { Table, message } from 'antd';
 import NewWithdrawModal from '../withdraw/NewWithdrawModal';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
@@ -6,65 +6,130 @@ import banCircle from '../../../assets/banCircle.svg';
 import cancleCircle from '../../../assets/cancleCircle.svg';
 import checkCircle from '../../../assets/checkCircle.svg';
 
+import copyicon from '../../../assets/cards/copy-icon.svg';
+import { NoRecordComponent } from '../MyTickets';
+
 const Referrals = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 786 });
   const [opneValue, setOpneValue] = useState();
-  return (
-    <div>
-      <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
-        <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-          Withdraw
-        </h1>
-      </div>
-      <div className="justify-between gap-[1rem] items-center rtl px-[1rem] flex md:flex-row flex-wrap sm:flex-col-reverse md:items-center sm:items-start w-full md:w-auto mt-10">
-        <button
-          className={`
-          bg-[#dbe0ee] ease-in transition-all
-        }text-[#324792]  shadow_md py-2 px-8 sm:mt-2 md:mt-4 rounded-full text-lg font-semibold `}
-          onClick={() => {
-            setOpneValue(true);
-          }}
-        >
-          Withdraw
-        </button>
-        <div className="glassEffect sm:text-[12px] sm:w-full md:w-auto sm:text-center md:text-start md:text-[16px] p-5 gap-[0.5rem] grid sm:grid-cols-3 md:grid-cols-5">
-          <div className="pl-[0.5rem] border-l">
-            <h3 className="font-bold mb-2">Payment Name</h3>
-            <h3>PerfectMoney</h3>
+  const [messageApi, contextHolder] = message.useMessage();
+  const success = () => {
+    messageApi.open({
+      type: 'success',
+      content: 'copied',
+    });
+  };
+  const copyToClipboard = (text) => {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand('copy');
+
+    document.body.removeChild(textarea);
+  };
+  if (modifiedDataSource.length > 0) {
+    return (
+      <div>
+        <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
+          <h1 className="font-black text-lg md:text-xl text-[#32444e]">
+            Withdraw
+          </h1>
+        </div>
+        <div className="justify-between gap-[1rem] items-center rtl px-[1rem] flex md:flex-row flex-wrap sm:flex-col-reverse md:items-center sm:items-start w-full md:w-auto mt-10">
+          <button
+            className={
+              'shadow_md flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov py-3 px-6 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10] border-[#b1cc10] '
+            }
+            onClick={() => {
+              setOpneValue(true);
+            }}
+          >
+            Withdraw
+          </button>
+          <div className="glassEffect sm:text-[12px] sm:w-full md:w-auto sm:text-center md:text-start md:text-[16px] p-5 gap-[0.5rem] grid sm:grid-cols-3 md:grid-cols-5">
+            <div className="pl-[0.5rem] border-l">
+              <h3 className="font-bold mb-2">Payment Name</h3>
+              <h3>PerfectMoney</h3>
+            </div>
+            <div className="pl-[0.5rem] border-l">
+              <h3 className="font-bold mb-2">Fee</h3>
+              <h3>Free</h3>
+            </div>
+            <div className="pr-[0.5rem] sm:border-l-0 md:border-l lg:border-l">
+              <h3 className="font-bold mb-2">Process Time</h3>
+              <h3>0-12 Hours</h3>
+            </div>
+            <div className="pl-[0.5rem] border-l">
+              <h3 className="font-bold mb-2">Min</h3>
+              <h3>5000 TOM</h3>
+            </div>
+            <div>
+              <h3 className="font-bold mb-2">Max</h3>
+              <h3>2500000 TOM</h3>
+            </div>
           </div>
-          <div className="pl-[0.5rem] border-l">
-            <h3 className="font-bold mb-2">Fee</h3>
-            <h3>Free</h3>
-          </div>
-          <div className="pr-[0.5rem] sm:border-l-0 md:border-l lg:border-l">
-            <h3 className="font-bold mb-2">Process Time</h3>
-            <h3>0-12 Hours</h3>
-          </div>
-          <div className="pl-[0.5rem] border-l">
-            <h3 className="font-bold mb-2">Min</h3>
-            <h3>5000 TOM</h3>
-          </div>
-          <div>
-            <h3 className="font-bold mb-2">Max</h3>
-            <h3>2500000 TOM</h3>
+        </div>
+        <NewWithdrawModal opneValue={opneValue} setOpneValue={setOpneValue} />
+        <div className="p-[1rem]">
+          <Table
+            dataSource={modifiedDataSource}
+            columns={columns}
+            className="rtl"
+            scroll={
+              !isLargeScreen && {
+                x: 700,
+              }
+            }
+          />
+        </div>
+        <div className="justify-between gap-[1rem] items-center rtl px-[1rem] flex md:flex-row flex-wrap sm:flex-col-reverse md:items-center sm:items-start w-full md:w-auto mt-[1rem] mb-[1rem]">
+          <div className="glassEffect sm:text-[12px] w-full sm:text-center md:text-center md:text-[16px] p-5 gap-[0.5rem] grid sm:grid-cols-3 ">
+            <div className="pl-[0.5rem] border-l">
+              <h3 className="font-bold mb-2">
+                Your Referral Link
+                <button
+                  onClick={() => {
+                    copyToClipboard('Referal Link');
+                    success();
+                  }}
+                >
+                  <img src={copyicon} alt="" className="w-4 h-4 mr-2" />
+                </button>
+              </h3>
+              <h3>
+                https://refferal-link.com/34234
+                {contextHolder}
+              </h3>
+            </div>
+            <div className="pl-[0.5rem] border-l">
+              <h3 className="font-bold mb-2">Available Earnings</h3>
+              <h3>324</h3>
+            </div>
+            <div className="pr-[0.5rem] sm:border-l-0 md:border-l lg:border-l">
+              <h3 className="font-bold mb-2">Referrals</h3>
+              <h3>12</h3>
+            </div>
           </div>
         </div>
       </div>
-      <NewWithdrawModal opneValue={opneValue} setOpneValue={setOpneValue} />
-      <div className="p-[1rem]">
-        <Table
-          dataSource={modifiedDataSource}
-          columns={columns}
-          className="rtl"
-          scroll={
-            !isLargeScreen && {
-              x: 700,
-            }
-          }
-        />
+    );
+  } else {
+    return (
+      <div className="relative">
+        <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
+          <h1 className="font-black text-lg md:text-xl text-[#32444e]">
+            Withdraw
+          </h1>
+        </div>
+        <div>
+          <NoRecordComponent />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Referrals;
@@ -194,7 +259,7 @@ let dataSource = [
   },
 ];
 
-const modifiedDataSource = dataSource.map((item) => ({
+const modifiedDataSource = dataSource?.map((item) => ({
   ...item,
   status: Status(item.status),
   dateTime: convertTime(item.dateTime),

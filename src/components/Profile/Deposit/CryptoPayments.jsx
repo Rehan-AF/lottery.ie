@@ -28,10 +28,6 @@ const data = [
     title: 'ETH',
   },
   {
-    logo: shib,
-    title: 'SHIB',
-  },
-  {
     logo: litecoin,
     title: 'Litecoin',
   },

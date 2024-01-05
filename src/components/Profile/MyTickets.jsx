@@ -41,16 +41,7 @@ const MyTickets = () => {
         TicketID="247444fdb66777"
         status="Lost"
       />
-      <div className="px-4 py-6 max-w-lg mx-auto">
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-2 lg:mb-4">
-            <img src={Starlogo} alt="" />
-          </div>
-          <div className="max-w-xs font-bold text-lg text-[#2C444E]">
-            You haven&apos;t got any Draw Based Games at the moment
-          </div>
-        </div>
-      </div>
+      <NoRecordComponent />
       <div>
         <div className="flex justify-between pb-4 pr-4 text-[#2C444E] rtl">
           <h3 className="font-black text-3xl">Play Now</h3>
@@ -153,3 +144,18 @@ const MyTickets = () => {
 };
 
 export default MyTickets;
+
+export const NoRecordComponent = () => {
+  return (
+    <div className="px-4 py-6 max-w-lg mx-auto">
+      <div className="flex flex-col items-center text-center">
+        <div className="mb-2 lg:mb-4">
+          <img src={Starlogo} alt="" />
+        </div>
+        <div className="max-w-xs font-bold text-lg text-[#2C444E]">
+          You haven&apos;t got any Draw Based Games at the moment
+        </div>
+      </div>
+    </div>
+  );
+};

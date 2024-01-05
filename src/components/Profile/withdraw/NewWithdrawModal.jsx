@@ -43,6 +43,7 @@ const NewWithdrawModal = ({ opneValue = false, setOpneValue, setUnlock }) => {
         <div className="modal-container" onClick={handleCancel}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <div className="p-5 pb-2">
+              <h2 className="text-center font-bold text-[#32444e]">Withdraw</h2>
               <div className="justify-between md:justify-end flex flex-row w-full md:w-auto">
                 <form onSubmit={formik.handleSubmit}>
                   <div className="mt-4 rtl">
