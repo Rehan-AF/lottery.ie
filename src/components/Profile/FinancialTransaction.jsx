@@ -166,8 +166,16 @@ let dataSource = [
   {
     key: '1',
     transactionNumber: 1,
-    Type: 132,
-    Amount: 20,
+    type: 'credit card',
+    amount: 20,
+    balance: 4,
+    dateTime: 1704376951003,
+  },
+  {
+    key: '1',
+    transactionNumber: 1,
+    type: 'credit card',
+    amount: 20,
     balance: 4,
     dateTime: 1704376951003,
   },
@@ -177,7 +185,9 @@ const modifiedDataSource = dataSource.map((item) => ({
   ...item,
   status: Status(item.status),
   dateTime: convertTime(item.dateTime),
-  id: <div className="text-[#4199d2] font-bold">{item.id}</div>,
+  transactionNumber: (
+    <div className="text-[#4199d2] font-bold">{item.transactionNumber}</div>
+  ),
   action: action(item.status, item.id),
 }));
 
@@ -204,7 +214,7 @@ const columns = [
   },
   {
     title: 'Date and Time',
-    dataIndex: 'date',
-    key: 'date',
+    dataIndex: 'dateTime',
+    key: 'dateTime',
   },
 ];
