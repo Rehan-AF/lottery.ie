@@ -8,15 +8,15 @@ import { useEffect, useState } from 'react';
 const validate = (values) => {
   const errors = {};
   if (!values.password) {
-    errors.password = 'Password is required';
+    errors.password = 'رمزعبور اجباری می باشد';
   } else if (values.password.length < 8) {
-    errors.password = 'Password must be at least 8 characters';
+    errors.password = 'رمزعبور می بایستی حداقل شامل ۸ کاراکتر باشد';
   }
 
   if (!values.email) {
-    errors.email = 'Email is required';
+    errors.email = 'آدرس ایمیل اجباری می باشد';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
+    errors.email = 'آدرس ایمیل نامعتبر است';
   }
 
   return errors;
@@ -82,7 +82,7 @@ const SignIn = () => {
             ></path>
           </svg>
           <h3 className="mt-auto text-center text-[#2c444e] font-black text-3xl">
-            Sign in to continue
+            ورود به حساب کاربری
           </h3>
           <svg
             className="hidden w-10 h-13 md:block lg:block"
@@ -122,7 +122,7 @@ const SignIn = () => {
               <div className="flex flex-col gap-[1rem]">
                 <div className="sm:flex flex-col items-center md:block">
                   <FloatingLabelInput
-                    label="Email"
+                    label="آدرس ایمیل"
                     id="email"
                     name="email"
                     type="email"
@@ -135,7 +135,7 @@ const SignIn = () => {
                 <div className="sm:flex flex-col items-center md:block">
                   <FloatingLabelInput
                     id="password"
-                    label="Password"
+                    label="رمز عبور"
                     type="password"
                     name="password"
                     onChange={formik.handleChange}
@@ -145,9 +145,9 @@ const SignIn = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-row cursor-pointer sm:w-[295px] md:w-full sm:mr-auto md:mr-o sm:ml-auto md:ml-o md:justify-start items-center mt-6 mb-11">
+              <div className="rtl flex flex-row cursor-pointer sm:w-[295px] md:w-full sm:mr-auto md:mr-o sm:ml-auto md:ml-o md:justify-start items-center mt-6 mb-11">
                 <input
-                  className="inset-0 w-5 h-5 z-10 cursor-pointer "
+                  className="inset-0 w-5 h-5 z-10 cursor-pointer"
                   type="checkbox"
                   id="remember"
                   name="remember"
@@ -155,9 +155,9 @@ const SignIn = () => {
                 />
                 <label
                   htmlFor="Remember_email"
-                  className="w-full text-blue-dark ml-2"
+                  className="w-full text-blue-dark ml-2 rtl pr-1"
                 >
-                  Remember my email
+                  مرا به خاطر بسپار
                 </label>
                 {/* <div className="absolute text-white border-2 border-blue-dark flex inset-0 items-center justify-center pointer-events-none z-20 rounded bg-blue-dark">
                     <svg
@@ -181,7 +181,7 @@ const SignIn = () => {
                       className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
                       style={{ width: '270px' }}
                     >
-                      <span>Sign in</span>
+                      <span>ورود</span>
                     </button>
                   ) : (
                     <button
@@ -190,14 +190,14 @@ const SignIn = () => {
                       className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
                       style={{ width: '270px' }}
                     >
-                      <span>Sign in</span>
+                      <span>ورود</span>
                     </button>
                   )}
                 </div>
                 <div className="flex flex-col sm:items-center mt-6 mb-12 gap-1 text-blue-900 underline">
                   <div className="flex flex-wrap w-full justify-center">
                     <Link className="text-sm" to="/auth/forgot-password">
-                      Forgot Password?
+                      رمزتان را فراموش کرده اید؟
                     </Link>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ const SignIn = () => {
           </div>
         </div>
         <div
-          className="relative inline-flex justify-between px-4 py-6 bg-cover bg-register-here-tablet sm:mx-[16px] md:mx-0 sm:rounded-tl-xl sm:rounded-tr-xl md:rounded-tl-none md:rounded-tr-none sm:rounded-bl-xl sm:rounded-br-xl sm:mb-[10rem] md:mb-[0px]"
+          className="relative rtl inline-flex justify-between px-4 py-6 bg-cover bg-register-here-tablet sm:mx-[16px] md:mx-0 sm:rounded-tl-xl sm:rounded-tr-xl md:rounded-tl-none md:rounded-tr-none sm:rounded-bl-xl sm:rounded-br-xl sm:mb-[10rem] md:mb-[0px]"
           style={{
             background: `url("${backgroundImage}")`,
             backgroundSize: 'cover',
@@ -214,7 +214,7 @@ const SignIn = () => {
           }}
         >
           <p className="w-6/12 sm:text-[16px] md:text-lg font-bold text-white">
-            Create an account &amp; start playing!
+            اگر در لوتوایران حساب کاربری ندارید، ثبت‌نام کنید
           </p>
           <div className="mt-auto mb-auto text-center whitespace-pre">
             <Link
@@ -222,7 +222,7 @@ const SignIn = () => {
               className="flex items-center justify-center rounded-full border sm:text-[12px] md:text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov px-4 py-1 hover:shadow-md text-[#2c444e] bg-white active:bg-blue-lighter-04"
               to="/auth/sign-up"
             >
-              <span>Register Here</span>
+              <span>ایجاد حساب کاربری</span>
             </Link>
           </div>
           <svg

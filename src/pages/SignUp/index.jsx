@@ -5,29 +5,29 @@ import { useEffect, useState } from 'react';
 const validate = (values) => {
   const errors = {};
   if (!values.firstName) {
-    errors.firstName = 'Required';
+    errors.firstName = 'اجباری';
   }
 
   if (!values.surName) {
-    errors.surName = 'Required';
+    errors.surName = 'اجباری';
   }
   if (!values.email) {
-    errors.email = 'Required';
+    errors.email = 'آدرس ایمیل اجباری می باشد';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
+    errors.email = 'آدرس ایمیل نامعتبر است';
   }
   if (!values.password) {
-    errors.password = 'required';
+    errors.password = 'اجباری';
   } else if (values.password.length < 8) {
-    errors.password = 'must be at least 8 characters';
+    errors.password = 'رمزعبور می بایستی حداقل شامل ۸ کاراکتر باشد';
   }
   if (!values.confirmPassword) {
-    errors.confirmPassword = 'required';
+    errors.confirmPassword = 'اجباری';
   } else if (values.confirmPassword !== values.password) {
-    errors.confirmPassword = 'password does not match';
+    errors.confirmPassword = 'رمزعبور وارد شده مطابقت ندارد';
   }
   if (!values.phoneNumber) {
-    errors.phoneNumber = 'required';
+    errors.phoneNumber = 'تلفن همراه اجباری می باشد';
   }
   // if (!values.affiliateCode) {
   //   errors.affiliateCode = 'required';
@@ -122,7 +122,7 @@ const SignUp = () => {
             ></path>
           </svg>
           <h3 className="mt-auto text-center text-[#2c444e] font-black text-3xl">
-            Register
+            ثبت نام در لوتوایران
           </h3>
           <svg
             className="w-10 h-13"
@@ -214,8 +214,8 @@ const SignUp = () => {
                     steps === 1 ? 'text-[#2d4550]' : 'text-gray-400'
                   }`}
                 >
-                  Account <br />
-                  Details
+                  اطلاعات
+                  شخصی
                 </p>
               </div>
             </div>
@@ -247,8 +247,8 @@ const SignUp = () => {
                       steps === 2 ? 'text-[#2d4550]' : 'text-gray-400'
                     }`}
                   >
-                    User <br />
-                    Details
+                    تأیید تلفن همراه
+                    
                   </p>
                 </div>
               </div>
@@ -302,7 +302,7 @@ const SignUp = () => {
             <>
               <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
-                  label="Name"
+                  label="نام"
                   id="firstName"
                   name="firstName"
                   type="text"
@@ -314,7 +314,7 @@ const SignUp = () => {
               </div>
               <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
-                  label="Surname"
+                  label="نام خانوادگی"
                   id="surName"
                   name="surName"
                   type="text"
@@ -326,7 +326,7 @@ const SignUp = () => {
               </div>
               <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
-                  label="Email"
+                  label="آدرس ایمیل"
                   id="email"
                   name="email"
                   type="email"
@@ -338,7 +338,7 @@ const SignUp = () => {
               </div>
               <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
-                  label="Password"
+                  label="رمز عبور"
                   id="password"
                   name="password"
                   type="password"
@@ -350,7 +350,7 @@ const SignUp = () => {
               </div>
               <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
-                  label="Confirm Pasword"
+                  label="تأیید رمز عبور"
                   id="confirmPassword"
                   name="confirmPassword"
                   type="password"
@@ -366,7 +366,7 @@ const SignUp = () => {
             <>
               <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
-                  label="Phone Number"
+                  label="تلفن همراه"
                   id="phoneNumber"
                   name="phoneNumber"
                   type="tel"
@@ -378,7 +378,7 @@ const SignUp = () => {
               </div>
               <div className="sm:w-full md:w-[378px]">
                 <FloatingLabelInput
-                  label="Affiliate Code"
+                  label="کد نمایندگی"
                   id="affiliateCode"
                   name="affiliateCode"
                   type="text"
@@ -459,7 +459,7 @@ const SignUp = () => {
                   className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
                   onClick={() => setSteps(2)}
                 >
-                  <span>Continue</span>
+                  <span>مرحله بعد</span>
                 </button>
               ) : (
                 <button
@@ -467,7 +467,7 @@ const SignUp = () => {
                   className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
                   data-selected="false"
                 >
-                  <span>Continue</span>
+                  <span>مرحله بعد</span>
                 </button>
               )
             ) : null}
@@ -478,14 +478,14 @@ const SignUp = () => {
                   onClick={() => alert(formik.values)}
                   className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
                 >
-                  <span>Continue</span>
+                  <span>ثبت نام و ورود به سایت</span>
                 </button>
               ) : (
                 <button
                   disabled=""
                   className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
                 >
-                  <span>Continue</span>
+                  <span>ثبت نام و ورود به سایت</span>
                 </button>
               )
             ) : null}

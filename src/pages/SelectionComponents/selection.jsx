@@ -256,7 +256,7 @@ const NumberSelector = ({
               className={`flex justify-center flex-col items-center bg-[${backgroundColor}] h-[126x] p-5 sm:rounded-none md:rounded-tr-lg md:rounded-tl-lg`}
             >
               <div className=" uppercase font-bold text-gray-700 flex justify-center py-3">
-                Game line 1
+                اعداد انتخاب شده
               </div>
               <div
                 className={`grid gap-[4px] space-x-1`}
@@ -298,11 +298,11 @@ const NumberSelector = ({
               opneValue={isNumbersAlreadySelected()}
               setUnlock={setUnlock}
             />
-            <div className="bg-white px-2 mt-2">
+            <div className="bg-white px-2 mt-2 rtl">
               <div className="border-gray-300 border-b-1 py-1 mb-2 flex justify-between">
                 <span className="p-1 text-base text-left flex gap-x-3">
                   <h6 className="font-bold">
-                    Pick {numbersToBeSelected} numbers
+                    {numbersToBeSelected} عدد انتخاب کنید
                   </h6>
                 </span>
                 <p className="py-1">
@@ -329,7 +329,7 @@ const NumberSelector = ({
                   data-selected="false"
                   key="back"
                 >
-                  <span>Reset</span>
+                  <span>پاک کردن اعداد</span>
                 </button>
               ) : (
                 <button
@@ -340,7 +340,7 @@ const NumberSelector = ({
                   data-selected="false"
                   key="back"
                 >
-                  <span>Reset</span>
+                  <span>پاک کردن اعداد</span>
                 </button>
               )}
               {(selectedNumbers.length === numbersToBeSelected &&
@@ -352,7 +352,7 @@ const NumberSelector = ({
                   data-selected="false"
                   onClick={() => handleSubmit()}
                 >
-                  <span>Add numbers</span>
+                  <span>تأیید</span>
                 </button>
               ) : (
                 <button
@@ -362,7 +362,7 @@ const NumberSelector = ({
                   data-selected="false"
                   key="submit"
                 >
-                  <span>Add numbers</span>
+                  <span>تأیید</span>
                 </button>
               )}
             </div>
