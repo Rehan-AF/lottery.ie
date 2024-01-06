@@ -63,7 +63,7 @@ const ViewResultsPage = () => {
         className="flex items-center my-[2rem] justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
         style={{ width: '270px' }}
       >
-        <span>Load more</span>
+        <span>مشاهده نتایج بیشتر</span>
       </button>
     </div>
   );

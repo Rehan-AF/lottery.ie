@@ -11,7 +11,7 @@ const LotofacilHistoryPage = () => {
           defaultActiveKey="2"
           items={[
             {
-              label: 'View Results',
+              label: 'مشاهده نتایج',
               key: '2',
               children: (
                 <Template>

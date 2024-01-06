@@ -58,7 +58,7 @@ const NewModalDateRangePicker = ({ onClose }) => {
               </div>
             </div>
           ) : (
-            'Filter By Date'
+            'فیلتر بر اساس روز'
           )}
         </p>
         <svg
@@ -90,7 +90,7 @@ const NewModalDateRangePicker = ({ onClose }) => {
                 key="back"
                 onClick={closeModal}
               >
-                Cancle
+                انصراف
               </button>
               <button
                 key="submit"
@@ -100,7 +100,7 @@ const NewModalDateRangePicker = ({ onClose }) => {
                 onClick={handleOk}
                 className="w-[144px] h-[54px] flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold shadow-button hover:shadow-button-hov p-4 text-[#1f2937] bg-[#c4dc33] active:bg-[#b1cc10] active:bg-blue-lighter-04"
               >
-                Ok
+                تأیید
               </button>
             </div>
           </div>
