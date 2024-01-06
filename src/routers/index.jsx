@@ -33,6 +33,7 @@ import LotoManiaSelectionPage from '../pages/SelectionComponents/lotoManiaSelect
 import DepositPage from '../components/Profile/Deposit/DepositPage.jsx';
 import WithdrawPage from '../components/Profile/withdraw/WithdrawPage.jsx';
 import Referrals from '../components/Profile/Referrals/Referrals.jsx';
+import FinancialTransaction from '../components/Profile/FinancialTransaction.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -119,6 +120,7 @@ const NewRouter = createBrowserRouter([
       { path: 'deposit', element: <DepositPage /> },
       { path: 'withdraw', element: <WithdrawPage /> },
       { path: 'referrals', element: <Referrals /> },
+      { path: 'transactions', element: <FinancialTransaction /> },
     ],
   },
 ]);

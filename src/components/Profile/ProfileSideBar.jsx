@@ -12,27 +12,22 @@ const ProfileSideBar = () => {
     console.log(location.pathname);
     if (location.pathname === '/account/change-password') {
       setSelectedRoute('Change Password');
-    }
-    if (location.pathname === '/account/my-details') {
+    } else if (location.pathname === '/account/my-details') {
       setSelectedRoute('My Details');
-    }
-    if (location.pathname === '/account/my-tickets') {
+    } else if (location.pathname === '/account/my-tickets') {
       setSelectedRoute('My Tickets');
-    }
-    if (location.pathname === '/account/deposit') {
+    } else if (location.pathname === '/account/deposit') {
       setSelectedRoute('Deposit');
-    }
-    if (location.pathname === '/account/deposit-card') {
+    } else if (location.pathname === '/account/deposit-card') {
       setSelectedRoute('Deposit Card');
-    }
-    if (location.pathname === '/account/deposit-crypto') {
+    } else if (location.pathname === '/account/deposit-crypto') {
       setSelectedRoute('Deposit Crypto');
-    }
-    if (location.pathname === '/account/withdraw') {
+    } else if (location.pathname === '/account/withdraw') {
       setSelectedRoute('Withdraw');
-    }
-    if (location.pathname === '/account/referrals') {
+    } else if (location.pathname === '/account/referrals') {
       setSelectedRoute('Referrals');
+    } else if (location.pathname === '/account/transactions') {
+      setSelectedRoute('Transaction');
     }
   }, [location]);
 
@@ -280,8 +275,8 @@ const ProfileSideBar = () => {
                           </div>
                           Withdraw
                         </Link>
-                        <a
-                          href=""
+                        <Link
+                          to="/account/transactions"
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -303,7 +298,7 @@ const ProfileSideBar = () => {
                             </svg>
                           </div>
                           Finincial Transaction
-                        </a>
+                        </Link>
                       </div>
                     </section>
                     <section
