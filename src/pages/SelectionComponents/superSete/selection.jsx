@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Modal } from 'antd';
 import { useDispatch } from 'react-redux';
 // import { updateWiningNumberAtIndex } from '../../Store';
-import ConfirmationModal from './ConfirmationModal';
+import ConfirmationModal from '../ConfirmationModal';
 const NumberSelector = ({
   numberOfWiningNumber,
   index,
@@ -23,8 +23,9 @@ const NumberSelector = ({
   const [finalSelectedNumbers, setFinalSelectedNumbers] = useState(values);
   const [applyPop, setApplyPop] = useState(false);
   const [unlock, setUnlock] = useState(false);
-  const dispatch = useDispatch();
   const [selectedNumbers, setSelectedNumbers] = useState(values);
+  const [nonNullNumbers, setNonNullNumbers] = useState([]);
+  const dispatch = useDispatch();
   const handleSubmit = () => {
     handleCancel();
     dispatch(dispatchFunction({ index: index, newValue: selectedNumbers }));
@@ -32,11 +33,27 @@ const NumberSelector = ({
       setFinalSelectedNumbers(selectedNumbers);
     }, 300);
   };
-  const handleCheckboxChange = (number) => {
-    if (selectedNumbers.includes(number)) {
-      setSelectedNumbers(selectedNumbers.filter((n) => n !== number));
-    } else if (selectedNumbers.length < numbersToBeSelected) {
-      setSelectedNumbers([...selectedNumbers, number].sort((a, b) => a - b));
+  useEffect(() => {
+    if (!selectedNumbers) {
+      return;
+    }
+    setNonNullNumbers(() =>
+      selectedNumbers.filter((number) => number !== undefined)
+    );
+  }, [selectedNumbers]);
+  const handleCheckboxChange = (i, number) => {
+    if (selectedNumbers[i] === number) {
+      const updatedNumbers = [...selectedNumbers];
+      updatedNumbers[i] = undefined;
+      setSelectedNumbers(updatedNumbers);
+    } else if (selectedNumbers[i] === undefined) {
+      const updatedNumbers = [...selectedNumbers];
+      updatedNumbers[i] = number;
+      setSelectedNumbers(updatedNumbers);
+    } else if (nonNullNumbers.length < numbersToBeSelected) {
+      const updatedNumbers = [...selectedNumbers];
+      updatedNumbers.splice(i, 0, number);
+      setSelectedNumbers(updatedNumbers);
     }
   };
   const isNumbersAlreadySelected = () => {
@@ -51,29 +68,42 @@ const NumberSelector = ({
 
   const renderNumbers = () => {
     const elements = [];
-    for (let i = 1; i <= numberOfWiningNumber; i++) {
-      const isDisabled =
-        selectedNumbers.length >= numbersToBeSelected &&
-        !selectedNumbers.includes(i);
-      elements.push(
-        <div
-          className={` border flex items-center justify-center cursor-pointer rounded-full  sm:w-9 md:w-[49px] sm:h-9 md:h-[49px] border-1 bg-white text-base font-bold ${
-            selectedNumbers.includes(i)
-              ? `!bg-[${mainColor}] text-white border-[${mainColor}]`
-              : ' text-[#2f4751] border-gray-500'
-          } ${isDisabled ? 'opacity-40 cursor-not-allowed' : ''}`}
-          key={i}
-          onClick={() => !isDisabled && handleCheckboxChange(i)}
-        >
-          <div aria-hidden="true">{i}</div>
-          <input
-            type="checkbox"
-            className="opacity-0 absolute"
-            name="balls"
-            aria-label={i}
-            value={i}
+    for (let i = 0; i < 7; i++) {
+      const innerElements = [];
+      const selectedNumber = selectedNumbers[i];
+      for (let j = 0; j <= 9; j++) {
+        const isDisabled = selectedNumber !== undefined && selectedNumber !== j;
+        console.log(isDisabled, 'index', i);
+        innerElements.push(
+          <button
+            className={` border flex gap-[4px] items-center justify-center cursor-pointer rounded-full  sm:w-9 md:w-[49px] sm:h-9 md:h-[49px] border-1 bg-white text-base font-bold ${
+              selectedNumbers[i] === j
+                ? `!bg-[${mainColor}] text-white border-[${mainColor}]`
+                : ' text-[#2f4751] border-gray-500'
+            } 
+            
+            ${isDisabled ? 'opacity-40 cursor-not-allowed' : 'opacity-1'}
+            `}
+            key={j}
+            onClick={() => handleCheckboxChange(i, j)}
             disabled={isDisabled}
-          />
+          >
+            <div aria-hidden="true">{j}</div>
+            <input
+              type="checkbox"
+              className="opacity-0 absolute"
+              name="balls"
+              aria-label={j}
+              value={j}
+              // disabled={isDisabled}
+            />
+          </button>
+        );
+      }
+      elements.push(
+        <div key={i} className="flex flex-col justify-evenly gap-[4px]">
+          <div className="flex justify-center">{i + 1}</div>
+          <div className="flex flex-col gap-[4px]">{innerElements}</div>
         </div>
       );
     }
@@ -81,22 +111,24 @@ const NumberSelector = ({
   };
   const renderSelectedNumbers = () => {
     const elements = [];
-    for (let i = 0; i <= numbersToBeSelected - 1; i++) {
+    for (let i = 0; i < numbersToBeSelected; i++) {
       elements.push(
         <div className="!m-0" key={i}>
-          {selectedNumbers[i] ? (
+          {selectedNumbers[i] !== undefined ? (
             <div
-              className={`self-auto !m-0 bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl text-white bg-game-lotto popAnimation`}
+              className={`self-auto bg-[${mainColor}] border-[${mainColor}] flex font-bold rounded-full justify-center items-center relative sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl text-white bg-game-lotto popAnimation`}
               aria-hidden="true"
             >
               <span className="absolute opacity-0 w-full h-full text-x-sm">
-                {selectedNumbers[i]}
+                {selectedNumbers[i] === 0 ? 0 : selectedNumbers[i]}
               </span>
-              <span aria-hidden="true">{selectedNumbers[i]}</span>
+              <span aria-hidden="true">
+                {selectedNumbers[i] === 0 ? 0 : selectedNumbers[i]}
+              </span>
             </div>
           ) : (
             <div
-              className={`rounded-full !m-0 flex font-bold justify-center items-center relative bg-[${buttonNotSelectedColor}] opacity-30 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl`}
+              className={`rounded-full flex font-bold justify-center items-center relative bg-[${buttonNotSelectedColor}] opacity-30 sm:w-8 md:w-[45px] sm:h-8 md:h-[45px] text-base md:text-2xl`}
             >
               <span className="absolute opacity-0 w-full h-full"></span>
               <span aria-hidden="true"></span>
@@ -307,20 +339,25 @@ const NumberSelector = ({
                 </span>
                 <p className="py-1">
                   <span>
-                    <b>{selectedNumbers.length}</b> از {numbersToBeSelected}
+                    <b>{nonNullNumbers.length}</b> از {numbersToBeSelected}
                   </span>
                 </p>
               </div>
             </div>
             <hr className="mb-[9px]" />
             {/* ::::::::::::::::: render Number Start :::::::::::::::::: */}
-            <div className="ml-3 flex flex-wrap gap-2">{renderNumbers()}</div>
+            <div className="flex justify-center font-bold text-[18px] mb-2">
+              Columns
+            </div>
+            <div className="ml-3 flex flex-wrap justify-evenly gap-2">
+              {renderNumbers()}
+            </div>
             {/* ::::::::::::::::: render Number End :::::::::::::::::: */}
           </div>
           <div className="flex flex-col sm:mb-[20px] md:mb-[0]">
             <hr className="sm:my-[20px] md:my-[20px] " />
             <div className="flex">
-              {selectedNumbers.length > 0 ? (
+              {nonNullNumbers.length > 0 ? (
                 <button
                   role="button"
                   data-elem-reset-num-button="true"
@@ -343,7 +380,7 @@ const NumberSelector = ({
                   <span>پاک کردن اعداد</span>
                 </button>
               )}
-              {(selectedNumbers.length === numbersToBeSelected &&
+              {(nonNullNumbers.length === numbersToBeSelected &&
                 isNumbersAlreadySelected() === false) ||
               unlock === true ? (
                 <button

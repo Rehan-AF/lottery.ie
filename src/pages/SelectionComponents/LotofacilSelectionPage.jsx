@@ -328,7 +328,7 @@ const LotofacilSelectionPage = () => {
                 <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                   <Accorion
                     center={false}
-                    title="Lotto win odds"
+                    title="لوتوفسیل چیست؟"
                     icon={true}
                     pading={false}
                     direction={true}
@@ -349,7 +349,7 @@ const LotofacilSelectionPage = () => {
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
                   center={false}
-                  title="How to Play"
+                  title="چگونه بلیط بخرم؟"
                   icon={true}
                   pading={false}
                   direction={true}
@@ -369,7 +369,7 @@ const LotofacilSelectionPage = () => {
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
                   center={false}
-                  title="Responsible Play"
+                  title="نحوه دریافت جایزه"
                   icon={true}
                   pading={false}
                   direction={true}
@@ -398,7 +398,7 @@ const LotofacilSelectionPage = () => {
           {winingNumbers.length ? (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
               <div className="flex justify-end font-bold text-gray-700">
-                {winingNumbers.length} lines
+               تعداد بلیط: {winingNumbers.length} عدد
               </div>
             </div>
           ) : (

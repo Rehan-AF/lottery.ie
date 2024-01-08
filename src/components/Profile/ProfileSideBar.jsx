@@ -87,7 +87,7 @@ const ProfileSideBar = () => {
               <div className="bg-[#e7eff3] rtl absolute inset-0 bg-blue-lighter-04 pointer-events-auto overflow-y-auto sm:block md:block lg:hidden">
                 <div className="border-b border-gray-300 flex h-14 items-center justify-center lg:h-24 relative">
                   <h1 className="font-black text-[#2c444e] text-lg md:text-xl">
-                    Manage account
+                    حساب کاربری من
                     <button
                       className="right-5 top-0 bottom-0 absolute flex items-center lg:hidden"
                       aria-label="Close menu"
@@ -122,7 +122,7 @@ const ProfileSideBar = () => {
                         id="header-Profile"
                         className="text-lg font-bold pb-2"
                       >
-                        Dashboard
+                        حساب من
                       </h3>
                       <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
                         <Link
@@ -150,7 +150,7 @@ const ProfileSideBar = () => {
                               <path d="M15.9997 14.5531C14.7547 14.5531 13.7419 15.5658 13.7419 16.8109C13.7419 18.0559 14.7549 19.0687 15.9997 19.0687C17.2445 19.0687 18.2575 18.0557 18.2575 16.8109C18.2575 15.5661 17.2445 14.5531 15.9997 14.5531Z"></path>
                             </svg>
                           </div>
-                          My Dashboard
+                          داشبورد
                         </Link>
                         <Link
                           to="/account/my-details"
@@ -181,7 +181,7 @@ const ProfileSideBar = () => {
                               <path d="M8.40002 12.6H4.40002V14.2H8.40002V12.6Z"></path>
                             </svg>
                           </div>
-                          My Details
+                          اطلاعات کاربری
                         </Link>
                         <Link
                           to="/account/my-tickets"
@@ -219,7 +219,7 @@ const ProfileSideBar = () => {
                               ></path>
                             </svg>
                           </div>
-                          My Tickets
+                          بلیط های من
                         </Link>
                       </div>
                     </section>
@@ -231,7 +231,7 @@ const ProfileSideBar = () => {
                         id="header-Finincial"
                         className="text-lg font-bold pb-2"
                       >
-                        Finincial
+                        مالی
                       </h3>
                       <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
                         <Link
@@ -251,7 +251,7 @@ const ProfileSideBar = () => {
                               <path d="M15.2002 5.28667V3.46667H1.3335V10.4C1.33583 11.3851 1.54804 12.3584 1.95602 13.255C2.36399 14.1517 2.95835 14.9511 3.6995 15.6H1.3335V17.3333H15.2002V15.6H12.8342C13.3988 15.1031 13.8789 14.5177 14.2555 13.8667H14.3335C15.4081 13.8678 16.4448 13.4695 17.2423 12.7492C18.0398 12.0289 18.5412 11.038 18.6492 9.96884C18.7572 8.89965 18.4641 7.82848 17.8268 6.96326C17.1894 6.09805 16.2533 5.50052 15.2002 5.28667ZM13.4668 10.4C13.4668 11.7791 12.919 13.1018 11.9438 14.077C10.9686 15.0522 9.64596 15.6 8.26683 15.6C6.8877 15.6 5.56506 15.0522 4.58987 14.077C3.61469 13.1018 3.06683 11.7791 3.06683 10.4V5.20001H13.4668V10.4ZM16.1795 11.3707C15.8525 11.6933 15.4458 11.9236 15.0008 12.038C15.1322 11.5019 15.1992 10.952 15.2002 10.4V7.08934C15.6116 7.23613 15.9794 7.48421 16.2696 7.81068C16.5599 8.13715 16.7632 8.53149 16.8608 8.95728C16.9584 9.38307 16.9471 9.82659 16.828 10.2469C16.709 10.6672 16.4859 11.0507 16.1795 11.362V11.3707Z"></path>
                             </svg>
                           </div>
-                          Deposit
+                          شارژ حساب کاربری
                         </Link>
                         <Link
                           to="/account/withdraw"
@@ -273,7 +273,7 @@ const ProfileSideBar = () => {
                               ></path>
                             </svg>
                           </div>
-                          Withdraw
+                          دریافت جایزه
                         </Link>
                         <Link
                           to="/account/transactions"
@@ -297,7 +297,7 @@ const ProfileSideBar = () => {
                               ></path>
                             </svg>
                           </div>
-                          Finincial Transaction
+                          تراکنش های مالی
                         </Link>
                       </div>
                     </section>
@@ -309,7 +309,7 @@ const ProfileSideBar = () => {
                         id="header-settings"
                         className="text-lg font-bold pb-2"
                       >
-                        Settings
+                        بیشتر
                       </h3>
                       <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
                         <a
@@ -326,7 +326,7 @@ const ProfileSideBar = () => {
                               <path d="M16.4 3H3.6C2.72 3 2.008 3.72 2.008 4.6L2 14.2C2 15.08 2.72 15.8 3.6 15.8H16.4C17.28 15.8 18 15.08 18 14.2V4.6C18 3.72 17.28 3 16.4 3ZM15.6 14.2H4.4C3.96 14.2 3.6 13.84 3.6 13.4V6.2L9.152 9.672C9.672 10 10.328 10 10.848 9.672L16.4 6.2V13.4C16.4 13.84 16.04 14.2 15.6 14.2ZM10 8.6L3.6 4.6H16.4L10 8.6Z"></path>
                             </svg>
                           </div>
-                          Support
+                          پشتیبانی
                         </a>
                         <a
                           href=""
@@ -343,7 +343,7 @@ const ProfileSideBar = () => {
                               <path d="M8.57499 11.2083L6.64166 9.26662L5.40833 10.5083L8.57499 13.6833L14.6917 7.54995L13.4583 6.30829L8.57499 11.2083Z"></path>
                             </svg>
                           </div>
-                          My Referrals
+                          نمایندگی
                         </a>
                         <Link
                           to="change-password"
@@ -363,7 +363,7 @@ const ProfileSideBar = () => {
                               <path d="M18.2444 9.24454C17.8271 9.24454 17.4889 9.58276 17.4889 10C17.4889 14.1294 14.1294 17.4889 10.0002 17.4889C5.87062 17.4889 2.5111 14.1294 2.5111 10C2.5111 5.87062 5.87062 2.51128 10 2.51128C11.5793 2.51128 13.098 3.0079 14.3571 3.90916H13.3597C12.9425 3.90916 12.6041 4.24738 12.6041 4.6648C12.6041 5.08204 12.9425 5.42026 13.3597 5.42026H16.2687C16.6859 5.42026 17.0241 5.08204 17.0241 4.6648V1.75564C17.0241 1.33822 16.6861 1 16.2687 1C15.8513 1 15.513 1.33822 15.513 1.75564V2.88694C13.9485 1.67338 12.0156 1 10 1C7.5961 1 5.33584 1.93618 3.6361 3.6361C1.936 5.33602 1 7.5961 1 10C1 12.4039 1.936 14.6642 3.6361 16.3639C5.33584 18.064 7.5961 19 10 19C12.4037 19 14.664 18.064 16.3637 16.3639C18.0638 14.6642 19 12.4039 19 10C19 9.58276 18.6616 9.24454 18.2444 9.24454Z"></path>
                             </svg>
                           </div>
-                          Change Password
+                          تغییر رمز عبور
                         </Link>
 
                         <a
@@ -381,7 +381,7 @@ const ProfileSideBar = () => {
                               <path d="M12.8798 7.31983L13.9998 6.19983L17.9998 10.1998L13.9998 14.1998L12.8798 13.0798L14.9598 10.9998L6.7998 10.9998L6.7998 9.39983L14.9598 9.39983L12.8798 7.31983Z"></path>
                             </svg>
                           </div>
-                          Log Out
+                          خروج
                         </a>
                       </div>
                     </section>

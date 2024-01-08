@@ -15,7 +15,7 @@ const WithdrawPage = () => {
       <div>
         <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
           <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-            Finincial Transaction
+            تراکنش های مالی
           </h1>
         </div>
         {/* <div className="justify-between gap-[1rem] items-center rtl px-[1rem] flex md:flex-row flex-wrap sm:flex-col-reverse md:items-center sm:items-start w-full md:w-auto mt-10">
@@ -225,27 +225,27 @@ const modifiedDataSource = dataSource.map((item) => ({
 
 const columns = [
   {
-    title: 'Transaction Number',
+    title: 'شماره تراکنش',
     dataIndex: 'transactionNumber',
     key: 'transactionNumber',
   },
   {
-    title: 'Type',
+    title: 'نوع تراکنش',
     dataIndex: 'type',
     key: 'type',
   },
   {
-    title: 'Amount',
+    title: 'مبلغ',
     dataIndex: 'amount',
     key: 'amount',
   },
   {
-    title: 'Balance',
+    title: 'موجودی',
     dataIndex: 'balance',
     key: 'balance',
   },
   {
-    title: 'Date and Time',
+    title: 'تاریخ و ساعت تراکنش',
     dataIndex: 'dateTime',
     key: 'dateTime',
   },

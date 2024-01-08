@@ -50,7 +50,7 @@ const GamesCard = ({
                 className="text-lg md:text-3xl lg:text-xl "
               >
                 <span>
-                  <strong className="lg:text-[20px] ">؟؟؟{amount}*</strong>
+                  <strong className="lg:text-[20px] ">{amount}*</strong>
                 </span>
               </span>
             </h3>

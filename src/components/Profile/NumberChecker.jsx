@@ -27,7 +27,7 @@ const NumberCheckerModal = ({
             <div className="p-5 pb-2">
               <div className="flex flex-col justify-end mb-4">
                 <div className="rtl mb-3">
-                  <p className="mb-2">Selected Slip</p>
+                  <p className="mb-2">اعداد انتخاب شده</p>
                   <hr />
                 </div>
 
@@ -69,7 +69,7 @@ const NumberCheckerModal = ({
               </div>
               <div className="flex flex-col justify-start">
                 <div className="rtl mb-4">
-                  <p className="mb-3">Winning numbers</p>
+                  <p className="mb-3">اعداد برنده شده</p>
                   <hr />
                 </div>
                 <div
@@ -113,7 +113,7 @@ const NumberCheckerModal = ({
                   data-selected="false"
                   onClick={handleOk}
                 >
-                  <span>Confirm</span>
+                  <span>بستن</span>
                 </button>
               </div>
             </div>

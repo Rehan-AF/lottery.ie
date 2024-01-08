@@ -115,14 +115,14 @@ const GameCard = ({
               })}
             </div>
           </div>
-          <div className="w-full sm:order-2 md:order-3  flex md:justify-end col-span-1 items-center ">
+          <div className="w-full sm:order-2 md:order-3  flex md:justify-end col-span-1 items-center">
             <div className="bg-[#E7EFF3] rounded-md px-1 md:px-3">
-              <h5 className=" font-bold md:font-extrabold  text-[11px] md:text-base text-[#2C444E] ">
-                {WinningAmount}
+              <h5 className="font-bold md:font-extrabold  text-[11px] md:text-base text-[#2C444E]">
+              (تومان) {WinningAmount}
               </h5>
             </div>
-            <h5 className=" pl-1 md:pr-1 md:font-[600]  text-[11px] md:text-base text-[#2C444E] font-bold flex justify-center items-center">
-              : Win Amount
+            <h5 className="pl-1 md:pr-1 md:font-[600]  text-[11px] md:text-base text-[#2C444E] font-bold flex justify-center items-center">
+             :مبلغ جایزه
             </h5>
           </div>
         </div>

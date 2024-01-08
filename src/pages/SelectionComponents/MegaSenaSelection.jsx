@@ -82,7 +82,7 @@ const MegaSanaSelectionPage = () => {
                     ></path>
                   </svg>
                 </span>
-                <span className="text-xs">HOME</span>
+                <span className="text-xs">برگشت</span>
               </button>
             </div>
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
@@ -107,11 +107,11 @@ const MegaSanaSelectionPage = () => {
                 </div>
                 <div className="flex flex-row lg:flex-col justify-between">
                   <p className="text-white shadow-text font-bold lg:mt-2 lg:text-xl rtl">
-                    Thursday, 12:45am
+                  سه شنبه ساعت ۱۸:۰۰
                   </p>
                   <div className="flex lg:flex-col justify-between lg:justify-start sm:mt-0.5 items-baseline">
                     <div className="text-white shadow-text font-bold lg:py-8 text-sm lg:text-base w-full rtl">
-                      * estimated
+                    * مبلغ تقریبی می باشد
                     </div>
                   </div>
                 </div>
@@ -127,11 +127,11 @@ const MegaSanaSelectionPage = () => {
                       className="text-[#2C444E] text-2xl capitalize font-bold"
                       aria-level="3"
                     >
-                      Play Lotto
+                      خرید بلیط
                     </h3>
                   </div>
                   <h2 className="text-[#49636E]">
-                    Enter a minimum of 2 lines below.
+                  !حداقل یک بلیط انتخاب کنید
                   </h2>
                 </div>
                 <ol className="hidden" aria-hidden="true"></ol>
@@ -306,7 +306,7 @@ const MegaSanaSelectionPage = () => {
                               </svg>
                             </span>
                             <h6 className="font-bold text-gray-700">
-                              Add Quick Pick Line
+                            انتخاب سریع
                             </h6>
                           </div>
                         </button>
@@ -321,7 +321,7 @@ const MegaSanaSelectionPage = () => {
                 <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                   <Accorion
                     center={false}
-                    title="Lotto win odds"
+                    title="مگاسنا چیست؟"
                     icon={true}
                     pading={false}
                     direction={true}
@@ -342,7 +342,7 @@ const MegaSanaSelectionPage = () => {
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
                   center={false}
-                  title="How to Play"
+                  title="چگونه بلیط بخرم؟"
                   icon={true}
                   pading={false}
                   direction={true}
@@ -362,7 +362,7 @@ const MegaSanaSelectionPage = () => {
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
                   center={false}
-                  title="Responsible Play"
+                  title="نحوه دریافت جایزه"
                   icon={true}
                   pading={false}
                   direction={true}
@@ -391,13 +391,13 @@ const MegaSanaSelectionPage = () => {
           {winingNumbers.length ? (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
               <div className="flex justify-end font-bold text-gray-700">
-                {winingNumbers.length} lines
+              تعداد بلیط: {winingNumbers.length} عدد
               </div>
             </div>
           ) : (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0 pr-3">
               <div className="flex justify-end font-bold text-gray-700">
-                from €2.00 per line
+              خرید بلیط با ۱۰۰ هزار تومان
               </div>
             </div>
           )}
@@ -408,7 +408,7 @@ const MegaSanaSelectionPage = () => {
             className="flex shadow_md items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-68 lg:w-64 h-14 mr-2 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
             data-selected="false"
           >
-            <span className="text-gray-700">back</span>
+            <span className="text-gray-700">برگشت</span>
           </button>
           {winingNumbers.length < 1 ? (
             <button
@@ -416,7 +416,7 @@ const MegaSanaSelectionPage = () => {
               className="flex shadow_md items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-[288px] h-14 cursor-default  text-gray-400 bg-gray-200 border-gray-400"
               data-selected="false"
             >
-              <span className="text-gray-700 py-3">Add to basket</span>
+              <span className="text-gray-700 py-3">افزودن به سبد خرید</span>
             </button>
           ) : (
             <button
@@ -424,7 +424,7 @@ const MegaSanaSelectionPage = () => {
               "
               data-selected="false"
             >
-              <span>Add to basket</span>
+              <span>افزودن به سبد خرید</span>
             </button>
           )}
         </div>

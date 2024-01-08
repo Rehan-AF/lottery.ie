@@ -4,10 +4,10 @@ const validate = (values) => {
   const errors = {};
 
   if (!values.Amount) {
-    errors.Amount = 'Required';
+    errors.Amount = 'این فیلد الزامی است';
   }
   if (!values.WalletAddress) {
-    errors.WalletAddress = 'Required';
+    errors.WalletAddress = 'این فیلد الزامی است';
   }
 
   return errors;
@@ -43,7 +43,7 @@ const NewWithdrawModal = ({ opneValue = false, setOpneValue, setUnlock }) => {
         <div className="modal-container" onClick={handleCancel}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <div className="p-5 pb-2">
-              <h2 className="text-center font-bold text-[#32444e]">Withdraw</h2>
+              <h2 className="text-center font-bold text-[#32444e]">درخواست برداشت</h2>
               <div className="justify-between md:justify-end flex flex-row w-full md:w-auto">
                 <form onSubmit={formik.handleSubmit}>
                   <div className="mt-4 rtl">
@@ -51,7 +51,7 @@ const NewWithdrawModal = ({ opneValue = false, setOpneValue, setUnlock }) => {
                       className="block text-sm text-gray-00 px-[1rem]"
                       htmlFor="cus_name"
                     >
-                      Amount<span className="text-red-500">*</span>
+                      مبلغ برداشت به تومان<span className="text-red-500">*</span>
                     </label>
                     <input
                       className="w-full px-[1rem] py-2 text-gray-700 rounded bg-[#f5f9fa] outline-none"
@@ -59,7 +59,7 @@ const NewWithdrawModal = ({ opneValue = false, setOpneValue, setUnlock }) => {
                       name="Amount"
                       type="number"
                       required=""
-                      placeholder="Amount"
+                      placeholder="مبلغ برداشت"
                       aria-label="Amount"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -76,7 +76,7 @@ const NewWithdrawModal = ({ opneValue = false, setOpneValue, setUnlock }) => {
                       className="block text-sm text-gray-00 px-[1rem]"
                       htmlFor="cus_name"
                     >
-                      Amount<span className="text-red-500">*</span>
+                      آدرس کیف پول تتر TRC-20<span className="text-red-500">*</span>
                     </label>
                     <input
                       className="w-full px-[1rem] py-2 text-gray-700 rounded bg-[#f5f9fa] outline-none"
@@ -84,7 +84,7 @@ const NewWithdrawModal = ({ opneValue = false, setOpneValue, setUnlock }) => {
                       name="WalletAddress"
                       type="text"
                       required=""
-                      placeholder="WalletAddress"
+                      placeholder="آدرس کیف پول"
                       aria-label="WalletAddress"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
@@ -104,14 +104,14 @@ const NewWithdrawModal = ({ opneValue = false, setOpneValue, setUnlock }) => {
                       data-selected="false"
                       onClick={handleCancel}
                     >
-                      <span className="text-gray-700">cancle</span>
+                      <span className="text-gray-700">لغو</span>
                     </button>
                     <button
                       className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-full sm:w-44 md:w-48 lg:w-64 h-12 shadow-button hover:shadow-button-hov p-4 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10] border-[#b1cc10] "
                       data-selected="false"
                       type="submit"
                     >
-                      <span>Confirm</span>
+                      <span>درخواست برداشت</span>
                     </button>
                   </div>
                 </form>

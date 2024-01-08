@@ -1,24 +1,26 @@
-import background from '../../assets/backgrounds/7_Quina.svg';
-import NumberSelector from './selection';
+import background from '../../assets/backgrounds/8_Super-Sete.svg';
+import NumberSelector from './superSete/selection';
 import Accorion from '../../components/Accordion';
 import { useDispatch, useSelector } from 'react-redux';
-import OnlyNumberSelector from './onlyNumberSelector';
-import { quinaPush, quinaupdate, quinaDelete } from '../../Store';
+import OnlyNumberSelector from './superSete/onlyNumberSelector';
+import { superSetePush, superSeteupdate, superSeteDelete } from '../../Store';
 import GameLogos from '../../components/svg/GameLogos';
 
-const QuinaSelectionPage = () => {
-  const numbersToBeSelected = 5;
-  const numbersToBeSelectedFrom = 80;
-  const numberOfColumns = 5;
+const SuperSeteSelectionPage = () => {
+  const numbersToBeSelected = 7;
+  const numbersToBeSelectedFrom = 60;
+  const numberOfColumns = 7;
   const colors = {
-    mainColor: '#0094b3',
-    backgroundColor: '#a1e1ef',
-    buttonNotSelectedColor: '#70c9dd',
+    mainColor: '#11822f',
+    backgroundColor: '#e5efac',
+    buttonNotSelectedColor: '#37934f',
   };
   const dispatch = useDispatch();
-  const winingNumbers = useSelector((state) => state.productsSlice.quinaNumber);
+  const winingNumbers = useSelector(
+    (state) => state.productsSlice.superSeteNumbers
+  );
   const handleDelele = (i) => {
-    dispatch(quinaDelete(i));
+    dispatch(superSeteDelete(i));
   };
   const generateUniqueNumbers = (winingNumbers) => {
     const getRandomInt = (min, max) =>
@@ -26,13 +28,13 @@ const QuinaSelectionPage = () => {
 
     const isNumbersAlreadySelected = (numbersArray) =>
       winingNumbers.some((existingArray) =>
-        existingArray.every((num) => numbersArray.includes(num))
+        existingArray.includes(numbersArray)
       );
 
     let uniqueNumbersArray = [];
 
-    while (uniqueNumbersArray.length < numbersToBeSelected) {
-      const randomNumber = getRandomInt(1, numbersToBeSelectedFrom);
+    while (uniqueNumbersArray.length < 7) {
+      const randomNumber = getRandomInt(0, 9 - 1);
       if (
         !uniqueNumbersArray.includes(randomNumber) &&
         !isNumbersAlreadySelected([...uniqueNumbersArray, randomNumber])
@@ -40,24 +42,24 @@ const QuinaSelectionPage = () => {
         uniqueNumbersArray.push(randomNumber);
       }
     }
+
     uniqueNumbersArray.sort((a, b) => a - b);
     return uniqueNumbersArray;
   };
   const getRandomNumbersLoto = () => {
     const newNumbersArray = generateUniqueNumbers(winingNumbers);
-    dispatch(quinaPush(newNumbersArray));
+    dispatch(superSetePush(newNumbersArray));
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
       <div className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center">
         <div
-          className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-[16rem] lg:h-[22rem] top-0"
+          className=" absolute bg-cover bg-no-repeat w-full h-60 sm:h-[17rem] md:h-[18rem] lg:h-[23rem] top-0"
           style={{
             backgroundImage: `url("${background}")`,
             backgroundRepeat: 'no-repeat',
             width: '100%',
             backgroundSize: 'cover',
-            backgroundPositionY: 'center',
           }}
         ></div>
         <div className="flex flex-col lg:flex-row w-full px-4 md:px-6 lg:px-0 lg:pl-0 h-full z-1 lg:justify-center">
@@ -87,7 +89,7 @@ const QuinaSelectionPage = () => {
             <div className="flex flex-col w-full md:w-125 mx-auto md:mt-9 lg:mt-4 lg:mx-0 lg:pr-14 items-between mt-8">
               <div className=" mt-2 lg:mt-3 flex justify-end z-10 mb-4">
                 <GameLogos
-                  logoName="03"
+                  logoName="08"
                   width="170"
                   color="white"
                   customClass={'game'}
@@ -106,11 +108,11 @@ const QuinaSelectionPage = () => {
                 </div>
                 <div className="flex flex-row lg:flex-col justify-between">
                   <p className="text-white shadow-text font-bold lg:mt-2 lg:text-xl rtl">
-                  سه شنبه ساعت ۱۸:۰۰
+                    سه شنبه ساعت ۱۸:۰۰
                   </p>
                   <div className="flex lg:flex-col justify-between lg:justify-start sm:mt-0.5 items-baseline">
                     <div className="text-white shadow-text font-bold lg:py-8 text-sm lg:text-base w-full rtl">
-                    * مبلغ تقریبی می باشد
+                      * مبلغ تقریبی می باشد
                     </div>
                   </div>
                 </div>
@@ -129,9 +131,7 @@ const QuinaSelectionPage = () => {
                       خرید بلیط
                     </h3>
                   </div>
-                  <h2 className="text-[#49636E]">
-                  !حداقل یک بلیط انتخاب کنید
-                  </h2>
+                  <h2 className="text-[#49636E]">!حداقل یک بلیط انتخاب کنید</h2>
                 </div>
                 <ol className="hidden" aria-hidden="true"></ol>
                 <div className="flex justify-center">
@@ -158,7 +158,7 @@ const QuinaSelectionPage = () => {
                                 buttonNotSelectedColor={
                                   colors.buttonNotSelectedColor
                                 }
-                                dispatchFunction={quinaupdate}
+                                dispatchFunction={superSeteupdate}
                                 winingNumbers={winingNumbers}
                               />
                               <div
@@ -203,7 +203,7 @@ const QuinaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={quinaPush}
+                            dispatchFunction={superSetePush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -221,7 +221,7 @@ const QuinaSelectionPage = () => {
                             buttonNotSelectedColor={
                               colors.buttonNotSelectedColor
                             }
-                            dispatchFunction={quinaPush}
+                            dispatchFunction={superSetePush}
                             winingNumbers={winingNumbers}
                           />
                         </div>
@@ -305,7 +305,7 @@ const QuinaSelectionPage = () => {
                               </svg>
                             </span>
                             <h6 className="font-bold text-gray-700">
-                            انتخاب سریع
+                              انتخاب سریع
                             </h6>
                           </div>
                         </button>
@@ -320,7 +320,7 @@ const QuinaSelectionPage = () => {
                 <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                   <Accorion
                     center={false}
-                    title="کوئینا چیست؟"
+                    title="Lotto win odds"
                     icon={true}
                     pading={false}
                     direction={true}
@@ -341,7 +341,7 @@ const QuinaSelectionPage = () => {
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
                   center={false}
-                  title="چگونه بلیط بخرم؟"
+                  title="How to Play"
                   icon={true}
                   pading={false}
                   direction={true}
@@ -361,7 +361,7 @@ const QuinaSelectionPage = () => {
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
                   center={false}
-                  title="نحوه دریافت جایزه"
+                  title="Responsible Play"
                   icon={true}
                   pading={false}
                   direction={true}
@@ -390,13 +390,13 @@ const QuinaSelectionPage = () => {
           {winingNumbers.length ? (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
               <div className="flex justify-end font-bold text-gray-700">
-              تعداد بلیط: {winingNumbers.length} عدد
+                تعداد بلیط: {winingNumbers.length} عدد
               </div>
             </div>
           ) : (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0 pr-3">
               <div className="flex justify-end font-bold text-gray-700">
-              خرید بلیط با ۱۰۰ هزار تومان
+                خرید بلیط با ۱۰۰ هزار تومان
               </div>
             </div>
           )}
@@ -432,4 +432,4 @@ const QuinaSelectionPage = () => {
   );
 };
 
-export default QuinaSelectionPage;
+export default SuperSeteSelectionPage;

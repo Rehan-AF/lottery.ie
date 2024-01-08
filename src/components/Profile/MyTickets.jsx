@@ -26,7 +26,7 @@ const MyTickets = () => {
     <div>
       <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
         <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-          My Tickets
+          بلیط های من
         </h1>
       </div>
 
@@ -39,12 +39,12 @@ const MyTickets = () => {
         logoSrc="01"
         color="red"
         TicketID="247444fdb66777"
-        status="Lost"
+        status="برنده نشده"
       />
       <NoRecordComponent />
       <div>
         <div className="flex justify-between pb-4 pr-4 text-[#2C444E] rtl">
-          <h3 className="font-black text-3xl">Play Now</h3>
+          <h3 className="font-black text-3xl">خرید بلیط</h3>
         </div>
         <div
           className=" overflow-x-scroll space-x-3 max-w-[936px] w-full flex mx-3  p-2  custom-scrollbar "
@@ -54,69 +54,69 @@ const MyTickets = () => {
           <ReusableCard
             backgroundUrl={backgroundimage1}
             logoSrc="01"
-            nextDraw="Tomorrow, 12:30am"
+            nextDraw="یکشنبه ۱۲ مهر"
             jackpotAmount="€17"
-            buttonText="Play from €2.50"
-            DrawText="Next draw"
+            buttonText="خرید با ۵۰ هزار تومان"
+            DrawText="ساعت ۱۸:۰۰"
             Millions="Million*"
-            guaranteedEstamated="*guaranteed"
+            guaranteedEstamated="مبلغ تقریبی می باشد *"
           />
           {/* 2 */}
           <ReusableCard
             backgroundUrl={backgroundimage2}
             logoSrc="02"
-            DrawText="Only €1 per line"
-            nextDraw="Tomorrow, 2:00am"
+            DrawText="ساعت ۱۸:۰۰"
+            nextDraw="یکشنبه ۱۲ مهر"
             jackpotAmount="€1"
-            buttonText="Play from €1"
+            buttonText="خرید با ۵۰ هزار تومان"
             Millions="Million*"
-            guaranteedEstamated="*guaranteed"
+            guaranteedEstamated="مبلغ تقریبی می باشد *"
           />
           {/* 3 */}
           <ReusableCard
             backgroundUrl={backgroundimage3}
             logoSrc="03"
-            DrawText="Next draw"
-            nextDraw="Thursday, 12:45am"
+            DrawText="ساعت ۱۸:۰۰"
+            nextDraw="یکشنبه ۱۲ مهر"
             jackpotAmount="€10.2"
-            buttonText="Play from €4"
+            buttonText="خرید با ۵۰ هزار تومان"
             Millions="Million*"
-            guaranteedEstamated="*estimated"
+            guaranteedEstamated="مبلغ تقریبی می باشد *"
           />
           {/* 4 */}
           <ReusableCard
             backgroundUrl={backgroundimage4}
             logoSrc="04"
             useBackgroundImage={false}
-            DrawText="Next draw"
-            nextDraw="Friday, 12:30am"
+            DrawText="ساعت ۱۸:۰۰"
+            nextDraw="یکشنبه ۱۲ مهر"
             jackpotAmount="€20 "
-            buttonText="Play from €2.50"
+            buttonText="خرید با ۵۰ هزار تومان"
             Millions="Million*"
-            guaranteedEstamated="*guaranteed"
+            guaranteedEstamated="مبلغ تقریبی می باشد *"
           />
           {/* 5 */}
 
           <ReusableCard
             backgroundUrl={backgroundimage4}
             logoSrc="05"
-            DrawText="Next draw"
-            nextDraw="Thursday, 12:45am"
+            DrawText="ساعت ۱۸:۰۰"
+            nextDraw="یکشنبه ۱۲ مهر"
             jackpotAmount="€125,000*"
-            buttonText="Play from €1"
+            buttonText="خرید با ۵۰ هزار تومان"
             Millions=""
-            guaranteedEstamated="*guaranteed"
+            guaranteedEstamated="مبلغ تقریبی می باشد *"
           />
           {/* 6 */}
           <ReusableCard
             backgroundUrl={backgroundimage6}
             logoSrc="07"
-            DrawText="One Millionaire Guaranteed"
-            nextDraw="Monday, 3:00am"
+            DrawText="ساعت ۱۸:۰۰"
+            nextDraw="یکشنبه ۱۲ مهر"
             jackpotAmount="€1"
-            buttonText="Play for €25"
+            buttonText="خرید با ۵۰ هزار تومان"
             Millions="Million*"
-            guaranteedEstamated="*guaranteed"
+            guaranteedEstamated="مبلغ تقریبی می باشد *"
           />
         </div>
         <div className="flex justify-end pt-2 mr-4 my-6">
@@ -153,7 +153,12 @@ export const NoRecordComponent = () => {
           <img src={Starlogo} alt="" />
         </div>
         <div className="max-w-xs font-bold text-lg text-[#2C444E]">
-          You haven&apos;t got any Draw Based Games at the moment
+        <p className="font-black sm:text-[20px] md:text-2xl text-blue-dark text-[#2f4751]">
+                !بلیطی برای نمایش وجود ندارد
+              </p>
+              <p className="sm:text-[14px] md:text-[15.5px] text-[#2f4751]">
+                از گزینه های زیر برای خرید بلیط استفاده کنید
+              </p>
         </div>
       </div>
     </div>

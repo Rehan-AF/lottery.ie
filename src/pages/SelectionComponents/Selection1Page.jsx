@@ -132,11 +132,11 @@ const Selection1Page = () => {
                       className="text-[#2C444E] text-2xl capitalize font-bold"
                       aria-level="3"
                     >
-                      Play Lotto
+                      خرید بلیط
                     </h3>
                   </div>
                   <h2 className="text-[#49636E]">
-                    Enter a minimum of 2 lines below.
+                  !حداقل یک بلیط انتخاب کنید
                   </h2>
                 </div>
                 <ol className="hidden" aria-hidden="true"></ol>
@@ -311,7 +311,7 @@ const Selection1Page = () => {
                               </svg>
                             </span>
                             <h6 className="font-bold text-gray-700">
-                              Add Quick Pick Line
+                            انتخاب سریع
                             </h6>
                           </div>
                         </button>

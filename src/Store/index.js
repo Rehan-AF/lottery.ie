@@ -9,6 +9,7 @@ const initialState = {
   lotoManiaNumber: [],
   millionariaNumber: [],
   milliSpecialNumber: [],
+  superSeteNumbers: [],
 };
 
 const productsSlice = createSlice({
@@ -150,6 +151,23 @@ const productsSlice = createSlice({
     milliSpecialreset(state) {
       state.milliSpecialNumber = [];
     },
+    // super sete state
+    superSetePush(state, action) {
+      state.superSeteNumbers.push(action.payload);
+    },
+    superSeteupdate(state, action) {
+      const { index, newValue } = action.payload;
+      if (state.superSeteNumbers[index]) {
+        state.superSeteNumbers[index] = newValue;
+      }
+    },
+    superSeteDelete(state, action) {
+      const indexToDelete = action.payload;
+      state.superSeteNumbers.splice(indexToDelete, 1);
+    },
+    superSetereset(state) {
+      state.superSeteNumbers = [];
+    },
   },
 });
 
@@ -186,6 +204,10 @@ export const {
   milliSpecialupdate,
   milliSpecialDelete,
   milliSpecialreset,
+  superSetePush,
+  superSeteupdate,
+  superSeteDelete,
+  superSetereset,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;
