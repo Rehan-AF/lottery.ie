@@ -88,10 +88,18 @@ const HomePageTopSection = () => {
           </div>
         </div>
       </div>
-      <CardGreen />
+      <CardGreen link="/draw-games/mega-sena-Selection" />
       <div className="flex flex-col xl:flex-row gap-[1rem]">
-        <MediumCardBlue backgroundImage={backgroundImage7} logo={logo3} />
-        <MediumCardBlue backgroundImage={backgroundImage8} logo={logo8} />
+        <MediumCardBlue
+          backgroundImage={backgroundImage7}
+          logo={logo3}
+          link="/draw-games/quina-Selection"
+        />
+        <MediumCardBlue
+          backgroundImage={backgroundImage8}
+          logo={logo8}
+          link="/draw-games/super-sete-Selection"
+        />
       </div>
       <div className="flex gap-[1rem]"></div>
     </div>

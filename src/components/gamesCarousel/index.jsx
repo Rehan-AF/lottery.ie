@@ -32,7 +32,7 @@ const data = [
     logo: gameLogo_2,
     background: 'linear-gradient(162.45deg,#781ea5 51.95%,#ff3c69 126.15%)',
     gradient: true,
-    date: 'Saturday, 12:30am',
+    date: 'شنبه ساعت ۱۸:۰۰',
     amount: '200 Millions',
     playFor: '2.50',
     animationDuration: 0.26,
@@ -40,7 +40,7 @@ const data = [
   {
     logo: gameLogo_3,
     background: backgroundImage_3,
-    date: 'Tomorrow, 12:30am',
+    date: 'شنبه ساعت ۱۸:۰۰',
     amount: '20,000',
     playFor: '2.50',
     animationDuration: 0.32,
@@ -48,7 +48,7 @@ const data = [
   {
     logo: gameLogo_4,
     background: backgroundImage_4,
-    date: 'Only €1 per line',
+    date: 'شنبه ساعت ۱۸:۰۰',
     amount: '1 Million',
     playFor: '1',
     animationDuration: 0.38,
@@ -56,7 +56,7 @@ const data = [
   {
     logo: gameLogo_5,
     background: backgroundImage_5,
-    date: 'Sunday, 12:45am',
+    date: 'شنبه ساعت ۱۸:۰۰',
     amount: '125,000',
     playFor: '1',
     animationDuration: 0.44,
@@ -64,7 +64,7 @@ const data = [
   {
     logo: gameLogo_6,
     background: backgroundImage_6,
-    date: '32 days to go!',
+    date: 'شنبه ساعت ۱۸:۰۰',
     amount: '1 Million',
     playFor: '25',
     animationDuration: 0.5,
@@ -72,7 +72,7 @@ const data = [
   {
     logo: gameLogo_7,
     background: backgroundImage_7,
-    date: 'Sunday, 12:45am',
+    date: 'شنبه ساعت ۱۸:۰۰',
     amount: '125,000',
     playFor: '1',
     animationDuration: 0.55,
@@ -80,7 +80,7 @@ const data = [
   {
     logo: gameLogo_8,
     background: backgroundImage_8,
-    date: '32 days to go!',
+    date: 'شنبه ساعت ۱۸:۰۰',
     amount: '1 Million',
     playFor: '25',
     animationDuration: 0.6,

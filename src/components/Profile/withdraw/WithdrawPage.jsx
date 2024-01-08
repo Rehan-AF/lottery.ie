@@ -15,7 +15,7 @@ const WithdrawPage = () => {
       <div>
         <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
           <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-            Withdraw
+            دریافت جایزه
           </h1>
         </div>
         <div className="justify-between gap-[1rem] items-center rtl px-[1rem] flex md:flex-row flex-wrap sm:flex-col-reverse md:items-center sm:items-start w-full md:w-auto mt-10">
@@ -27,28 +27,28 @@ const WithdrawPage = () => {
               setOpneValue(true);
             }}
           >
-            Withdraw
+            برداشت جایزه
           </button>
           <div className="glassEffect sm:text-[12px] sm:w-full md:w-auto sm:text-center md:text-start md:text-[16px] p-5 gap-[0.5rem] grid sm:grid-cols-3 md:grid-cols-5">
             <div className="pl-[0.5rem] border-l">
-              <h3 className="font-bold mb-2">Payment Name</h3>
-              <h3>PerfectMoney</h3>
+              <h3 className="font-bold mb-2">سیستم پرداخت</h3>
+              <h3>تتر TRC-20</h3>
             </div>
             <div className="pl-[0.5rem] border-l">
-              <h3 className="font-bold mb-2">Fee</h3>
-              <h3>Free</h3>
+              <h3 className="font-bold mb-2">کارمزد</h3>
+              <h3>رایگان</h3>
             </div>
             <div className="pr-[0.5rem] sm:border-l-0 md:border-l lg:border-l">
-              <h3 className="font-bold mb-2">Process Time</h3>
-              <h3>0-12 Hours</h3>
+              <h3 className="font-bold mb-2">پروسه واریز</h3>
+              <h3>۱۲ ساعت</h3>
             </div>
             <div className="pl-[0.5rem] border-l">
-              <h3 className="font-bold mb-2">Min</h3>
-              <h3>5000 TOM</h3>
+              <h3 className="font-bold mb-2">حداقل</h3>
+              <h3>۵۰۰ هزار تومان</h3>
             </div>
             <div>
-              <h3 className="font-bold mb-2">Max</h3>
-              <h3>2500000 TOM</h3>
+              <h3 className="font-bold mb-2">حداکثر</h3>
+              <h3>نامحدود</h3>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ const WithdrawPage = () => {
       <div className="relative">
         <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
           <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-            Withdraw
+            دریافت جایزه
           </h1>
         </div>
         <div>
@@ -86,14 +86,14 @@ const WithdrawPage = () => {
 export default WithdrawPage;
 
 const Status = (status) => {
-  if (status === 'new') {
+  if (status === 'جدید') {
     return (
       <div className="flex items-center gap-[4px]">
         <div className="w-[10px] h-[10px] bg-[#54b0e9] rounded-full mb-[1px]"></div>
         <div className="capitalize text-[#54b0e9]">{status}</div>
       </div>
     );
-  } else if (status === 'cancelled') {
+  } else if (status === 'لغو شده') {
     return (
       <div className="flex items-center gap-[4px] ">
         <img
@@ -103,7 +103,7 @@ const Status = (status) => {
         <div className="capitalize text-red-500">{status}</div>
       </div>
     );
-  } else if (status === 'rejected') {
+  } else if (status === 'رد شده') {
     return (
       <div className="flex items-center gap-[4px]">
         <img
@@ -113,7 +113,7 @@ const Status = (status) => {
         <div className="capitalize text-red-700">{status}</div>
       </div>
     );
-  } else if (status === 'paided') {
+  } else if (status === 'پرداخت شده') {
     return (
       <div className="flex items-center gap-[4px]">
         <img
@@ -142,7 +142,7 @@ const convertTime = (timestamp) => {
   );
 };
 const action = (status, item) => {
-  if (status === 'new') {
+  if (status === 'جدید') {
     return (
       <button
         className={`
@@ -150,7 +150,7 @@ const action = (status, item) => {
           }text-[#324792]  shadow_md rounded-md py-[2px] px-3 text-[12px] font-[600] `}
         onClick={() => alert(`id: ${item}`)}
       >
-        Cancle
+        لغو برداشت
       </button>
     );
   } else {
@@ -164,7 +164,7 @@ let dataSource = [
     amountTom: 132,
     amountUSDT: 20,
     balance: 4,
-    status: 'new',
+    status: 'جدید',
     information: 'info',
     dateTime: 1704376951003,
   },
@@ -174,7 +174,7 @@ let dataSource = [
     amountTom: 132,
     amountUSDT: 20,
     balance: 89,
-    status: 'cancelled',
+    status: 'لغو شده',
     information: 'info',
     dateTime: 1704376951003,
   },
@@ -184,7 +184,7 @@ let dataSource = [
     amountTom: 132,
     amountUSDT: 20,
     balance: 89,
-    status: 'new',
+    status: 'جدید',
     information: 'info',
     dateTime: 1704376951003,
   },
@@ -194,7 +194,7 @@ let dataSource = [
     amountTom: 132,
     amountUSDT: 20,
     balance: 89,
-    status: 'rejected',
+    status: 'رد شده',
     information: 'info',
     dateTime: 1704376951003,
   },
@@ -204,7 +204,7 @@ let dataSource = [
     amountTom: 132,
     amountUSDT: 20,
     balance: 89,
-    status: 'paided',
+    status: 'پرداخت شده',
     information: 'info',
     dateTime: 1704376951003,
   },
@@ -219,44 +219,44 @@ const modifiedDataSource = dataSource.map((item) => ({
 }));
 const columns = [
   {
-    title: 'ID#',
+    title: 'شناسه تراکنش',
     dataIndex: 'id',
     key: 'id',
     // fixed: 'left',
     // sorter: true,
   },
   {
-    title: 'Amount(TOM)',
+    title: 'مبلغ (تومان)',
     dataIndex: 'amountTom',
     key: 'amountTom',
   },
   {
-    title: 'Amount(USDT)',
+    title: 'مبلغ (تتر)',
     dataIndex: 'amountUSDT',
     key: 'amountUSDT',
   },
   {
-    title: 'Status',
+    title: 'وضعیت',
     dataIndex: 'status',
     key: 'status',
   },
   {
-    title: 'Balance',
+    title: 'موجودی',
     dataIndex: 'balance',
     key: 'balance',
   },
   {
-    title: 'Information',
+    title: 'اطلاعات برداشت',
     dataIndex: 'information',
     key: 'information',
   },
   {
-    title: 'Date and Time',
+    title: 'تاریخ و ساعت تراکنش',
     dataIndex: 'dateTime',
     key: 'dateTime',
   },
   {
-    title: 'Action',
+    title: '',
     dataIndex: 'action',
     key: 'action',
   },

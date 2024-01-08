@@ -14,19 +14,18 @@ style={{
 
   <section className="sm:hidden md:flex bg-[#49636e] text-white items-center justify-center md:h-[63px]">
         <div className=" flex items-center justify-center">
-          <div className=" text-[#49636e] font-bold h-[36px] sm:w-[42px] md:w-[36px] bg-white rounded-full flex justify-center items-center">
-            18+
-          </div>
+          
           <p className="pl-[9px] text-[0.75rem] font-bold heght-[1rem] border-r border-white pr-[18px]">
-            Play responsibly, Play for fun. National Lottery funds Good Causes
-            around Ireland.
+          شانس آنقدرها هم که فکر می کنید تصادفی نیست، قبل از این که بلیط بخت
+            آزمایی برنده جکپات شود باید شخصی آن را خریداری کرده باشد. (ورا
+            نظریان)
           </p>
         </div>
         <a
           className="sm:hidden md:flex pl-[18px] text-[0.75rem]"
           href="/useful-info/play-responsibly"
         >
-          Responsible play information
+          همین حالا تنها با یک بلیط، شانس خودتو محک بزن
         </a>
       </section>
       <section className="sm:flex flex-row-reverse text-right md:hidden py-[12px] px-[16px] bg-[#49636e] text-white items-center justify-start pl-[1rem] ">

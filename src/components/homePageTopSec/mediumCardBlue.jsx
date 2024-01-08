@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
-const MediumCardBlue = ({ backgroundImage, logo }) => {
+const MediumCardBlue = ({ backgroundImage, logo, link }) => {
   return (
     <div
       className="xsm:h-30 md:min-h-30 h-full w-full xl:mt-[1rem]"
@@ -50,16 +51,19 @@ const MediumCardBlue = ({ backgroundImage, logo }) => {
               </div>
             </div>
             <div className="sm:justify-start flex flex-start h-auto md:flex-col md:items-start -mt-3 md:mt-0 bottom-4 w-1/2 md:w-1/3 md:justify-end false">
-              <a
+              <Link
+                to={link}
                 aria-label="Play from €2.50 link"
                 className="no_hover_shadow self-start on_hover flex justify-center cursor-pointer transition-colors duration-200 group-hover:text-gray-800 shadow-boxButton hover:shadow-boxButtonHov group-hover:bg-white rounded-full"
               >
                 <div className="m-auto rounded-full border border-solid text-center px-3 py-1.5 border-white text-white group-hover:text-gray-800 bg-blue-900 bg-opacity-20 group-hover:bg-white">
                   <div className="uppercase text-sm font-bold leading-none sm:text-[12px]">
-                    <span aria-label="play from €2.50">خرید بلیط با ۸۰ هزار تومان</span>
+                    <span aria-label="play from €2.50">
+                      خرید بلیط با ۸۰ هزار تومان
+                    </span>
                   </div>
                 </div>
-              </a>
+              </Link>
               <p className="sm:text-start  hidden md:block text-white md:none text-sm  font-normal pr-4 bottom-0 left-[16px] pt-2.5 w-1/2">
                 مبلغ تقریبی
               </p>

@@ -28,7 +28,7 @@ const ResultsHistory = ({
           </div>
           <div className="text-right">
             <p className="text-bold text-base sm:text-[14px] md:text-[15.5px] text-[#49636e]">
-              Jackpot
+              مبلغ جایزه جکپات
             </p>
             <p className="font-black text-xl sm:text-[18px] md:text-[20px] text-[#49636e]">
               €{JackportAmount}
@@ -136,10 +136,10 @@ const ResultsHistory = ({
         </div>
       </div>
       <hr />
-      <ResultsAccorion title="View prize breakdown" center={true}>
+      <ResultsAccorion title="جزئیات نتایج" center={true}>
         <ResultsTable data={data} />
         <div className="flex justify-center p-4 bg-white">
-          <a className="underline">How to claim your prize</a>
+          <a className="underline">نحوه دریافت جایزه</a>
         </div>
       </ResultsAccorion>
     </div>

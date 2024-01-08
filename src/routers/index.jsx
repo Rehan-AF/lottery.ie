@@ -34,6 +34,7 @@ import DepositPage from '../components/Profile/Deposit/DepositPage.jsx';
 import WithdrawPage from '../components/Profile/withdraw/WithdrawPage.jsx';
 import Referrals from '../components/Profile/Referrals/Referrals.jsx';
 import FinancialTransaction from '../components/Profile/FinancialTransaction.jsx';
+import SuperSeteSelectionPage from '../pages/SelectionComponents/SuperSeteSelectionpage.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ const NewRouter = createBrowserRouter([
       {
         path: 'draw-games/loto-mania-Selection',
         element: <LotoManiaSelectionPage />,
+      },
+      {
+        path: 'draw-games/super-sete-Selection',
+        element: <SuperSeteSelectionPage />,
       },
     ],
   },

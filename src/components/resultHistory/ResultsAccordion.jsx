@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './styles.css';
 const ResultsAccorion = ({
   children,
-  title = 'price breakdown',
+  title = 'جزئیات نتایج',
   center = false,
   pading = false,
   navbar = false,
@@ -31,7 +31,7 @@ const ResultsAccorion = ({
         } m-h-[100%] gap-[1rem] items-center sm:flex-row-reverse md:flex-row-reverse md:hover:bg-[#f2f6f8] border-b lg:border-b-0 border-gray-300 text-[#2C444E]`}
       >
         <p className="rtl font-bold tracking-wide cursor-pointer text-[#2C444E] ">
-          {visibility === false ? 'view' : 'hide'} {title}
+          {visibility === false ? 'مشاهده' : 'پنهان کردن'} {title}
         </p>
         <span className="">
           <svg

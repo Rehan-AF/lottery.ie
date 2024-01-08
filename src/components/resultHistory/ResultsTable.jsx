@@ -3,8 +3,7 @@ const ResultsTable = ({ data }) => {
     <div className="p-[1rem]">
       <div className="border-[1px] border-blue-100 bg-[#eef0fd] text-[#49636e] text-[13.5px] text-center p-2 bg-message-info-light rounded-md border-1 border-blue-lighter-02">
         <p className="text-sm">
-          There was no winner of the Lotto jackpot. In total, over 68,000
-          players won prizes in the Lotto and Lotto Plus draws.
+        جزئیات تعداد بلیط های برنده شده به همراه تعداد حدس درست و مبالغ جایزه برای این سری از قرعه کشی
         </p>
       </div>
       <table className="table-fixed w-full">
@@ -44,8 +43,7 @@ const ResultsTable = ({ data }) => {
       </table>
       <div className="py-2">
         <p className="rtl text-sm leading-normal text-right">
-          *Prize is redeemable as per above for retail players and as a cash to
-          wallet prize for online players - for full details see Game Rules.
+        * برای دریافت جایزه خود درصورتی که تعداد حدس درست بلیط شما در این جدول می باشد به پنل کاربری و یا نمایندگی های خود مراجعه کنید.
         </p>
       </div>
     </div>

@@ -360,6 +360,7 @@ const OnlyNumberSelectorMilli = ({
               aria-label="Enter Numbers"
               className="font-bold text-lg items-center flex justify-center"
             >
+              <span className="text-[#49636E] pl-1 pr-1"> انتخاب اعداد</span>
               <span className="inline-flex relative">
                 <svg
                   width="15"
@@ -376,7 +377,7 @@ const OnlyNumberSelectorMilli = ({
                   ></path>
                 </svg>
               </span>
-              <span className="text-[#49636E] pl-1"> Enter Numbers</span>
+              
             </p>
           </div>
         </div>
@@ -396,7 +397,7 @@ const OnlyNumberSelectorMilli = ({
               className={`flex justify-center flex-col items-center bg-[${backgroundColor}] h-[126x] p-5 sm:rounded-none md:rounded-tr-lg md:rounded-tl-lg`}
             >
               <div className=" uppercase font-bold text-gray-700 flex justify-center py-3">
-                Game line 1
+              اعداد انتخاب شده
               </div>
               <div
                 className={`grid gap-[4px] space-x-1`}
@@ -443,12 +444,12 @@ const OnlyNumberSelectorMilli = ({
               <div className="border-gray-300 border-b-1 py-1 flex flex-row-reverse justify-between ">
                 <span className="p-1 text-base text-left flex gap-x-3">
                   <h6 className="font-bold rtl">
-                    Pick {numbersToBeSelected} numbers
+                  {numbersToBeSelected} عدد انتخاب کنید
                   </h6>
                 </span>
-                <p className="py-1 flex flex-row-reverse">
+                <p className="py-1 flex flex-row-reverse rtl">
                   <span>
-                    <b>{selectedNumbers.length}</b> of {numbersToBeSelected}
+                  <b>{selectedNumbers.length}</b> از {numbersToBeSelected}
                   </span>
                 </p>
               </div>
@@ -460,11 +461,11 @@ const OnlyNumberSelectorMilli = ({
             <div className="bg-white px-2 mt-4">
               <div className="border-gray-300 border-b-1 py-1 flex flex-row-reverse justify-between ">
                 <span className="p-1 text-base text-left flex gap-x-3">
-                  <h6 className="font-bold rtl">Pick 2 numbers</h6>
+                  <h6 className="font-bold rtl">۲ شبدر انتخاب کنید</h6>
                 </span>
-                <p className="py-1 flex flex-row-reverse">
+                <p className="py-1 flex flex-row-reverse rtl">
                   <span>
-                    <b>{selectedSpeicalNumbers.length}</b> of 2
+                    <b>{selectedSpeicalNumbers.length}</b> از 2
                   </span>
                 </p>
               </div>
@@ -489,7 +490,7 @@ const OnlyNumberSelectorMilli = ({
                   data-selected="false"
                   key="back"
                 >
-                  <span>Reset</span>
+                  <span>پاک کردن اعداد</span>
                 </button>
               ) : (
                 <button
@@ -500,7 +501,7 @@ const OnlyNumberSelectorMilli = ({
                   data-selected="false"
                   key="back"
                 >
-                  <span>Reset</span>
+                  <span>پاک کردن اعداد</span>
                 </button>
               )}
               {(selectedNumbers.length === numbersToBeSelected &&
@@ -513,7 +514,7 @@ const OnlyNumberSelectorMilli = ({
                   data-selected="false"
                   onClick={() => handleSubmit()}
                 >
-                  <span>Add numbers</span>
+                  <span>تأیید</span>
                 </button>
               ) : (
                 <button
@@ -523,7 +524,7 @@ const OnlyNumberSelectorMilli = ({
                   data-selected="false"
                   key="submit"
                 >
-                  <span>Add numbers</span>
+                  <span>تأیید</span>
                 </button>
               )}
             </div>

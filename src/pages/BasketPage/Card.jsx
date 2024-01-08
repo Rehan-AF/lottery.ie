@@ -10,7 +10,7 @@ const Card = () => {
     <>
       <div>
         <span className="text-[#2C444E]  font-semibold text-xl flex rtl pb-4">
-          Your basket items
+          بلیط های انتخاب شده
         </span>
 
         <div className="flex justify-center flex-col w-full items-center">
@@ -61,17 +61,17 @@ const Card = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-white flex items-start justify-between px-4 pt-4 pb-4">
+            <div className="bg-white flex items-start justify-between px-4 pt-4 pb-4 rtl">
               <div>
                 <p className="text-[#2C444E]">2 Lines </p>
                 <p className="text-[#2C444E]">for 1 Draw</p>
               </div>
               <div className="bg-[#E7EFF3] rounded-md py-1 px-3">
-                <p className="text-[#2C444E] font-bold">€5.00</p>
+                <p className="text-[#2C444E] font-bold">۲۱۰ هزار تومان</p>
               </div>
             </div>
             <hr />
-            <ResultsAccorion title="details" center={true}>
+            <ResultsAccorion title="جزيیات بلیط ها" center={true}>
               <hr />
               <div className="bg-gray-100 px-4 pt-2 pb-3 border-t-1 border-grey-300 rounded-b-md">
                 <div className="mb-3 mt-2 self-center flex flex-col items-center">
@@ -113,7 +113,7 @@ const Card = () => {
                 </section>
                 <hr />
                 <section className="flex justify-between text-lg border-t-1 pt-1">
-                  <h4 className="text-[#2C444E] font-bold">Total</h4>
+                  <h4 className="text-[#2C444E] font-bold">مبلغ کل:</h4>
                   <h4 className="text-[#2C444E] font-bold">€6.00</h4>
                 </section>
               </div>

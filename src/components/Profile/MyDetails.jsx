@@ -46,7 +46,7 @@ const MyDetails = () => {
     <div>
       <div className="border-b border-gray-300  h-14 sm:hidden lg:flex items-center w-full justify-center lg:h-24">
         <h1 className="font-black text-lg md:text-xl text-[#32444e]">
-          My Details
+          اطلاعات کاربری
         </h1>
       </div>
       <div>
@@ -57,7 +57,7 @@ const MyDetails = () => {
           <div className="flex flex-col gap-[1rem]">
             <div className="sm:flex flex-col  md:block justify-end items-end">
               <DynamicLabel
-                label="Name"
+                label="نام"
                 id="name"
                 name="name"
                 type="text"
@@ -73,7 +73,7 @@ const MyDetails = () => {
             <div className="sm:flex flex-col items-end md:block">
               <DynamicLabel
                 id="surname"
-                label="Surname"
+                label="نام خانوادگی"
                 type="text"
                 name="surname"
                 tooltip
@@ -85,13 +85,13 @@ const MyDetails = () => {
                 touched={formik.touched.surname}
               />
             </div>
-            <div className="text-[#32444e] text-lg mb-3">
-              <b>Contact Info</b>
+            <div className="text-[#32444e] text-lg mb-3 rtl pt-3">
+              <b>اطلاعات تماس</b>
             </div>
             <div className="sm:flex flex-col items-end md:block">
               <DynamicLabel
                 id="email"
-                label="Email"
+                label="ایمیل"
                 type="email"
                 name="email"
                 tooltip
@@ -106,7 +106,7 @@ const MyDetails = () => {
             <div className="sm:flex flex-col items-end md:block">
               <DynamicLabel
                 id="phoneNumber"
-                label="Phone Number"
+                label="شماره تلفن"
                 type="text"
                 name="phoneNumber"
                 tooltip
@@ -121,7 +121,7 @@ const MyDetails = () => {
             <div className="sm:flex flex-col items-end md:block">
               <DynamicLabel
                 id="AffiliateCode"
-                label="Affiliate Code"
+                label="کد نمایندگی"
                 type="text"
                 name="AffiliateCode"
                 tooltip
@@ -145,7 +145,7 @@ const MyDetails = () => {
                 className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold  p-4 shadow_md text-[#2c444e] bg-[#c4dd32] border-[#c4dd32] active:bg-[#b4ca39]"
                 style={{ width: '270px' }}
               >
-                <span>save changes</span>
+                <span>اعمال تغییرات</span>
               </button>
             ) : (
               <button
@@ -154,7 +154,7 @@ const MyDetails = () => {
                 className="flex items-center justify-center rounded-full border text-sm transition duration-150 uppercase font-bold cursor-default p-4 text-gray-400 bg-gray-200 border-gray-400"
                 style={{ width: '270px' }}
               >
-                <span>save changes</span>
+                <span>اعمال تغییرات</span>
               </button>
             )}
           </div>
