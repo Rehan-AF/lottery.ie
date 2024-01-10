@@ -36,6 +36,7 @@ import Referrals from '../components/Profile/Referrals/Referrals.jsx';
 import FinancialTransaction from '../components/Profile/FinancialTransaction.jsx';
 import SuperSeteSelectionPage from '../pages/SelectionComponents/SuperSeteSelectionpage.jsx';
 import SupportPage from '../components/Profile/support/SupportPage.jsx';
+import HowToClaim from '../pages/howToClaim/index.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ const NewRouter = createBrowserRouter([
       {
         path: 'draw-games/super-sete-Selection',
         element: <SuperSeteSelectionPage />,
+      },
+      {
+        path: 'useful-info/how-to-claim',
+        element: <HowToClaim />,
       },
     ],
   },
