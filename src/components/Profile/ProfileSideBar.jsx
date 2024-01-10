@@ -28,6 +28,8 @@ const ProfileSideBar = () => {
       setSelectedRoute('Referrals');
     } else if (location.pathname === '/account/transactions') {
       setSelectedRoute('Transaction');
+    } else if (location.pathname === '/account/support') {
+      setSelectedRoute('Support');
     }
   }, [location]);
 
@@ -312,8 +314,8 @@ const ProfileSideBar = () => {
                         بیشتر
                       </h3>
                       <div className="bg-white flex flex-col px-5 py-2 rounded-lg shadow text-base lg:px-0 lg:bg-transparent lg:shadow-none">
-                        <a
-                          href=""
+                        <Link
+                          to="/account/support"
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"
                         >
                           <div className="pl-3">
@@ -327,7 +329,7 @@ const ProfileSideBar = () => {
                             </svg>
                           </div>
                           پشتیبانی
-                        </a>
+                        </Link>
                         <a
                           href=""
                           className="py-2 flex  lg:rounded-lg lg:active:bg-blue-lighter-01 lg:hover:bg-blue-lighter-04 lg:hover:text-blue text-base font-bold"

@@ -35,6 +35,7 @@ import WithdrawPage from '../components/Profile/withdraw/WithdrawPage.jsx';
 import Referrals from '../components/Profile/Referrals/Referrals.jsx';
 import FinancialTransaction from '../components/Profile/FinancialTransaction.jsx';
 import SuperSeteSelectionPage from '../pages/SelectionComponents/SuperSeteSelectionpage.jsx';
+import SupportPage from '../components/Profile/support/SupportPage.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -126,6 +127,7 @@ const NewRouter = createBrowserRouter([
       { path: 'withdraw', element: <WithdrawPage /> },
       { path: 'referrals', element: <Referrals /> },
       { path: 'transactions', element: <FinancialTransaction /> },
+      { path: 'support', element: <SupportPage /> },
     ],
   },
 ]);
