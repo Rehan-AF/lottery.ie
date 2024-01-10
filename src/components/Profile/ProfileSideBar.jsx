@@ -28,6 +28,8 @@ const ProfileSideBar = () => {
       setSelectedRoute('Referrals');
     } else if (location.pathname === '/account/transactions') {
       setSelectedRoute('Transaction');
+    } else if (location.pathname === '/account/support') {
+      setSelectedRoute('Support');
     }
   }, [location]);
 
