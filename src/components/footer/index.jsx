@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import backgroundImage from '../../assets/backgrounds/footerBack.svg';
 import './styles.css';
+import { Link } from 'react-router-dom';
 export const Footer = () => {
   const [lotteryVisible, setLotteryVisible] = useState(true);
   const [infoVisible, setInfoVisible] = useState(true);
@@ -106,12 +107,12 @@ export const Footer = () => {
               {lotteryVisible && (
                 <ul className="lg:text-end space-y-2 my-3 sm:flex md:flex sm:self-end md:self-end sm:flex-col sm:items-end md:items-end">
                   <li>
-                    <a
-                      href="/"
+                    <Link
+                      to="/useful-info/faq"
                       className="mx-2 text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
                       سوالات متداول
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -316,12 +317,12 @@ export const Footer = () => {
                 </ul>
                 <ul className="lg:text-end space-y-2 my-3 sm:flex md:flex sm:self-end md:self-end sm:flex-col sm:items-end md:items-end">
                   <li>
-                    <a
-                      href="/"
+                    <Link
+                      to="/useful-info/how-to-claim"
                       className=" text-[14px] text-[#49636e] transition-colors duration-300 md:text-[15.75px] font-extralight hover:text-deep-purple-accent-200"
                     >
                       نحوه دریافت جایزه
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 <ul className="lg:text-end space-y-2 my-3 sm:flex md:flex sm:self-end md:self-end sm:flex-col sm:items-end md:items-end">
