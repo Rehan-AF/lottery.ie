@@ -37,6 +37,7 @@ import FinancialTransaction from '../components/Profile/FinancialTransaction.jsx
 import SuperSeteSelectionPage from '../pages/SelectionComponents/SuperSeteSelectionpage.jsx';
 import SupportPage from '../components/Profile/support/SupportPage.jsx';
 import HowToClaim from '../pages/howToClaim/index.jsx';
+import FAQpage from '../pages/FAQ/FAQ.jsx';
 
 const NewRouter = createBrowserRouter([
   {
@@ -94,6 +95,10 @@ const NewRouter = createBrowserRouter([
       {
         path: 'useful-info/how-to-claim',
         element: <HowToClaim />,
+      },
+      {
+        path: 'useful-info/faq',
+        element: <FAQpage />,
       },
     ],
   },

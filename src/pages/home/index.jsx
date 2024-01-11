@@ -21,7 +21,7 @@ const Home = () => {
           className="self-center flex md:self-center items-center hover:shadow-xl justify-center rounded-full border text-sm transition duration-150 uppercase font-bold w-72 p-4 text-gray-700 bg-[#c4dc33] active:bg-[#b1cc10]  border-[#b1cc10]  lg:text-end lg:self-end"
           data-selected="false"
         >
-          <span>see all instant win games</span>
+          <span>مشاهده نتایج لاتاری ها</span>
         </button>
       </div>
       <Template>

@@ -316,7 +316,7 @@ input::-ms-clear {
   }
   .ant-modal-content {
     width: 100vw;
-    height: 100vh;
+    /* height: auto; */
     margin: 0;
     border-radius: 0px !important;
   }
@@ -326,7 +326,8 @@ input::-ms-clear {
     top: -8px;
   }
   .ant-modal-wrap {
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
+    /* background-color: white; */
   }
 }
 

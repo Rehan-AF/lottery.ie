@@ -11,9 +11,9 @@ const SuperSeteSelectionPage = () => {
   const numbersToBeSelectedFrom = 60;
   const numberOfColumns = 7;
   const colors = {
-    mainColor: '#11822f',
-    backgroundColor: '#e5efac',
-    buttonNotSelectedColor: '#37934f',
+    mainColor: '#82c342',
+    backgroundColor: '#F1F8C5',
+    buttonNotSelectedColor: '#a0d16f',
   };
   const dispatch = useDispatch();
   const winingNumbers = useSelector(
@@ -52,7 +52,7 @@ const SuperSeteSelectionPage = () => {
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
-      <div className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center">
+      <div className="flex flex-col lg:flex-row max-w-[1200px] w-full h-full lg:max-w-screen-lg lg:justify-center">
         <div
           className=" absolute bg-cover bg-no-repeat w-full h-60 sm:h-[17rem] md:h-[18rem] lg:h-[23rem] top-0"
           style={{
@@ -230,7 +230,7 @@ const SuperSeteSelectionPage = () => {
                           className="my-3 uppercase font-bold text-xl"
                           aria-label="or"
                         >
-                          <span className="text-[#2C444E]">or</span>
+                          <span className="text-[#2C444E]">یا</span>
                         </p>
                         <button
                           className="shadowCustom lg:min-w-[301px] relative text-center rounded-full py-4 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
@@ -320,7 +320,7 @@ const SuperSeteSelectionPage = () => {
                 <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                   <Accorion
                     center={false}
-                    title="Lotto win odds"
+                    title="لوتوفسیل چیست؟"
                     icon={true}
                     pading={false}
                     direction={true}
@@ -341,7 +341,7 @@ const SuperSeteSelectionPage = () => {
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
                   center={false}
-                  title="How to Play"
+                  title="چگونه بلیط بخرم؟"
                   icon={true}
                   pading={false}
                   direction={true}
@@ -361,7 +361,7 @@ const SuperSeteSelectionPage = () => {
               <div className="flex flex-col rounded-md shadow mb-3 bg-white  px-4">
                 <Accorion
                   center={false}
-                  title="Responsible Play"
+                  title="نحوه دریافت جایزه"
                   icon={true}
                   pading={false}
                   direction={true}

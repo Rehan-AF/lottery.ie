@@ -377,7 +377,6 @@ const OnlyNumberSelectorMilli = ({
                   ></path>
                 </svg>
               </span>
-              
             </p>
           </div>
         </div>
@@ -390,14 +389,14 @@ const OnlyNumberSelectorMilli = ({
         footer={[]}
         width={756}
       >
-        <div className="flex flex-col justify-between sm:h-[100vh] md:h-full">
+        <div className="flex flex-col justify-between sm:min-h-[100vh] md:min-h-[auto] md:h-full">
           <div>
             {/* ::::::::::::::::: display selected Numbers start  :::::::::::::::::::::*/}
             <div
               className={`flex justify-center flex-col items-center bg-[${backgroundColor}] h-[126x] p-5 sm:rounded-none md:rounded-tr-lg md:rounded-tl-lg`}
             >
               <div className=" uppercase font-bold text-gray-700 flex justify-center py-3">
-              اعداد انتخاب شده
+                اعداد انتخاب شده
               </div>
               <div
                 className={`grid gap-[4px] space-x-1`}
@@ -444,12 +443,12 @@ const OnlyNumberSelectorMilli = ({
               <div className="border-gray-300 border-b-1 py-1 flex flex-row-reverse justify-between ">
                 <span className="p-1 text-base text-left flex gap-x-3">
                   <h6 className="font-bold rtl">
-                  {numbersToBeSelected} عدد انتخاب کنید
+                    {numbersToBeSelected} عدد انتخاب کنید
                   </h6>
                 </span>
                 <p className="py-1 flex flex-row-reverse rtl">
                   <span>
-                  <b>{selectedNumbers.length}</b> از {numbersToBeSelected}
+                    <b>{selectedNumbers.length}</b> از {numbersToBeSelected}
                   </span>
                 </p>
               </div>

@@ -411,7 +411,7 @@ const NumberSelectorMilli = ({
         footer={[]}
         width={756}
       >
-        <div className="flex flex-col justify-between sm:h-[100vh] md:h-full">
+        <div className="flex flex-col justify-between sm:min-h-[100vh] md:min-h-[auto] md:h-full">
           <div>
             {/* ::::::::::::::::: display selected Numbers start  :::::::::::::::::::::*/}
             <div

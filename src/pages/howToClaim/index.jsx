@@ -6,17 +6,11 @@ import backgroundImage_5 from '../../assets/backgrounds/2_Milionaria.svg';
 import backgroundImage_6 from '../../assets/backgrounds/4_Dupla-Sena.svg';
 import backgroundImage_7 from '../../assets/backgrounds/5_Lotomania.svg';
 import backgroundImage_8 from '../../assets/backgrounds/8_Super-Sete.svg';
+import { useSelector } from 'react-redux';
 const HowToClaim = () => {
-  //     gradient,
-  //   winingColor,
-  //   backgroundImage,
-  //   radient_left,
-  //   secondLogo,
-  //   nextDraw,
-  //   drawAmount,
-  //   amountMultiplier,
-  //   playFor,
-  //   radient_right,
+  const cardDataState = useSelector(
+    (state) => state.productsSlice.upcomingLotteryDetails
+  );
   const data = [
     {
       name: 'mega-da-virada',
@@ -33,7 +27,7 @@ const HowToClaim = () => {
       link: 'megaSanaVirda',
     },
     {
-      name: 'lotofacil',
+      name: cardDataState[1].name,
       JackportAmount: '6,431,246',
       date: 'یکشنبه ۱۴ آبان ماه',
 
@@ -41,7 +35,7 @@ const HowToClaim = () => {
       nextDraw: 'شنبه ساعت ۱۸:۰۰',
       drawAmount: '۸۷',
       amountMultiplier: 'میلیارد',
-      playFor: '4',
+      playFor: cardDataState[1].playFor,
       winingColor: '#781ea5',
       columnNumber: 8,
       backgroundImage:
@@ -50,7 +44,7 @@ const HowToClaim = () => {
       link: 'lotofacil',
     },
     {
-      name: 'quina',
+      name: cardDataState[2].name,
       JackportAmount: '6,431,246',
       date: 'یکشنبه ۱۴ آبان ماه',
 
@@ -58,14 +52,14 @@ const HowToClaim = () => {
       nextDraw: 'دوشنبه ساعت ۱۹:۰۰',
       drawAmount: '۹',
       amountMultiplier: 'میلیارد',
-      playFor: '4',
+      playFor: cardDataState[2].playFor,
       winingColor: '#0094b3',
       backgroundImage: backgroundImage_3,
       columnNumber: 5,
       link: 'quina',
     },
     {
-      name: 'megasena',
+      name: cardDataState[3].name,
       JackportAmount: '6,431,246',
       date: 'یکشنبه ۱۴ آبان ماه',
 
@@ -74,12 +68,12 @@ const HowToClaim = () => {
       nextDraw: 'دوشنبه ساعت ۱۹:۰۰',
       drawAmount: '۱۷',
       amountMultiplier: 'میلیارد',
-      playFor: '4',
+      playFor: cardDataState[3].playFor,
       backgroundImage: backgroundImage_4,
       link: 'mega-sana',
     },
     {
-      name: 'lotomania',
+      name: cardDataState[4].name,
       JackportAmount: '6,431,246',
       date: 'یکشنبه ۱۴ آبان ماه',
 
@@ -87,14 +81,14 @@ const HowToClaim = () => {
       nextDraw: 'دوشنبه ساعت ۱۹:۰۰',
       drawAmount: '۴۹',
       amountMultiplier: 'میلیارد',
-      playFor: '4',
+      playFor: cardDataState[4].playFor,
       winingColor: '#f6a500',
       columnNumber: 10,
       backgroundImage: backgroundImage_7,
       link: 'loto-mania',
     },
     {
-      name: 'dupla-sena',
+      name: cardDataState[5].name,
       JackportAmount: '83,068,817',
       date: 'یکشنبه ۱۴ آبان ماه',
 
