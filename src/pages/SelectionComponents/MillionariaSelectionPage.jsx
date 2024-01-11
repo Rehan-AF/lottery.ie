@@ -81,7 +81,12 @@ const MillionariaSelectionPage = () => {
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
-      <div className="flex flex-col lg:flex-row max-w-[1200px] w-full h-full lg:max-w-screen-lg lg:justify-center">
+      <div
+        className="flex flex-col lg:flex-row max-w-[1200px] w-full h-full lg:max-w-[1200px] lg:justify-center"
+        style={{
+          maxWidth: '1200px',
+        }}
+      >
         <div
           className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-56 lg:h-80 top-0"
           style={{

@@ -51,7 +51,12 @@ const DuplaSenaSelectionPage = () => {
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
-      <div className="flex flex-col lg:flex-row w-full max-w-[1200px] h-full lg:max-w-screen-lg lg:justify-center">
+      <div
+        className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center"
+        style={{
+          maxWidth: '1200px',
+        }}
+      >
         <div
           className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-[16rem] lg:h-[22rem] top-0"
           style={{
