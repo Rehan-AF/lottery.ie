@@ -113,12 +113,12 @@ export default function Navbar() {
                     </Link>
                   </div>
 
-                  <a
-                    href="#"
+                  <Link
+                    to="/account"
                     className="px-2 text-xs font-medium hover:text-gray-light text-gray-700  "
                   >
                     وبلاگ لوتوایران
-                  </a>
+                  </Link>
                 </div>
               </div>
 

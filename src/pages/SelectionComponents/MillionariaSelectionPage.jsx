@@ -81,7 +81,7 @@ const MillionariaSelectionPage = () => {
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
-      <div className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center">
+      <div className="flex flex-col lg:flex-row max-w-[1200px] w-full h-full lg:max-w-screen-lg lg:justify-center">
         <div
           className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-56 lg:h-80 top-0"
           style={{
@@ -138,11 +138,11 @@ const MillionariaSelectionPage = () => {
                 </div>
                 <div className="flex flex-row lg:flex-col justify-between">
                   <p className="text-white shadow-text font-bold lg:mt-2 lg:text-xl rtl">
-                  سه شنبه ساعت ۱۸:۰۰
+                    سه شنبه ساعت ۱۸:۰۰
                   </p>
                   <div className="flex lg:flex-col justify-between lg:justify-start sm:mt-0.5 items-baseline">
                     <div className="text-white shadow-text font-bold lg:py-8 text-sm lg:text-base w-full rtl">
-                    * مبلغ تقریبی می باشد
+                      * مبلغ تقریبی می باشد
                     </div>
                   </div>
                 </div>
@@ -161,9 +161,7 @@ const MillionariaSelectionPage = () => {
                       خرید بلیط
                     </h3>
                   </div>
-                  <h2 className="text-[#49636E]">
-                  !حداقل یک بلیط انتخاب کنید
-                  </h2>
+                  <h2 className="text-[#49636E]">!حداقل یک بلیط انتخاب کنید</h2>
                 </div>
                 <ol className="hidden" aria-hidden="true"></ol>
                 <div className="flex justify-center">
@@ -265,7 +263,7 @@ const MillionariaSelectionPage = () => {
                           className="my-3 uppercase font-bold text-xl"
                           aria-label="or"
                         >
-                          <span className="text-[#2C444E]">or</span>
+                          <span className="text-[#2C444E]">یا</span>
                         </p>
                         <button
                           className="shadowCustom lg:min-w-[301px] relative text-center rounded-full py-4 pl-3 pr-1 border border-gray-300 w-full hover:shadow-hover cursor-pointer"
@@ -340,7 +338,7 @@ const MillionariaSelectionPage = () => {
                               </svg>
                             </span>
                             <h6 className="font-bold text-gray-700">
-                            انتخاب سریع
+                              انتخاب سریع
                             </h6>
                           </div>
                         </button>
@@ -425,13 +423,13 @@ const MillionariaSelectionPage = () => {
           {winingNumbers.length ? (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0">
               <div className="flex justify-end font-bold text-gray-700">
-              تعداد بلیط: {winingNumbers.length} عدد
+                تعداد بلیط: {winingNumbers.length} عدد
               </div>
             </div>
           ) : (
             <div className="flex flex-row md:flex-col justify-between w-full md:w-auto lg:mr-4 mb-2 md:mb-0 pr-3">
               <div className="flex justify-end font-bold text-gray-700">
-              خرید بلیط با ۱۰۰ هزار تومان
+                خرید بلیط با ۱۰۰ هزار تومان
               </div>
             </div>
           )}

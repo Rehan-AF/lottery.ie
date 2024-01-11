@@ -10,6 +10,65 @@ const initialState = {
   millionariaNumber: [],
   milliSpecialNumber: [],
   superSeteNumbers: [],
+  upcomingLotteryDetails: [
+    {
+      name: 'milionaria',
+      JackpotAmount: '120',
+      date: 'یکشنبه ۱۴ آبان',
+      time: 'ساعت ۱۸:۰۰',
+      jackpotAmountMultiplier: 'میلیارد',
+      playFor: '۷۰',
+    },
+    {
+      name: 'lotofacil',
+      JackpotAmount: '120',
+      date: 'یکشنبه ۱۴ آبان',
+      time: 'ساعت ۱۸:۰۰',
+      jackpotAmountMultiplier: 'میلیارد',
+      playFor: '۷۰',
+    },
+    {
+      name: 'quina',
+      JackpotAmount: '120',
+      date: 'یکشنبه ۱۴ آبان',
+      time: 'ساعت ۱۸:۰۰',
+      jackpotAmountMultiplier: 'میلیارد',
+      playFor: '۷۰',
+    },
+    {
+      name: 'megaSena',
+      JackpotAmount: '120',
+      date: 'یکشنبه ۱۴ آبان',
+      time: 'ساعت ۱۸:۰۰',
+      jackpotAmountMultiplier: 'میلیارد',
+      playFor: '۷۰',
+    },
+    {
+      name: 'lotoMania',
+      JackpotAmount: '120',
+      date: 'یکشنبه ۱۴ آبان',
+      time: 'ساعت ۱۸:۰۰',
+      jackpotAmountMultiplier: 'میلیارد',
+      playFor: '۷۰',
+    },
+    {
+      name: 'duplaSena',
+      JackpotAmount: '120',
+      date: 'یکشنبه ۱۴ آبان',
+      time: 'ساعت ۱۸:۰۰',
+      jackpotAmountMultiplier: 'میلیارد',
+      playFor: '۷۰',
+    },
+    {
+      name: 'seuperSete',
+      JackpotAmount: '120',
+      date: 'یکشنبه ۱۴ آبان',
+      time: 'ساعت ۱۸:۰۰',
+      jackpotAmountMultiplier: 'میلیارد',
+      playFor: '۷۰',
+    },
+    
+  ],
 };
 
 const productsSlice = createSlice({

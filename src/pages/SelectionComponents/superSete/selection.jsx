@@ -281,7 +281,7 @@ const NumberSelector = ({
         footer={[]}
         width={756}
       >
-        <div className="flex flex-col justify-between sm:h-[100vh] md:h-full">
+        <div className="flex flex-col justify-between sm:min-h-[100vh] md:min-h-[auto] md:h-full">
           <div>
             {/* ::::::::::::::::: display selected Numbers start  :::::::::::::::::::::*/}
             <div
@@ -347,7 +347,7 @@ const NumberSelector = ({
             <hr className="mb-[9px]" />
             {/* ::::::::::::::::: render Number Start :::::::::::::::::: */}
             <div className="flex justify-center font-bold text-[18px] mb-2">
-              Columns
+              از هر ستون یک عدد انتخاب کنید
             </div>
             <div className="ml-3 flex flex-wrap justify-evenly gap-2">
               {renderNumbers()}
