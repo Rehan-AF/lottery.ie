@@ -56,7 +56,12 @@ const Selection1Page = () => {
   };
   return (
     <div className="bg-[#e7eff3] relative flex justify-center min-h-screen">
-      <div className="flex flex-col lg:flex-row w-full h-full lg:max-w-screen-lg lg:justify-center">
+      <div
+        className="flex flex-col lg:flex-row w-full h-full lg:max-w-[1200px] lg:justify-center"
+        style={{
+          maxWidth: '1200px',
+        }}
+      >
         <div
           className=" absolute bg-cover bg-no-repeat w-full h-60 md:h-56 lg:h-80 top-0"
           style={{
@@ -135,9 +140,7 @@ const Selection1Page = () => {
                       خرید بلیط
                     </h3>
                   </div>
-                  <h2 className="text-[#49636E]">
-                  !حداقل یک بلیط انتخاب کنید
-                  </h2>
+                  <h2 className="text-[#49636E]">!حداقل یک بلیط انتخاب کنید</h2>
                 </div>
                 <ol className="hidden" aria-hidden="true"></ol>
                 <div className="flex justify-center">
@@ -311,7 +314,7 @@ const Selection1Page = () => {
                               </svg>
                             </span>
                             <h6 className="font-bold text-gray-700">
-                            انتخاب سریع
+                              انتخاب سریع
                             </h6>
                           </div>
                         </button>
