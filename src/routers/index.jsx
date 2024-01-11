@@ -107,7 +107,7 @@ const NewRouter = createBrowserRouter([
     element: (
       <div>
         <Provider store={store}>
-          <LayoutWithouNavbar />
+          <LayoutWithNavbar />
           <ScrollRestoration />
         </Provider>
       </div>

@@ -1,0 +1,17 @@
+.element_style_accordionCustom {
+  opacity: 1;
+  max-height: 0;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.opening_animation_accordionCustom {
+  max-height: 500vh;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.closing_animation_accordionCustom {
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
